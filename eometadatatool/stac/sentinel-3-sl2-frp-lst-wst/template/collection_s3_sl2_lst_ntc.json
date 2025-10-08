@@ -1,0 +1,535 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "id": "sentinel-3-sl-2-lst-ntc",
+  "type": "Collection",
+  "title": "Sentinel-3 SLSTR Land Surface Temperature (NTC)",
+  "description": "This Collection provides Sentinel-3 SLSTR Level-2 Land Surface Temperature products containing data on land surface temperature measurements on a 1km grid. Radiance is measured in two channels to determine the temperature of the Earth's surface skin in the instrument field of view, where the term \"skin\" refers to the top surface of bare soil or the effective emitting temperature of vegetation canopies as viewed from above.",
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2016-04-19T01:35:17.188500Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "1000m",
+    "Aerosol",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "Global",
+    "P1M",
+    "SLSTR",
+    "SL_2_LST____",
+    "Satellite",
+    "Sentinel",
+    "Sentinel-3"
+  ],
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-3",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S3_SL2_LST.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Sentinel-3 SLSTR LST Thumbnail",
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "gsd": [
+      1000
+    ],
+    "proj:code": [
+      null
+    ],
+    "platform": [
+      "sentinel-3a",
+      "sentinel-3b"
+    ],
+    "instruments": [
+      "slstr"
+    ],
+    "constellation": [
+      "sentinel-3"
+    ],
+    "product:type": [
+      "SL_2_LST____"
+    ],
+    "product:timeliness": [
+      "P1M"
+    ],
+    "product:timeliness_category": [
+      "NT"
+    ],
+    "processing:level": [
+      "L2"
+    ],
+    "processing:version": [
+      "03.29",
+      "03.30",
+      "03.32",
+      "03.34",
+      "03.35",
+      "03.37",
+      "03.38",
+      "03.39",
+      "03.40",
+      "03.43",
+      "03.44",
+      "03.45",
+      "03.47",
+      "03.48",
+      "03.49",
+      "03.50"
+    ],
+    "sat:orbit_state": [
+      "ascending",
+      "descending"
+    ],
+    "sat:platform_international_designator": [
+      "2016-011A",
+      "2018-039A"
+    ],
+    "statistics": {
+      "type": "object",
+      "properties": {
+        "saline_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "coastal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fresh_inland_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "tidal_region": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "land": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  },
+  "auth:schemes": {
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+    },
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "cdse-s3": {
+      "title": "Copernicus Data Space Ecosystem S3",
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false,
+      "type": "custom-s3"
+    },
+    "creodias-s3": {
+      "title": "CREODIAS S3",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true,
+      "type": "custom-s3"
+    }
+  },
+  "item_assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "LST_ancillary_ds": {
+      "type": "application/netcdf",
+      "title": "LST ancillary measurement dataset",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "LST_in": {
+      "type": "application/netcdf",
+      "title": "LST_in Data Set",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: S8, S9",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_in": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_tx": {
+      "type": "application/netcdf",
+      "title": "16km cartesian coordinates",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_in": {
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_in": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_tx": {
+      "type": "application/netcdf",
+      "title": "16km geodetic coordinates",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geometry_tn": {
+      "type": "application/netcdf",
+      "title": "16km solar and satellite geometry annotations, nadir view",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_in": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "met_tx": {
+      "type": "application/netcdf",
+      "title": "Meteorological parameters regridded onto the 16km tie points",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "time_in": {
+      "type": "application/netcdf",
+      "title": "Time annotations for the 1 KM grid",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ]
+}

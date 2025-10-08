@@ -1,0 +1,55 @@
+metadata;file;mappings;datatype;Sample
+id;**/TSX1_*.xml;/level1Product/productInfo/sceneInfo/sceneID/text();String;C243_N38_D_SM_strip_003_R_2014-09-30T14:24:04.006000Z
+type;static;Feature;String;Feature
+bbox;**/TSX1_*.xml;concat('[', number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[1]/lon), ',',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[1]/lat), ',',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[4]/lon), ',',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[4]/lat), ']');String;[-121.886623776297881,38.4370596071495427,-122.392817962696597,37.9942754555882019]
+geometry_type;static;Polygon;String;Polygon
+coordinates;**/TSX1_*.xml;concat('[[[', number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[4]/lon), ',',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[4]/lat), '],[',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[1]/lon), ',',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[1]/lat), '],[',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[2]/lon), ',',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[2]/lat), '],[',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[3]/lon), ',',  number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[3]/lat), '],[',   number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[4]/lon), ',', number(/level1Product/productInfo/sceneInfo/sceneCornerCoord[4]/lat), ']]]');String;
+version;static;1;String;1
+title;**/TSX1_*.xml;/level1Product/setup/orderInfo/userData/customerOrderID/text();String;cwix_HAZ2703_Napa_2014-10-21-16:16:37,385
+datetime;**/TSX1_*.xml;/level1Product/productInfo/sceneInfo/sceneCenterCoord/azimuthTimeUTC/text();DateTimeOffset;2014-09-30T14:24:08.005875Z
+start_datetime;**/TSX1_*.xml;/level1Product/productInfo/sceneInfo/start/timeUTC/text();DateTimeOffset;2014-09-30T14:24:04.006000Z
+end_datetime;**/TSX1_*.xml;/level1Product/productInfo/sceneInfo/stop/timeUTC/text();DateTimeOffset;2014-09-30T14:24:12.005750Z
+created;**/TSX1_*.xml;/level1Product/generalHeader/generationTime/text();DateTimeOffset;2014-10-23T08:22:03.000000
+updated;**/TSX1_*.xml;;DateTimeOffset;
+published;**/L1B_iif.xml;/IIF/creation/time/text();DateTimeOffset;2014-10-23T08:22:15.000
+expires;static;;;--
+sci:doi;static;;;--
+platform;**/TSX1_*.xml;/level1Product/productInfo/missionInfo/mission/text();String;TSX-1
+instruments;**/TSX1_*.xml;/level1Product/productInfo/acquisitionInfo/sensor/text();String;[SAR]
+constellation;static;TerraSAR-X;String;TerraSAR-X
+gsd;**/TSX1_*.xml;/level1Product/productInfo/imageDataInfo/imageRaster/groundRangeResolution/text();Double;3.20740703579516095E+00
+view:off_nadir;static;;;--
+view:incidence_angle;static;;;--
+view:azimuth;static;/level1Product/productInfo/sceneInfo/headingAngle/text();Double;1.91324888817820096E+02
+view:sun_elevation;static;;;--
+view:sun_azimuth;static;;;--
+sat:platform_international_designator;**/TSX1_*.xml;/level1Product/platform/orbit/orbitHeader/sensor/text();String;GPSD
+sat:orbit_state;**/TSX1_*.xml;lowercase(/level1Product/productInfo/missionInfo/orbitDirection/text());String;DESCENDING
+sat:absolute_orbit;**/TSX1_*.xml;/level1Product/productInfo/missionInfo/absOrbit/text();Int64;40452
+sat:relative_orbit;**/TSX1_*.xml;/level1Product/productInfo/missionInfo/relOrbit/text();Int64;38
+sat:anx_datetime;**/TSX1_*.xml;/level1Product/productInfo/sceneInfo/sceneCenterCoord/azimuthTimeUTC/text();DateTimeOffset;2014-09-30T14:24:08.005875Z
+tsx:frame;static;"/level1Product/productInfo/sceneInfo/sceneCenterCoord/azimuthTimeUTC/text() - 
+";;
+tsx:beam;**/TSX1_*.xml;/level1Product/productQuality/imageDataQuality/beamID/text();String;strip_003
+tsx:antennaLookDirection;**/TSX1_*.xml;/level1Product/productInfo/acquisitionInfo/lookDirection/text();String;RIGHT
+tsx:antennaReceiveConfiguration;**/TSX1_*.xml;/level1Product/productInfo/acquisitionInfo/antennaReceiveConfiguration/text();String;SRA
+tsx:polarisationMode;**/TSX1_*.xml;/level1Product/productInfo/acquisitionInfo/polarisationMode/text();String;SINGLE
+sar:instrument_mode;**/TSX1_*.xml;/level1Product/productInfo/acquisitionInfo/imagingMode/text();String;SM
+sar:polarizations;**/TSX1_*.xml;/level1Product/setup/orderInfo/polList/polLayer/text();String;[HH]
+sar:resolution_range;**/TSX1_*.xml;/level1Product/productSpecific/complexImageInfo/slantRangeResolution/text();Double;1.17699594895475679E+00
+sar:resolution_azimuth;**/TSX1_*.xml;/level1Product/productSpecific/complexImageInfo/projectedSpacingAzimuth/text();Double;2.07620887322612546E+00
+sar:pixel_spacing_range;**/TSX1_*.xml;/level1Product/productInfo/imageDataInfo/imageRaster/groundRangeResolution/text();Double;3.20740703579516095E+00
+sar:pixel_spacing_azimuth;**/TSX1_*.xml;/level1Product/productInfo/imageDataInfo/imageRaster/azimuthResolution/text();Double;3.29999995231628418E+00
+sar:looks_range;**/TSX1_*.xml;/level1Product/productInfo/imageDataInfo/imageRaster/rangeLooks/text();Int64;1.00000000000000000E+00
+sar:looks_azimuth;**/TSX1_*.xml;/level1Product/productInfo/imageDataInfo/imageRaster/azimuthLooks/text();Int64;1.00000000000000000E+00
+sar:looks_equivalent_number;**/TSX1_*.xml;/level1Product/productInfo/imageDataInfo/imageRaster/azimuthLooks/text();Int64;
+sar:frequency_band;static;X;String;X
+sar:center_frequency;**/TSX1_*.xml;/level1Product/instrument/radarParameters/centerFrequency div 1000000000;Double;9.64999929300000000E+09
+sar:product_type;**/TSX1_*.xml;/level1Product/productInfo/productVariantInfo/productVariant/text();String;SSC
+processing:lineage;**/TSX1_*.xml;/level1Product/generalHeader/referenceDocument/text();String;TX-GS-DD-3302 Basic Product Specification 1.5
+processing:level;**/TSX1_*.xml;/level1Product/setup/orderInfo/orderType/text();String;L1B-SAR
+processing:facility;**/TSX1_*.xml;/level1Product/productInfo/generationInfo/level1ProcessingFacility/text();String;TS-X PGS NZ
+processing:software;static;"{""TMSP"", ""4.10""}";json;
+processing:name;**/TSX1_*.xml;/level1Product/generalHeader/generationSystem/text();String;TMSP
+processing:version;**/TSX1_*.xml;/level1Product/generalHeader/generationSystem/@version;String;4.10
+product_name;**/TSX1_*.xml;concat(/level1Product/generalHeader/mission/text(),' ',/level1Product/generalHeader/itemName);String;

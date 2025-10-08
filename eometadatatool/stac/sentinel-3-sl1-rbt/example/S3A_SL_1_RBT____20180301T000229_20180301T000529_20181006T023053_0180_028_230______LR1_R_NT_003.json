@@ -1,0 +1,3588 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-3-sl-1-rbt-ntc",
+  "id": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003",
+  "properties": {
+    "created": "2019-03-25T13:36:26.450000Z",
+    "updated": "2023-11-28T10:21:43.688977Z",
+    "published": "2019-03-27T06:25:53.574060Z",
+    "eopf:origin_datetime": "2019-03-25T13:36:26.450000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2018-03-01T00:02:28.648877Z",
+    "start_datetime": "2018-03-01T00:02:28.648877Z",
+    "end_datetime": "2018-03-01T00:05:28.648877Z",
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "slstr"
+    ],
+    "gsd": 1000,
+    "processing:level": "L1",
+    "processing:datetime": "2018-10-06T02:31:44.000000Z",
+    "proj:code": null,
+    "sat:absolute_orbit": 10598,
+    "sat:relative_orbit": 230,
+    "sat:orbit_cycle": 28,
+    "sat:orbit_state": "descending",
+    "sat:platform_international_designator": "2016-011A",
+    "eo:cloud_cover": 88.43,
+    "product:type": "SL_1_RBT___",
+    "product:timeliness": "P1M",
+    "product:timeliness_category": "NT",
+    "statistics": {
+      "saline_water": 100.0,
+      "coastal": 0.0,
+      "fresh_inland_water": 0.0,
+      "tidal_region": 0.0,
+      "land": 0.0
+    },
+    "processing:version": "03.34",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    143.384,
+    28.9528,
+    162.455,
+    42.2648
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          143.384,
+          31.770099999999996
+        ],
+        [
+          150.76499999999996,
+          30.6511
+        ],
+        [
+          158.649,
+          28.952799999999996
+        ],
+        [
+          162.455,
+          39.375099999999996
+        ],
+        [
+          153.53899999999996,
+          41.2129
+        ],
+        [
+          145.064,
+          42.264799999999994
+        ],
+        [
+          143.384,
+          31.770099999999996
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/xfdumanifest.xml",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/xfdumanifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(xfdumanifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/quicklook.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(4bc49201-408d-4fe0-8215-9e840f68c806)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/quicklook.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "cartesian_an": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the A stripe grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110fc17e1b83e96aff0a64a9912b398e172",
+      "file:size": 17476334,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_ao": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the A stripe grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110a374195ffecd23afaf0871ad56a0142e",
+      "file:size": 9639360,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_bn": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the B stripe grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011086f360583d7998dc7c68586208faf5db",
+      "file:size": 17395262,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_bo": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the B stripe grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501103f6397757c8254e9d09698456e4a0649",
+      "file:size": 9726588,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_cn": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501103070e52fba3d924c9df8a7fd48dd59b8",
+      "file:size": 17522250,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_co": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110320131ae963ce00d3b6237b3122ae66a",
+      "file:size": 9717293,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_in": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501100fda9dad9bcd5078924ecf786b5fd2f9",
+      "file:size": 4582475,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_io": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km TIR grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110c69e14e93c20ecdfaab2d2bd50548a6e",
+      "file:size": 2589171,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_tx": {
+      "type": "application/netcdf",
+      "title": "16km cartesian coordinates",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110f54bc8030b108063a04725928fae0187",
+      "file:size": 42645,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_tx.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/cartesian_tx.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(cartesian_tx.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "F1_BT_in": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F1 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "F1",
+          "description": "Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "file:checksum": "d501104adb0716cf96e6f3016c66871d9b2791",
+      "file:size": 2740067,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F1_BT_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F1_BT_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(F1_BT_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "F1_BT_io": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F1 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "F1",
+          "description": "Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "file:checksum": "d50110a9493bed56e634cbfb5e8d016faca4e8",
+      "file:size": 1517211,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F1_BT_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F1_BT_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(F1_BT_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "F1_quality_in": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F1 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110b9d181a8bba0a163207730879e380cc2",
+      "file:size": 109282,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F1_quality_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F1_quality_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(F1_quality_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "F1_quality_io": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F1 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011031252efc63c9673a1cfbe6dc8ffd3cfe",
+      "file:size": 111492,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F1_quality_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F1_quality_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(F1_quality_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "F2_BT_in": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F2 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "F2",
+          "description": "Active fire",
+          "eo:center_wavelength": 10.854,
+          "eo:full_width_half_max": 0.776
+        }
+      ],
+      "file:checksum": "d5011032227bd6735850d9bbf7ae4eba44d62c",
+      "file:size": 2711249,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F2_BT_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F2_BT_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(F2_BT_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "F2_BT_io": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F2 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "F2",
+          "description": "Active fire",
+          "eo:center_wavelength": 10.854,
+          "eo:full_width_half_max": 0.776
+        }
+      ],
+      "file:checksum": "d50110e2d676eeb8c497b2c9d62e2b17b02e37",
+      "file:size": 1532138,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F2_BT_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F2_BT_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(F2_BT_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "F2_quality_in": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F2 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110f5ea76df6f1c427f38e8386eaade7f32",
+      "file:size": 109162,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F2_quality_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F2_quality_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(F2_quality_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "F2_quality_io": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F2 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110272b9a381ca65fe2285813c423070667",
+      "file:size": 111543,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F2_quality_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/F2_quality_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(F2_quality_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_an": {
+      "type": "application/netcdf",
+      "title": "Global flags for the A stripe grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011078f8b948c6a0585a19b4e59a9bd5a648",
+      "file:size": 2846471,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(flags_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_ao": {
+      "type": "application/netcdf",
+      "title": "Global flags for the A stripe grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501108bd78aaeb5eb06260c30aea6abfa5d93",
+      "file:size": 1832063,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(flags_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_bn": {
+      "type": "application/netcdf",
+      "title": "Global flags for the B stripe grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110e9c1d5b661b54b7e126c5a3946b1e1e5",
+      "file:size": 2825249,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(flags_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_bo": {
+      "type": "application/netcdf",
+      "title": "Global flags for the B stripe grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110e6b00ac63fa3d95feeeafd7319d51059",
+      "file:size": 1875428,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(flags_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_cn": {
+      "type": "application/netcdf",
+      "title": "Global flags for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501106c6086da3326c87668ce27ee97847ffb",
+      "file:size": 2845881,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(flags_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_co": {
+      "type": "application/netcdf",
+      "title": "Global flags for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110042bfc2a097fe1146b9bc07088a8f992",
+      "file:size": 1859700,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(flags_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_in": {
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501101f00b250e56756e993d5f2a545b84db2",
+      "file:size": 1256610,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(flags_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_io": {
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km TIR grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011076b754b30f6f06354534958fc373425a",
+      "file:size": 923017,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/flags_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(flags_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_an": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the A stripe grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110eb9333d248cffc6c6bf6c29e265ac395",
+      "file:size": 28568728,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_ao": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the A stripe grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110999d112329641123a7b10fe20acace04",
+      "file:size": 16984520,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_bn": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the B stripe grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501108b337772b6fa8eae65349dace3cdef18",
+      "file:size": 28369443,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_bo": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the B stripe grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110c022eeee887ac7c0a95e0fd484f07d49",
+      "file:size": 17091854,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_cn": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501100059c3a6e4033f2c1603708cbfd531e9",
+      "file:size": 28438352,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_co": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110d71fa8befbaa3bb1c76750afcbc94e18",
+      "file:size": 17032777,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_in": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501106948c9da26043f20e8f34477a05b0ea2",
+      "file:size": 7691968,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_io": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km TIR grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501102a8303392c7128e69f1c983c538b3413",
+      "file:size": 4718743,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_tx": {
+      "type": "application/netcdf",
+      "title": "16km geodetic coordinates",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501104f121e56d5bb537aa2e5e7fd341c1944",
+      "file:size": 1662061,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_tx.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geodetic_tx.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geodetic_tx.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geometry_tn": {
+      "type": "application/netcdf",
+      "title": "16km solar and satellite geometry annotations, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011037a6a1b27f71946a8f2ba4149ac4682c",
+      "file:size": 3426215,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geometry_tn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geometry_tn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geometry_tn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geometry_to": {
+      "type": "application/netcdf",
+      "title": "16km solar and satellite geometry annotations, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501104f8b6091af76c2d711eacc54e6580c24",
+      "file:size": 1861374,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geometry_to.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/geometry_to.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(geometry_to.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_an": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the A stripe grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501103d686b07856aac92415c96f663175240",
+      "file:size": 3124962,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(indices_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_ao": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the A stripe grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011053740253fd703b8f17e5afc8d66f2986",
+      "file:size": 2087980,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(indices_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_bn": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the B stripe grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501109858e6c4b902c15f5264bd58d5e9d856",
+      "file:size": 3124134,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(indices_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_cn": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110007fe59a22638196dc9258cc86b2d613",
+      "file:size": 3150103,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(indices_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_co": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110a2953ae68d8f97e2d01ae329c5f06590",
+      "file:size": 2105797,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(indices_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_bo": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the B stripe grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110b96466e64f67e5d7b25af955535a0aa9",
+      "file:size": 2112399,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(indices_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_in": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011069d7f74843f2453c44de478b50d35fcd",
+      "file:size": 881776,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(indices_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_io": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km TIR grid, oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011051ea7df561d88b894852271798df3024",
+      "file:size": 534033,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/indices_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(indices_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "met_tx": {
+      "type": "application/netcdf",
+      "title": "Meteorological parameters regridded onto the 16km tie points",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011067988719f92eeaf62cce644e4294eb6c",
+      "file:size": 34378091,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/met_tx.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/met_tx.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(met_tx.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S1_quality_an": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S1 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011002eaa43102d887cf1159eda80433d7d8",
+      "file:size": 72398,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S1_quality_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S1_quality_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S1_quality_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S1_quality_ao": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S1 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110ca59c1fa88a5c8c92d8dcc7aca1d147e",
+      "file:size": 74456,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S1_quality_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S1_quality_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S1_quality_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S1_radiance_an": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S1 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S1",
+          "description": "Cloud screening, vegetation monitoring, aerosol",
+          "eo:center_wavelength": 0.55427,
+          "eo:full_width_half_max": 0.01926
+        }
+      ],
+      "file:checksum": "d501100471785458880dedb5d33a9153d1a077",
+      "file:size": 11765564,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S1_radiance_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S1_radiance_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S1_radiance_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S1_radiance_ao": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S1 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S1",
+          "description": "Cloud screening, vegetation monitoring, aerosol",
+          "eo:center_wavelength": 0.55427,
+          "eo:full_width_half_max": 0.01926
+        }
+      ],
+      "file:checksum": "d501103f2eca6b9bc1e31035fc98724e5b60d8",
+      "file:size": 6563595,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S1_radiance_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S1_radiance_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S1_radiance_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S2_quality_an": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S2 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011007e742f68c2abe532835636fc29c2d98",
+      "file:size": 72000,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S2_quality_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S2_quality_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S2_quality_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S2_quality_ao": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S2 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501103099b69c9af4f66d74c8b93b3f440c28",
+      "file:size": 74093,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S2_quality_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S2_quality_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S2_quality_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S2_radiance_an": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S2 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S2",
+          "description": "NDVI, vegetation monitoring, aerosol",
+          "eo:center_wavelength": 0.65947,
+          "eo:full_width_half_max": 0.01925
+        }
+      ],
+      "file:checksum": "d50110f87da09fd3c4f2f0451607e21d5f0523",
+      "file:size": 11830895,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S2_radiance_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S2_radiance_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S2_radiance_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S2_radiance_ao": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S2 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S2",
+          "description": "NDVI, vegetation monitoring, aerosol",
+          "eo:center_wavelength": 0.65947,
+          "eo:full_width_half_max": 0.01925
+        }
+      ],
+      "file:checksum": "d50110ec67450146144f35bc0533d43ae69158",
+      "file:size": 6646808,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S2_radiance_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S2_radiance_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S2_radiance_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S3_quality_an": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S3 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110c6b2ced16cf1090f2e8d65802b2a45f4",
+      "file:size": 72411,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S3_quality_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S3_quality_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S3_quality_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S3_quality_ao": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S3 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501109f48c9343f0e5f3dcaf79f77352af2f8",
+      "file:size": 74255,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S3_quality_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S3_quality_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S3_quality_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S3_radiance_an": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S3 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S3",
+          "description": "NDVI, cloud flagging, pixel co-registration",
+          "eo:center_wavelength": 0.868,
+          "eo:full_width_half_max": 0.0206
+        }
+      ],
+      "file:checksum": "d5011001e2c36a04314b90fd62955155006310",
+      "file:size": 11926468,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S3_radiance_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S3_radiance_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S3_radiance_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S3_radiance_ao": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S3 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S3",
+          "description": "NDVI, cloud flagging, pixel co-registration",
+          "eo:center_wavelength": 0.868,
+          "eo:full_width_half_max": 0.0206
+        }
+      ],
+      "file:checksum": "d501109d3ac7ac334057bb102ee0e6beea0a24",
+      "file:size": 6730710,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S3_radiance_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S3_radiance_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S3_radiance_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_quality_an": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501104663c77968758d15a756a4afefe2dcb8",
+      "file:size": 82687,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_quality_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_quality_ao": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501105d1f5d811aa71bdf01556c557e03b83d",
+      "file:size": 88679,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_quality_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_quality_bn": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110e06ca07f2fca2884cf766f9dc5225c84",
+      "file:size": 82552,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_quality_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_quality_bo": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011003ab130c6e786d3cc0ef45cd9dd6084b",
+      "file:size": 88766,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_quality_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_quality_cn": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110539876a932010e3db91ab7849fd13893",
+      "file:size": 82606,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_quality_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_quality_co": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011055ce51f39f57cf987c8a6d6947ed75a5",
+      "file:size": 88706,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_quality_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_quality_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_radiance_an": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "file:checksum": "d501108942e40819b7b6a74a9a0496a6c738f7",
+      "file:size": 10653440,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_radiance_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_radiance_ao": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "file:checksum": "d501101ae21fe48ffc794d9de0f1514d3e6043",
+      "file:size": 5649915,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_radiance_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_radiance_bn": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "file:checksum": "d5011022f4c80e011e7ad36f853b6c48bee753",
+      "file:size": 10718063,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_radiance_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_radiance_bo": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "file:checksum": "d50110563f16323cc93f090b1fc11293b73748",
+      "file:size": 5798029,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_radiance_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_radiance_cn": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "file:checksum": "d50110401cd2489f16c5bc019341f9992158a6",
+      "file:size": 10575287,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_radiance_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S4_radiance_co": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "file:checksum": "d50110dddc5ee7960791dc977e2a1a635ceded",
+      "file:size": 5646081,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S4_radiance_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S4_radiance_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_quality_an": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501109a37916163ff5425234e646da93e9c4b",
+      "file:size": 82211,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_quality_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_quality_ao": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501109460b186d163c75e7d08d6754d60ba57",
+      "file:size": 87720,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_quality_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_quality_bn": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110301aff4915e83d99f569742373c950df",
+      "file:size": 82029,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_quality_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_quality_bo": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110b18efc77dfff36817ce85695e23f383c",
+      "file:size": 87667,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_quality_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_quality_cn": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110ae07cc803a186abd2a6d89bb75f3d45a",
+      "file:size": 82050,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_quality_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_quality_co": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110c7603c9719dbf074a82a2b8b7dec2bb6",
+      "file:size": 87761,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_quality_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_quality_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_radiance_an": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "file:checksum": "d50110f3ab2087fd6e130a70fbd3513f502689",
+      "file:size": 11397959,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_radiance_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_radiance_ao": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "file:checksum": "d501109e3ea960ddf722201cfa25f8c89a3060",
+      "file:size": 6531570,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_radiance_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_radiance_bn": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "file:checksum": "d50110136e26e922bae2898cbe8fc3981e1388",
+      "file:size": 11329176,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_radiance_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_radiance_bo": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "file:checksum": "d50110e1b0f1d052bec9c7bf3c33822935fb03",
+      "file:size": 6580582,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_radiance_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_radiance_cn": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "file:checksum": "d5011067c5d7b6666318a5af2bae0141fab7df",
+      "file:size": 11282729,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_radiance_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S5_radiance_co": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "file:checksum": "d50110b4634010dbff69a3ccfc782dbc162946",
+      "file:size": 6545834,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S5_radiance_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S5_radiance_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_quality_an": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501100c5149117b51a6cb0d7d115e4ed65eed",
+      "file:size": 82371,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_quality_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_quality_ao": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501107572288f689682023c5c7ab1a8da5361",
+      "file:size": 87536,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_quality_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_quality_bn": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110c849b4be16e4d428e41c23b7f437f72d",
+      "file:size": 82194,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_quality_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_quality_bo": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501101629d9a9c47b35d2476f5d35401a5925",
+      "file:size": 87566,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_quality_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_quality_cn": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110a013a59acccb0279c8b0d062bd8b536e",
+      "file:size": 82245,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_quality_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_quality_co": {
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110d64d8e795c84e11ff6bbf6359f87644d",
+      "file:size": 87594,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_quality_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_quality_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_radiance_an": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "file:checksum": "d50110066f972cc268b1b81c88ad38749f1918",
+      "file:size": 11405602,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_radiance_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_radiance_ao": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "file:checksum": "d501107d33722ff30faf881a8d0ed9a6cfa67c",
+      "file:size": 6442869,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_ao.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_ao.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_radiance_ao.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_radiance_bn": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "file:checksum": "d50110446a4dd0d024d0723157029a80319dd4",
+      "file:size": 11302874,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_radiance_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_radiance_bo": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "file:checksum": "d50110aa29d3b9126cef2a4048f87d4435a006",
+      "file:size": 6508814,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_bo.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_bo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_radiance_bo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_radiance_cn": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "file:checksum": "d501108bc57c64af6f0009881433ba11c2ea17",
+      "file:size": 11273352,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_radiance_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S6_radiance_co": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "file:checksum": "d50110856a7c6c7c7f4fdfdcc3dff10cb7312d",
+      "file:size": 6459513,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_co.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S6_radiance_co.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S6_radiance_co.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S7_BT_in": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S7 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S7",
+          "description": "SST, LST, Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "file:checksum": "d50110d158c62586900c887831214ad51fd46c",
+      "file:size": 2656192,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S7_BT_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S7_BT_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S7_BT_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S7_BT_io": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S7 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S7",
+          "description": "SST, LST, Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "file:checksum": "d50110ba40b639602fc3418a9195a9bbe3dbed",
+      "file:size": 1510737,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S7_BT_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S7_BT_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S7_BT_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S7_quality_in": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S7 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110dde6c864f48f9d40bf21bf76f428c71d",
+      "file:size": 122576,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S7_quality_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S7_quality_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S7_quality_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S7_quality_io": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S7 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501102446643e41b4a391397ff6f4d4c3d02f",
+      "file:size": 126416,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S7_quality_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S7_quality_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S7_quality_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S8_BT_in": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S8 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S8",
+          "description": "SST, LST, Active fire",
+          "eo:center_wavelength": 10.854,
+          "eo:full_width_half_max": 0.776
+        }
+      ],
+      "file:checksum": "d50110660d457268ce8fd34a5590ad4f096c90",
+      "file:size": 2700476,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S8_BT_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S8_BT_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S8_BT_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S8_BT_io": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S8 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S8",
+          "description": "SST, LST, Active fire",
+          "eo:center_wavelength": 10.854,
+          "eo:full_width_half_max": 0.776
+        }
+      ],
+      "file:checksum": "d50110a6d37a4053613949545f0a669c7d46f3",
+      "file:size": 1526066,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S8_BT_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S8_BT_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S8_BT_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S8_quality_in": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S8 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011001b32de2f0c68fa6879a1bfe15c28b24",
+      "file:size": 117896,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S8_quality_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S8_quality_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S8_quality_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S8_quality_io": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S8 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110dcde7c4e5b1300d1a5d628f7ab8040e4",
+      "file:size": 121338,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S8_quality_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S8_quality_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S8_quality_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S9_BT_in": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S9 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S9",
+          "description": "SST, LST",
+          "eo:center_wavelength": 12.0225,
+          "eo:full_width_half_max": 0.905
+        }
+      ],
+      "file:checksum": "d5011069efdf1ea3a286949b501e35817252af",
+      "file:size": 2697276,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S9_BT_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S9_BT_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S9_BT_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S9_BT_io": {
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S9 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "S9",
+          "description": "SST, LST",
+          "eo:center_wavelength": 12.0225,
+          "eo:full_width_half_max": 0.905
+        }
+      ],
+      "file:checksum": "d501108ef43e644f2a8fc2784cd5aa068de731",
+      "file:size": 1523740,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S9_BT_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S9_BT_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S9_BT_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S9_quality_in": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S9 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501105c88d8f7b16304616e0fdc5bca7f1201",
+      "file:size": 118249,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S9_quality_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S9_quality_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S9_quality_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "S9_quality_io": {
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S9 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110ba7e34af8aaf5a51a172e10ab398058f",
+      "file:size": 121615,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S9_quality_io.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/S9_quality_io.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(S9_quality_io.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "time_cn": {
+      "type": "application/netcdf",
+      "title": "Time annotations for the A, B or TDI stripe grid, nadir and oblique view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110df70ea1afb274111a0c822325a82a4b7",
+      "file:size": 56698,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/time_cn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/time_cn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(time_cn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "viscal": {
+      "type": "application/netcdf",
+      "title": "VISCAL data obtained from input VISCAL ADF",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110667fe8cc5059be372de897c5c646a6f1",
+      "file:size": 160299,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/viscal.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_1_RBT/2018/03/01/S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3/viscal.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/Nodes(S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3)/Nodes(viscal.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110ecc80de9b1875df5223532f51b4fec49",
+      "file:size": 549259999,
+      "file:local_path": "S3A_SL_1_RBT____20180301T000229_20180301T000529_20181006T023053_0180_028_230______LR1_R_NT_003.SEN3.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c85d33c6-3dca-57a5-b188-a8e7625b3ae5)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

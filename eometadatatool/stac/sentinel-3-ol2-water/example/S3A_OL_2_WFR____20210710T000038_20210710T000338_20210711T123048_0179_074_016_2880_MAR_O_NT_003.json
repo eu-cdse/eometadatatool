@@ -1,0 +1,1242 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-3-olci-2-wfr-ntc",
+  "id": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003",
+  "properties": {
+    "created": "2021-07-11T13:01:15.261000Z",
+    "updated": "2021-07-11T14:06:26.216066Z",
+    "published": "2021-07-11T14:06:26.216066Z",
+    "eopf:origin_datetime": "2021-07-11T13:01:15.261000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2021-07-10T00:00:37.647058Z",
+    "start_datetime": "2021-07-10T00:00:37.647058Z",
+    "end_datetime": "2021-07-10T00:03:37.647058Z",
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "olci"
+    ],
+    "gsd": 300,
+    "processing:level": "L2",
+    "processing:datetime": "2021-07-11T12:39:11.000000Z",
+    "proj:code": null,
+    "sat:absolute_orbit": 28094,
+    "sat:relative_orbit": 16,
+    "sat:orbit_cycle": 74,
+    "sat:orbit_state": "descending",
+    "sat:platform_international_designator": "2016-011A",
+    "eo:cloud_cover": 18.0,
+    "product:type": "OL_2_WFR___",
+    "product:timeliness": "P1M",
+    "product:timeliness_category": "NT",
+    "statistics": {
+      "saline_water": 78.0,
+      "coastal": 0.006128,
+      "fresh_inland_water": 0.0,
+      "tidal_region": 0.0,
+      "land": 0.0,
+      "invalid": 4.0,
+      "cosmetic": 0.0,
+      "duplicated": 1.545253,
+      "saturated": 0.0,
+      "dubious_samples": 0.0
+    },
+    "processing:version": "03.39",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    140.3,
+    -2.72887,
+    154.206,
+    10.3907
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          140.3,
+          -0.133608
+        ],
+        [
+          151.817,
+          -2.7288699999999997
+        ],
+        [
+          154.206,
+          7.893130000000001
+        ],
+        [
+          142.52399999999997,
+          10.3907
+        ],
+        [
+          140.3,
+          -0.133608
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/xfdumanifest.xml",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/xfdumanifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(xfdumanifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003-ql.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(0f9ecdc5-6a90-4ac6-a2ac-8d042ad5abda)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003-ql.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "Oa01_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa01",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa01",
+          "description": "Aerosol correction, improved water constituent retrieval",
+          "eo:center_wavelength": 0.4,
+          "eo:full_width_half_max": 0.015
+        }
+      ],
+      "file:checksum": "d50110b9237c2a110588d41fea0e18ddd00624",
+      "file:size": 33952753,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa01_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa01_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa01_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa02_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa02",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa02",
+          "description": "Yellow substance and detrital pigments (turbidity)",
+          "eo:center_wavelength": 0.4125,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d5011060fb61dd6d8cc119bcc4d1dcf85f8c2b",
+      "file:size": 33312897,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa02_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa02_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa02_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa03_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa03",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa03",
+          "description": "Chlorophyll absorption maximum, biogeochemistry, vegetation",
+          "eo:center_wavelength": 0.4425,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d50110da0aeba21ed0de5cb8bb902818c3d2e8",
+      "file:size": 32138279,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa03_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa03_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa03_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa04_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa04",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa04",
+          "description": "Chlorophyll",
+          "eo:center_wavelength": 0.49,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d501102e0e0e2cf3a47121d2776b8c461a504f",
+      "file:size": 30650311,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa04_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa04_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa04_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa05_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa05",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa05",
+          "description": "Chlorophyll, sediment, turbidity, red tide",
+          "eo:center_wavelength": 0.51,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d50110ce635237e7e18bda24b50595868e9096",
+      "file:size": 30254603,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa05_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa05_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa05_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa06_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa06",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa06",
+          "description": "Chlorophyll reference (minimum)",
+          "eo:center_wavelength": 0.56,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d50110aa1f3d909e958199947e43974452864f",
+      "file:size": 28014810,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa06_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa06_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa06_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa07_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa07",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa07",
+          "description": "Sediment loading",
+          "eo:center_wavelength": 0.62,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d5011033be83afa9927dc8684fbf9ba6e7ae82",
+      "file:size": 26397862,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa07_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa07_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa07_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa08_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa08",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa08",
+          "description": "2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+          "eo:center_wavelength": 0.665,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d501104a523a8c49d83822f2fb6ac8880c3fd3",
+      "file:size": 24401049,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa08_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa08_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa08_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa09_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa09",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa09",
+          "description": "Improved fluorescence retrieval",
+          "eo:center_wavelength": 0.67375,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "file:checksum": "d50110e59a50c75544e0c682ee4af36965f177",
+      "file:size": 24122412,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa09_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa09_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa09_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa10_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa10",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa10",
+          "description": "Chlorophyll fluorescence peak, red edge",
+          "eo:center_wavelength": 0.68125,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "file:checksum": "d5011097f03cc01a763332b068cd83925e96ab",
+      "file:size": 23829125,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa10_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa10_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa10_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa11_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa11",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa11",
+          "description": "Chlorophyll fluorescence baseline, red edge transition",
+          "eo:center_wavelength": 0.70875,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d50110604c2e8129f25b73c93083cdc619cdea",
+      "file:size": 23367700,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa11_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa11_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa11_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa12_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa12",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa12",
+          "description": "O2 absorption / clouds, vegetation",
+          "eo:center_wavelength": 0.75375,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "file:checksum": "d50110ee05a86444569494cebcba9659a8f5f8",
+      "file:size": 20728916,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa12_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa12_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa12_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa16_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa16",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa16",
+          "description": "Atmospheric / aerosol correction",
+          "eo:center_wavelength": 0.77875,
+          "eo:full_width_half_max": 0.015
+        }
+      ],
+      "file:checksum": "d501104d6285976acd93d93c0ecf369d6a48fe",
+      "file:size": 15983270,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa16_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa16_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa16_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa17_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa17",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa17",
+          "description": "Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "eo:center_wavelength": 0.865,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "file:checksum": "d5011079c58d2177ad01ce7915ad748272c4e6",
+      "file:size": 15702481,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa17_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa17_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa17_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa18_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa18",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa18",
+          "description": "Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+          "eo:center_wavelength": 0.885,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "file:checksum": "d50110ceb2795a8aac419a993d3c90f3c4ecca",
+      "file:size": 15909574,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa18_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa18_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa18_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa21_reflectanceData": {
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa21",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa21",
+          "description": "Water vapour absorption, atmospheric / aerosol correction",
+          "eo:center_wavelength": 1.02,
+          "eo:full_width_half_max": 0.04
+        }
+      ],
+      "file:checksum": "d501106f3c855ecacaa4ddf6699d185078d538",
+      "file:size": 29517735,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa21_reflectance.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/Oa21_reflectance.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(Oa21_reflectance.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "trsp": {
+      "type": "application/netcdf",
+      "title": "Transparency properties of water",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: Oa04, Oa06",
+      "file:checksum": "d501102a5aba5e8aae9f8240e3edb35bd436dc",
+      "file:size": 11352813,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/trsp.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/trsp.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(trsp.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "chl-Nn": {
+      "type": "application/netcdf",
+      "title": "Neural net chlorophyll concentration",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: Oa01, Oa02, Oa03, Oa04, Oa05, Oa06, Oa07, Oa08, Oa09, Oa10, Oa11, Oa12, Oa16, Oa17, Oa18, Oa21",
+      "file:checksum": "d50110088afe4d68939ca1e449cab2473d787a",
+      "file:size": 16957068,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/chl_nn.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/chl_nn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(chl_nn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "chl-Oc4me": {
+      "type": "application/netcdf",
+      "title": "OC4Me algorithm chlorophyll concentration",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: Oa03, Oa04, Oa05, Oa06",
+      "file:checksum": "d50110dda0e89258c0c3657df4a7710574752e",
+      "file:size": 14166531,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/chl_oc4me.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/chl_oc4me.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(chl_oc4me.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "iop-Nn": {
+      "type": "application/netcdf",
+      "title": "Inherent optical properties of water",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: Oa01, Oa12, Oa16, Oa17, Oa21",
+      "file:checksum": "d501108f2e9dae4823dc3d203150f53be752bc",
+      "file:size": 16778068,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/iop_nn.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/iop_nn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(iop_nn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "iwv": {
+      "type": "application/netcdf",
+      "title": "Integrated water vapour column",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: Oa18, Oa19",
+      "file:checksum": "d501106a43e24c6ff2624a481049988366c617",
+      "file:size": 21776496,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/iwv.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/iwv.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(iwv.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "par": {
+      "type": "application/netcdf",
+      "title": "Photosynthetically active radiation",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501100ece3601534633b939a61f7cca06dd47",
+      "file:size": 7758840,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/par.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/par.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(par.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tsm-Nn": {
+      "type": "application/netcdf",
+      "title": "Total suspended matter concentration",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: Oa01, Oa02, Oa03, Oa04, Oa05, Oa06, Oa07, Oa08, Oa09, Oa10, Oa11, Oa12, Oa16, Oa17, Oa18, Oa21",
+      "file:checksum": "d50110d9982564d1c29bd985662d0ae7a89b08",
+      "file:size": 18775953,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/tsm_nn.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/tsm_nn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(tsm_nn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "w-Aer": {
+      "type": "application/netcdf",
+      "title": "Aerosol over water",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: Oa05, Oa06, Oa17",
+      "file:checksum": "d5011042e9c4eb0d114ceda10ce547999c3067",
+      "file:size": 22750546,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/w_aer.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/w_aer.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(w_aer.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "wqsf": {
+      "type": "application/netcdf",
+      "title": "Water quality and science flags",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110be7cbde0a36ff121cc17e6e7d0569108",
+      "file:size": 25006521,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/wqsf.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/wqsf.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(wqsf.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geo-coordinates": {
+      "type": "application/netcdf",
+      "title": "Geo Coordinates Annotations",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110ca91486c3ebae15da1e9d3671ff028ab",
+      "file:size": 48365280,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/geo_coordinates.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/geo_coordinates.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(geo_coordinates.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "instrument-data": {
+      "type": "application/netcdf",
+      "title": "Instrument Annotation",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110ab1e7a199c0a43dbdccaf1478d615dd6",
+      "file:size": 976771,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/instrument_data.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/instrument_data.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(instrument_data.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tie-geo-coordinates": {
+      "type": "application/netcdf",
+      "title": "Tie-Point Geo Coordinate Annotations",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110c0b4ed0d3dc4efdaa398765065b22054",
+      "file:size": 949453,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/tie_geo_coordinates.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/tie_geo_coordinates.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(tie_geo_coordinates.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tie-geometries": {
+      "type": "application/netcdf",
+      "title": "Tie-Point Geometries Annotations",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110492e6990c7b4482444f054af2a819f44",
+      "file:size": 2187170,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/tie_geometries.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/tie_geometries.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(tie_geometries.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tie-meteo": {
+      "type": "application/netcdf",
+      "title": "Tie-Point Meteo Annotations",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011051bbe79819bd6fabd6d7f0ee23f07837",
+      "file:size": 17850324,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/tie_meteo.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/tie_meteo.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(tie_meteo.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "time-coordinates": {
+      "type": "application/netcdf",
+      "title": "Time Coordinates Annotations",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110d75b8822df1f7c6df250ef29f652aa2d",
+      "file:size": 15523,
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/time_coordinates.nc",
+      "href": "s3://eodata/Sentinel-3/OLCI/OL_2_WFR/2021/07/10/S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3/time_coordinates.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/Nodes(S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3)/Nodes(time_coordinates.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:local_path": "S3A_OL_2_WFR____20210710T000038_20210710T000338_20210711T123048_0179_074_016_2880_MAR_O_NT_003.SEN3.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(e32ffe09-cba3-51ba-b47e-aefe7b6af4f0)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

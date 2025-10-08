@@ -1,0 +1,1177 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-aer-lh-offl",
+  "id": "S5P_OFFL_L2__AER_LH_20241203T104901_20241203T123031_37002_03_020800_20241205T011158",
+  "properties": {
+    "created": "2024-12-05T01:14:54.851000Z",
+    "updated": "2024-12-05T01:16:51.011639Z",
+    "published": "2024-12-05T01:16:50.162849Z",
+    "eopf:origin_datetime": "2024-12-05T01:14:54.851000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2024-12-03T12:08:57Z",
+    "start_datetime": "2024-12-03T12:08:57Z",
+    "end_datetime": "2024-12-03T12:08:59Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 3500,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      4,
+      448
+    ],
+    "sat:absolute_orbit": 37002,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along-track dimension index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across-track dimension index",
+        "extent": [
+          0,
+          448
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference time for the measurements",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2024-12-03T00:00:00.000000Z"
+        ]
+      },
+      "corner": {
+        "type": "other",
+        "description": "pixel corner index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "state_vector_length": {
+        "type": "other",
+        "description": "names of state vector elements",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "albedo_wavelength": {
+        "type": "other",
+        "description": "radiation_wavelength",
+        "extent": [
+          0,
+          2
+        ]
+      },
+      "vertices": {
+        "type": "other",
+        "extent": [
+          0,
+          2
+        ]
+      },
+      "aerosol_mid_pressure_histogram_axis": {
+        "type": "other",
+        "description": "Histogram of aerosol mid altitude",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "aerosol_mid_pressure_pdf_axis": {
+        "type": "other",
+        "description": "Probability density function of aerosol mid altitude",
+        "extent": [
+          0,
+          400
+        ]
+      },
+      "aerosol_mid_height_histogram_axis": {
+        "type": "other",
+        "description": "Histogram of aerosol mid altitude",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "aerosol_mid_height_pdf_axis": {
+        "type": "other",
+        "description": "Probability density function of aerosol mid altitude",
+        "extent": [
+          0,
+          400
+        ]
+      }
+    },
+    "cube:variables": {
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          470880000
+        ],
+        "description": "reference time for the measurements",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "corner": {
+        "dimensions": [
+          "corner"
+        ],
+        "type": "auxiliary",
+        "description": "pixel corner index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "state_vector_length": {
+        "dimensions": [
+          "state_vector_length"
+        ],
+        "type": "data",
+        "description": "names of state vector elements",
+        "data_type": "other"
+      },
+      "albedo_wavelength": {
+        "dimensions": [
+          "albedo_wavelength"
+        ],
+        "type": "data",
+        "description": "radiation_wavelength",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "offset of start time of measurement relative to time_reference",
+        "unit": "milliseconds since 2024-12-03 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time_utc": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "Time of observation as ISO 8601 date-time string",
+        "data_type": "other"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "aerosol_mid_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_center_of_aerosol_layer, never higher than surface pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_height": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Height at center of aerosol layer relative to geoid",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_pressure_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_center_of_aerosol_layer standard_error",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_height_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "height_at_center_of_aerosol_layer standard_error",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_latitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sub satellite latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_longitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite_longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_altitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_orbit_phase": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite orbit phase",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "geolocation_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "geolocation flags",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "processing_quality_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Processing quality flags",
+        "nodata": 4294967295,
+        "data_type": "uint32"
+      },
+      "number_of_spectral_points_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_iterations": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "aerosol_mid_pressure_not_clipped": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_center_of_aerosol_layer, can be higher than surface pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_optical_thickness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "aerosol_optical_thickness",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "albedo_wavelength"
+        ],
+        "type": "data",
+        "description": "surface_albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "albedo_wavelength"
+        ],
+        "type": "data",
+        "description": "surface_albedo error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "covariance_matrix": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "state_vector_length",
+          "state_vector_length"
+        ],
+        "type": "data",
+        "description": "Covariance matrix",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_optical_thickness_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "aerosol_optical_thickness standard_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "root_mean_square_error_of_fit": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "root_mean_square_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "chi_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "chi_squared",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "degrees_of_freedom": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "degrees_of_freedom",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_offset": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength offset",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_offset_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength offset precision",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_stretch": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength stretch",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_stretch_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength stretch precision",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_chi_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength calibration chi square",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_irradiance_offset": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "irradiance wavelength offset",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_irradiance_offset_precision": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "irradiance wavelength offset precision",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_irradiance_chi_square": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "irradiance wavelength calibration chi squared",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude precision",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_classification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Land-water mask and surface classification based on a static database",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "instrument_configuration_identifier": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcID",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "instrument_configuration_version": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcVersion",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "scaled_small_pixel_variance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaled small pixel variance",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "eastward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Eastward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "northward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Northward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_index_354_388": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Aerosol index from 388 and 354 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Cloud fraction from the cloud product",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viirs_cloud_mask": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Cloud mask from the VIIRS instrument on the Suomi NPP satellite",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viirs_cirrus_reflectance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Cirrus reflectance from the VIIRS instrument on the Suomi NPP satellite",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "diff_albedo_380": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Difference between scene and surface albedo at 380 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "small_pixel_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Standard deviation of small pixel radiance",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "snow_ice_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "aerosol_mid_pressure_histogram_axis": {
+        "dimensions": [
+          "aerosol_mid_pressure_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of aerosol mid altitude",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_pressure_pdf_axis": {
+        "dimensions": [
+          "aerosol_mid_pressure_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of aerosol mid altitude",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_pressure_histogram_bounds": {
+        "dimensions": [
+          "aerosol_mid_pressure_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_pressure_pdf_bounds": {
+        "dimensions": [
+          "aerosol_mid_pressure_pdf_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_height_histogram_axis": {
+        "dimensions": [
+          "aerosol_mid_height_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of aerosol mid altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_height_pdf_axis": {
+        "dimensions": [
+          "aerosol_mid_height_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of aerosol mid altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_height_histogram_bounds": {
+        "dimensions": [
+          "aerosol_mid_height_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_height_pdf_bounds": {
+        "dimensions": [
+          "aerosol_mid_height_pdf_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_height_histogram": {
+        "dimensions": [
+          "aerosol_mid_height_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the aerosol mid altitude in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "aerosol_mid_pressure_histogram": {
+        "dimensions": [
+          "aerosol_mid_pressure_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the aerosol mid pressure in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "aerosol_mid_height_pdf": {
+        "dimensions": [
+          "aerosol_mid_height_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the aerosol mid altitude in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_mid_pressure_pdf": {
+        "dimensions": [
+          "aerosol_mid_pressure_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the aerosol mid pressure in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      }
+    },
+    "product:type": "L2__AER_LH",
+    "processing:level": "L2",
+    "processing:facility": "PDGS-OP",
+    "processing:datetime": "2024-12-05T00:00:00Z",
+    "product:timeliness": "PT12H",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "2.8.0",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -48.462906,
+    67.48443,
+    44.985836,
+    82.65606
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -48.462906,
+          67.5572
+        ],
+        [
+          -47.97167,
+          67.48443
+        ],
+        [
+          -46.699852,
+          69.38314
+        ],
+        [
+          -44.892669999999995,
+          71.54938999999999
+        ],
+        [
+          -43.240498,
+          73.10455
+        ],
+        [
+          -41.64749499999999,
+          74.31473499999998
+        ],
+        [
+          -40.05890699999999,
+          75.30768599999999
+        ],
+        [
+          -38.435252999999996,
+          76.15484
+        ],
+        [
+          -34.94253499999999,
+          77.57325
+        ],
+        [
+          -30.848451999999995,
+          78.7781
+        ],
+        [
+          -25.649115,
+          79.87575
+        ],
+        [
+          -22.36671,
+          80.40264999999998
+        ],
+        [
+          -13.424127999999998,
+          81.41646
+        ],
+        [
+          -7.035585,
+          81.88069
+        ],
+        [
+          1.4303689,
+          82.266136
+        ],
+        [
+          12.877913999999999,
+          82.46714999999999
+        ],
+        [
+          28.265203,
+          82.232666
+        ],
+        [
+          41.215959999999995,
+          81.53102999999999
+        ],
+        [
+          44.50353199999999,
+          81.25782999999998
+        ],
+        [
+          44.985836,
+          81.43301400000001
+        ],
+        [
+          33.48809399999999,
+          82.21493499999998
+        ],
+        [
+          16.514015,
+          82.65606
+        ],
+        [
+          3.762132399999999,
+          82.532425
+        ],
+        [
+          -5.611376,
+          82.17197399999999
+        ],
+        [
+          -12.598709,
+          81.711975
+        ],
+        [
+          -22.194020999999996,
+          80.68941999999998
+        ],
+        [
+          -25.650169999999996,
+          80.15762999999998
+        ],
+        [
+          -31.253689,
+          79.00419599999998
+        ],
+        [
+          -35.214966,
+          77.85938999999999
+        ],
+        [
+          -38.71920399999999,
+          76.46921
+        ],
+        [
+          -41.891506,
+          74.69646499999999
+        ],
+        [
+          -43.442135,
+          73.55033
+        ],
+        [
+          -45.02896499999999,
+          72.102455
+        ],
+        [
+          -46.72965,
+          70.13907
+        ],
+        [
+          -48.462906,
+          67.5572
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_OFFL_L2__AER_LH_20241203T104901_20241203T123031_37002_03_020800_20241205T011158.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "UV Aerosol Layer Height",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "file:checksum": "d5011065e5dce35021ebe2587dcbe3d1dd4279",
+      "file:size": 602003,
+      "file:local_path": "S5P_OFFL_L2__AER_LH_20241203T104901_20241203T123031_37002_03_020800_20241205T011158.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__AER_LH/2024/12/03/S5P_OFFL_L2__AER_LH_20241203T104901_20241203T123031_37002_03_020800_20241205T011158.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(f82abf29-7504-4f9c-875b-781b12b81599)/Nodes(S5P_OFFL_L2__AER_LH_20241203T104901_20241203T123031_37002_03_020800_20241205T011158.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

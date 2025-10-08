@@ -1,0 +1,706 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "id": "sentinel-1-grd",
+  "type": "Collection",
+  "title": "Sentinel-1 Ground Range Detected (GRD)",
+  "description": "Level-1 Ground Range Detected (GRD) products consist of focused SAR data that has been detected, multi-looked and projected to ground range using the Earth ellipsoid model WGS84. The ellipsoid projection of the GRD products is corrected using the terrain height specified in the product general annotation. The terrain height used varies in azimuth and it is constant in range (For IW/EW modes only the terrain height of first subswath is considered)",
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2014-10-04T03:12:47Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "C-Band",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "GRD",
+    "IW_GRDH_1S",
+    "PT24H",
+    "SAR",
+    "Sentinel",
+    "Sentinel-1"
+  ],
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-1",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
+  ],
+  "auth:schemes": {
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+    },
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "cdse-s3": {
+      "title": "Copernicus Data Space Ecosystem S3",
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false,
+      "type": "custom-s3"
+    },
+    "creodias-s3": {
+      "title": "CREODIAS S3",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true,
+      "type": "custom-s3"
+    }
+  },
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S1_GRD.jpg",
+      "type": "image/jpeg",
+      "proj:shape": [
+        360,
+        640
+      ],
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Sentinel-1 Ground Range Detected (GRD)"
+    }
+  },
+  "summaries": {
+    "sar:polarizations": [
+      "VV",
+      "VH",
+      "HH",
+      "HV"
+    ],
+    "sar:frequency_band": [
+      "C"
+    ],
+    "sar:instrument_mode": [
+      "IW",
+      "EW",
+      "SM"
+    ],
+    "sar:center_frequency": [
+      5.405
+    ],
+    "sar:observation_direction": [
+      "right"
+    ],
+    "sat:orbit_state": [
+      "ascending",
+      "descending"
+    ],
+    "sat:platform_international_designator": [
+      "2014-016A",
+      "2016-025A",
+      "2024-235"
+    ],
+    "platform": [
+      "sentinel-1a",
+      "sentinel-1b",
+      "sentinel-1c"
+    ],
+    "instruments": [
+      "sar"
+    ],
+    "constellation": [
+      "sentinel-1"
+    ],
+    "processing:level": [
+      "L1"
+    ],
+    "processing:version": [
+      "003.52",
+      "003.61",
+      "003.71",
+      "003.80",
+      "1.0"
+    ],
+    "product:type": [
+      "IW_GRDH_1S",
+      "EW_GRDH_1S",
+      "S1_GRDH_1S",
+      "S2_GRDH_1S",
+      "S3_GRDH_1S",
+      "S4_GRDH_1S",
+      "S5_GRDH_1S",
+      "S6_GRDH_1S",
+      "EW_GRDM_1S"
+    ],
+    "product:timeliness": [
+      "PT24H"
+    ],
+    "product:timeliness_category": [
+      "Fast-24h",
+      "NRT-10m",
+      "NRT-3h"
+    ],
+    "view:incidence_angle": {
+      "minimum": 20,
+      "maximum": 45
+    }
+  },
+  "item_assets": {
+    "Product": {
+      "title": "Zipped product",
+      "type": "application/zip",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ]
+    },
+    "hh": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "HH: Horizontal transmit, horizontal receive",
+      "roles": [
+        "data"
+      ],
+      "data_type": "uint16",
+      "nodata": 0,
+      "proj:code": null,
+      "sar:polarizations": [
+        "HH"
+      ],
+      "description": "Amplitude of horizontally polarized signal received horizontally.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "hv": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "HV: Horizontal transmit, vertical receive",
+      "roles": [
+        "data"
+      ],
+      "data_type": "uint16",
+      "nodata": 0,
+      "proj:code": null,
+      "sar:polarizations": [
+        "HV"
+      ],
+      "description": "Amplitude of horizontally polarized signal received vertically.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "vh": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "VH: Vertical transmit, horizontal receive",
+      "roles": [
+        "data"
+      ],
+      "data_type": "uint16",
+      "nodata": 0,
+      "proj:code": null,
+      "sar:polarizations": [
+        "VH"
+      ],
+      "description": "Amplitude of vertically polarized signal received horizontally.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "vv": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "VV: Vertical transmit, vertical receive",
+      "roles": [
+        "data"
+      ],
+      "data_type": "uint16",
+      "nodata": 0,
+      "proj:code": null,
+      "sar:polarizations": [
+        "VV"
+      ],
+      "description": "Amplitude of vertically polarized signal received vertically.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-noise-hh": {
+      "type": "application/xml",
+      "title": "HH noise Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "HH"
+      ],
+      "description": "Estimated thermal noise look-up tables.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-noise-hv": {
+      "type": "application/xml",
+      "title": "HV noise Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "HV"
+      ],
+      "description": "Estimated thermal noise look-up tables.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-noise-vh": {
+      "type": "application/xml",
+      "title": "VH noise Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "VH"
+      ],
+      "description": "Estimated thermal noise look-up tables.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-noise-vv": {
+      "type": "application/xml",
+      "title": "VV noise Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "VV"
+      ],
+      "description": "Estimated thermal noise look-up tables.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-product-hh": {
+      "type": "application/xml",
+      "title": "HH product Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "HH"
+      ],
+      "description": "Main source of band's metadata, including: state of the platform during acquisition, image properties, Doppler information, geographic location, etc.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-product-hv": {
+      "type": "application/xml",
+      "title": "HV product Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "HV"
+      ],
+      "description": "Main source of band's metadata, including: state of the platform during acquisition, image properties, Doppler information, geographic location, etc.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-product-vh": {
+      "type": "application/xml",
+      "title": "VH product Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "VH"
+      ],
+      "description": "Main source of band's metadata, including: state of the platform during acquisition, image properties, Doppler information, geographic location, etc.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-product-vv": {
+      "type": "application/xml",
+      "title": "VV product Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "VV"
+      ],
+      "description": "Main source of band's metadata, including: state of the platform during acquisition, image properties, Doppler information, geographic location, etc.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-calibration-hh": {
+      "type": "application/xml",
+      "title": "HH calibration Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "HH"
+      ],
+      "description": "Calibration metadata including calibration details and lookup tables for beta nought, sigma nought, gamma, and digital numbers used in absolute product calibration.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-calibration-hv": {
+      "type": "application/xml",
+      "title": "HV calibration Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "HV"
+      ],
+      "description": "Calibration metadata including calibration details and lookup tables for beta nought, sigma nought, gamma, and digital numbers used in absolute product calibration.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-calibration-vh": {
+      "type": "application/xml",
+      "title": "VH calibration Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "VH"
+      ],
+      "description": "Calibration metadata including calibration details and lookup tables for beta nought, sigma nought, gamma, and digital numbers used in absolute product calibration.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "schema-calibration-vv": {
+      "type": "application/xml",
+      "title": "VV calibration Schema",
+      "roles": [
+        "metadata"
+      ],
+      "sar:polarizations": [
+        "VV"
+      ],
+      "description": "Calibration metadata including calibration details and lookup tables for beta nought, sigma nought, gamma, and digital numbers used in absolute product calibration.",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "safe_manifest": {
+      "type": "application/xml",
+      "title": "manifest.safe",
+      "roles": [
+        "metadata"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:shape": [
+        343,
+        343
+      ],
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ]
+}

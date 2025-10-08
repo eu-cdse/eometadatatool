@@ -1,0 +1,1357 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-o3-pr-offl",
+  "id": "S5P_OFFL_L2__O3__PR_20211211T104909_20211211T123039_21566_02_020301_20211213T011724",
+  "properties": {
+    "created": "2021-12-13T01:38:45.686000Z",
+    "updated": "2025-01-17T17:13:24.734789Z",
+    "published": "2022-04-07T18:31:41.370460Z",
+    "eopf:origin_datetime": "2021-12-13T01:38:45.686000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2021-12-11T12:09:05Z",
+    "start_datetime": "2021-12-11T12:09:05Z",
+    "end_datetime": "2021-12-11T12:09:07Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 21000,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      2,
+      77
+    ],
+    "sat:absolute_orbit": 21566,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along-track dimension index",
+        "extent": [
+          0,
+          2
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across-track dimension index",
+        "extent": [
+          0,
+          77
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference time for the measurements",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2021-12-11T00:00:00.000000Z"
+        ]
+      },
+      "corner": {
+        "type": "other",
+        "description": "pixel corner index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "dimension_surface_albedo": {
+        "type": "other",
+        "description": "Wavelengths at which the surface albedo is fitted",
+        "extent": [
+          0,
+          3
+        ]
+      },
+      "dimension_cloud_albedo": {
+        "type": "other",
+        "description": "Wavelengths at which the cloud albedo is fitted",
+        "extent": [
+          0,
+          3
+        ]
+      },
+      "subcolumns": {
+        "type": "other",
+        "description": "height of the subcolumn wrt the surface",
+        "extent": [
+          0,
+          6
+        ]
+      },
+      "level": {
+        "type": "other",
+        "extent": [
+          0,
+          33
+        ]
+      },
+      "vertices": {
+        "type": "other",
+        "extent": [
+          0,
+          2
+        ]
+      },
+      "ozone_total_column_histogram_axis": {
+        "type": "other",
+        "description": "Histogram of the ozone total vertical column",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "ozone_total_column_pdf_axis": {
+        "type": "other",
+        "description": "Probability density function of ozone total vertical column",
+        "extent": [
+          0,
+          400
+        ]
+      }
+    },
+    "cube:variables": {
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          376876800
+        ],
+        "description": "reference time for the measurements",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "corner": {
+        "dimensions": [
+          "corner"
+        ],
+        "type": "auxiliary",
+        "description": "pixel corner index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "dimension_surface_albedo": {
+        "dimensions": [
+          "dimension_surface_albedo"
+        ],
+        "type": "data",
+        "description": "Wavelengths at which the surface albedo is fitted",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "dimension_cloud_albedo": {
+        "dimensions": [
+          "dimension_cloud_albedo"
+        ],
+        "type": "data",
+        "description": "Wavelengths at which the cloud albedo is fitted",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "subcolumns": {
+        "dimensions": [
+          "subcolumns"
+        ],
+        "type": "data",
+        "description": "height of the subcolumn wrt the surface",
+        "unit": "m",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "level": {
+        "dimensions": [
+          "level"
+        ],
+        "type": "data",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "subcolumns_bounds": {
+        "dimensions": [
+          "subcolumns",
+          "vertices"
+        ],
+        "type": "data",
+        "unit": "m",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "offset of start time of measurement relative to time_reference",
+        "unit": "milliseconds since 2021-12-11 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time_utc": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "Time of observation as ISO 8601 date-time string",
+        "data_type": "other"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "ozone_profile": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "mole_concentration_of_ozone_in_air",
+        "unit": "mol m-3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_profile_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "mole_concentration_of_ozone_in_air noise error",
+        "unit": "mol m-3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_profile_smoothing": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "mole_concentration_of_ozone_in_air smoothing error",
+        "unit": "mol m-3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "atmosphere_mole_content_of_ozone",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "atmosphere_mole_content_of_ozone standard_error",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_tropospheric_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "troposphere_mole_content_of_ozone",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_tropospheric_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "troposphere_mole_content_of_ozone standard_error",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_profile_subcolumns": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "subcolumns"
+        ],
+        "type": "data",
+        "description": "mole_content_of_ozone_in_atmosphere_layer",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_profile_subcolumns_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "subcolumns"
+        ],
+        "type": "data",
+        "description": "mole_content_of_ozone_in_atmosphere_layer standard_error",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "altitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_latitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sub satellite latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_longitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite_longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_altitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_orbit_phase": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite orbit phase",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "geolocation_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "geolocation flags",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "processing_quality_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Processing quality flags",
+        "nodata": 4294967295,
+        "data_type": "uint32"
+      },
+      "number_of_spectral_points_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "convergence_status": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "convergence status",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_iterations": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "surface_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "dimension_surface_albedo"
+        ],
+        "type": "data",
+        "description": "surface_albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "dimension_surface_albedo"
+        ],
+        "type": "data",
+        "description": "surface_albedo standard_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "dimension_cloud_albedo"
+        ],
+        "type": "data",
+        "description": "cloud albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "dimension_cloud_albedo"
+        ],
+        "type": "data",
+        "description": "cloud albedo standard_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfur_dioxide_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "sulphur dioxide total column",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfur_dioxide_total_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "precision of the sulfur dioxide total column",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_profile_error_covariance_matrix": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level",
+          "level"
+        ],
+        "type": "data",
+        "description": "error covariance matrix for the ozone profile",
+        "unit": "mol2 m-6",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "averaging_kernel": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level",
+          "level"
+        ],
+        "type": "data",
+        "description": "averaging kernel",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "root_mean_square_error_of_fit": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "root-mean-square deviation of model and measurement",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "degrees_of_freedom": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total degrees of freedom for signal",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "degrees_of_freedom_ozone": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "degrees of freedom for the ozone profile",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cost_function": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cost function in the retrieval",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude precision",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_classification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Land-water mask and surface classification based on a static database",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "instrument_configuration_identifier": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcID",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "instrument_configuration_version": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcVersion",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "scaled_small_pixel_variance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaled small pixel variance",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "eastward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Eastward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "northward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Northward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_profile_apriori": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "A priori ozone profile",
+        "unit": "mol m-3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo_apriori": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "dimension_surface_albedo"
+        ],
+        "type": "data",
+        "description": "apriori surface albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_column_apriori": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "atmosphere_mole_content_of_ozone",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_profile_apriori_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "precision of a priori ozone profile",
+        "unit": "mol m-3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "covariance_matrix_apriori_surface_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "dimension_surface_albedo"
+        ],
+        "type": "data",
+        "description": "diagonal elements of a priori error covariance matrix of the surface albedo",
+        "unit": "various",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "covariance_matrix_apriori_cloud_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "dimension_cloud_albedo"
+        ],
+        "type": "data",
+        "description": "diagonal elements of a priori error covariance matrix of the cloud albedo",
+        "unit": "various",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb_apriori": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "dimension_cloud_albedo"
+        ],
+        "type": "data",
+        "description": "apriori cloud albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_pressure_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud fraction",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb_ozone_window": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective cloud fraction in ozone window",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_radiance_fraction_ozone_window": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective cloud radiance fraction in ozone window",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "reflectance_at_330nm": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "toa reflectance for cloud fraction determination",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "pressure_at_tropopause": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "tropopause_air_pressure from temperature profile",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_temperature": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "temperature at the surface",
+        "unit": "K",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "temperature_at_cloud_height": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "temperature at the level of clouds",
+        "unit": "K",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "temperature_at_tropopause": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "temperature at the tropopause",
+        "unit": "K",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "temperature": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "temperature",
+        "unit": "K",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "aerosol_index_354_388": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Aerosol index from 388 and 354 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "snow_ice_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "ozone_total_column_histogram_axis": {
+        "dimensions": [
+          "ozone_total_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the ozone total vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_column_pdf_axis": {
+        "dimensions": [
+          "ozone_total_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of ozone total vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_column_histogram_bounds": {
+        "dimensions": [
+          "ozone_total_column_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_column_pdf_bounds": {
+        "dimensions": [
+          "ozone_total_column_pdf_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_column_histogram": {
+        "dimensions": [
+          "ozone_total_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Ozone total vertical column",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ozone_total_column_pdf": {
+        "dimensions": [
+          "ozone_total_column_pdf_axis"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      }
+    },
+    "product:type": "L2__O3__PR",
+    "processing:level": "L2",
+    "processing:facility": "PDGS-OP",
+    "processing:datetime": "2021-12-13T00:00:00Z",
+    "product:timeliness": "PT12H",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "2.3.1",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -45.396633,
+    66.66119,
+    42.504677,
+    81.498985
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -45.396632999999994,
+          66.78403
+        ],
+        [
+          -44.69888999999999,
+          66.66119
+        ],
+        [
+          -44.034466,
+          67.627945
+        ],
+        [
+          -41.73646,
+          70.39524
+        ],
+        [
+          -39.403347,
+          72.48421499999999
+        ],
+        [
+          -37.51208499999999,
+          73.791626
+        ],
+        [
+          -36.263119999999994,
+          74.51277
+        ],
+        [
+          -33.0665,
+          75.984856
+        ],
+        [
+          -31.722390000000004,
+          76.48324999999998
+        ],
+        [
+          -28.070848,
+          77.58794
+        ],
+        [
+          -21.752294999999997,
+          78.9271
+        ],
+        [
+          -19.525620999999997,
+          79.28203599999999
+        ],
+        [
+          -12.590624999999998,
+          80.123535
+        ],
+        [
+          -9.037161999999999,
+          80.43565
+        ],
+        [
+          4.6042094,
+          81.120476
+        ],
+        [
+          17.982259999999997,
+          81.20152999999999
+        ],
+        [
+          30.898980999999996,
+          80.78422999999998
+        ],
+        [
+          41.955853,
+          79.96542
+        ],
+        [
+          42.504677,
+          80.23377
+        ],
+        [
+          37.435913000000006,
+          80.6712
+        ],
+        [
+          25.443546,
+          81.31524
+        ],
+        [
+          20.244725999999996,
+          81.45347999999998
+        ],
+        [
+          9.33257,
+          81.498985
+        ],
+        [
+          -3.247859,
+          81.12275999999999
+        ],
+        [
+          -7.931821300000001,
+          80.8415
+        ],
+        [
+          -16.691965,
+          80.030495
+        ],
+        [
+          -19.38425,
+          79.68248999999999
+        ],
+        [
+          -24.852975999999998,
+          78.76997
+        ],
+        [
+          -26.67966,
+          78.38557
+        ],
+        [
+          -30.660927,
+          77.35283999999999
+        ],
+        [
+          -32.08343,
+          76.899734
+        ],
+        [
+          -35.370613,
+          75.60900999999998
+        ],
+        [
+          -36.614993999999996,
+          75.00253
+        ],
+        [
+          -39.363018000000004,
+          73.32880999999999
+        ],
+        [
+          -41.552589999999995,
+          71.531555
+        ],
+        [
+          -43.97256999999999,
+          68.8372
+        ],
+        [
+          -45.396632999999994,
+          66.78403
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_OFFL_L2__O3__PR_20211211T104909_20211211T123039_21566_02_020301_20211213T011724.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Atmospheric Ozone Concentration",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "file:checksum": "d50110c7e5c0573f78d642426751bf867820b1",
+      "file:size": 637066,
+      "file:local_path": "S5P_OFFL_L2__O3__PR_20211211T104909_20211211T123039_21566_02_020301_20211213T011724.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__O3__PR/2021/12/11/S5P_OFFL_L2__O3__PR_20211211T104909_20211211T123039_21566_02_020301_20211213T011724.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(66bb467b-ae90-5ed5-b79f-e1f27d7c100e)/Nodes(S5P_OFFL_L2__O3__PR_20211211T104909_20211211T123039_21566_02_020301_20211213T011724.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

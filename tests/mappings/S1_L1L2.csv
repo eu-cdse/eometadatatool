@@ -1,0 +1,12 @@
+metadata;file;mappings;datatype
+cycleNumber;manifest.safe;//safe:orbitReference/safe:cycleNumber/text();Int64
+orbitDirection;manifest.safe;//safe:orbitReference/safe:extension/s1:orbitProperties/s1:pass/text();String
+coordinates;manifest.safe;//safe:frameSet/safe:frame/safe:footPrint/gml:coordinates/text();WKT
+instrumentConfigurationID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='instrumentConfigurationID']/text();Int64
+datatakeID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='missionDataTakeID']/text();Int64
+polarisationChannels;manifest.safe;join(//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation']/text());String
+0:processingdate;manifest.safe;//safe:processing/@start;String
+1:datetime;manifest.safe;date_format(//safe:processing/@start);String
+2:roundUpDate;manifest.safe;date_format(//safe:processing/@start, '%Y-%m-%d', '23h59m59s');String
+3:orbitDirection;manifest.safe;map(lowercase(//safe:orbitReference/safe:extension/s1:orbitProperties/s1:pass),'{"asc":"ASCENDING","ascending":"ASCENDING","default":"DESCENDING"}');String
+

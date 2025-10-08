@@ -1,0 +1,12 @@
+metadata;file;mappings;datatype
+processingDate;manifest.safe;//*[local-name()='processing']/@start;DateTimeOffset
+processingCenter;manifest.safe;//*[local-name()='processing']/*[local-name()='facility']/@site;String
+processorName;manifest.safe;//*[local-name()='processing']/*[local-name()='software']/@name;String
+processorVersion;manifest.safe;//*[local-name()='processing']/*[local-name()='software']/@version;String
+platformShortName;manifest.safe;//*[local-name()='platform']/*[local-name()='familyName']/text();String
+platformSerialIdentifier;manifest.safe;//*[local-name()='platform']/*[local-name()='number']/text();String
+instrumentShortName;manifest.safe;//*[local-name()='platform']/*[local-name()='instrument']/*[local-name()='familyName']/@abbreviation;String
+productType;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='auxProductType']/text();String
+beginningDateTime;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='validity']/text();DateTimeOffset
+productGeneration;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='generation']/text();DateTimeOffset
+instrumentConfigurationID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='instrumentConfigurationId']/text();String

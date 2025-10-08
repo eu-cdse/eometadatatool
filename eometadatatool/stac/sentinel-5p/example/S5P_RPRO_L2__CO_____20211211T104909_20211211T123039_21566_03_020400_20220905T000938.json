@@ -1,0 +1,1026 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-co-rpro",
+  "id": "S5P_RPRO_L2__CO_____20211211T104909_20211211T123039_21566_03_020400_20220905T000938",
+  "properties": {
+    "created": "2022-12-07T02:20:46.502713Z",
+    "updated": "2025-01-17T17:13:31.106693Z",
+    "published": "2022-12-07T04:17:03.377197Z",
+    "eopf:origin_datetime": "2022-12-07T02:20:46.502713Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2021-12-11T12:09:02Z",
+    "start_datetime": "2021-12-11T12:09:02Z",
+    "end_datetime": "2021-12-11T12:09:07Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 7000,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      7,
+      215
+    ],
+    "sat:absolute_orbit": 21566,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along-track dimension index",
+        "extent": [
+          0,
+          7
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across-track dimension index",
+        "extent": [
+          0,
+          215
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference time for the measurements",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2021-12-11T00:00:00.000000Z"
+        ]
+      },
+      "corner": {
+        "type": "other",
+        "description": "pixel corner index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "layer": {
+        "type": "other",
+        "description": "Height above topographic surface",
+        "extent": [
+          0,
+          50
+        ]
+      },
+      "vertices": {
+        "type": "other",
+        "extent": [
+          0,
+          2
+        ]
+      },
+      "CO_total_vertical_column_histogram_axis": {
+        "type": "other",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "CO_total_vertical_column_pdf_axis": {
+        "type": "other",
+        "extent": [
+          0,
+          400
+        ]
+      }
+    },
+    "cube:variables": {
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          376876800
+        ],
+        "description": "reference time for the measurements",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "corner": {
+        "dimensions": [
+          "corner"
+        ],
+        "type": "auxiliary",
+        "description": "pixel corner index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "layer": {
+        "dimensions": [
+          "layer"
+        ],
+        "type": "data",
+        "description": "Height above topographic surface",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "offset of start time of measurement relative to time_reference",
+        "unit": "milliseconds since 2021-12-11 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time_utc": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "Time of observation as ISO 8601 date-time string",
+        "data_type": "other"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Vertically integrated CO column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Standard error of the vertically integrated CO column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column_corrected": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "carbonmonoxide_total_column - carbonmonoxide_total_column_stripe_offset",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_latitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sub satellite latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_longitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite_longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_altitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_orbit_phase": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite orbit phase",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "geolocation_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "geolocation flags",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "processing_quality_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Processing quality flags",
+        "nodata": 4294967295,
+        "data_type": "uint32"
+      },
+      "number_of_spectral_points_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "pressure_levels": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "Pressure at bottom of layer",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "water_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Vertically integrated H2O column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "water_total_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of vertically integrated H2O column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "semiheavy_water_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Vertically integrated HDO column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "semiheavy_water_total_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of the vertically integrated HDO column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "scattering_optical_thickness_SWIR": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Scattering optical depth at 2330 nm wavelength",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "height_scattering_layer": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Scattering layer height above the topographic surface",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo_2325": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface albedo at 2325 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo_2335": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface albedo at 2335 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_offset": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Spectral offset",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "chi_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "chi squared of fit residuals",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "degrees_of_freedom": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "degrees of freedom for signal",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_iterations": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "column_averaging_kernel": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "CO column averaging kernel",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "methane_total_column_prefit": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Vertically integrated CH4 column from pre-fit",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "methane_weak_twoband_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Vertically integrated CH4 column from weak band",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "methane_strong_twoband_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Vertically integrated CH4 column from strong band",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "water_weak_twoband_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Vertically integrated H2O column from weak band",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "water_strong_twoband_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Vertically integrated H2O column from strong band",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column_stripe_offset": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Stripe offset as applied to the carbonmonoxide_total_column_corrected variable",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude precision",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_classification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Land-water mask and surface classification based on a static database",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "instrument_configuration_identifier": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcID",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "instrument_configuration_version": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcVersion",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "scaled_small_pixel_variance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaled small pixel variance",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "eastward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Eastward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "northward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Northward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_profile_apriori": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "CO a priori profile",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column_histogram_axis": {
+        "dimensions": [
+          "CO_total_vertical_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the CO total vertical column",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column_pdf_axis": {
+        "dimensions": [
+          "CO_total_vertical_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of CO total vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column_histogram_bounds": {
+        "dimensions": [
+          "CO_total_vertical_column_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column_pdf_bounds": {
+        "dimensions": [
+          "CO_total_vertical_column_pdf_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "carbonmonoxide_total_column_histogram": {
+        "dimensions": [
+          "CO_total_vertical_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the CO column in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "carbonmonoxide_total_column_pdf": {
+        "dimensions": [
+          "CO_total_vertical_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the CO column in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      }
+    },
+    "product:type": "L2__CO____",
+    "processing:level": "L2",
+    "processing:facility": "SENTINEL-5P ionos-s5p-4",
+    "processing:datetime": "2022-09-05T00:00:00Z",
+    "processing:version": "2.4.0",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -45.369328,
+    66.79818,
+    41.521065,
+    81.54302
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -45.369328,
+          66.94176
+        ],
+        [
+          -44.550839999999994,
+          66.79818000000002
+        ],
+        [
+          -42.48981,
+          69.4869
+        ],
+        [
+          -40.382079999999995,
+          71.59218
+        ],
+        [
+          -38.92043699999999,
+          72.75989999999999
+        ],
+        [
+          -35.635323,
+          74.763435
+        ],
+        [
+          -32.272648,
+          76.21927
+        ],
+        [
+          -28.582097999999995,
+          77.393234
+        ],
+        [
+          -24.258607999999995,
+          78.41245
+        ],
+        [
+          -18.813248,
+          79.34282
+        ],
+        [
+          -11.353890999999999,
+          80.204414
+        ],
+        [
+          -5.5674795999999995,
+          80.64849
+        ],
+        [
+          -0.11465639,
+          80.93404999999998
+        ],
+        [
+          9.2649355,
+          81.18464
+        ],
+        [
+          18.444391,
+          81.17618
+        ],
+        [
+          34.45591,
+          80.56272999999999
+        ],
+        [
+          40.903873,
+          80.05863
+        ],
+        [
+          41.52106499999999,
+          80.37377999999998
+        ],
+        [
+          25.988518000000003,
+          81.32925399999999
+        ],
+        [
+          11.683318,
+          81.54301999999998
+        ],
+        [
+          3.5208871,
+          81.41034
+        ],
+        [
+          -9.729839,
+          80.72916399999998
+        ],
+        [
+          -14.9606905,
+          80.24661999999998
+        ],
+        [
+          -21.790228000000003,
+          79.33962
+        ],
+        [
+          -28.691195999999994,
+          77.92359999999998
+        ],
+        [
+          -32.486076,
+          76.78617
+        ],
+        [
+          -35.854139999999994,
+          75.41323
+        ],
+        [
+          -39.047625999999994,
+          73.59245
+        ],
+        [
+          -40.89793399999999,
+          72.17882999999999
+        ],
+        [
+          -42.357859999999995,
+          70.80118
+        ],
+        [
+          -44.532596999999996,
+          68.1775
+        ],
+        [
+          -45.369328,
+          66.94176
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_RPRO_L2__CO_____20211211T104909_20211211T123039_21566_03_020400_20220905T000938.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Carbon Monoxide Concentration",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "file:checksum": "d50110b2937e6b7930ad94a0c141fbfd2593a2",
+      "file:size": 519078,
+      "file:local_path": "S5P_RPRO_L2__CO_____20211211T104909_20211211T123039_21566_03_020400_20220905T000938.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__CO____/2021/12/11/S5P_RPRO_L2__CO_____20211211T104909_20211211T123039_21566_03_020400_20220905T000938.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(77b72bd6-45a8-5c36-bf39-ed6ae671e839)/Nodes(S5P_RPRO_L2__CO_____20211211T104909_20211211T123039_21566_03_020400_20220905T000938.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

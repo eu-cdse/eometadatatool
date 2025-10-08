@@ -1,0 +1,1937 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
+  ],
+  "id": "sentinel-3-olci-1-efr-nrt",
+  "type": "Collection",
+  "title": "Sentinel-3 OLCI Earth Observation Full Resolution (NRT)",
+  "description": "The Ocean and Land Color Instrument (OLCI) Earth Observation Full Resolution dataset contains top of atmosphere radiances at 21 spectral bands with center wavelengths ranging between 0.4µm and 1.02µm at spatial resolution of 300m with worldwide coverage every ~2 days.",
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-04-16T19:36:28.012367Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "300m",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "Earth",
+    "Global",
+    "OLCI",
+    "OL_1_EFR____",
+    "PT3H",
+    "Satellite",
+    "Sentinel",
+    "Sentinel-3"
+  ],
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-3",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S3_OL1_EFR-ERR.jpg",
+      "type": "image/jpeg",
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ],
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Sentinel-3 OLCI Earth Observation Thumbnail"
+    }
+  },
+  "bands": [
+    {
+      "name": "Oa01",
+      "description": "Aerosol correction, improved water constituent retrieval",
+      "eo:center_wavelength": 0.4,
+      "eo:full_width_half_max": 0.015
+    },
+    {
+      "name": "Oa02",
+      "description": "Yellow substance and detrital pigments (turbidity)",
+      "eo:center_wavelength": 0.4125,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa03",
+      "description": "Chlorophyll absorption maximum, biogeochemistry, vegetation",
+      "eo:center_wavelength": 0.4425,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa04",
+      "description": "Chlorophyll",
+      "eo:center_wavelength": 0.49,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa05",
+      "description": "Chlorophyll, sediment, turbidity, red tide",
+      "eo:center_wavelength": 0.51,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa06",
+      "description": "Chlorophyll reference (minimum)",
+      "eo:center_wavelength": 0.56,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa07",
+      "description": "Sediment loading",
+      "eo:center_wavelength": 0.62,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa08",
+      "description": "2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+      "eo:center_wavelength": 0.665,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa09",
+      "description": "Improved fluorescence retrieval",
+      "eo:center_wavelength": 0.67375,
+      "eo:full_width_half_max": 0.0075
+    },
+    {
+      "name": "Oa10",
+      "description": "Chlorophyll fluorescence peak, red edge",
+      "eo:center_wavelength": 0.68125,
+      "eo:full_width_half_max": 0.0075
+    },
+    {
+      "name": "Oa11",
+      "description": "Chlorophyll fluorescence baseline, red edge transition",
+      "eo:center_wavelength": 0.70875,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa12",
+      "description": "O2 absorption / clouds, vegetation",
+      "eo:center_wavelength": 0.75375,
+      "eo:full_width_half_max": 0.0075
+    },
+    {
+      "name": "Oa13",
+      "description": "O2 absorption / aerosol correction",
+      "eo:center_wavelength": 0.76125,
+      "eo:full_width_half_max": 0.0025
+    },
+    {
+      "name": "Oa14",
+      "description": "Atmospheric correction",
+      "eo:center_wavelength": 0.764375,
+      "eo:full_width_half_max": 0.00375
+    },
+    {
+      "name": "Oa15",
+      "description": "O2 absorption used for cloud top pressure, fluorescence over land",
+      "eo:center_wavelength": 0.7675,
+      "eo:full_width_half_max": 0.0025
+    },
+    {
+      "name": "Oa16",
+      "description": "Atmospheric / aerosol correction",
+      "eo:center_wavelength": 0.77875,
+      "eo:full_width_half_max": 0.015
+    },
+    {
+      "name": "Oa17",
+      "description": "Atmospheric / aerosol correction, clouds, pixel co-registration",
+      "eo:center_wavelength": 0.865,
+      "eo:full_width_half_max": 0.02
+    },
+    {
+      "name": "Oa18",
+      "description": "Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+      "eo:center_wavelength": 0.885,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa19",
+      "description": "Water vapour absorption, vegetation monitoring (maximum REFLECTANCE)",
+      "eo:center_wavelength": 0.9,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa20",
+      "description": "Water vapour absorption, atmospheric / aerosol correction",
+      "eo:center_wavelength": 0.94,
+      "eo:full_width_half_max": 0.02
+    },
+    {
+      "name": "Oa21",
+      "description": "Water vapour absorption, atmospheric / aerosol correction",
+      "eo:center_wavelength": 1.02,
+      "eo:full_width_half_max": 0.04
+    }
+  ],
+  "summaries": {
+    "gsd": [
+      300
+    ],
+    "proj:code": [
+      null
+    ],
+    "platform": [
+      "sentinel-3a",
+      "sentinel-3b"
+    ],
+    "instruments": [
+      "olci"
+    ],
+    "constellation": [
+      "sentinel-3"
+    ],
+    "product:type": [
+      "OL_1_EFR____"
+    ],
+    "product:timeliness": [
+      "PT3H"
+    ],
+    "product:timeliness_category": [
+      "NR"
+    ],
+    "processing:level": [
+      "L1"
+    ],
+    "processing:version": [
+      "03.24",
+      "03.25",
+      "03.27",
+      "03.29",
+      "03.30",
+      "03.32",
+      "03.34",
+      "03.35",
+      "03.37",
+      "03.38",
+      "03.39",
+      "03.43",
+      "03.44",
+      "03.45",
+      "03.48",
+      "03.49",
+      "03.50"
+    ],
+    "sat:orbit_state": [
+      "ascending",
+      "descending"
+    ],
+    "sat:platform_international_designator": [
+      "2016-011A",
+      "2018-039A"
+    ],
+    "statistics": {
+      "type": "object",
+      "properties": {
+        "saline_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "coastal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fresh_inland_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "tidal_region": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "bright": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "invalid": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cosmetic": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "duplicated": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "saturated": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dubious_samples": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  },
+  "auth:schemes": {
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+    },
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "cdse-s3": {
+      "title": "Copernicus Data Space Ecosystem S3",
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false,
+      "type": "custom-s3"
+    },
+    "creodias-s3": {
+      "title": "CREODIAS S3",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true,
+      "type": "custom-s3"
+    }
+  },
+  "item_assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "geo-coordinates": {
+      "type": "application/netcdf",
+      "title": "Geo Coordinates Annotations",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "instrument-data": {
+      "type": "application/netcdf",
+      "title": "Instrument Data Annotations",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "quality-flags": {
+      "type": "application/netcdf",
+      "title": "Quality Flags Annotations",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tie-geo-coordinates": {
+      "type": "application/netcdf",
+      "title": "Tie Geo Coordinates Annotations",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tie-geometries": {
+      "type": "application/netcdf",
+      "title": "Tie Geometries Annotations",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tie-meteo": {
+      "type": "application/netcdf",
+      "title": "Tie Meteo Annotations",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "time-coordinates": {
+      "type": "application/netcdf",
+      "title": "Time Coordinates Annotations",
+      "roles": [
+        "data"
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa01_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa01",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa01",
+          "description": "Aerosol correction, improved water constituent retrieval",
+          "eo:center_wavelength": 0.4,
+          "eo:full_width_half_max": 0.015
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa01_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa01",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa01",
+          "description": "Aerosol correction, improved water constituent retrieval",
+          "eo:center_wavelength": 0.4,
+          "eo:full_width_half_max": 0.015
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa02_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa02",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa02",
+          "description": "Yellow substance and detrital pigments (turbidity)",
+          "eo:center_wavelength": 0.4125,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa02_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa02",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa02",
+          "description": "Yellow substance and detrital pigments (turbidity)",
+          "eo:center_wavelength": 0.4125,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa03_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa03",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa03",
+          "description": "Chlorophyll absorption maximum, biogeochemistry, vegetation",
+          "eo:center_wavelength": 0.4425,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa03_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa03",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa03",
+          "description": "Chlorophyll absorption maximum, biogeochemistry, vegetation",
+          "eo:center_wavelength": 0.4425,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa04_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa04",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa04",
+          "description": "Chlorophyll",
+          "eo:center_wavelength": 0.49,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa04_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa04",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa04",
+          "description": "Chlorophyll",
+          "eo:center_wavelength": 0.49,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa05_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa05",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa05",
+          "description": "Chlorophyll, sediment, turbidity, red tide",
+          "eo:center_wavelength": 0.51,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa05_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa05",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa05",
+          "description": "Chlorophyll, sediment, turbidity, red tide",
+          "eo:center_wavelength": 0.51,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa06_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa06",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa06",
+          "description": "Chlorophyll reference (minimum)",
+          "eo:center_wavelength": 0.56,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa06_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa06",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa06",
+          "description": "Chlorophyll reference (minimum)",
+          "eo:center_wavelength": 0.56,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa07_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa07",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa07",
+          "description": "Sediment loading",
+          "eo:center_wavelength": 0.62,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa07_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa07",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa07",
+          "description": "Sediment loading",
+          "eo:center_wavelength": 0.62,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa08_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa08",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa08",
+          "description": "2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+          "eo:center_wavelength": 0.665,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa08_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa08",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa08",
+          "description": "2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+          "eo:center_wavelength": 0.665,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa09_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa09",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa09",
+          "description": "Improved fluorescence retrieval",
+          "eo:center_wavelength": 0.67375,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa09_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa09",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa09",
+          "description": "Improved fluorescence retrieval",
+          "eo:center_wavelength": 0.67375,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa10_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa10",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa10",
+          "description": "Chlorophyll fluorescence peak, red edge",
+          "eo:center_wavelength": 0.68125,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa10_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa10",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa10",
+          "description": "Chlorophyll fluorescence peak, red edge",
+          "eo:center_wavelength": 0.68125,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa11_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa11",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa11",
+          "description": "Chlorophyll fluorescence baseline, red edge transition",
+          "eo:center_wavelength": 0.70875,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa11_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa11",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa11",
+          "description": "Chlorophyll fluorescence baseline, red edge transition",
+          "eo:center_wavelength": 0.70875,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa12_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa12",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa12",
+          "description": "O2 absorption / clouds, vegetation",
+          "eo:center_wavelength": 0.75375,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa12_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa12",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa12",
+          "description": "O2 absorption / clouds, vegetation",
+          "eo:center_wavelength": 0.75375,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa13_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa13",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa13",
+          "description": "O2 absorption / aerosol correction",
+          "eo:center_wavelength": 0.76125,
+          "eo:full_width_half_max": 0.0025
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa13_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa13",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa13",
+          "description": "O2 absorption / aerosol correction",
+          "eo:center_wavelength": 0.76125,
+          "eo:full_width_half_max": 0.0025
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa14_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa14",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa14",
+          "description": "Atmospheric correction",
+          "eo:center_wavelength": 0.764375,
+          "eo:full_width_half_max": 0.00375
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa14_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa14",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa14",
+          "description": "Atmospheric correction",
+          "eo:center_wavelength": 0.764375,
+          "eo:full_width_half_max": 0.00375
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa15_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa15",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa15",
+          "description": "O2 absorption used for cloud top pressure, fluorescence over land",
+          "eo:center_wavelength": 0.7675,
+          "eo:full_width_half_max": 0.0025
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa15_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa15",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa15",
+          "description": "O2 absorption used for cloud top pressure, fluorescence over land",
+          "eo:center_wavelength": 0.7675,
+          "eo:full_width_half_max": 0.0025
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa16_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa16",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa16",
+          "description": "Atmospheric / aerosol correction",
+          "eo:center_wavelength": 0.77875,
+          "eo:full_width_half_max": 0.015
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa16_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa16",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa16",
+          "description": "Atmospheric / aerosol correction",
+          "eo:center_wavelength": 0.77875,
+          "eo:full_width_half_max": 0.015
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa17_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa17",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa17",
+          "description": "Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "eo:center_wavelength": 0.865,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa17_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa17",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa17",
+          "description": "Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "eo:center_wavelength": 0.865,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa18_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa18",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa18",
+          "description": "Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+          "eo:center_wavelength": 0.885,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa18_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa18",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa18",
+          "description": "Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+          "eo:center_wavelength": 0.885,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa19_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa19",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa19",
+          "description": "Water vapour absorption, vegetation monitoring (maximum REFLECTANCE)",
+          "eo:center_wavelength": 0.9,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa19_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa19",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa19",
+          "description": "Water vapour absorption, vegetation monitoring (maximum REFLECTANCE)",
+          "eo:center_wavelength": 0.9,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa20_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa20",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa20",
+          "description": "Water vapour absorption, atmospheric / aerosol correction",
+          "eo:center_wavelength": 0.94,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa20_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa20",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa20",
+          "description": "Water vapour absorption, atmospheric / aerosol correction",
+          "eo:center_wavelength": 0.94,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa21_radianceData": {
+      "type": "application/netcdf",
+      "title": "TOA radiance for OLCI acquisition band Oa21",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa21",
+          "description": "Water vapour absorption, atmospheric / aerosol correction",
+          "eo:center_wavelength": 1.02,
+          "eo:full_width_half_max": 0.04
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Oa21_radiance_uncData": {
+      "type": "application/netcdf",
+      "title": "Log10 scaled Radiometric Uncertainty Estimate for OLCI acquisition band Oa21",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Oa21",
+          "description": "Water vapour absorption, atmospheric / aerosol correction",
+          "eo:center_wavelength": 1.02,
+          "eo:full_width_half_max": 0.04
+        }
+      ],
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ]
+}

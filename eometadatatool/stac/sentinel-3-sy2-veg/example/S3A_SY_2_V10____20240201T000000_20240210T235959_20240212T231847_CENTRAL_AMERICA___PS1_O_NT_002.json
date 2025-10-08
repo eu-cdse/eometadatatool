@@ -1,0 +1,641 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-3-syn-2-v10-ntc",
+  "id": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002",
+  "properties": {
+    "created": "2024-02-12T23:42:49.005000Z",
+    "updated": "2024-02-12T23:49:30.365749Z",
+    "published": "2024-02-12T23:48:57.064970Z",
+    "eopf:origin_datetime": "2024-02-12T23:42:49.005000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2024-02-01T00:00:00.000000Z",
+    "start_datetime": "2024-02-01T00:00:00.000000Z",
+    "end_datetime": "2024-02-10T23:59:59.000000Z",
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "olci",
+      "slstr"
+    ],
+    "gsd": 1000,
+    "processing:level": "L2",
+    "processing:datetime": "2024-02-12T23:30:21.000000Z",
+    "proj:code": null,
+    "sat:absolute_orbit": 41168,
+    "sat:orbit_cycle": 108,
+    "sat:orbit_state": "descending",
+    "sat:platform_international_designator": "2016-011A",
+    "eo:cloud_cover": 4.6,
+    "eo:snow_cover": 2.009892,
+    "product:type": "SY_2_V10___",
+    "product:timeliness": "P1M",
+    "product:timeliness_category": "NT",
+    "statistics": {
+      "land": 39.65487
+    },
+    "processing:version": "03.49",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -124.991,
+    3.60956e-12,
+    -50.0,
+    49.9911
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -124.991,
+          3.609559999999999e-12
+        ],
+        [
+          -49.99999999999999,
+          3.609559999999999e-12
+        ],
+        [
+          -49.99999999999999,
+          49.9911
+        ],
+        [
+          -124.991,
+          49.9911
+        ],
+        [
+          -124.991,
+          3.609559999999999e-12
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/xfdumanifest.xml",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/xfdumanifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(xfdumanifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/quicklook.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(4e1b946b-4554-48bd-8248-63943572481b)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/quicklook.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "B0": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B0 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B0",
+          "description": "OLCI channels Oa02, Oa03",
+          "eo:center_wavelength": 0.45,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "file:checksum": "d5011031ee631051e0822545b915842aaa2bcc",
+      "file:size": 23749556,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/B0.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/B0.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(B0.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B2": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B2 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B2",
+          "description": "OLCI channels Oa06, Oa07, Oa08, Oa09, Oa10",
+          "eo:center_wavelength": 0.645,
+          "eo:full_width_half_max": 0.035
+        }
+      ],
+      "file:checksum": "d501104a27b12f29050030f87197466fa64bac",
+      "file:size": 24851344,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/B2.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/B2.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(B2.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B3": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B3 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B3",
+          "description": "OLCI channels Oa16, Oa17, Oa18, Oa21",
+          "eo:center_wavelength": 0.835,
+          "eo:full_width_half_max": 0.055
+        }
+      ],
+      "file:checksum": "d501102e268ed90fd34fa8b2ed01bdadc23be5",
+      "file:size": 26144104,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/B3.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/B3.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(B3.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "MIR": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-MIR channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "MIR",
+          "description": "SLSTR nadir and oblique channels S5, S6",
+          "eo:center_wavelength": 1.665,
+          "eo:full_width_half_max": 0.085
+        }
+      ],
+      "file:checksum": "d501107eb3183eac6a17c391a400aeaa15607e",
+      "file:size": 26557652,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/MIR.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/MIR.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(MIR.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "og": {
+      "type": "application/netcdf",
+      "title": "Total Ozone column data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011079208ba1ec0b3fcedcf0e35f5c523b81",
+      "file:size": 568505,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/og.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/og.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(og.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "saa": {
+      "type": "application/netcdf",
+      "title": "Solar azimuth angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011042220f7aad8f07595a574b9da5bde581",
+      "file:size": 4525682,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/saa.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/saa.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(saa.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "sm": {
+      "type": "application/netcdf",
+      "title": "Status Map data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110f10d1074161497799af7c3f39ef4c1bb",
+      "file:size": 4307186,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/sm.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/sm.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(sm.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "sza": {
+      "type": "application/netcdf",
+      "title": "Solar zenith angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501104ad9d6535e59327dd4a96bef94c4f230",
+      "file:size": 4925961,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/sza.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/sza.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(sza.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "vaa": {
+      "type": "application/netcdf",
+      "title": "View azimuth angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110cafa4b2a55f221d33aa8b99523eb8d70",
+      "file:size": 3673760,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/vaa.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/vaa.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(vaa.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "vza": {
+      "type": "application/netcdf",
+      "title": "View zenith angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110a839ba05f0e66452a029e296546aed14",
+      "file:size": 7387445,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/vza.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/vza.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(vza.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "wvg": {
+      "type": "application/netcdf",
+      "title": "Total column water vapour data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110e6ad8e69548e386675032a506604636c",
+      "file:size": 8179037,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/wvg.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/wvg.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(wvg.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ag": {
+      "type": "application/netcdf",
+      "title": "Aerosol optical thickness data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011039d765e2ed20297f373f61006d2c51a6",
+      "file:size": 11870495,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/ag.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/ag.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(ag.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "NDVI": {
+      "type": "application/netcdf",
+      "title": "Normalised difference vegetation index",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: B2, B3",
+      "file:checksum": "d501106b854de92a691460a9f3897268e59f75",
+      "file:size": 15449413,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/NDVI.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/NDVI.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(NDVI.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tg": {
+      "type": "application/netcdf",
+      "title": "Synthesis time data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501100e089e394aeabb642e819703b0dfaf8a",
+      "file:size": 7977766,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/tg.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_V10___/2024/02/01/S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3/tg.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/Nodes(S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3)/Nodes(tg.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110d426e2aa56acbf35252e4045a56ae1f2",
+      "file:size": 177229667,
+      "file:local_path": "S3A_SY_2_V10____20240201T000000_20240210T235959_20240212T231847_CENTRAL_AMERICA___PS1_O_NT_002.SEN3.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(28e43ca2-44f0-49e1-9f25-6a8a2defedbe)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-2-global-mosaics",
+  "id": "Sentinel-2_mosaic_2024_Q1_17RLM_0_0",
+  "properties": {
+    "created": "2024-04-16T17:09:33.882000Z",
+    "updated": "2024-05-28T16:30:52.321532Z",
+    "published": "2024-05-28T16:30:52.321532Z",
+    "eopf:origin_datetime": "2024-04-16T17:09:33.882000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2024-01-01T00:00:00Z",
+    "start_datetime": "2024-01-01T00:00:00Z",
+    "end_datetime": "2024-03-31T23:59:59Z",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "processing:level": "L3",
+    "processing:facility": "Copernicus Data Space Ecosystem",
+    "product:type": "S2MSI_L3__MCQ",
+    "product:timeliness": "P3M",
+    "gsd": 10,
+    "grid:code": "MGRS-17RLM",
+    "proj:code": "EPSG:32617",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -83.05143193776608,
+    28.009839382415255,
+    -82.01641570248502,
+    28.924380354617146
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -83.03406618346821,
+          28.009839382415255
+        ],
+        [
+          -83.05143193776608,
+          28.912653886324343
+        ],
+        [
+          -82.02509885231775,
+          28.924380354617146
+        ],
+        [
+          -82.01641570248502,
+          28.021134937493315
+        ],
+        [
+          -83.03406618346821,
+          28.009839382415255
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/Sentinel-2_mosaic_2024_Q1_17RLM_0_0.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-2/S2MSI_L3__MCQ/2024/01/01/Sentinel-2_mosaic_2024_Q1_17RLM_0_0/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "userdata": {
+      "type": "application/xml",
+      "title": "Product Odata Response File (JSON)",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 1259,
+      "file:local_path": "Sentinel-2_mosaic_2024_Q1_17RLM_0_0/userdata.json",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-2/S2MSI_L3__MCQ/2024/01/01/Sentinel-2_mosaic_2024_Q1_17RLM_0_0/userdata.json",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(00f85bcb-b784-4e01-9d16-7b81138804a6)/Nodes(Sentinel-2_mosaic_2024_Q1_17RLM_0_0)/Nodes(userdata.json)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B02": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Blue (band 2)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B02",
+          "description": "Blue (band 2)",
+          "eo:center_wavelength": 0.493,
+          "eo:full_width_half_max": 0.267,
+          "eo:common_name": "blue"
+        }
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "proj:bbox": [
+        298292.09941824054,
+        3098708.619795318,
+        400926.4250339079,
+        3201339.6229429278
+      ],
+      "file:size": 169617581,
+      "file:local_path": "Sentinel-2_mosaic_2024_Q1_17RLM_0_0/B02.tif",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-2/S2MSI_L3__MCQ/2024/01/01/Sentinel-2_mosaic_2024_Q1_17RLM_0_0/B02.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(00f85bcb-b784-4e01-9d16-7b81138804a6)/Nodes(Sentinel-2_mosaic_2024_Q1_17RLM_0_0)/Nodes(B02.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B03": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Green (band 3)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B03",
+          "description": "Green (band 3)",
+          "eo:center_wavelength": 0.56,
+          "eo:full_width_half_max": 0.291,
+          "eo:common_name": "green"
+        }
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "proj:bbox": [
+        298292.09941824054,
+        3098708.619795318,
+        400926.4250339079,
+        3201339.6229429278
+      ],
+      "file:size": 173104758,
+      "file:local_path": "Sentinel-2_mosaic_2024_Q1_17RLM_0_0/B03.tif",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-2/S2MSI_L3__MCQ/2024/01/01/Sentinel-2_mosaic_2024_Q1_17RLM_0_0/B03.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(00f85bcb-b784-4e01-9d16-7b81138804a6)/Nodes(Sentinel-2_mosaic_2024_Q1_17RLM_0_0)/Nodes(B03.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B04": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Red (band 4)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B04",
+          "description": "Red (band 4)",
+          "eo:center_wavelength": 0.665,
+          "eo:full_width_half_max": 0.342,
+          "eo:common_name": "red"
+        }
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "proj:bbox": [
+        298292.09941824054,
+        3098708.619795318,
+        400926.4250339079,
+        3201339.6229429278
+      ],
+      "file:size": 168782100,
+      "file:local_path": "Sentinel-2_mosaic_2024_Q1_17RLM_0_0/B04.tif",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-2/S2MSI_L3__MCQ/2024/01/01/Sentinel-2_mosaic_2024_Q1_17RLM_0_0/B04.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(00f85bcb-b784-4e01-9d16-7b81138804a6)/Nodes(Sentinel-2_mosaic_2024_Q1_17RLM_0_0)/Nodes(B04.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B08": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "NIR 1 (band 8)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B08",
+          "description": "NIR 1 (band 8)",
+          "eo:center_wavelength": 0.833,
+          "eo:full_width_half_max": 0.454,
+          "eo:common_name": "nir"
+        }
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "proj:bbox": [
+        298292.09941824054,
+        3098708.619795318,
+        400926.4250339079,
+        3201339.6229429278
+      ],
+      "file:size": 169783945,
+      "file:local_path": "Sentinel-2_mosaic_2024_Q1_17RLM_0_0/B08.tif",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-2/S2MSI_L3__MCQ/2024/01/01/Sentinel-2_mosaic_2024_Q1_17RLM_0_0/B08.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(00f85bcb-b784-4e01-9d16-7b81138804a6)/Nodes(Sentinel-2_mosaic_2024_Q1_17RLM_0_0)/Nodes(B08.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "observations": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Observations",
+      "roles": [
+        "data"
+      ],
+      "data_type": "uint16",
+      "nodata": 0,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "proj:bbox": [
+        298292.09941824054,
+        3098708.619795318,
+        400926.4250339079,
+        3201339.6229429278
+      ],
+      "description": "Number of valid observations for each pixel",
+      "file:size": 14964550,
+      "file:local_path": "Sentinel-2_mosaic_2024_Q1_17RLM_0_0/observations.tif",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-2/S2MSI_L3__MCQ/2024/01/01/Sentinel-2_mosaic_2024_Q1_17RLM_0_0/observations.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(00f85bcb-b784-4e01-9d16-7b81138804a6)/Nodes(Sentinel-2_mosaic_2024_Q1_17RLM_0_0)/Nodes(observations.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:local_path": "Sentinel-2_mosaic_2024_Q1_17RLM_0_0.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(00f85bcb-b784-4e01-9d16-7b81138804a6)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

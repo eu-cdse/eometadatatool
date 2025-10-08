@@ -1,0 +1,1069 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-np-bd6-rpro",
+  "id": "S5P_RPRO_L2__NP_BD6_20211211T104909_20211211T123039_21566_03_010300_20220810T083350",
+  "properties": {
+    "created": "2023-03-20T01:39:21.083996Z",
+    "updated": "2025-01-15T10:31:30.955996Z",
+    "published": "2023-05-09T19:28:19.240966Z",
+    "eopf:origin_datetime": "2023-03-20T01:39:21.083996Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2021-12-11T12:09:03Z",
+    "start_datetime": "2021-12-11T12:09:03Z",
+    "end_datetime": "2021-12-11T12:09:07Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 3500,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      6,
+      448
+    ],
+    "sat:absolute_orbit": 21566,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "vertices": {
+        "type": "other",
+        "extent": [
+          0,
+          2
+        ]
+      },
+      "VIIRS_delta_time_histogram_axis": {
+        "type": "other",
+        "description": "Axis for the histogram of the Time difference from S5P observation",
+        "extent": [
+          0,
+          120
+        ]
+      },
+      "VIIRS_view_zenith_histogram_axis": {
+        "type": "other",
+        "description": "Axis for the histogram of the VIIRS viewing zenith angle",
+        "extent": [
+          0,
+          14
+        ]
+      },
+      "number_viirs_pixels_histogram_axis": {
+        "type": "other",
+        "description": "Axis for histograms of the number of VIIRS pixels",
+        "extent": [
+          0,
+          121
+        ]
+      },
+      "sun_normalised_radiance_histogram_axis": {
+        "type": "other",
+        "description": "Axis for histograms of sun-normalised radiance",
+        "extent": [
+          0,
+          101
+        ]
+      },
+      "SRF_coverage_histogram_axis": {
+        "type": "other",
+        "description": "Axis for histograms of SRF coverage",
+        "extent": [
+          0,
+          101
+        ]
+      },
+      "cloud_fraction_histogram_axis": {
+        "type": "other",
+        "description": "Axis for histograms of cloud fraction",
+        "extent": [
+          0,
+          101
+        ]
+      },
+      "scaled_field_of_view": {
+        "type": "other",
+        "description": "dimension index corresponding to each defined geometric scaling of the S5P nominal field of view for which VIIRS statistics are summarised",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference start time of measurement",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2021-12-11T00:00:00.000000Z"
+        ]
+      },
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along track dimension index",
+        "extent": [
+          0,
+          6
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across track dimension index",
+        "extent": [
+          0,
+          448
+        ]
+      },
+      "ncorner": {
+        "type": "other",
+        "extent": [
+          0,
+          4
+        ]
+      }
+    },
+    "cube:variables": {
+      "VIIRS_delta_time_histogram_axis": {
+        "dimensions": [
+          "VIIRS_delta_time_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Axis for the histogram of the Time difference from S5P observation",
+        "unit": "s",
+        "data_type": "other"
+      },
+      "VIIRS_view_zenith_histogram_axis": {
+        "dimensions": [
+          "VIIRS_view_zenith_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Axis for the histogram of the VIIRS viewing zenith angle",
+        "unit": "degrees",
+        "data_type": "other"
+      },
+      "number_viirs_pixels_histogram_axis": {
+        "dimensions": [
+          "number_viirs_pixels_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Axis for histograms of the number of VIIRS pixels",
+        "data_type": "int32"
+      },
+      "sun_normalised_radiance_histogram_axis": {
+        "dimensions": [
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Axis for histograms of sun-normalised radiance",
+        "data_type": "other"
+      },
+      "SRF_coverage_histogram_axis": {
+        "dimensions": [
+          "SRF_coverage_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Axis for histograms of SRF coverage",
+        "data_type": "other"
+      },
+      "cloud_fraction_histogram_axis": {
+        "dimensions": [
+          "cloud_fraction_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Axis for histograms of cloud fraction",
+        "data_type": "other"
+      },
+      "scaled_field_of_view": {
+        "dimensions": [
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "dimension index corresponding to each defined geometric scaling of the S5P nominal field of view for which VIIRS statistics are summarised",
+        "data_type": "int32"
+      },
+      "VIIRS_delta_time_histogram_axis_bounds": {
+        "dimensions": [
+          "VIIRS_delta_time_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "description": "Bounds for the histogram of the Time difference from S5P observation",
+        "unit": "s",
+        "data_type": "other"
+      },
+      "VIIRS_view_zenith_histogram_axis_bounds": {
+        "dimensions": [
+          "VIIRS_view_zenith_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "description": "Bounds for the histogram of the VIIRS viewing zenith angle",
+        "unit": "degrees",
+        "data_type": "other"
+      },
+      "number_viirs_pixels_histogram_axis_bounds": {
+        "dimensions": [
+          "number_viirs_pixels_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "description": "Bounds for histograms of the number of VIIRS pixels",
+        "data_type": "int32"
+      },
+      "sun_normalised_radiance_histogram_axis_bounds": {
+        "dimensions": [
+          "sun_normalised_radiance_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "description": "Bounds for histograms of sun-normalised radiance",
+        "data_type": "other"
+      },
+      "SRF_coverage_histogram_axis_bounds": {
+        "dimensions": [
+          "SRF_coverage_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "description": "Bounds for histograms of SRF coverage",
+        "data_type": "other"
+      },
+      "cloud_fraction_histogram_axis_bounds": {
+        "dimensions": [
+          "cloud_fraction_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "description": "Bounds for histograms of cloud fraction",
+        "data_type": "other"
+      },
+      "viirs_delta_time_histogram": {
+        "dimensions": [
+          "VIIRS_delta_time_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Time difference from S5P observation",
+        "data_type": "int32"
+      },
+      "viirs_viewing_zenith_angle_histogram": {
+        "dimensions": [
+          "VIIRS_view_zenith_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the VIIRS viewing zenith angle",
+        "data_type": "int32"
+      },
+      "vcm_confidently_cloudy_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "cloud_fraction_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Number of VIIRS pixels classified as CONFIDENTLY_CLOUDY",
+        "data_type": "int32"
+      },
+      "vcm_probably_cloudy_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "cloud_fraction_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Number of VIIRS pixels classified as PROBABLY_CLOUDY",
+        "data_type": "int32"
+      },
+      "vcm_probably_clear_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "cloud_fraction_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Number of VIIRS pixels classified as PROBABLY_CLEAR",
+        "data_type": "int32"
+      },
+      "vcm_confidently_clear_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "cloud_fraction_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Number of VIIRS pixels classified as CONFIDENTLY_CLEAR",
+        "data_type": "int32"
+      },
+      "band07_srf_mean_histogram": {
+        "dimensions": [
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Mean of valid VIIRS band M07 sun-normalised radiances weighted by the S5P spatial response function",
+        "data_type": "int32"
+      },
+      "band07_srf_coverage_histogram": {
+        "dimensions": [
+          "SRF_coverage_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Fractional energy of SRF covered by valid VIIRS band M07 radiances",
+        "data_type": "int32"
+      },
+      "band07_fov_mean_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Mean of valid VIIRS band M07 sun-normalisd radiances in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "band07_fov_stdev_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Standard deviation  of valid VIIRS band M07 sun-normalised radiances in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "band07_fov_nvalid_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "number_viirs_pixels_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Number of valid VIIRS band M07 pixels in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "band09_srf_mean_histogram": {
+        "dimensions": [
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Mean of valid VIIRS band M09 sun-normalised radiances weighted by the S5P spatial response function",
+        "data_type": "int32"
+      },
+      "band09_srf_coverage_histogram": {
+        "dimensions": [
+          "SRF_coverage_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Fractional energy of SRF covered by valid VIIRS band M09 radiances",
+        "data_type": "int32"
+      },
+      "band09_fov_mean_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Mean of valid VIIRS band M09 sun-normalisd radiances in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "band09_fov_stdev_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Standard deviation  of valid VIIRS band M09 sun-normalised radiances in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "band09_fov_nvalid_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "number_viirs_pixels_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Number of valid VIIRS band M09 pixels in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "band11_srf_mean_histogram": {
+        "dimensions": [
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Mean of valid VIIRS band M11 sun-normalised radiances weighted by the S5P spatial response function",
+        "data_type": "int32"
+      },
+      "band11_srf_coverage_histogram": {
+        "dimensions": [
+          "SRF_coverage_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Fractional energy of SRF covered by valid VIIRS band M11 radiances",
+        "data_type": "int32"
+      },
+      "band11_fov_mean_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Mean of valid VIIRS band M11 sun-normalisd radiances in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "band11_fov_stdev_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "sun_normalised_radiance_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Standard deviation  of valid VIIRS band M11 sun-normalised radiances in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "band11_fov_nvalid_histogram": {
+        "dimensions": [
+          "scaled_field_of_view",
+          "number_viirs_pixels_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the Number of valid VIIRS band M11 pixels in each S5P scaled field-of-view",
+        "data_type": "int32"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "ncorner"
+        ],
+        "type": "data",
+        "description": "The four latitude boundaries of each ground pixel.",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "ncorner"
+        ],
+        "type": "data",
+        "description": "The four longitude boundaries of each ground pixel.",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          376876800
+        ],
+        "description": "reference start time of measurement",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "data_type": "int32"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "offset from the reference start time of measurement",
+        "unit": "milliseconds since 2021-12-11 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across track dimension index",
+        "data_type": "int32"
+      },
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along track dimension index",
+        "data_type": "int32"
+      },
+      "scaled_field_of_view_ymin": {
+        "dimensions": [
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "S5P scaled field-of-view normalised coordinate:  Minimum across-track",
+        "data_type": "other"
+      },
+      "scaled_field_of_view_ymax": {
+        "dimensions": [
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "S5P scaled field-of-view normalised coordinate:  Maximum across-track",
+        "data_type": "other"
+      },
+      "scaled_field_of_view_zmin": {
+        "dimensions": [
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "S5P scaled field-of-view normalised coordinate:  Minimum along-track",
+        "data_type": "other"
+      },
+      "scaled_field_of_view_zmax": {
+        "dimensions": [
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "S5P scaled field-of-view normalised coordinate:  Maximum along-track",
+        "data_type": "other"
+      },
+      "viirs_delta_time": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Time difference from S5P observation",
+        "unit": "s",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "viirs_viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "VIIRS viewing zenith angle",
+        "unit": "degree",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "vcm_confidently_cloudy": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Number of VIIRS pixels classified as CONFIDENTLY_CLOUDY",
+        "nodata": -999,
+        "data_type": "int16"
+      },
+      "vcm_probably_cloudy": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Number of VIIRS pixels classified as PROBABLY_CLOUDY",
+        "nodata": -999,
+        "data_type": "int16"
+      },
+      "vcm_probably_clear": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Number of VIIRS pixels classified as PROBABLY_CLEAR",
+        "nodata": -999,
+        "data_type": "int16"
+      },
+      "vcm_confidently_clear": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Number of VIIRS pixels classified as CONFIDENTLY_CLEAR",
+        "nodata": -999,
+        "data_type": "int16"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "band07_srf_mean": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Mean of valid VIIRS band M07 sun-normalised radiances weighted by the S5P spatial response function",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band07_srf_coverage": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Fractional energy of SRF covered by valid VIIRS band M07 radiances",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band07_fov_mean": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Mean of valid VIIRS band M07 sun-normalisd radiances in each S5P scaled field-of-view",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band07_fov_stdev": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Standard deviation  of valid VIIRS band M07 sun-normalised radiances in each S5P scaled field-of-view",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band07_fov_nvalid": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Number of valid VIIRS band M07 pixels in each S5P scaled field-of-view",
+        "nodata": -999,
+        "data_type": "int16"
+      },
+      "band09_srf_mean": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Mean of valid VIIRS band M09 sun-normalised radiances weighted by the S5P spatial response function",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band09_srf_coverage": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Fractional energy of SRF covered by valid VIIRS band M09 radiances",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band09_fov_mean": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Mean of valid VIIRS band M09 sun-normalisd radiances in each S5P scaled field-of-view",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band09_fov_stdev": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Standard deviation  of valid VIIRS band M09 sun-normalised radiances in each S5P scaled field-of-view",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band09_fov_nvalid": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Number of valid VIIRS band M09 pixels in each S5P scaled field-of-view",
+        "nodata": -999,
+        "data_type": "int16"
+      },
+      "band11_srf_mean": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Mean of valid VIIRS band M11 sun-normalised radiances weighted by the S5P spatial response function",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band11_srf_coverage": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Fractional energy of SRF covered by valid VIIRS band M11 radiances",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band11_fov_mean": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Mean of valid VIIRS band M11 sun-normalisd radiances in each S5P scaled field-of-view",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band11_fov_stdev": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Standard deviation  of valid VIIRS band M11 sun-normalised radiances in each S5P scaled field-of-view",
+        "nodata": -999.0,
+        "data_type": "other"
+      },
+      "band11_fov_nvalid": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "scaled_field_of_view"
+        ],
+        "type": "data",
+        "description": "Number of valid VIIRS band M11 pixels in each S5P scaled field-of-view",
+        "nodata": -999,
+        "data_type": "int16"
+      }
+    },
+    "product:type": "L2__NP_BD6",
+    "processing:level": "L2",
+    "processing:facility": "SENTINEL-5P ionos-s5p-4",
+    "processing:datetime": "2022-08-10T00:00:00Z",
+    "processing:version": "01.03.00",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -46.082893,
+    67.11421,
+    43.16526,
+    81.76183
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -46.08289299999999,
+          67.23396
+        ],
+        [
+          -45.368219999999994,
+          67.11421
+        ],
+        [
+          -43.89941999999999,
+          68.99045599999998
+        ],
+        [
+          -41.83237499999999,
+          71.125595
+        ],
+        [
+          -39.967545,
+          72.65306999999999
+        ],
+        [
+          -38.19367999999999,
+          73.83721
+        ],
+        [
+          -34.686572999999996,
+          75.62673
+        ],
+        [
+          -30.967650000000003,
+          76.993004
+        ],
+        [
+          -26.715225,
+          78.14046499999999
+        ],
+        [
+          -21.458564999999997,
+          79.17110999999998
+        ],
+        [
+          -18.213919,
+          79.65917
+        ],
+        [
+          -9.624807,
+          80.58103
+        ],
+        [
+          -3.677156999999999,
+          80.99224000000001
+        ],
+        [
+          4.0220404,
+          81.32394
+        ],
+        [
+          14.2231045,
+          81.48243999999998
+        ],
+        [
+          27.852573,
+          81.24595999999998
+        ],
+        [
+          42.573387000000004,
+          80.33832
+        ],
+        [
+          43.165259999999996,
+          80.60541
+        ],
+        [
+          32.60486,
+          81.33641999999999
+        ],
+        [
+          17.394485,
+          81.76182999999999
+        ],
+        [
+          5.975926399999999,
+          81.67260999999999
+        ],
+        [
+          -2.5685916,
+          81.362434
+        ],
+        [
+          -9.084252999999999,
+          80.95351
+        ],
+        [
+          -14.190789999999998,
+          80.49850499999998
+        ],
+        [
+          -21.729592999999998,
+          79.52493
+        ],
+        [
+          -24.641169,
+          79.01504499999999
+        ],
+        [
+          -29.446260000000002,
+          77.93227
+        ],
+        [
+          -33.4204,
+          76.70501
+        ],
+        [
+          -36.96628,
+          75.20233
+        ],
+        [
+          -40.38868299999999,
+          73.14936
+        ],
+        [
+          -42.166335999999994,
+          71.72542999999999
+        ],
+        [
+          -44.09548999999999,
+          69.78834
+        ],
+        [
+          -46.08289299999999,
+          67.23396
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_RPRO_L2__NP_BD6_20211211T104909_20211211T123039_21566_03_010300_20220810T083350.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Cloud from the Suomi NPP mission, band 6",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": -999,
+      "file:checksum": "d50110498352a921ebd3d341a650f5d3179c6f",
+      "file:size": 1042909,
+      "file:local_path": "S5P_RPRO_L2__NP_BD6_20211211T104909_20211211T123039_21566_03_010300_20220810T083350.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__NP_BD6/2021/12/11/S5P_RPRO_L2__NP_BD6_20211211T104909_20211211T123039_21566_03_010300_20220810T083350.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(cf5bfd96-ad26-4ad9-ad3b-20dc4143a9d8)/Nodes(S5P_RPRO_L2__NP_BD6_20211211T104909_20211211T123039_21566_03_010300_20220810T083350.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

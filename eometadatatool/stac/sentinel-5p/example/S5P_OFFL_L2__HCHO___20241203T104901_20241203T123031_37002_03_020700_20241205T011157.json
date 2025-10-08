@@ -1,0 +1,1585 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-hcho-offl",
+  "id": "S5P_OFFL_L2__HCHO___20241203T104901_20241203T123031_37002_03_020700_20241205T011157",
+  "properties": {
+    "created": "2024-12-05T01:19:54.866000Z",
+    "updated": "2024-12-05T01:21:57.413602Z",
+    "published": "2024-12-05T01:21:55.821481Z",
+    "eopf:origin_datetime": "2024-12-05T01:19:54.866000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2024-12-03T12:08:56Z",
+    "start_datetime": "2024-12-03T12:08:56Z",
+    "end_datetime": "2024-12-03T12:08:59Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 3500,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      5,
+      450
+    ],
+    "sat:absolute_orbit": 37002,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along-track dimension index",
+        "extent": [
+          0,
+          5
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across-track dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference time for the measurements",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2024-12-03T00:00:00.000000Z"
+        ]
+      },
+      "corner": {
+        "type": "other",
+        "description": "pixel corner index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "layer": {
+        "type": "other",
+        "description": "layer dimension index",
+        "extent": [
+          0,
+          34
+        ]
+      },
+      "polynomial_coefficients": {
+        "type": "other",
+        "extent": [
+          0,
+          9
+        ]
+      },
+      "detector_rows": {
+        "type": "other",
+        "description": "detector_rows dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "wavelengths": {
+        "type": "other",
+        "description": "wavelengths dimension index",
+        "extent": [
+          0,
+          9000
+        ]
+      },
+      "latitude_grids": {
+        "type": "other",
+        "description": "latitude_grids dimension index",
+        "extent": [
+          0,
+          36
+        ]
+      },
+      "number_of_slant_columns": {
+        "type": "other",
+        "description": "number_of_slant_columns dimension index",
+        "extent": [
+          0,
+          8
+        ]
+      },
+      "number_of_slant_columns_first_win1": {
+        "type": "other",
+        "description": "number_of_slant_columns_first_win1 dimension index",
+        "extent": [
+          0,
+          9
+        ]
+      },
+      "number_of_doas_polynomial_coefficients": {
+        "type": "other",
+        "description": "number_of_doas_polynomial_coefficients dimension index",
+        "extent": [
+          0,
+          6
+        ]
+      },
+      "number_of_calibrations": {
+        "type": "other",
+        "description": "number_of_calibrations dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "degrees_of_polynomial_shift": {
+        "type": "other",
+        "description": "degrees_of_polynomial_shift dimension index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "number_of_subwindows": {
+        "type": "other",
+        "description": "number_of_subwindows dimension index",
+        "extent": [
+          0,
+          5
+        ]
+      },
+      "histogram_axis": {
+        "type": "other",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "pdf_axis": {
+        "type": "other",
+        "extent": [
+          0,
+          400
+        ]
+      },
+      "vertices": {
+        "type": "other",
+        "description": "vertices dimension index",
+        "extent": [
+          0,
+          2
+        ]
+      }
+    },
+    "cube:variables": {
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          470880000
+        ],
+        "description": "reference time for the measurements",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "corner": {
+        "dimensions": [
+          "corner"
+        ],
+        "type": "auxiliary",
+        "description": "pixel corner index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "offset from reference start time of measurement",
+        "unit": "milliseconds since 2024-12-03 00:00:00Z",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time_utc": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "Time of observation as ISO 8601 date-time string",
+        "data_type": "other"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "formaldehyde_tropospheric_vertical_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "vertical column of formaldehyde",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_tropospheric_vertical_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of vertical column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "layer": {
+        "dimensions": [
+          "layer"
+        ],
+        "type": "data",
+        "description": "layer dimension index",
+        "data_type": "int32"
+      },
+      "snow_ice_flag_nise": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "snow_ice_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "snow_cover": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-cover",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sea_ice_cover": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "sea-ice-cover",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective radiometric cloud fraction from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective radiometric cloud fraction precision from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_pressure_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid pressure from the CRB model",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_pressure_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid pressure precision from the CRB model",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_height_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid height from the CRB model",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_height_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid height precision from the CRB model",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud albedo from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud albedo precision from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude precision",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_classification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "land-water mask",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "instrument_configuration_identifier": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcID",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "instrument_configuration_version": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcVersion",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "scaled_small_pixel_variance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaled small pixel variance",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_temperature": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_temperature",
+        "unit": "K",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "northward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Northward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "eastward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Eastward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "tm5_constant_a": {
+        "dimensions": [
+          "time",
+          "layer"
+        ],
+        "type": "data",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "tm5_constant_b": {
+        "dimensions": [
+          "time",
+          "layer"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "tm5_tropopause_layer_index": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "aerosol_index_340_380": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Aerosol index from 380 and 340 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface albdeo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "offsets": {
+        "dimensions": [
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "offsets_scd0": {
+        "dimensions": [
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "polynomial_coefficients": {
+        "dimensions": [
+          "polynomial_coefficients"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "polynomial_coefficients_scd0": {
+        "dimensions": [
+          "polynomial_coefficients"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "amf_scd0_median": {
+        "dimensions": [
+          "latitude_grids",
+          "detector_rows"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "amf_scd0_error_median": {
+        "dimensions": [
+          "latitude_grids",
+          "detector_rows"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "vcd_scd0_median": {
+        "dimensions": [
+          "latitude_grids",
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "molec cm-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "vcd_scd0_error_median": {
+        "dimensions": [
+          "latitude_grids",
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "molec cm-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "clear_amf_scd0": {
+        "dimensions": [
+          "latitude_grids",
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "molec cm-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "earthshine_reference_wavelength": {
+        "dimensions": [
+          "wavelengths"
+        ],
+        "type": "data",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "earthshine_reference_radiance": {
+        "dimensions": [
+          "detector_rows",
+          "wavelengths"
+        ],
+        "type": "data",
+        "unit": "mol.m-2.nm-1.sr-1.s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "detector_rows": {
+        "dimensions": [
+          "detector_rows"
+        ],
+        "type": "data",
+        "description": "detector_rows dimension index",
+        "data_type": "int32"
+      },
+      "wavelengths": {
+        "dimensions": [
+          "wavelengths"
+        ],
+        "type": "data",
+        "description": "wavelengths dimension index",
+        "data_type": "int32"
+      },
+      "latitude_grids": {
+        "dimensions": [
+          "latitude_grids"
+        ],
+        "type": "data",
+        "description": "latitude_grids dimension index",
+        "data_type": "int32"
+      },
+      "satellite_latitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sub satellite latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_longitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite_longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_altitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_orbit_phase": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite orbit phase",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "geolocation_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "geolocation flags",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "formaldehyde_tropospheric_vertical_column_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Systematic error of vertical column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns"
+        ],
+        "type": "data",
+        "description": "slant columns of all absorbers",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns"
+        ],
+        "type": "data",
+        "description": "slant columns errors of all absorbers",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_slant_column_corrected_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the slant column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_slant_column_corrected": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "corrected slant column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_slant_column_correction_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "slant column density background correction flag",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "formaldehyde_tropospheric_vertical_column_correction": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "background correction value which is added to the vertical column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_tropospheric_air_mass_factor": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "tropospheric air mass factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_clear_air_mass_factor": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "clear air mass factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_cloudy_air_mass_factor": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloudy air mass factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_tropospheric_air_mass_factor_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the tropospheric air mass factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_tropospheric_air_mass_factor_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the tropospheric air mass factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_radiance_shift": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength shift from the doas fit",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_radiance_squeeze": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength squeeze/stretch from the doas fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "averaging_kernel": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "total column averaging kernel",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_profile_apriori": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "tm5_hcho a priori profile (vmr) interpolated in space and time on ground pixel",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_root_mean_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "root mean square from the doas fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_root_mean_square_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "root mean square in the first interval of the doas fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns_first_win1"
+        ],
+        "type": "data",
+        "description": "slant columns of all absorbers in the first interval of the doas fit",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_win1_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns_first_win1"
+        ],
+        "type": "data",
+        "description": "slant columns errors of all absorbers in the first interval of the doas fit",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_iterations_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations used in the retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_iterations_in_retrieval_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations used in the retrieval in the first interval of the doas fit",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_spectral_points_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the DOAS retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_spectral_points_in_retrieval_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the retrieval in the first interval of the DOAS fit",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "formaldehyde_tropospheric_air_mass_factor_kernel_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the air mass factor for the kernel tropospheric formaldehyde",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_tropospheric_vertical_column_kernel_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the air mass factor for the kernel tropospheric formaldehyde",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "doas_polynomial_coefficients": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_doas_polynomial_coefficients"
+        ],
+        "type": "data",
+        "description": "DOAS polynomial coefficients",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "processing_quality_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Processing quality flags",
+        "nodata": 4294967295,
+        "data_type": "uint32"
+      },
+      "cloud_fraction_intensity_weighted": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud fraction intensity weighted",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_intensity_weighted_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the cloud fraction intensity weighted",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_slant_columns": {
+        "dimensions": [
+          "number_of_slant_columns"
+        ],
+        "type": "data",
+        "description": "number_of_slant_columns dimension index",
+        "data_type": "int32"
+      },
+      "number_of_slant_columns_first_win1": {
+        "dimensions": [
+          "number_of_slant_columns_first_win1"
+        ],
+        "type": "data",
+        "description": "number_of_slant_columns_first_win1 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_doas_polynomial_coefficients": {
+        "dimensions": [
+          "number_of_doas_polynomial_coefficients"
+        ],
+        "type": "data",
+        "description": "number_of_doas_polynomial_coefficients dimension index",
+        "data_type": "int32"
+      },
+      "calibration_polynomial_coefficients": {
+        "dimensions": [
+          "number_of_calibrations",
+          "degrees_of_polynomial_shift"
+        ],
+        "type": "data",
+        "description": "computed coefficients of the polynomial function",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_shift": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths shift fitted values per subwindow",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_squeeze": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths squeeze fitted values per subwindow",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_root_mean_square": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "calibration rms per subwindow",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_wavelength": {
+        "dimensions": [
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "calibration wavelength center in each subwindow",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_calibrations": {
+        "dimensions": [
+          "number_of_calibrations"
+        ],
+        "type": "data",
+        "description": "number_of_calibrations dimension index",
+        "data_type": "int32"
+      },
+      "degrees_of_polynomial_shift": {
+        "dimensions": [
+          "degrees_of_polynomial_shift"
+        ],
+        "type": "data",
+        "description": "degrees_of_polynomial_shift dimension index",
+        "data_type": "int32"
+      },
+      "number_of_subwindows": {
+        "dimensions": [
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "number_of_subwindows dimension index",
+        "data_type": "int32"
+      },
+      "histogram_axis": {
+        "dimensions": [
+          "histogram_axis"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "pdf_axis": {
+        "dimensions": [
+          "pdf_axis"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "formaldehyde_total_column_histogram": {
+        "dimensions": [
+          "histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of HCHO in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "formaldehyde_total_column_pdf": {
+        "dimensions": [
+          "pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of hcho in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "vertices": {
+        "dimensions": [
+          "vertices"
+        ],
+        "type": "data",
+        "description": "vertices dimension index",
+        "data_type": "int32"
+      }
+    },
+    "product:type": "L2__HCHO__",
+    "processing:level": "L2",
+    "processing:facility": "PDGS-OP",
+    "processing:datetime": "2024-12-05T00:00:00Z",
+    "product:timeliness": "PT12H",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "02.07.00",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -48.52939,
+    67.353035,
+    44.746246,
+    82.66065
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -48.52939,
+          67.44397
+        ],
+        [
+          -47.91861299999999,
+          67.353035
+        ],
+        [
+          -46.854457999999994,
+          68.968735
+        ],
+        [
+          -44.842533,
+          71.42863
+        ],
+        [
+          -43.25001499999999,
+          72.94283
+        ],
+        [
+          -41.502289999999995,
+          74.27775599999998
+        ],
+        [
+          -38.205546999999996,
+          76.15246999999998
+        ],
+        [
+          -34.615616,
+          77.59097
+        ],
+        [
+          -30.595055,
+          78.76011
+        ],
+        [
+          -21.76794,
+          80.42298
+        ],
+        [
+          -12.376419999999998,
+          81.44863999999998
+        ],
+        [
+          -5.057370999999999,
+          81.93948999999999
+        ],
+        [
+          3.5077282999999997,
+          82.27829999999999
+        ],
+        [
+          16.857737999999998,
+          82.4135
+        ],
+        [
+          32.52022,
+          82.00996399999998
+        ],
+        [
+          44.15073,
+          81.23495999999999
+        ],
+        [
+          44.74624599999999,
+          81.45447
+        ],
+        [
+          33.710716,
+          82.20403999999999
+        ],
+        [
+          15.363561000000002,
+          82.66065000000002
+        ],
+        [
+          3.4087564999999995,
+          82.52334
+        ],
+        [
+          -6.578094499999999,
+          82.11932
+        ],
+        [
+          -13.055640999999998,
+          81.674866
+        ],
+        [
+          -22.640400000000003,
+          80.62679999999999
+        ],
+        [
+          -26.293363999999997,
+          80.04568499999999
+        ],
+        [
+          -31.617087999999992,
+          78.91301
+        ],
+        [
+          -35.75896,
+          77.671616
+        ],
+        [
+          -39.26451,
+          76.207054
+        ],
+        [
+          -42.47393,
+          74.29256999999998
+        ],
+        [
+          -43.957736999999995,
+          73.11426999999999
+        ],
+        [
+          -45.720769999999995,
+          71.36211
+        ],
+        [
+          -47.419456,
+          69.19087999999999
+        ],
+        [
+          -48.52939,
+          67.44397
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_OFFL_L2__HCHO___20241203T104901_20241203T123031_37002_03_020700_20241205T011157.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Atmospheric Formaldehyde Concentration",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "file:checksum": "d5011000f3f02e4f37c8112744075a0f180634",
+      "file:size": 10090019,
+      "file:local_path": "S5P_OFFL_L2__HCHO___20241203T104901_20241203T123031_37002_03_020700_20241205T011157.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__HCHO__/2024/12/03/S5P_OFFL_L2__HCHO___20241203T104901_20241203T123031_37002_03_020700_20241205T011157.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(369259ac-6398-415f-938b-b938ba0de440)/Nodes(S5P_OFFL_L2__HCHO___20241203T104901_20241203T123031_37002_03_020700_20241205T011157.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

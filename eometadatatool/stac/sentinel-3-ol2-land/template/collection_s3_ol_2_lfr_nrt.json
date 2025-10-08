@@ -1,0 +1,550 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "id": "sentinel-3-olci-2-lfr-nrt",
+  "type": "Collection",
+  "title": "Sentinel-3 OLCI Land Full Resolution (NRT)",
+  "description": "This collection provides Sentinel-3 OLCI Level-2 Land Full Resolution products containing data on global vegetation, chlorophyll, and water vapor.",
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2016-04-25T11:33:47.368562Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "300m",
+    "Biomass",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "Global",
+    "Land",
+    "OLCI",
+    "OL_2_LFR____",
+    "PT3H",
+    "Satellite",
+    "Sentinel",
+    "Sentinel-3"
+  ],
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-3",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S3_OL2_LFR-LRR.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Sentinel-3 OLCI Land Thumbnail",
+      "proj:code": null
+    }
+  },
+  "summaries": {
+    "gsd": [
+      300
+    ],
+    "proj:code": [
+      null
+    ],
+    "platform": [
+      "sentinel-3a",
+      "sentinel-3b"
+    ],
+    "instruments": [
+      "olci"
+    ],
+    "constellation": [
+      "sentinel-3"
+    ],
+    "product:type": [
+      "OL_2_LFR____"
+    ],
+    "product:timeliness": [
+      "PT3H"
+    ],
+    "product:timeliness_category": [
+      "NR"
+    ],
+    "processing:level": [
+      "L2"
+    ],
+    "processing:version": [
+      "03.29",
+      "03.30",
+      "03.32",
+      "03.34",
+      "03.35",
+      "03.37",
+      "03.38",
+      "03.39",
+      "03.41",
+      "03.43",
+      "03.44",
+      "03.45",
+      "03.48",
+      "03.49",
+      "03.50"
+    ],
+    "sat:orbit_state": [
+      "ascending",
+      "descending"
+    ],
+    "sat:platform_international_designator": [
+      "2016-011A",
+      "2018-039A"
+    ],
+    "statistics": {
+      "type": "object",
+      "properties": {
+        "saline_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "coastal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fresh_inland_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "tidal_region": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "land": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "invalid": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cosmetic": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "duplicated": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "saturated": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dubious_samples": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  },
+  "auth:schemes": {
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+    },
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "cdse-s3": {
+      "type": "custom-s3",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "description": "This endpoint will provide access to EO data which is stored on the Object Storage. A Global Service Load Balancer (GSLB) directs the request to either CloudFerro Cloud or OpenTelekom Cloud (OTC) S3 endpoint based on the location of the DNS resolver.",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    },
+    "creodias-s3": {
+      "type": "custom-s3",
+      "title": "CREODIAS S3",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    }
+  },
+  "item_assets": {
+    "product": {
+      "alternate:name": "HTTPS",
+      "auth:refs": [
+        "oidc"
+      ],
+      "title": "Zipped product",
+      "type": "application/zip",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ]
+    },
+    "geo-coordinates": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Geo Coordinates Annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "gifapar": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Green Instantaneous FAPAR (GIFAPAR, formerly: OGVI)",
+      "description": "Since the December 16, 2021 the OGVI files have been renamed to GIFAPAR. Products processed before that date still contain 'OGVI' in the name.",
+      "processing:lineage": "Input bands: Oa03, Oa10, Oa17",
+      "roles": [
+        "data"
+      ]
+    },
+    "instrument-data": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Instrument Annotation",
+      "roles": [
+        "data"
+      ]
+    },
+    "iwv": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Integrated water vapour column",
+      "processing:lineage": "Input bands: Oa18, Oa19",
+      "roles": [
+        "data"
+      ]
+    },
+    "lqsf": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Land Quality and Science Flags",
+      "roles": [
+        "data"
+      ]
+    },
+    "otci": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "OLCI Terrestrial Chlorophyll Index",
+      "processing:lineage": "Input bands: Oa10, Oa11, Oa12",
+      "roles": [
+        "data"
+      ]
+    },
+    "rc-gifapar": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Green Instantaneous FAPAR (GIFAPAR, formerly: OGVI) - Rectified Reflectance",
+      "description": "Since the December 16, 2021 the OGVI files have been renamed to GIFAPAR. Products processed before that date still contain 'OGVI' in the name.",
+      "roles": [
+        "data"
+      ]
+    },
+    "tie-geo-coordinates": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Tie-Point Geo Coordinate Annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "tie-geometries": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Tie-Point Geometries Annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "tie-meteo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Tie-Point Meteo Annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "time-coordinates": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Time Coordinates Annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      },
+      "proj:code": null,
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "xfdumanifest": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "ccm-dem",
+  "id": "DEM1_SAR_DTE_30_20101212T040432_20121120T041804_ADS_000000_0730_884b2eb3",
+  "properties": {
+    "created": "2024-05-07T08:13:24.000000Z",
+    "updated": "2025-04-23T20:28:11.962546Z",
+    "published": "2024-05-11T18:23:44.961550Z",
+    "eopf:origin_datetime": "2024-05-07T08:13:24.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2020-12-01T16:43:20.000000Z",
+    "start_datetime": "2010-12-12T04:04:32.000000Z",
+    "end_datetime": "2010-12-12T04:04:33.000000Z",
+    "proj:code": "EPSG:4326",
+    "sar:polarizations": [
+      "HH"
+    ],
+    "product:type": "SAR_DTE_30",
+    "product:acquisition_type": "nominal",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    21.0,
+    -13.0,
+    22.0,
+    -12.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          21.0,
+          -13.0
+        ],
+        [
+          22.0,
+          -13.0
+        ],
+        [
+          22.0,
+          -12.0
+        ],
+        [
+          21.0,
+          -12.0
+        ],
+        [
+          21.0,
+          -13.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/DEM1_SAR_DTE_30_20101212T040432_20121120T041804_ADS_000000_0730_884b2eb3.DEM.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "circulation_report": {
+      "type": "application/xml",
+      "title": "Circulation report",
+      "roles": [
+        "metadata"
+      ],
+      "file:checksum": "d50110f2d7d0e547cbd43550669c29d744f039",
+      "file:size": 2611,
+      "href": "s3://eodata/CCM/COP-DEM_GLO-30-DTED/SAR_DTE_30_615C/2010/12/12/DEM1_SAR_DTE_30_20101212T040432_20121120T041804_ADS_000000_0730_884b2eb3/GSC_CR_ESA_COP-DEM_GLO-30-DTED_20201201_164320.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e3722622-1f1a-467c-a5cb-329e442a11ef)/Nodes(DEM1_SAR_DTE_30_20101212T040432_20121120T041804_ADS_000000_0730_884b2eb3.DEM)/Nodes(eodata)/Nodes(CCM)/Nodes(COP-DEM_GLO-30-DTED)/Nodes(SAR_DTE_30_615C)/Nodes(2010)/Nodes(12)/Nodes(12)/Nodes(DEM1_SAR_DTE_30_20101212T040432_20121120T041804_ADS_000000_0730_884b2eb3)/Nodes(GSC_CR_ESA_COP-DEM_GLO-30-DTED_20201201_164320.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110b4a9c0293f148a3ad81fbb291307a69c",
+      "file:size": 26139906,
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(e3722622-1f1a-467c-a5cb-329e442a11ef)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

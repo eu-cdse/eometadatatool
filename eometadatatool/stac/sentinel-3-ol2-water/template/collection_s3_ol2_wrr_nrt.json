@@ -1,0 +1,1246 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "id": "sentinel-3-olci-2-wrr-nrt",
+  "type": "Collection",
+  "title": "Sentinel-3 OLCI Water Reduced Resolution (NRT)",
+  "description": "This collection provides Sentinel-3 OLCI Level-2 Water Reduced Resolution products containing data on water-leaving reflectance, ocean color, and more.",
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-11-01T00:07:01.738487Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "1200m",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "Global",
+    "OLCI",
+    "OL_2_WRR____",
+    "Ocean",
+    "PT3H",
+    "Satellite",
+    "Sentinel",
+    "Sentinel-3",
+    "Water"
+  ],
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-3",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S3_OL2_WFR-WRR.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Sentinel-3 OLCI Water Thumbnail",
+      "proj:code": null
+    }
+  },
+  "bands": [
+    {
+      "name": "Oa01",
+      "description": "Aerosol correction, improved water constituent retrieval",
+      "eo:center_wavelength": 0.4,
+      "eo:full_width_half_max": 0.015
+    },
+    {
+      "name": "Oa02",
+      "description": "Yellow substance and detrital pigments (turbidity)",
+      "eo:center_wavelength": 0.4125,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa03",
+      "description": "Chlorophyll absorption maximum, biogeochemistry, vegetation",
+      "eo:center_wavelength": 0.4425,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa04",
+      "description": "Chlorophyll",
+      "eo:center_wavelength": 0.49,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa05",
+      "description": "Chlorophyll, sediment, turbidity, red tide",
+      "eo:center_wavelength": 0.51,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa06",
+      "description": "Chlorophyll reference (minimum)",
+      "eo:center_wavelength": 0.56,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa07",
+      "description": "Sediment loading",
+      "eo:center_wavelength": 0.62,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa08",
+      "description": "2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+      "eo:center_wavelength": 0.665,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa09",
+      "description": "Improved fluorescence retrieval",
+      "eo:center_wavelength": 0.67375,
+      "eo:full_width_half_max": 0.0075
+    },
+    {
+      "name": "Oa10",
+      "description": "Chlorophyll fluorescence peak, red edge",
+      "eo:center_wavelength": 0.68125,
+      "eo:full_width_half_max": 0.0075
+    },
+    {
+      "name": "Oa11",
+      "description": "Chlorophyll fluorescence baseline, red edge transition",
+      "eo:center_wavelength": 0.70875,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa12",
+      "description": "O2 absorption / clouds, vegetation",
+      "eo:center_wavelength": 0.75375,
+      "eo:full_width_half_max": 0.0075
+    },
+    {
+      "name": "Oa16",
+      "description": "Atmospheric / aerosol correction",
+      "eo:center_wavelength": 0.77875,
+      "eo:full_width_half_max": 0.015
+    },
+    {
+      "name": "Oa17",
+      "description": "Atmospheric / aerosol correction, clouds, pixel co-registration",
+      "eo:center_wavelength": 0.865,
+      "eo:full_width_half_max": 0.02
+    },
+    {
+      "name": "Oa18",
+      "description": "Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+      "eo:center_wavelength": 0.885,
+      "eo:full_width_half_max": 0.01
+    },
+    {
+      "name": "Oa21",
+      "description": "Water vapour absorption, atmospheric / aerosol correction",
+      "eo:center_wavelength": 1.02,
+      "eo:full_width_half_max": 0.04
+    }
+  ],
+  "summaries": {
+    "gsd": [
+      1200
+    ],
+    "proj:code": [
+      null
+    ],
+    "platform": [
+      "sentinel-3a",
+      "sentinel-3b"
+    ],
+    "instruments": [
+      "olci"
+    ],
+    "constellation": [
+      "sentinel-3"
+    ],
+    "product:type": [
+      "OL_2_WRR____"
+    ],
+    "product:timeliness": [
+      "PT3H"
+    ],
+    "product:timeliness_category": [
+      "NR"
+    ],
+    "processing:level": [
+      "L2"
+    ],
+    "processing:version": [
+      "03.30",
+      "03.32",
+      "03.34",
+      "03.35",
+      "06.13",
+      "03.37",
+      "03.38",
+      "03.39",
+      "03.43",
+      "03.45",
+      "03.47",
+      "03.50",
+      "03.51"
+    ],
+    "sat:orbit_state": [
+      "ascending",
+      "descending"
+    ],
+    "sat:platform_international_designator": [
+      "2016-011A",
+      "2018-039A"
+    ],
+    "statistics": {
+      "type": "object",
+      "properties": {
+        "saline_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "coastal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fresh_inland_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "tidal_region": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "land": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "invalid": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "cosmetic": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "duplicated": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "saturated": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "dubious_samples": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  },
+  "auth:schemes": {
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+    },
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "cdse-s3": {
+      "type": "custom-s3",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "description": "This endpoint will provide access to EO data which is stored on the Object Storage. A Global Service Load Balancer (GSLB) directs the request to either CloudFerro Cloud or OpenTelekom Cloud (OTC) S3 endpoint based on the location of the DNS resolver.",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    },
+    "creodias-s3": {
+      "type": "custom-s3",
+      "title": "CREODIAS S3",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    }
+  },
+  "item_assets": {
+    "product": {
+      "alternate:name": "HTTPS",
+      "auth:refs": [
+        "oidc"
+      ],
+      "title": "Zipped product",
+      "type": "application/zip",
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "description": "S3 storage provided by CloudFerro Cloud and OpenTelekom Cloud (OTC). Use endpoint URL `https://eodata.dataspace.copernicus.eu`."
+        }
+      },
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ]
+    },
+    "Oa01_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa01",
+      "bands": [
+        {
+          "name": "Oa01",
+          "description": "Aerosol correction, improved water constituent retrieval",
+          "eo:center_wavelength": 0.4,
+          "eo:full_width_half_max": 0.015
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa02_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa02",
+      "bands": [
+        {
+          "name": "Oa02",
+          "description": "Yellow substance and detrital pigments (turbidity)",
+          "eo:center_wavelength": 0.412,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa03_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa03",
+      "bands": [
+        {
+          "name": "Oa03",
+          "description": "Chlorophyll absorption maximum, biogeochemistry, vegetation",
+          "eo:center_wavelength": 0.443,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa04_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa04",
+      "bands": [
+        {
+          "name": "Oa04",
+          "description": "Chlorophyll",
+          "eo:center_wavelength": 0.49,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa05_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa05",
+      "bands": [
+        {
+          "name": "Oa05",
+          "description": "Chlorophyll, sediment, turbidity, red tide",
+          "eo:center_wavelength": 0.51,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa06_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa06",
+      "bands": [
+        {
+          "name": "Oa06",
+          "description": "Chlorophyll reference (minimum)",
+          "eo:center_wavelength": 0.56,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa07_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa07",
+      "bands": [
+        {
+          "name": "Oa07",
+          "description": "Sediment loading",
+          "eo:center_wavelength": 0.62,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa08_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa08",
+      "bands": [
+        {
+          "name": "Oa08",
+          "description": "2nd Chlorophyll absorption maximum, sediment, yellow substance / vegetation",
+          "eo:center_wavelength": 0.665,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa09_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa09",
+      "bands": [
+        {
+          "name": "Oa09",
+          "description": "Improved fluorescence retrieval",
+          "eo:center_wavelength": 0.674,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa10_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa10",
+      "bands": [
+        {
+          "name": "Oa10",
+          "description": "Chlorophyll fluorescence peak, red edge",
+          "eo:center_wavelength": 0.681,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa11_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa11",
+      "bands": [
+        {
+          "name": "Oa11",
+          "description": "Chlorophyll fluorescence baseline, red edge transition",
+          "eo:center_wavelength": 0.709,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa12_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa12",
+      "bands": [
+        {
+          "name": "Oa12",
+          "description": "O2 absorption / clouds, vegetation",
+          "eo:center_wavelength": 0.754,
+          "eo:full_width_half_max": 0.0075
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa16_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa16",
+      "bands": [
+        {
+          "name": "Oa16",
+          "description": "Atmospheric / aerosol correction",
+          "eo:center_wavelength": 0.779,
+          "eo:full_width_half_max": 0.015
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa17_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa17",
+      "bands": [
+        {
+          "name": "Oa17",
+          "description": "Atmospheric / aerosol correction, clouds, pixel co-registration",
+          "eo:center_wavelength": 0.865,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa18_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa18",
+      "bands": [
+        {
+          "name": "Oa18",
+          "description": "Water vapour absorption reference. Common reference band with SLSTR. Vegetation monitoring",
+          "eo:center_wavelength": 0.885,
+          "eo:full_width_half_max": 0.01
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "Oa21_reflectanceData": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Reflectance for OLCI acquisition band Oa21",
+      "bands": [
+        {
+          "name": "Oa21",
+          "description": "Water vapour absorption, atmospheric / aerosol correction",
+          "eo:center_wavelength": 1.02,
+          "eo:full_width_half_max": 0.04
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "chl-Nn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Neural net chlorophyll concentration",
+      "processing:lineage": "Input bands: Oa01, Oa02, Oa03, Oa04, Oa05, Oa06, Oa07, Oa08, Oa09, Oa10, Oa11, Oa12, Oa16, Oa17, Oa18, Oa21",
+      "roles": [
+        "data"
+      ]
+    },
+    "chl-Oc4me": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "OC4Me algorithm chlorophyll concentration",
+      "processing:lineage": "Input bands: Oa03, Oa04, Oa05, Oa06",
+      "roles": [
+        "data"
+      ]
+    },
+    "geo-coordinates": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Geo coordinates annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "instrument-data": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Instrument annotation",
+      "roles": [
+        "data"
+      ]
+    },
+    "iop-Nn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Inherent optical properties of water",
+      "processing:lineage": "Input bands: Oa01, Oa12, Oa16, Oa17, Oa21",
+      "roles": [
+        "data"
+      ]
+    },
+    "iwv": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Integrated water vapour column",
+      "processing:lineage": "Input bands: Oa18, Oa19",
+      "roles": [
+        "data"
+      ]
+    },
+    "par": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Photosynthetically active radiation",
+      "roles": [
+        "data"
+      ]
+    },
+    "tie-geo-coordinates": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Tie-point geo coordinate annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "tie-geometries": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Tie-point geometries annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "tie-meteo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Tie-point meteo annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "time-coordinates": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Time coordinates annotations",
+      "roles": [
+        "data"
+      ]
+    },
+    "trsp": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Transparency properties of water",
+      "processing:lineage": "Input bands: Oa04, Oa06",
+      "roles": [
+        "data"
+      ]
+    },
+    "tsm-Nn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Total suspended matter concentration",
+      "processing:lineage": "Input bands: Oa01, Oa02, Oa03, Oa04, Oa05, Oa06, Oa07, Oa08, Oa09, Oa10, Oa11, Oa12, Oa16, Oa17, Oa18, Oa21",
+      "roles": [
+        "data"
+      ]
+    },
+    "w-Aer": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Aerosol over water",
+      "processing:lineage": "Input bands: Oa05, Oa06, Oa17",
+      "roles": [
+        "data"
+      ]
+    },
+    "wqsf": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Water quality and science flags",
+      "roles": [
+        "data"
+      ]
+    },
+    "thumbnail": {
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      },
+      "proj:code": null,
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ]
+    },
+    "xfdumanifest": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ]
+}

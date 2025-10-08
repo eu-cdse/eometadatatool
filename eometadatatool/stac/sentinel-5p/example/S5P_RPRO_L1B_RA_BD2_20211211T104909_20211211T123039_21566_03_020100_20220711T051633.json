@@ -1,0 +1,810 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l1-ra-bd2-rpro",
+  "id": "S5P_RPRO_L1B_RA_BD2_20211211T104909_20211211T123039_21566_03_020100_20220711T051633",
+  "properties": {
+    "created": "2023-04-06T17:23:01.651915Z",
+    "updated": "2025-01-15T10:31:29.612544Z",
+    "published": "2023-04-27T07:22:51.708455Z",
+    "eopf:origin_datetime": "2023-04-06T17:23:01.651915Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2021-12-11T12:09:04Z",
+    "start_datetime": "2021-12-11T12:09:04Z",
+    "end_datetime": "2021-12-11T12:09:07Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 3500,
+    "proj:code": null,
+    "proj:shape": [
+      5,
+      448
+    ],
+    "sat:absolute_orbit": 21566,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "time": {
+        "type": "temporal",
+        "description": "reference start time of measurement",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2021-12-11T00:00:00.000000Z"
+        ]
+      },
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along track dimension index",
+        "extent": [
+          0,
+          5
+        ]
+      },
+      "spectral_channel": {
+        "type": "other",
+        "description": "wavelength dimension index",
+        "extent": [
+          0,
+          497
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across track dimension index",
+        "extent": [
+          0,
+          448
+        ]
+      },
+      "ncorner": {
+        "type": "other",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "nsettings": {
+        "type": "other",
+        "extent": [
+          0,
+          1
+        ]
+      },
+      "nbinningregions": {
+        "type": "other",
+        "extent": [
+          0,
+          18
+        ]
+      },
+      "job_configuration_dim": {
+        "type": "other",
+        "extent": [
+          0,
+          217
+        ]
+      },
+      "algorithm_configuration_dim": {
+        "type": "other",
+        "extent": [
+          0,
+          261
+        ]
+      },
+      "processing_configuration_dim": {
+        "type": "other",
+        "extent": [
+          0,
+          1753
+        ]
+      }
+    },
+    "cube:variables": {
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along track dimension index",
+        "data_type": "int32"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "offset from the reference start time of measurement",
+        "unit": "milliseconds since 2021-12-11 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "spectral_channel": {
+        "dimensions": [
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "wavelength dimension index",
+        "data_type": "int32"
+      },
+      "detector_column_qualification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "Detector column qualification flags",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across track dimension index",
+        "data_type": "int32"
+      },
+      "detector_row_qualification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Detector row qualification flags",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "ground_pixel_quality": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "ground pixel quality flag",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "measurement_quality": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "measurement quality flag",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "quality_level": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "qualiy level of spectral channel",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "radiance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "spectral photon radiance",
+        "unit": "mol.m-2.nm-1.sr-1.s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "radiance_error": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "spectral photon radiance error, one standard deviation",
+        "nodata": -127,
+        "data_type": "int8"
+      },
+      "radiance_noise": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "spectral photon radiance noise, one standard deviation",
+        "nodata": -127,
+        "data_type": "int8"
+      },
+      "small_pixel_radiance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "small pixel photon radiance",
+        "unit": "mol.m-2.nm-1.sr-1.s-1",
+        "data_type": "other"
+      },
+      "spectral_channel_quality": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "spectral channel quality flag",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          376876800
+        ],
+        "description": "reference start time of measurement",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "data_type": "int32"
+      },
+      "earth_sun_distance": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "data",
+        "description": "distance between the earth and the sun",
+        "unit": "au",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "ncorner"
+        ],
+        "type": "data",
+        "description": "The four latitude boundaries of each ground pixel.",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "ncorner"
+        ],
+        "type": "data",
+        "description": "The four longitude boundaries of each ground pixel.",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_altitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_latitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sub-satellite latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_longitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "Longitude of the spacecraft sub-satellite point on the WGS84 reference ellipsoid",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_orbit_phase": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite orbit phase",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_shadow_fraction": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite shadow",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "housekeeping_data": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "data_type": "other"
+      },
+      "instrument_configuration": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "instrument configuration, IcID and IcVersion",
+        "data_type": "other"
+      },
+      "measurement_to_detector_row_table": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "data_type": "other"
+      },
+      "nominal_wavelength": {
+        "dimensions": [
+          "time",
+          "ground_pixel",
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "spectral channel nominal wavelength",
+        "unit": "1e-09 m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nominal_wavelength_error": {
+        "dimensions": [
+          "time",
+          "ground_pixel",
+          "spectral_channel"
+        ],
+        "type": "data",
+        "description": "spectral channel nominal wavelength error",
+        "unit": "1e-09 m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "processing_class": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "processing class",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "sample_cycle": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sample cycle",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "sample_cycle_length": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "length of sample cycle",
+        "unit": "ms",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "binning_table": {
+        "dimensions": [
+          "nsettings",
+          "nbinningregions"
+        ],
+        "type": "data",
+        "description": "binning table settings",
+        "data_type": "other"
+      },
+      "instrument_settings": {
+        "dimensions": [
+          "nsettings"
+        ],
+        "type": "data",
+        "data_type": "other"
+      },
+      "job_configuration": {
+        "dimensions": [
+          "job_configuration_dim"
+        ],
+        "type": "data",
+        "data_type": "other"
+      },
+      "algorithm_configuration": {
+        "dimensions": [
+          "algorithm_configuration_dim"
+        ],
+        "type": "data",
+        "data_type": "other"
+      },
+      "processing_configuration": {
+        "dimensions": [
+          "processing_configuration_dim"
+        ],
+        "type": "data",
+        "data_type": "other"
+      }
+    },
+    "product:type": "L1B_RA_BD2",
+    "processing:level": "L1",
+    "processing:facility": "DLR-DFD",
+    "processing:datetime": "2022-07-11T00:00:00Z",
+    "processing:version": "2.1.0.25042",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -45.39663,
+    66.68176,
+    42.504677,
+    81.498535
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -45.396629999999995,
+          66.78403
+        ],
+        [
+          -44.81473499999999,
+          66.68175999999998
+        ],
+        [
+          -43.44077299999999,
+          68.60493
+        ],
+        [
+          -41.43838,
+          70.85554999999998
+        ],
+        [
+          -39.629436,
+          72.44663999999999
+        ],
+        [
+          -37.900208,
+          73.670654
+        ],
+        [
+          -36.188669999999995,
+          74.66488
+        ],
+        [
+          -34.45228,
+          75.50502999999999
+        ],
+        [
+          -30.762478,
+          76.89222
+        ],
+        [
+          -26.307202999999998,
+          78.09627499999999
+        ],
+        [
+          -21.260902,
+          79.07560999999998
+        ],
+        [
+          -14.149258,
+          80.02183499999998
+        ],
+        [
+          -9.430498999999998,
+          80.45896999999998
+        ],
+        [
+          -3.5109974999999998,
+          80.85142
+        ],
+        [
+          4.110853,
+          81.156555
+        ],
+        [
+          14.130823999999999,
+          81.27899
+        ],
+        [
+          27.392338,
+          80.99769000000002
+        ],
+        [
+          42.04495599999999,
+          80.010185
+        ],
+        [
+          42.504677,
+          80.23377
+        ],
+        [
+          31.920680000000004,
+          81.02865
+        ],
+        [
+          17.249274999999997,
+          81.49853499999999
+        ],
+        [
+          6.130916,
+          81.44948
+        ],
+        [
+          -2.2683706000000003,
+          81.17074
+        ],
+        [
+          -8.720077499999999,
+          80.785
+        ],
+        [
+          -13.801543999999998,
+          80.34664999999998
+        ],
+        [
+          -21.332687,
+          79.39263999999999
+        ],
+        [
+          -24.246504,
+          78.88756599999999
+        ],
+        [
+          -29.054339999999996,
+          77.80659999999999
+        ],
+        [
+          -33.02044,
+          76.57023
+        ],
+        [
+          -36.537952,
+          75.04240999999999
+        ],
+        [
+          -38.219692,
+          74.0901
+        ],
+        [
+          -39.900504999999995,
+          72.93272400000001
+        ],
+        [
+          -41.63354499999999,
+          71.45485
+        ],
+        [
+          -43.509556,
+          69.42322
+        ],
+        [
+          -45.396629999999995,
+          66.78403
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_RPRO_L1B_RA_BD2_20211211T104909_20211211T123039_21566_03_020100_20220711T051633.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Radiance Product, Band 2",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "bands": [
+        {
+          "name": "BD2",
+          "description": "Band 2 (UV)",
+          "eo:center_wavelength": 0.31,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "file:checksum": "d501103ceb6a0b7761db649e545859f38298ee",
+      "file:size": 6644963,
+      "file:local_path": "S5P_RPRO_L1B_RA_BD2_20211211T104909_20211211T123039_21566_03_020100_20220711T051633.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L1B_RA_BD2/2021/12/11/S5P_RPRO_L1B_RA_BD2_20211211T104909_20211211T123039_21566_03_020100_20220711T051633.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e75af095-7c06-454d-9bb4-f36ff4eadd2d)/Nodes(S5P_RPRO_L1B_RA_BD2_20211211T104909_20211211T123039_21566_03_020100_20220711T051633.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

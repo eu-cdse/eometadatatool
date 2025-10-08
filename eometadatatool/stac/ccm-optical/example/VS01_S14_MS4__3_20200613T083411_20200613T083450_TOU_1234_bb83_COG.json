@@ -1,0 +1,181 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "ccm-optical",
+  "id": "VS01_S14_MS4__3_20200613T083411_20200613T083450_TOU_1234_bb83_COG",
+  "properties": {
+    "created": "2025-03-01T06:05:38.121198Z",
+    "updated": "2025-04-29T05:11:20.169646Z",
+    "published": "2025-03-01T07:06:24.214484Z",
+    "eopf:origin_datetime": "2025-03-01T06:05:38.121198Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2022-05-04T00:48:25.000000Z",
+    "start_datetime": "2020-06-13T08:34:11.000000Z",
+    "end_datetime": "2020-06-13T08:34:50.000000Z",
+    "instruments": [
+      "s1-imager"
+    ],
+    "proj:code": "EPSG:4326",
+    "product:type": "S14_MS4__3",
+    "constellation": "vision",
+    "platform": "vision-1",
+    "processing:level": "L2",
+    "product:acquisition_type": "nominal",
+    "eo:cloud_cover": 0.0,
+    "view:incidence_angle": 6.82752256548,
+    "view:sun_azimuth": 112.0268359296,
+    "view:sun_elevation": 64.03922304849,
+    "gsd": 4.0,
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    25.237762,
+    35.456032,
+    25.303045,
+    35.505531
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          25.262707000000002,
+          35.45603199999999
+        ],
+        [
+          25.245550000000005,
+          35.461426
+        ],
+        [
+          25.237762,
+          35.476108999999994
+        ],
+        [
+          25.24086,
+          35.49612
+        ],
+        [
+          25.258572,
+          35.505526999999994
+        ],
+        [
+          25.288373999999997,
+          35.49573899999999
+        ],
+        [
+          25.298495999999997,
+          35.48762899999999
+        ],
+        [
+          25.302773,
+          35.478825
+        ],
+        [
+          25.30234,
+          35.470123
+        ],
+        [
+          25.297361,
+          35.462345
+        ],
+        [
+          25.262707000000002,
+          35.45603199999999
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/VS01_S14_MS4__3_20200613T083411_20200613T083450_TOU_1234_bb83_COG.DIMA.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "circulation_report": {
+      "type": "application/xml",
+      "title": "Circulation report",
+      "roles": [
+        "metadata"
+      ],
+      "file:checksum": "d50110bc23aaa7614caffb7dd003e8269a366b",
+      "file:size": 7066,
+      "href": "s3://eodata/CCM/VHR_IMAGE_2021/S14_MS4__3_07B6-COG/2020/06/13/VS01_S14_MS4__3_20200613T083411_20200613T083450_TOU_1234_bb83_COG/GSC_CR_ESA_VHR_IMAGE_2021_20220504_004825.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(82600eb9-095c-44e7-889d-20dc5557274a)/Nodes(VS01_S14_MS4__3_20200613T083411_20200613T083450_TOU_1234_bb83_COG.DIMA)/Nodes(eodata)/Nodes(CCM)/Nodes(VHR_IMAGE_2021)/Nodes(S14_MS4__3_07B6-COG)/Nodes(2020)/Nodes(06)/Nodes(13)/Nodes(VS01_S14_MS4__3_20200613T083411_20200613T083450_TOU_1234_bb83_COG)/Nodes(GSC_CR_ESA_VHR_IMAGE_2021_20220504_004825.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110b461ea0942ee2acd009930e329c88b06",
+      "file:size": 7510726,
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(82600eb9-095c-44e7-889d-20dc5557274a)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.1.0/schema.json"
+  ]
+}

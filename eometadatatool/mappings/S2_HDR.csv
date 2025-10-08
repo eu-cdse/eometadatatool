@@ -1,0 +1,9 @@
+metadata;file;mappings;datatype
+platformShortName;static;SENTINEL-2;String
+platformSerialIdentifier;*.HDR;substring(//*[local-name() = 'File_Name']/text(),3,1);String
+productType;*.HDR;//*[local-name() = 'File_Type']/text();String
+beginningDateTime;*.HDR;//*[local-name() = 'Validity_Start']/text();DateTimeOffset
+endingDateTime;*.HDR;//*[local-name() = 'Validity_Stop']/text();DateTimeOffset
+processingCenter;*.HDR;//*[local-name() = 'System']/text();String
+processorVersion;*.HDR;//*[local-name() = 'Creator_Version']/text();String
+processingDate;*.HDR;//*[local-name() = 'Creation_Date']/text();DateTimeOffset

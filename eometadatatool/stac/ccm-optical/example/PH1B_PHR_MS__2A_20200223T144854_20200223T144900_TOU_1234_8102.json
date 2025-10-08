@@ -1,0 +1,194 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "ccm-optical",
+  "id": "PH1B_PHR_MS__2A_20200223T144854_20200223T144900_TOU_1234_8102",
+  "properties": {
+    "created": "2024-03-05T10:05:43.000000Z",
+    "updated": "2025-04-22T10:01:00.130018Z",
+    "published": "2024-03-10T12:16:32.614595Z",
+    "eopf:origin_datetime": "2024-03-05T10:05:43.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2023-03-20T21:54:18.000000Z",
+    "start_datetime": "2020-02-23T14:48:58.000000Z",
+    "end_datetime": "2020-02-23T14:49:00.000000Z",
+    "instruments": [
+      "hr"
+    ],
+    "proj:code": "EPSG:4326",
+    "product:type": "PHR_MS__2A",
+    "platform": "pleiades-1b",
+    "processing:level": "L1",
+    "product:acquisition_type": "nominal",
+    "eo:cloud_cover": 0.0,
+    "view:incidence_angle": 12.88735410369473,
+    "view:sun_azimuth": 136.3891518038932,
+    "view:sun_elevation": 56.87555035584111,
+    "gsd": 2.0,
+    "sat:absolute_orbit": 164,
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -61.163658,
+    14.653499,
+    -61.091072,
+    14.7606
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -61.16348599999999,
+          14.675324
+        ],
+        [
+          -61.158768,
+          14.688663000000002
+        ],
+        [
+          -61.146648000000006,
+          14.701948000000002
+        ],
+        [
+          -61.14334100000001,
+          14.727632999999997
+        ],
+        [
+          -61.134716,
+          14.743814
+        ],
+        [
+          -61.11589399999999,
+          14.758914999999998
+        ],
+        [
+          -61.098026,
+          14.757777999999997
+        ],
+        [
+          -61.09210599999999,
+          14.747444999999997
+        ],
+        [
+          -61.091072,
+          14.721282
+        ],
+        [
+          -61.097145,
+          14.685214
+        ],
+        [
+          -61.11294599999999,
+          14.670067999999999
+        ],
+        [
+          -61.14315799999999,
+          14.653637999999997
+        ],
+        [
+          -61.15999200000001,
+          14.660666
+        ],
+        [
+          -61.16348599999999,
+          14.675324
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/PH1B_PHR_MS__2A_20200223T144854_20200223T144900_TOU_1234_8102.DIMA.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "circulation_report": {
+      "type": "application/xml",
+      "title": "Circulation report",
+      "roles": [
+        "metadata"
+      ],
+      "file:checksum": "d501106eaa29b21ad8ac29891f68a25fe29865",
+      "file:size": 11426,
+      "href": "s3://eodata/CCM/VHR_IMAGE_2021/PHR_MS__2A_07B6/2020/02/23/PH1B_PHR_MS__2A_20200223T144854_20200223T144900_TOU_1234_8102/GSC_CR_ESA_VHR_IMAGE_2021_20230320_215419.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(04aee854-ab83-4969-9a9a-7c22bc6de1c3)/Nodes(PH1B_PHR_MS__2A_20200223T144854_20200223T144900_TOU_1234_8102.DIMA)/Nodes(eodata)/Nodes(CCM)/Nodes(VHR_IMAGE_2021)/Nodes(PHR_MS__2A_07B6)/Nodes(2020)/Nodes(02)/Nodes(23)/Nodes(PH1B_PHR_MS__2A_20200223T144854_20200223T144900_TOU_1234_8102)/Nodes(GSC_CR_ESA_VHR_IMAGE_2021_20230320_215419.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110f48a9fab82ec9045f45bf57f94ae0e2c",
+      "file:size": 185077436,
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(04aee854-ab83-4969-9a9a-7c22bc6de1c3)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.1.0/schema.json"
+  ]
+}

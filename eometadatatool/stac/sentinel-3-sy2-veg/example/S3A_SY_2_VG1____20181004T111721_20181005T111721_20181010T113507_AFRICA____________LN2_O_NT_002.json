@@ -1,0 +1,642 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-3-syn-2-vg1-ntc",
+  "id": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002",
+  "properties": {
+    "created": "2019-04-19T16:14:44.084000Z",
+    "updated": "2024-08-06T20:18:23.668499Z",
+    "published": "2019-01-31T04:12:16.051856Z",
+    "eopf:origin_datetime": "2019-04-19T16:14:44.084000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2018-10-04T11:17:21.000000Z",
+    "start_datetime": "2018-10-04T11:17:21.000000Z",
+    "end_datetime": "2018-10-05T11:17:21.000000Z",
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "olci",
+      "slstr"
+    ],
+    "gsd": 1000,
+    "processing:level": "L2",
+    "processing:datetime": "2018-10-10T11:40:48.000000Z",
+    "proj:code": null,
+    "sat:absolute_orbit": 13699,
+    "sat:relative_orbit": 251,
+    "sat:orbit_cycle": 36,
+    "sat:orbit_state": "descending",
+    "sat:platform_international_designator": "2016-011A",
+    "eo:cloud_cover": 0.01,
+    "eo:snow_cover": 0.000041,
+    "product:type": "SY_2_VG1___",
+    "product:timeliness": "P1M",
+    "product:timeliness_category": "NT",
+    "statistics": {
+      "land": 16.632627
+    },
+    "processing:version": "03.35",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -25.9955,
+    -34.9955,
+    59.9955,
+    37.9955
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -25.995499999999996,
+          -34.9955
+        ],
+        [
+          59.9955,
+          -34.9955
+        ],
+        [
+          59.9955,
+          37.99549999999999
+        ],
+        [
+          -25.995499999999996,
+          37.99549999999999
+        ],
+        [
+          -25.995499999999996,
+          -34.9955
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/xfdumanifest.xml",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/xfdumanifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(xfdumanifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/quicklook.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(473bc6ec-7720-4b77-9fab-7ac013235779)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/quicklook.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "B0": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B0 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B0",
+          "description": "OLCI channels Oa02, Oa03",
+          "eo:center_wavelength": 0.45,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "file:checksum": "d50110d112f920ea71003ec9823dc220dd87ac",
+      "file:size": 18924359,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/B0.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/B0.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(B0.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B2": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B2 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B2",
+          "description": "OLCI channels Oa06, Oa07, Oa08, Oa09, Oa10",
+          "eo:center_wavelength": 0.645,
+          "eo:full_width_half_max": 0.035
+        }
+      ],
+      "file:checksum": "d50110841da23c3ddd342a358197052a76ab66",
+      "file:size": 20648139,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/B2.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/B2.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(B2.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B3": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B3 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B3",
+          "description": "OLCI channels Oa16, Oa17, Oa18, Oa21",
+          "eo:center_wavelength": 0.835,
+          "eo:full_width_half_max": 0.055
+        }
+      ],
+      "file:checksum": "d5011006930cfca26f0e3392c9ce55bb08a2cc",
+      "file:size": 21204336,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/B3.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/B3.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(B3.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "MIR": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-MIR channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "MIR",
+          "description": "SLSTR nadir and oblique channels S5, S6",
+          "eo:center_wavelength": 1.665,
+          "eo:full_width_half_max": 0.085
+        }
+      ],
+      "file:checksum": "d50110b6292edd4bd606b46ed664b10fdc0806",
+      "file:size": 20601404,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/MIR.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/MIR.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(MIR.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "og": {
+      "type": "application/netcdf",
+      "title": "Total Ozone column data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110d20c7d75d059b9b00b1616055c2b2f75",
+      "file:size": 1544785,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/og.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/og.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(og.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "saa": {
+      "type": "application/netcdf",
+      "title": "Solar azimuth angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501109df302fa97f05d4b1c364af550276779",
+      "file:size": 1755514,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/saa.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/saa.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(saa.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "sm": {
+      "type": "application/netcdf",
+      "title": "Status Map data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011030e09b9d062fa6e2122495ce5bc3c9b5",
+      "file:size": 1833604,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/sm.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/sm.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(sm.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "sza": {
+      "type": "application/netcdf",
+      "title": "Solar zenith angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110379dd0991d13b498aee3718486c9652b",
+      "file:size": 1947844,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/sza.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/sza.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(sza.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "vaa": {
+      "type": "application/netcdf",
+      "title": "View azimuth angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011014d862cad3f51b50335d23f10d4b7ee5",
+      "file:size": 1802840,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/vaa.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/vaa.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(vaa.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "vza": {
+      "type": "application/netcdf",
+      "title": "View zenith angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110bf1b9360cc518841c4d8f99a700b8c3c",
+      "file:size": 2743999,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/vza.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/vza.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(vza.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "wvg": {
+      "type": "application/netcdf",
+      "title": "Total column water vapour data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501106e9f1c704f6812f3b0a5400346b0bb8b",
+      "file:size": 3129432,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/wvg.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/wvg.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(wvg.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ag": {
+      "type": "application/netcdf",
+      "title": "Aerosol optical thickness data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110670dccc2032faf385d9bc16ca7922520",
+      "file:size": 8220239,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/ag.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/ag.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(ag.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "NDVI": {
+      "type": "application/netcdf",
+      "title": "Normalised difference vegetation index",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: B2, B3",
+      "file:checksum": "d50110fe652e49b650fd73728f3fff9031aabb",
+      "file:size": 8147393,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/NDVI.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/NDVI.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(NDVI.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tg": {
+      "type": "application/netcdf",
+      "title": "Synthesis time data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110f9d652a6a27aff3cf4c759fd9608c79e",
+      "file:size": 5936656,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/tg.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2018/10/04/S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3/tg.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/Nodes(S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3)/Nodes(tg.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501100a33afa9c83abe92b7b33055ef4f2831",
+      "file:size": 119492644,
+      "file:local_path": "S3A_SY_2_VG1____20181004T111721_20181005T111721_20181010T113507_AFRICA____________LN2_O_NT_002.SEN3.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(93d4d39c-f2d4-5330-acf6-b55e79b100cd)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

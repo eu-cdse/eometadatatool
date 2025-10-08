@@ -1,0 +1,3408 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "id": "sentinel-3-sl-1-rbt-ntc",
+  "type": "Collection",
+  "title": "Sentinel-3 SLSTR Radiance and Brightness Temperature (NTC)",
+  "description": "The Copernicus Sentinel-3 SLSTR RBT products provide global brightness temperatures and radiances with a spatial resolution of 500 meters for reflectance bands and 1 kilometer for thermal infrared bands, useful for environmental monitoring and climate studies.",
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2016-04-19T00:19:32.578034Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "1000m",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "Global",
+    "P1M",
+    "Radiance",
+    "SLSTR",
+    "SL_1_RBT____",
+    "Satellite",
+    "Sentinel",
+    "Sentinel-3",
+    "Temperature"
+  ],
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-3",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S3_SL1_RBT.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Sentinel-3 SLSTR RBT Thumbnail",
+      "proj:code": null
+    }
+  },
+  "summaries": {
+    "gsd": [
+      1000
+    ],
+    "proj:code": [
+      null
+    ],
+    "bands": [
+      {
+        "name": "S1",
+        "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
+        "eo:center_wavelength": 0.55427,
+        "eo:full_width_half_max": 0.01926
+      },
+      {
+        "name": "S2",
+        "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
+        "eo:center_wavelength": 0.65947,
+        "eo:full_width_half_max": 0.01925
+      },
+      {
+        "alternate:name": "S3",
+        "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
+        "eo:center_wavelength": 0.868,
+        "eo:full_width_half_max": 0.0206
+      },
+      {
+        "name": "S4",
+        "description": "Band 4 - Cirrus detection over land",
+        "eo:center_wavelength": 1.3748,
+        "eo:full_width_half_max": 0.0208
+      },
+      {
+        "name": "S5",
+        "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+        "eo:center_wavelength": 1.6134,
+        "eo:full_width_half_max": 0.06068
+      },
+      {
+        "name": "S6",
+        "description": "Band 6 - Vegetation state and cloud clearing",
+        "eo:center_wavelength": 2.2557,
+        "eo:full_width_half_max": 0.05015
+      },
+      {
+        "name": "S7",
+        "description": "Band 7 - SST, LST, Active fire",
+        "eo:center_wavelength": 3.742,
+        "eo:full_width_half_max": 0.398
+      },
+      {
+        "name": "S8",
+        "description": "Band 8 - SST, LST, Active fire",
+        "eo:center_wavelength": 10.854,
+        "eo:full_width_half_max": 0.776
+      },
+      {
+        "name": "S9",
+        "description": "Band 9 - SST, LST",
+        "eo:center_wavelength": 12.0225,
+        "eo:full_width_half_max": 0.905
+      },
+      {
+        "name": "F1",
+        "description": "Band 10 - Active fire",
+        "eo:center_wavelength": 3.742,
+        "eo:full_width_half_max": 0.398
+      },
+      {
+        "name": "F2",
+        "description": "Band 11 - Active fire",
+        "eo:center_wavelength": 10.854,
+        "eo:full_width_half_max": 0.776
+      }
+    ],
+    "platform": [
+      "sentinel-3a",
+      "sentinel-3b"
+    ],
+    "instruments": [
+      "slstr"
+    ],
+    "constellation": [
+      "sentinel-3"
+    ],
+    "product:type": [
+      "SL_1_RBT____"
+    ],
+    "product:timeliness": [
+      "P1M"
+    ],
+    "product:timeliness_category": [
+      "NT"
+    ],
+    "processing:level": [
+      "L1"
+    ],
+    "processing:version": [
+      "03.24",
+      "03.25",
+      "03.34",
+      "03.35",
+      "03.37",
+      "03.38",
+      "03.39",
+      "03.43",
+      "03.44",
+      "03.45",
+      "03.47",
+      "03.48",
+      "03.49",
+      "03.50"
+    ],
+    "sat:orbit_state": [
+      "ascending",
+      "descending"
+    ],
+    "sat:platform_international_designator": [
+      "2016-011A",
+      "2018-039A"
+    ],
+    "statistics": {
+      "type": "object",
+      "properties": {
+        "saline_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "coastal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "fresh_inland_water": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "tidal_region": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        },
+        "land": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100
+        }
+      }
+    }
+  },
+  "auth:schemes": {
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+    },
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "cdse-s3": {
+      "type": "custom-s3",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "description": "This endpoint will provide access to EO data which is stored on the Object Storage. A Global Service Load Balancer (GSLB) directs the request to either CloudFerro Cloud or OpenTelekom Cloud (OTC) S3 endpoint based on the location of the DNS resolver.",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    },
+    "creodias-s3": {
+      "type": "custom-s3",
+      "title": "CREODIAS S3",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    }
+  },
+  "item_assets": {
+    "product": {
+      "alternate:name": "HTTPS",
+      "auth:refs": [
+        "oidc"
+      ],
+      "title": "Zipped product",
+      "type": "application/zip",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ]
+    },
+    "cartesian_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the A stripe grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the A stripe grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the B stripe grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the B stripe grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the A, B orTDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_fn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_fo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km F1 grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km TIR grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "cartesian_tx": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "16km cartesian coordinates",
+      "roles": [
+        "data"
+      ]
+    },
+    "F1_BT_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F1 (1km TIR grid, nadir view)",
+      "bands": [
+        {
+          "name": "F1",
+          "description": "Band 10 - Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "F1_BT_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F1 (1km TIR grid, oblique view)",
+      "bands": [
+        {
+          "name": "F1",
+          "description": "Band 10 - Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "F1_quality_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F1 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "F1_quality_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F1 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "F1_BT_fn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F1 (1km F1 grid, nadir view)",
+      "bands": [
+        {
+          "name": "F1",
+          "description": "Band 10 - Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "F1_BT_fo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F1 (1km F1 grid, oblique view)",
+      "bands": [
+        {
+          "name": "F1",
+          "description": "Band 10 - Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "F1_quality_fn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F1 (1km F1 grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "F1_quality_fo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F1 (1km F1 grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "F2_BT_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F2 (1km TIR grid, nadir view)",
+      "bands": [
+        {
+          "name": "F2",
+          "description": "Band 11 - Active fire",
+          "eo:center_wavelength": 10.854,
+          "eo:full_width_half_max": 0.776
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "F2_BT_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel F1 (1km TIR grid, oblique view)",
+      "bands": [
+        {
+          "name": "F2",
+          "description": "Band 11 - Active fire",
+          "eo:center_wavelength": 10.854,
+          "eo:full_width_half_max": 0.776
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "F2_quality_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F2 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "F2_quality_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel F2 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the A stripe grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the A stripe grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the B stripe grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the B stripe grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_fn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_fo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km F1 grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "flags_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km TIR grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the A stripe grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the A stripe grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the B stripe grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the B stripe grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_fn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_fo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km F1 grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km TIR grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geodetic_tx": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "16km geodetic coordinates",
+      "roles": [
+        "data"
+      ]
+    },
+    "geometry_tn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "16km solar and satellite geometry annotations, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "geometry_to": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "16km solar and satellite geometry annotations, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the A stripe grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the A stripe grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the B stripe grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the B stripe grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the A, B or TDI stripe grid, nadir or oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_fn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_fo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km F1 grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ]
+    },
+    "indices_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km TIR grid, oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "met_tx": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Meteorological parameters regridded onto the 16km tie points",
+      "roles": [
+        "data"
+      ]
+    },
+    "S1_quality_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S1 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S1_quality_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S1 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S1_radiance_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S1 (A stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S1",
+          "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
+          "eo:center_wavelength": 0.55427,
+          "eo:full_width_half_max": 0.01926
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S1_radiance_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S1 (A stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S1",
+          "description": "Band 1 - Cloud screening, vegetation monitoring, aerosol",
+          "eo:center_wavelength": 0.55427,
+          "eo:full_width_half_max": 0.01926
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S2_quality_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S2 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S2_quality_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S2 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S2_radiance_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S2 (A stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S2",
+          "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
+          "eo:center_wavelength": 0.65947,
+          "eo:full_width_half_max": 0.01925
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S2_radiance_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S2 (A stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S2",
+          "description": "Band 2 - NDVI, vegetation monitoring, aerosol",
+          "eo:center_wavelength": 0.65947,
+          "eo:full_width_half_max": 0.01925
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S3_quality_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S3 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S3_quality_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S3 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S3_radiance_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S3 (A stripe grid, nadir view)",
+      "bands": [
+        {
+          "alternate:name": "S3",
+          "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
+          "eo:center_wavelength": 0.868,
+          "eo:full_width_half_max": 0.0206
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S3_radiance_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S3 (A stripe grid, oblique view)",
+      "bands": [
+        {
+          "alternate:name": "S3",
+          "description": "Band 3 - NDVI, cloud flagging, pixel co-registration",
+          "eo:center_wavelength": 0.868,
+          "eo:full_width_half_max": 0.0206
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_quality_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_quality_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_quality_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_quality_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_quality_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_quality_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S4 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_radiance_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (A stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Band 4 - Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_radiance_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (A stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Band 4 - Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_radiance_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (B stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Band 4 - Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_radiance_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (B stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Band 4 - Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_radiance_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (TDI stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Band 4 - Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S4_radiance_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S4 (TDI stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S4",
+          "description": "Band 4 - Cirrus detection over land",
+          "eo:center_wavelength": 1.3748,
+          "eo:full_width_half_max": 0.0208
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_quality_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_quality_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_quality_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_quality_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_quality_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_quality_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S5 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_radiance_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (A stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_radiance_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (A stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_radiance_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (B stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_radiance_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (B stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_radiance_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (TDI stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S5_radiance_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S5 (TDI stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S5",
+          "description": "Band 5 - Cloud clearing, ice, snow, vegetation monitoring",
+          "eo:center_wavelength": 1.6134,
+          "eo:full_width_half_max": 0.06068
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_quality_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (A stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_quality_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (A stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_quality_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (B stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_quality_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (B stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_quality_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (TDI stripe grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_quality_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Visible and Shortwave IR quality annotations for channel S6 (TDI stripe grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_radiance_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (A stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_radiance_ao": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (A stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_radiance_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (B stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_radiance_bo": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (B stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_radiance_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (TDI stripe grid, nadir view)",
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S6_radiance_co": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "TOA radiance for channel S6 (TDI stripe grid, oblique view)",
+      "bands": [
+        {
+          "name": "S6",
+          "description": "Band 6 - Vegetation state and cloud clearing",
+          "eo:center_wavelength": 2.2557,
+          "eo:full_width_half_max": 0.05015
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S7_BT_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S7 (1km TIR grid, nadir view)",
+      "bands": [
+        {
+          "name": "S7",
+          "description": "Band 7 - SST, LST, Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S7_BT_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S7 (1km TIR grid, oblique view)",
+      "bands": [
+        {
+          "name": "S7",
+          "description": "Band 7 - SST, LST, Active fire",
+          "eo:center_wavelength": 3.742,
+          "eo:full_width_half_max": 0.398
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S7_quality_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S7 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S7_quality_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S7 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S8_BT_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S8 (1km TIR grid, nadir view)",
+      "bands": [
+        {
+          "name": "S8",
+          "description": "Band 8 - SST, LST, Active fire",
+          "eo:center_wavelength": 10.854,
+          "eo:full_width_half_max": 0.776
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S8_BT_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S8 (1km TIR grid, oblique view)",
+      "bands": [
+        {
+          "name": "S8",
+          "description": "Band 8 - SST, LST, Active fire",
+          "eo:center_wavelength": 10.854,
+          "eo:full_width_half_max": 0.776
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S8_quality_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S8 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S8_quality_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S8 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S9_BT_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S9 (1km TIR grid, nadir view)",
+      "bands": [
+        {
+          "name": "S9",
+          "description": "Band 9 - SST, LST",
+          "eo:center_wavelength": 12.0225,
+          "eo:full_width_half_max": 0.905
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S9_BT_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Gridded pixel brightness temperature for channel S9 (1km TIR grid, oblique view)",
+      "bands": [
+        {
+          "name": "S9",
+          "description": "Band 9 - SST, LST",
+          "eo:center_wavelength": 12.0225,
+          "eo:full_width_half_max": 0.905
+        }
+      ],
+      "roles": [
+        "data"
+      ]
+    },
+    "S9_quality_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S9 (1km TIR grid, nadir view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "S9_quality_io": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Thermal Infrared quality annotations for channel S9 (1km TIR grid, oblique view)",
+      "roles": [
+        "data"
+      ]
+    },
+    "time_an": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Time annotations for the A stripe grid",
+      "roles": [
+        "data"
+      ]
+    },
+    "time_bn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Time annotations for the B stripe grid",
+      "roles": [
+        "data"
+      ]
+    },
+    "time_cn": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Time annotations for the A, B or TDI stripe grid, nadir and oblique view",
+      "roles": [
+        "data"
+      ]
+    },
+    "time_in": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "Time annotations for the 1 KM grid",
+      "roles": [
+        "data"
+      ]
+    },
+    "viscal": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/netcdf",
+      "title": "VISCAL data obtained from input VISCAL ADF",
+      "roles": [
+        "data"
+      ]
+    },
+    "xfdumanifest": {
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ]
+        }
+      },
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ]
+}

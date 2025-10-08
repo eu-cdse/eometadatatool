@@ -1,0 +1,734 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-3-sl-2-frp-ntc",
+  "id": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004",
+  "properties": {
+    "created": "2024-01-02T10:09:41.743000Z",
+    "updated": "2024-01-02T10:15:30.895477Z",
+    "published": "2024-01-02T10:15:28.127876Z",
+    "eopf:origin_datetime": "2024-01-02T10:09:41.743000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2024-01-01T00:01:54.080898Z",
+    "start_datetime": "2024-01-01T00:01:54.080898Z",
+    "end_datetime": "2024-01-01T00:04:54.080898Z",
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "slstr"
+    ],
+    "gsd": 1000,
+    "processing:level": "L2",
+    "processing:datetime": "2024-01-02T10:07:51.000000Z",
+    "proj:code": null,
+    "sat:absolute_orbit": 40999,
+    "sat:relative_orbit": 216,
+    "sat:orbit_cycle": 107,
+    "sat:orbit_state": "ascending",
+    "sat:platform_international_designator": "2016-011A",
+    "eo:cloud_cover": 94.15,
+    "product:type": "SL_2_FRP___",
+    "product:timeliness": "P1M",
+    "product:timeliness_category": "NT",
+    "statistics": {
+      "saline_water": 100.0,
+      "coastal": 0.0,
+      "fresh_inland_water": 0.0,
+      "tidal_region": 0.0,
+      "land": 0.0
+    },
+    "processing:version": "03.49",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -49.5316,
+    41.1037,
+    -26.2584,
+    54.4812
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -49.531600000000005,
+          51.3162
+        ],
+        [
+          -38.5555,
+          53.47429999999999
+        ],
+        [
+          -27.794699999999995,
+          54.481199999999994
+        ],
+        [
+          -26.258399999999998,
+          44.0167
+        ],
+        [
+          -44.1093,
+          41.1037
+        ],
+        [
+          -49.531600000000005,
+          51.3162
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/xfdumanifest.xml",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/xfdumanifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(xfdumanifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/quicklook.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(28396b80-6cae-4337-923f-7fd43541b718)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/quicklook.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "FRP_an": {
+      "type": "application/netcdf",
+      "title": "FRP_an measurements",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: S5, S6, S7, F1",
+      "file:checksum": "d501100d8a27e938ac08e5ba4821d5b9bbefe5",
+      "file:size": 1496808,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/FRP_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/FRP_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(FRP_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "FRP_bn": {
+      "type": "application/netcdf",
+      "title": "FRP_bn measurements",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: S5, S6, S7, F1",
+      "file:checksum": "d5011062c7eda640712f005b983515282a7c94",
+      "file:size": 150203,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/FRP_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/FRP_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(FRP_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "FRP_in": {
+      "type": "application/netcdf",
+      "title": "FRP_in measurements",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: S5, S6, S7, F1",
+      "file:checksum": "d501108a6e20610c9488361311f0b3bad921d4",
+      "file:size": 455045,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/FRP_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/FRP_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(FRP_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_fn": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011001d64b27916421a730e69a2fca7dea4e",
+      "file:size": 4874057,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/cartesian_fn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/cartesian_fn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(cartesian_fn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_in": {
+      "type": "application/netcdf",
+      "title": "Full resolution cartesian coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501101978cee696bdcf6974c60484b9e6e636",
+      "file:size": 4609795,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/cartesian_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/cartesian_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(cartesian_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "cartesian_tx": {
+      "type": "application/netcdf",
+      "title": "16km cartesian coordinates",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011001f33e83631921aa2ce972647c2833a6",
+      "file:size": 41924,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/cartesian_tx.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/cartesian_tx.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(cartesian_tx.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_fn": {
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011099948eaa5313f044ddc3ca4655094d49",
+      "file:size": 1205156,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/flags_fn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/flags_fn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(flags_fn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flags_in": {
+      "type": "application/netcdf",
+      "title": "Global flags for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110533f84c7f4d7b156e0d252091cd30ea0",
+      "file:size": 1204684,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/flags_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/flags_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(flags_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_fn": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501103d9bcf55e9ec924c2ee4dbe70d54cd3e",
+      "file:size": 7687210,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/geodetic_fn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/geodetic_fn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(geodetic_fn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_in": {
+      "type": "application/netcdf",
+      "title": "Full resolution geodetic coordinates for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011023a9c3cba0f373c825ccd94cc46a7e27",
+      "file:size": 7577104,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/geodetic_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/geodetic_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(geodetic_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geodetic_tx": {
+      "type": "application/netcdf",
+      "title": "16km geodetic coordinates",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110cd9944ac8735b6f85ed00630540620f2",
+      "file:size": 1710569,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/geodetic_tx.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/geodetic_tx.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(geodetic_tx.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "geometry_tn": {
+      "type": "application/netcdf",
+      "title": "16km solar and satellite geometry annotations, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110a78eb901a4d21402e7a364311dcac691",
+      "file:size": 3341739,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/geometry_tn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/geometry_tn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(geometry_tn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_fn": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km F1 grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110518042a4022852b6e1bec9da3cc7553c",
+      "file:size": 1135467,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/indices_fn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/indices_fn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(indices_fn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "indices_in": {
+      "type": "application/netcdf",
+      "title": "Scan, pixel and detector annotations for the 1km TIR grid, nadir view",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501108eff992948aed889198821da2a7e5d53",
+      "file:size": 906571,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/indices_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/indices_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(indices_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "met_tx": {
+      "type": "application/netcdf",
+      "title": "Meteorological parameters regridded onto the 16km tie points",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110560f8c4b750b5a93d2128464c1199ee1",
+      "file:size": 34398636,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/met_tx.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/met_tx.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(met_tx.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "time_an": {
+      "type": "application/netcdf",
+      "title": "Time annotations for the A stripe grid",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011000d4cf3b2abd3c7809dfe5bdedc79636",
+      "file:size": 67133,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/time_an.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/time_an.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(time_an.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "time_bn": {
+      "type": "application/netcdf",
+      "title": "Time annotations for the B stripe grid",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110e15425e7a3bf5280dae5db083a8f603c",
+      "file:size": 67542,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/time_bn.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/time_bn.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(time_bn.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "time_in": {
+      "type": "application/netcdf",
+      "title": "Time annotations for the 1 KM grid",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011090802f0632d863fba5644bd604ba6447",
+      "file:size": 64365,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/time_in.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_FRP___/2024/01/01/S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3/time_in.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/Nodes(S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3)/Nodes(time_in.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011079b6bb6fc1be4d6325f4d276bc1e2809",
+      "file:size": 71210767,
+      "file:local_path": "S3A_SL_2_FRP____20240101T000154_20240101T000454_20240102T100746_0179_107_216_0720_PS1_O_NT_004.SEN3.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(34ae76ae-86eb-4914-ba06-8a12712eeb38)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

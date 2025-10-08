@@ -1,0 +1,275 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-3-sr-2-lan-hy-ntc",
+  "id": "S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005",
+  "properties": {
+    "created": "2023-10-14T02:58:52.228000Z",
+    "updated": "2023-10-14T03:04:32.200753Z",
+    "published": "2023-10-14T03:04:30.944730Z",
+    "eopf:origin_datetime": "2023-10-14T02:58:52.228000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2023-09-18T00:34:33.729892Z",
+    "start_datetime": "2023-09-18T00:34:33.729892Z",
+    "end_datetime": "2023-09-18T00:36:15.286473Z",
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "sral"
+    ],
+    "gsd": 1640,
+    "processing:level": "L2",
+    "processing:datetime": "2023-10-14T02:37:20.000000Z",
+    "proj:code": null,
+    "sat:absolute_orbit": 39501,
+    "sat:relative_orbit": 258,
+    "sat:orbit_cycle": 103,
+    "sat:orbit_state": "ascending",
+    "sat:platform_international_designator": "2016-011A",
+    "product:type": "SR_2_LAN_HY",
+    "product:timeliness": "P1M",
+    "product:timeliness_category": "NT",
+    "statistics": {
+      "land": 43,
+      "closed_sea": 0,
+      "continental_ice": 13,
+      "open_ocean": 44
+    },
+    "altm:instrument_mode": "sar",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -100.967,
+    76.4207,
+    -77.2753,
+    80.2944
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -77.2753,
+          76.4219
+        ],
+        [
+          -87.185,
+          78.5847
+        ],
+        [
+          -100.962,
+          80.2944
+        ],
+        [
+          -100.967,
+          80.2928
+        ],
+        [
+          -87.1909,
+          78.5833
+        ],
+        [
+          -77.2811,
+          76.4207
+        ],
+        [
+          -77.2753,
+          76.4219
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-3/SRAL/SR_2_LAN_HY/2023/09/18/S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3/xfdumanifest.xml",
+      "href": "s3://eodata/Sentinel-3/SRAL/SR_2_LAN_HY/2023/09/18/S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3/xfdumanifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(08760cf6-5fe6-4696-a28d-fefd679acebd)/Nodes(S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3)/Nodes(xfdumanifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "enhanced_measurement": {
+      "type": "application/netcdf",
+      "title": "Enhanced Measurement Data Object File",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "description": "Ionospheric correction",
+          "sar:frequency_band": "C",
+          "sar:center_frequency": 5.409999872,
+          "sar:bandwidth": 0.29
+        },
+        {
+          "description": "Range measurements",
+          "sar:frequency_band": "Ku",
+          "sar:center_frequency": 13.575000064,
+          "sar:bandwidth": 0.32
+        }
+      ],
+      "file:checksum": "d50110bce6544f0cb4310621b21fc71bb3480d",
+      "file:size": 4496505,
+      "file:local_path": "S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3/enhanced_measurement.nc",
+      "href": "s3://eodata/Sentinel-3/SRAL/SR_2_LAN_HY/2023/09/18/S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3/enhanced_measurement.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(08760cf6-5fe6-4696-a28d-fefd679acebd)/Nodes(S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3)/Nodes(enhanced_measurement.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "standard_measurement": {
+      "type": "application/netcdf",
+      "title": "Standard Measurement Data Object File",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "description": "Ionospheric correction",
+          "sar:frequency_band": "C",
+          "sar:center_frequency": 5.409999872,
+          "sar:bandwidth": 0.29
+        },
+        {
+          "description": "Range measurements",
+          "sar:frequency_band": "Ku",
+          "sar:center_frequency": 13.575000064,
+          "sar:bandwidth": 0.32
+        }
+      ],
+      "file:checksum": "d50110e8c80d8e2e5dc482b82fffb8e0d95802",
+      "file:size": 1063211,
+      "file:local_path": "S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3/standard_measurement.nc",
+      "href": "s3://eodata/Sentinel-3/SRAL/SR_2_LAN_HY/2023/09/18/S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3/standard_measurement.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(08760cf6-5fe6-4696-a28d-fefd679acebd)/Nodes(S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3)/Nodes(standard_measurement.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011046ec8d136692c4b8c2bbab9a033a965b",
+      "file:size": 5666129,
+      "file:local_path": "S3A_SR_2_LAN_HY_20230918T003434_20230918T003615_20231014T025155_0101_103_259______PS1_O_NT_005.SEN3.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(08760cf6-5fe6-4696-a28d-fefd679acebd)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/altimetry/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

@@ -1,0 +1,195 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "id": "sentinel-5p-l2-np-bd7-offl",
+  "type": "Collection",
+  "title": "Sentinel-5P Level 2 NPP Cloud (band 7) (OFFL)",
+  "description": "This Collection provides Sentinel-5P Level-2 NP BD7 products, which contains information on cloud and scene homogeneity.",
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-04-30T00:18:51Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "3500m",
+    "Atmosphere",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "Global",
+    "L2",
+    "L2__NP_BD7",
+    "NP-BD7",
+    "OFFL",
+    "PT12H",
+    "Satellite",
+    "Sentinel",
+    "Sentinel-5",
+    "TROPOMI"
+  ],
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-5p",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S5P_L2_NP_BD7.jpg",
+      "type": "image/jpeg",
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Sentinel-5P L2 NPP Cloud (band 7) Thumbnail",
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "gsd": [
+      3500
+    ],
+    "platform": [
+      "sentinel-5p"
+    ],
+    "constellation": [
+      "sentinel-5"
+    ],
+    "instruments": [
+      "tropomi"
+    ],
+    "product:type": [
+      "L2__NP_BD7"
+    ],
+    "processing:level": [
+      "L2"
+    ],
+    "processing:version": [
+      "1.0.0",
+      "1.0.2",
+      "1.1.0",
+      "1.3.0"
+    ],
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "sat:platform_international_designator": [
+      "2017-064A"
+    ],
+    "product:timeliness": [
+      "PT12H"
+    ],
+    "product:timeliness_category": [
+      "OFFL"
+    ]
+  },
+  "auth:schemes": {
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+    },
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "cdse-s3": {
+      "title": "Copernicus Data Space Ecosystem S3",
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false,
+      "type": "custom-s3"
+    },
+    "creodias-s3": {
+      "title": "CREODIAS S3",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true,
+      "type": "custom-s3"
+    }
+  },
+  "item_assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Cloud from the Suomi NPP mission, band 7",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": -999,
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ]
+}

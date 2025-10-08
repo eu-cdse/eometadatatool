@@ -1,0 +1,1270 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-o3-offl",
+  "id": "S5P_OFFL_L2__O3_____20241203T104901_20241203T123031_37002_03_020700_20241205T011157",
+  "properties": {
+    "created": "2024-12-05T01:14:54.811000Z",
+    "updated": "2024-12-05T01:16:50.204391Z",
+    "published": "2024-12-05T01:16:49.545135Z",
+    "eopf:origin_datetime": "2024-12-05T01:14:54.811000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2024-12-03T12:08:56Z",
+    "start_datetime": "2024-12-03T12:08:56Z",
+    "end_datetime": "2024-12-03T12:08:59Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 3500,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      5,
+      450
+    ],
+    "sat:absolute_orbit": 37002,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along-track dimension index",
+        "extent": [
+          0,
+          5
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across-track dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference time for the measurements",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2024-12-03T00:00:00.000000Z"
+        ]
+      },
+      "corner": {
+        "type": "other",
+        "description": "pixel corner index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "layer": {
+        "type": "other",
+        "description": "layer dimension index",
+        "extent": [
+          0,
+          14
+        ]
+      },
+      "level": {
+        "type": "other",
+        "description": "level dimension index",
+        "extent": [
+          0,
+          15
+        ]
+      },
+      "number_fitting_parameter": {
+        "type": "other",
+        "description": "number_fitting_parameter dimension index",
+        "extent": [
+          0,
+          8
+        ]
+      },
+      "number_of_calibrations": {
+        "type": "other",
+        "description": "number_of_calibrations dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "degrees_of_polynomial_shift": {
+        "type": "other",
+        "description": "degrees_of_polynomial_shift dimension index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "number_of_subwindows": {
+        "type": "other",
+        "description": "number_of_subwindows dimension index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "histogram_axis": {
+        "type": "other",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "pdf_axis": {
+        "type": "other",
+        "extent": [
+          0,
+          400
+        ]
+      },
+      "vertices": {
+        "type": "other",
+        "description": "vertices dimension index",
+        "extent": [
+          0,
+          2
+        ]
+      }
+    },
+    "cube:variables": {
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          470880000
+        ],
+        "description": "reference time for the measurements",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "corner": {
+        "dimensions": [
+          "corner"
+        ],
+        "type": "auxiliary",
+        "description": "pixel corner index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "offset from reference start time of measurement",
+        "unit": "milliseconds since 2024-12-03 00:00:00Z",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time_utc": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "Time of observation as ISO 8601 date-time string",
+        "data_type": "other"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "ozone_total_vertical_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total ozone column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_vertical_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total ozone column random error",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "layer": {
+        "dimensions": [
+          "layer"
+        ],
+        "type": "data",
+        "description": "layer dimension index",
+        "data_type": "int32"
+      },
+      "level": {
+        "dimensions": [
+          "level"
+        ],
+        "type": "data",
+        "description": "level dimension index",
+        "data_type": "int32"
+      },
+      "surface_altitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude precision",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_classification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "land-water mask",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "instrument_configuration_identifier": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcID",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "instrument_configuration_version": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcVersion",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "scaled_small_pixel_variance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaled small pixel variance",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_temperature": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_temperature",
+        "unit": "K",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "northward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Northward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "eastward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Eastward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective radiometric cloud fraction from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective radiometric cloud fraction precision from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_pressure_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid pressure from the CRB model",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_pressure_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid pressure precision from the CRB model",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_height_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid height from the CRB model",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_height_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid height precision from the CRB model",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud albedo from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud albedo precision from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "snow_ice_flag_nise": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "snow_ice_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "snow_cover": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-cover",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sea_ice_cover": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "sea-ice-cover",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface albedo from daily G3_LER",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_latitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sub satellite latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_longitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite_longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_altitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_orbit_phase": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite orbit phase",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "geolocation_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "geolocation flags",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "ozone_profile_apriori": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "apriori ozone profile",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "averaging_kernel": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "ozone averaging kernel",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "pressure_grid": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "level"
+        ],
+        "type": "data",
+        "description": "pressure grid",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_root_mean_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "doas fit root mean square residual",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_spectral_points_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the DOAS retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "ozone_effective_temperature": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "ozone cross section effective temperature",
+        "unit": "K",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ring_scale_factor": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "ring correction factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "degrees_of_freedom": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "final degrees of freedom after the tikhonov inversion",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "condition_number": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "final condition number after the tikhonov inversion",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "shannon_information_content": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "shannon information content",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "regularization_parameter": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "final regularization parameter after the tikhonov inversion",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "smoothing_error": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "smoothing error",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_ghost_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "ghost column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_iterations_vertical_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of vcd iterations",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "effective_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective scene albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "convergence_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "flag signaling the convergence of the o3 algorithm",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "scene_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective scene pressure computed from surface and cloud pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_state_vector": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_fitting_parameter"
+        ],
+        "type": "data",
+        "description": "fitted parameters in the total ozone retrieval",
+        "unit": "various",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "covariance_matrix_diagonal": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_fitting_parameter"
+        ],
+        "type": "data",
+        "description": "The diagonal entries of the covariance matrix of the GODFIT retrieval",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "euv": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Erythemal UV irradiance",
+        "unit": "W m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "processing_quality_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Processing quality flags",
+        "nodata": 4294967295,
+        "data_type": "uint32"
+      },
+      "number_fitting_parameter": {
+        "dimensions": [
+          "number_fitting_parameter"
+        ],
+        "type": "data",
+        "description": "number_fitting_parameter dimension index",
+        "data_type": "int32"
+      },
+      "calibration_polynomial_coefficients": {
+        "dimensions": [
+          "number_of_calibrations",
+          "degrees_of_polynomial_shift"
+        ],
+        "type": "data",
+        "description": "computed coefficients of the polynomial function",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_shift": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths shift fitted values per subwindow",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_squeeze": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths squeeze fitted values per subwindow",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_root_mean_square": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "calibration rms per subwindow",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_wavelength": {
+        "dimensions": [
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "calibration wavelength center in each subwindow",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_calibrations": {
+        "dimensions": [
+          "number_of_calibrations"
+        ],
+        "type": "data",
+        "description": "number_of_calibrations dimension index",
+        "data_type": "int32"
+      },
+      "degrees_of_polynomial_shift": {
+        "dimensions": [
+          "degrees_of_polynomial_shift"
+        ],
+        "type": "data",
+        "description": "degrees_of_polynomial_shift dimension index",
+        "data_type": "int32"
+      },
+      "number_of_subwindows": {
+        "dimensions": [
+          "number_of_subwindows"
+        ],
+        "type": "data",
+        "description": "number_of_subwindows dimension index",
+        "data_type": "int32"
+      },
+      "histogram_axis": {
+        "dimensions": [
+          "histogram_axis"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "pdf_axis": {
+        "dimensions": [
+          "pdf_axis"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_column_histogram": {
+        "dimensions": [
+          "histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the total column O3 in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ozone_total_column_pdf": {
+        "dimensions": [
+          "pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the total column O3 in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "vertices": {
+        "dimensions": [
+          "vertices"
+        ],
+        "type": "data",
+        "description": "vertices dimension index",
+        "data_type": "int32"
+      }
+    },
+    "product:type": "L2__O3____",
+    "processing:level": "L2",
+    "processing:facility": "PDGS-OP",
+    "processing:datetime": "2024-12-05T00:00:00Z",
+    "product:timeliness": "PT12H",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "02.07.00",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -48.52939,
+    67.353035,
+    44.746246,
+    82.66065
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -48.52939,
+          67.44397
+        ],
+        [
+          -47.91861299999999,
+          67.353035
+        ],
+        [
+          -46.854457999999994,
+          68.968735
+        ],
+        [
+          -44.842533,
+          71.42863
+        ],
+        [
+          -43.25001499999999,
+          72.94283
+        ],
+        [
+          -41.502289999999995,
+          74.27775599999998
+        ],
+        [
+          -38.205546999999996,
+          76.15246999999998
+        ],
+        [
+          -34.615616,
+          77.59097
+        ],
+        [
+          -30.595055,
+          78.76011
+        ],
+        [
+          -21.76794,
+          80.42298
+        ],
+        [
+          -12.376419999999998,
+          81.44863999999998
+        ],
+        [
+          -5.057370999999999,
+          81.93948999999999
+        ],
+        [
+          3.5077282999999997,
+          82.27829999999999
+        ],
+        [
+          16.857737999999998,
+          82.4135
+        ],
+        [
+          32.52022,
+          82.00996399999998
+        ],
+        [
+          44.15073,
+          81.23495999999999
+        ],
+        [
+          44.74624599999999,
+          81.45447
+        ],
+        [
+          33.710716,
+          82.20403999999999
+        ],
+        [
+          15.363561000000002,
+          82.66065000000002
+        ],
+        [
+          3.4087564999999995,
+          82.52334
+        ],
+        [
+          -6.578094499999999,
+          82.11932
+        ],
+        [
+          -13.055640999999998,
+          81.674866
+        ],
+        [
+          -22.640400000000003,
+          80.62679999999999
+        ],
+        [
+          -26.293363999999997,
+          80.04568499999999
+        ],
+        [
+          -31.617087999999992,
+          78.91301
+        ],
+        [
+          -35.75896,
+          77.671616
+        ],
+        [
+          -39.26451,
+          76.207054
+        ],
+        [
+          -42.47393,
+          74.29256999999998
+        ],
+        [
+          -43.957736999999995,
+          73.11426999999999
+        ],
+        [
+          -45.720769999999995,
+          71.36211
+        ],
+        [
+          -47.419456,
+          69.19087999999999
+        ],
+        [
+          -48.52939,
+          67.44397
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_OFFL_L2__O3_____20241203T104901_20241203T123031_37002_03_020700_20241205T011157.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Total Column Ozone Concentration",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "file:checksum": "d50110c534e2955b7898e68e6fbb93540ae5ca",
+      "file:size": 632843,
+      "file:local_path": "S5P_OFFL_L2__O3_____20241203T104901_20241203T123031_37002_03_020700_20241205T011157.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__O3____/2024/12/03/S5P_OFFL_L2__O3_____20241203T104901_20241203T123031_37002_03_020700_20241205T011157.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(392724e3-f224-49fe-b6fa-796117fd5a9a)/Nodes(S5P_OFFL_L2__O3_____20241203T104901_20241203T123031_37002_03_020700_20241205T011157.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

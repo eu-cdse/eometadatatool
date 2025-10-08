@@ -1,0 +1,30 @@
+include:
+- template: Security/Secret-Detection.gitlab-ci.yml
+
+workflow:
+  rules:
+    - if: $CI_PIPELINE_SOURCE == "merge_request_event"
+
+default:
+  image: nixos/nix:latest
+
+stages:
+- test
+
+test_core_functions:
+  stage: test
+  script:
+    - nix-shell --run "python .venv/bin/pytest -n auto tests/test_checksum.py tests/test_clas_utils.py tests/test_dict_to_tree.py tests/test_dlc.py tests/test_function_namespace.py"
+
+test_stac:
+  stage: test
+  script:
+    - nix-shell --run "python .venv/bin/pytest -n auto tests/test_collection.py tests/test_item_examples.py tests/test_item_template.py"
+  artifacts:
+    when: on_failure
+    name: test-stac-output
+    paths:
+      - test_collection_output.json
+      - test_item_examples_output.json
+      - test_item_template_output.json
+    expire_in: 1 week

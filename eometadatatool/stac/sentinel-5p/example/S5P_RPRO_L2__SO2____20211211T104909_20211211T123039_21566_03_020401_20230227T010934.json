@@ -1,0 +1,2360 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-so2-rpro",
+  "id": "S5P_RPRO_L2__SO2____20211211T104909_20211211T123039_21566_03_020401_20230227T010934",
+  "properties": {
+    "created": "2023-04-21T10:02:08.992107Z",
+    "updated": "2025-01-15T10:31:32.694153Z",
+    "published": "2023-05-19T07:38:54.713452Z",
+    "eopf:origin_datetime": "2023-04-21T10:02:08.992107Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2021-12-11T12:09:02Z",
+    "start_datetime": "2021-12-11T12:09:02Z",
+    "end_datetime": "2021-12-11T12:09:07Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 3500,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      7,
+      450
+    ],
+    "sat:absolute_orbit": 21566,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along-track dimension index",
+        "extent": [
+          0,
+          7
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across-track dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference time for the measurements",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2021-12-11T00:00:00.000000Z"
+        ]
+      },
+      "corner": {
+        "type": "other",
+        "description": "pixel corner index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "layer": {
+        "type": "other",
+        "description": "layer dimension index",
+        "extent": [
+          0,
+          34
+        ]
+      },
+      "o3_grid": {
+        "type": "other",
+        "extent": [
+          0,
+          52
+        ]
+      },
+      "lat_grid": {
+        "type": "other",
+        "extent": [
+          0,
+          36
+        ]
+      },
+      "detector_rows": {
+        "type": "other",
+        "description": "detector_rows dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "wavelengths": {
+        "type": "other",
+        "description": "wavelengths dimension index",
+        "extent": [
+          0,
+          9000
+        ]
+      },
+      "number_of_slant_columns_win1": {
+        "type": "other",
+        "description": "number_of_slant_columns_win1 dimension index",
+        "extent": [
+          0,
+          7
+        ]
+      },
+      "number_of_slant_columns_win2": {
+        "type": "other",
+        "description": "number_of_slant_columns_win2 dimension index",
+        "extent": [
+          0,
+          7
+        ]
+      },
+      "number_of_slant_columns_win3": {
+        "type": "other",
+        "description": "number_of_slant_columns_win3 dimension index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "number_of_doas_polynomial_coefficients_win1": {
+        "type": "other",
+        "description": "number_of_doas_polynomial_coefficients_win1 dimension index",
+        "extent": [
+          0,
+          6
+        ]
+      },
+      "number_of_doas_polynomial_coefficients_win2": {
+        "type": "other",
+        "description": "number_of_doas_polynomial_coefficients_win2 dimension index",
+        "extent": [
+          0,
+          6
+        ]
+      },
+      "number_of_doas_polynomial_coefficients_win3": {
+        "type": "other",
+        "description": "number_of_doas_polynomial_coefficients_win3 dimension index",
+        "extent": [
+          0,
+          5
+        ]
+      },
+      "number_of_calibrations": {
+        "type": "other",
+        "description": "number_of_calibrations dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "degrees_of_polynomial_shift_win1": {
+        "type": "other",
+        "description": "degrees_of_polynomial_shift_win1 dimension index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "number_of_subwindows_win1": {
+        "type": "other",
+        "description": "number_of_subwindows_win1 dimension index",
+        "extent": [
+          0,
+          10
+        ]
+      },
+      "degrees_of_polynomial_shift_win2": {
+        "type": "other",
+        "description": "degrees_of_polynomial_shift_win2 dimension index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "number_of_subwindows_win2": {
+        "type": "other",
+        "description": "number_of_subwindows_win2 dimension index",
+        "extent": [
+          0,
+          10
+        ]
+      },
+      "degrees_of_polynomial_shift_win3": {
+        "type": "other",
+        "description": "degrees_of_polynomial_shift_win3 dimension index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "number_of_subwindows_win3": {
+        "type": "other",
+        "description": "number_of_subwindows_win3 dimension index",
+        "extent": [
+          0,
+          10
+        ]
+      },
+      "histogram_axis": {
+        "type": "other",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "pdf_axis": {
+        "type": "other",
+        "extent": [
+          0,
+          400
+        ]
+      },
+      "vertices": {
+        "type": "other",
+        "description": "vertices dimension index",
+        "extent": [
+          0,
+          2
+        ]
+      }
+    },
+    "cube:variables": {
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          376876800
+        ],
+        "description": "reference time for the measurements",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "corner": {
+        "dimensions": [
+          "corner"
+        ],
+        "type": "auxiliary",
+        "description": "pixel corner index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "offset from reference start time of measurement",
+        "unit": "milliseconds since 2021-12-11 00:00:00Z",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time_utc": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "Time of observation as ISO 8601 date-time string",
+        "data_type": "other"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "sulfurdioxide_total_vertical_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total vertical column of sulfur dioxide for the polluted scenario derived from the total slant column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "precision of the total vertical column of sulfur dioxide for the polluted scenario derived from the total slant column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "layer": {
+        "dimensions": [
+          "layer"
+        ],
+        "type": "data",
+        "description": "layer dimension index",
+        "data_type": "int32"
+      },
+      "snow_ice_flag_nise": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "snow_ice_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "snow_cover": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "snow-cover",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sea_ice_cover": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "sea-ice-cover",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective radiometric cloud fraction from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective radiometric cloud fraction precision from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_pressure_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid pressure from the CRB model",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_pressure_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid pressure precision from the CRB model",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_height_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid height from the CRB model",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_height_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud radiometric optical centroid height precision from the CRB model",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud albedo from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud albedo precision from the CRB model",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_vertical_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total ozone column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_total_vertical_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total ozone column random error",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude precision",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_classification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "land-water mask",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "instrument_configuration_identifier": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcID",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "instrument_configuration_version": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcVersion",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "scaled_small_pixel_variance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaled small pixel variance",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_temperature": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface_air_temperature",
+        "unit": "K",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "northward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Northward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "eastward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Eastward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "tm5_constant_a": {
+        "dimensions": [
+          "time",
+          "layer"
+        ],
+        "type": "data",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "tm5_constant_b": {
+        "dimensions": [
+          "time",
+          "layer"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "tm5_tropopause_layer_index": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "aerosol_index_340_380": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "aerosol index from 380 and 340 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo_328nm": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface albdeo at 328nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo_376nm": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface albdeo at 376nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o3_grid": {
+        "dimensions": [
+          "o3_grid"
+        ],
+        "type": "data",
+        "unit": "DU",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "lat_grid": {
+        "dimensions": [
+          "lat_grid"
+        ],
+        "type": "data",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "window1_north": {
+        "dimensions": [
+          "o3_grid",
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "window1_south": {
+        "dimensions": [
+          "o3_grid",
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "window2": {
+        "dimensions": [
+          "lat_grid",
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "window3": {
+        "dimensions": [
+          "lat_grid",
+          "detector_rows"
+        ],
+        "type": "data",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "earthshine_reference_wavelength": {
+        "dimensions": [
+          "wavelengths"
+        ],
+        "type": "data",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "earthshine_reference_radiance": {
+        "dimensions": [
+          "detector_rows",
+          "wavelengths"
+        ],
+        "type": "data",
+        "unit": "mol.m-2.nm-1.sr-1.s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "detector_rows": {
+        "dimensions": [
+          "detector_rows"
+        ],
+        "type": "data",
+        "description": "detector_rows dimension index",
+        "data_type": "int32"
+      },
+      "wavelengths": {
+        "dimensions": [
+          "wavelengths"
+        ],
+        "type": "data",
+        "description": "wavelengths dimension index",
+        "data_type": "int32"
+      },
+      "satellite_latitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sub satellite latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_longitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite_longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_altitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_orbit_phase": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite orbit phase",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "geolocation_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "geolocation flags",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "sulfurdioxide_total_vertical_column_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total vertical column density of sulfur dioxide for the polluted scenario",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns_win1"
+        ],
+        "type": "data",
+        "description": "slant columns of all absorbers in fitting window 1",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_win1_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns_win1"
+        ],
+        "type": "data",
+        "description": "slant column random errors of all absorbers in fitting window 1",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_win2": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns_win2"
+        ],
+        "type": "data",
+        "description": "slant columns of all absorbers in fitting window 2",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_win2_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns_win2"
+        ],
+        "type": "data",
+        "description": "slant column random all absorbers in fitting window 2",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_win3": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns_win3"
+        ],
+        "type": "data",
+        "description": "slant columns of all absorbers in fitting window 3",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_slant_columns_win3_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_slant_columns_win3"
+        ],
+        "type": "data",
+        "description": "slant column random errors of all absorbers in fitting window 3",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "selected_fitting_window_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "flag describing the selected fitting window for sulfur dioxide retrieval",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "sulfurdioxide_slant_column_corrected": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "background corrected sulfur dioxide slant column density for final selected fitting window",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_slant_column_corrected_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the corrected sulfur dioxide slant column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_slant_column_corrected_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "background corrected sulfur dioxide slant column density for fitting window 1",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_slant_column_corrected_win2": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "background corrected sulfur dioxide slant column density for fitting window 2",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_slant_column_corrected_win3": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "background corrected sulfur dioxide slant column density for fitting window 3",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_root_mean_square_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "root mean square residual of the fit in fitting window 1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_root_mean_square_win2": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "root mean square residual of the fit in fitting window 2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_root_mean_square_win3": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "root mean square residual of the fit in fitting window 3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "averaging_kernel": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "averaging kernel",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_profile_apriori": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "volume mixing ratio profile of sulfur dioxide",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_radiance_shift": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength shift from the doas fit",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_radiance_squeeze": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength squeeze from the doas fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_radiance_shift_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength shift from the doas fit in fitting window 1",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_radiance_squeeze_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength squeeze from the doas fit in fitting window 1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_spectral_points_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the DOAS retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_spectral_points_in_retrieval_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the DOAS retrieval for window 1",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "fitted_radiance_shift_win2": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength shift from the doas fit in fitting window 2",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_radiance_squeeze_win2": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength shift from the doas fit in fitting window 2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_spectral_points_in_retrieval_win2": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the DOAS retrieval for window 2",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "fitted_radiance_shift_win3": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength shift from the doas fit in fitting window 3",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fitted_radiance_squeeze_win3": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "radiance wavelength shift from the doas fit in fitting window 3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_spectral_points_in_retrieval_win3": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the DOAS retrieval for window 3",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "qa_value_box_profile": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "sulfurdioxide_total_air_mass_factor_polluted": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total air mass factor for boundary layer polluted scenario",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_polluted_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the total air mass factor for the boundary layer polluted scenario",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_polluted_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total air mass factor for the boundary layer polluted scenario",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_polluted_kernel_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total air mass factor for the kernel polluted scenario",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_clear_air_mass_factor_polluted": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "clear sky air mass factor for the boundary layer polluted scenario",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_cloudy_air_mass_factor_polluted": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloudy sky air mass factor for the boundary layer polluted scenario",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_1km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total vertical column density of sulfur dioxide for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_1km_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the total vertical column density of sulfur dioxide for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_1km_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total vertical column density of sulfur dioxide for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_1km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total air mass factor for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_1km_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the total air mass factor for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_1km_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total air mass factor for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_1km_kernel_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total air mass factor using kernels for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_clear_air_mass_factor_1km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "clear sky air mass factor for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_cloudy_air_mass_factor_1km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloudy sky air mass factor for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_averaging_kernel_scaling_box_1km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaling box of the total air mass factor for a sulfur dioxide plume at 1km altitude w.r.t. the topography",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_7km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total vertical column density of sulfur dioxide for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_7km_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the total vertical column of sulfur dioxide for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_7km_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total vertical column of sulfur dioxide for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_7km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total air mass factor for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_7km_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the total air mass factor for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_7km_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total air mass factor for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_7km_kernel_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total air mass factor using kernels for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_clear_air_mass_factor_7km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "clear sky air mass factor for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_cloudy_air_mass_factor_7km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloudy sky air mass factor for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_averaging_kernel_scaling_box_7km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaling box of the total air mass factor for a sulfur dioxide plume at 7km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_15km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total vertical column density of sulfur dioxide for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_15km_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the total vertical column density of sulfur dioxide for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_vertical_column_15km_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total vertical column density of sulfur dioxide for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_15km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "total air mass factor for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_15km_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the total air mass factor for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_15km_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total air mass factor for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_air_mass_factor_15km_kernel_trueness": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "systematic error of the total air mass factor using kernels for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_clear_air_mass_factor_15km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "clear sky air mass factor for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_cloudy_air_mass_factor_15km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloudy sky air mass factor for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_averaging_kernel_scaling_box_15km": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaling box of the total air mass factor for a sulfur dioxide plume at 15km altitude w.r.t. the sea level",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_slant_column_correction_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "sulfur dioxide slant column density background correction flag",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "sulfurdioxide_detection_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "sulfur dioxide volcano activity flag",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "number_of_iterations_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations used in the retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_iterations_in_retrieval_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations used in the retrieval for window 1",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_iterations_in_retrieval_win2": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations used in the retrieval for window 2",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_iterations_in_retrieval_win3": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations used in the retrieval for window 3",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "fitted_root_mean_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "root mean square of the sulfur dioxide slant column",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "doas_polynomial_coefficients_win1": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_doas_polynomial_coefficients_win1"
+        ],
+        "type": "data",
+        "description": "DOAS polynomial coefficients",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "doas_polynomial_coefficients_win2": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_doas_polynomial_coefficients_win2"
+        ],
+        "type": "data",
+        "description": "DOAS polynomial coefficients",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "doas_polynomial_coefficients_win3": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "number_of_doas_polynomial_coefficients_win3"
+        ],
+        "type": "data",
+        "description": "DOAS polynomial coefficients",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_intensity_weighted": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud fraction intensity weighted",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_intensity_weighted_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "random error of the cloud fraction intensity weighted",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "processing_quality_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Processing quality flags",
+        "nodata": 4294967295,
+        "data_type": "uint32"
+      },
+      "number_of_slant_columns_win1": {
+        "dimensions": [
+          "number_of_slant_columns_win1"
+        ],
+        "type": "data",
+        "description": "number_of_slant_columns_win1 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_slant_columns_win2": {
+        "dimensions": [
+          "number_of_slant_columns_win2"
+        ],
+        "type": "data",
+        "description": "number_of_slant_columns_win2 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_slant_columns_win3": {
+        "dimensions": [
+          "number_of_slant_columns_win3"
+        ],
+        "type": "data",
+        "description": "number_of_slant_columns_win3 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_doas_polynomial_coefficients_win1": {
+        "dimensions": [
+          "number_of_doas_polynomial_coefficients_win1"
+        ],
+        "type": "data",
+        "description": "number_of_doas_polynomial_coefficients_win1 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_doas_polynomial_coefficients_win2": {
+        "dimensions": [
+          "number_of_doas_polynomial_coefficients_win2"
+        ],
+        "type": "data",
+        "description": "number_of_doas_polynomial_coefficients_win2 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_doas_polynomial_coefficients_win3": {
+        "dimensions": [
+          "number_of_doas_polynomial_coefficients_win3"
+        ],
+        "type": "data",
+        "description": "number_of_doas_polynomial_coefficients_win3 dimension index",
+        "data_type": "int32"
+      },
+      "calibration_polynomial_coefficients_win1": {
+        "dimensions": [
+          "number_of_calibrations",
+          "degrees_of_polynomial_shift_win1"
+        ],
+        "type": "data",
+        "description": "computed coefficients of the polynomial function in fitting window 1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_shift_win1": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win1"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths shift values per subwindow in fitting window 1",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_squeeze_win1": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win1"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths squeeze fitted values per subwindow in fitting window 1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_root_mean_square_win1": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win1"
+        ],
+        "type": "data",
+        "description": "calibration rms per subwindow in fitting window 1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_wavelength_win1": {
+        "dimensions": [
+          "number_of_subwindows_win1"
+        ],
+        "type": "data",
+        "description": "calibration wavelength center in each subwindow in fitting window 1",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_polynomial_coefficients_win2": {
+        "dimensions": [
+          "number_of_calibrations",
+          "degrees_of_polynomial_shift_win2"
+        ],
+        "type": "data",
+        "description": "computed coefficients of the polynomial function in fitting window 2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_shift_win2": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win2"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths shift fitted values per subwindow in fitting window 2",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_squeeze_win2": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win2"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths squeeze fitted values per subwindow in fitting window 1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_root_mean_square_win2": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win2"
+        ],
+        "type": "data",
+        "description": "calibration rms per subwindow in fitting window 2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_wavelength_win2": {
+        "dimensions": [
+          "number_of_subwindows_win2"
+        ],
+        "type": "data",
+        "description": "calibration wavelength center in each subwindow in fitting window 2",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_polynomial_coefficients_win3": {
+        "dimensions": [
+          "number_of_calibrations",
+          "degrees_of_polynomial_shift_win3"
+        ],
+        "type": "data",
+        "description": "computed coefficients of the polynomial function in fitting window 3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_shift_win3": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win3"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths shift values per subwindow in fitting window 3",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_squeeze_win3": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win3"
+        ],
+        "type": "data",
+        "description": "irradiance wavelengths squeeze fitted values per subwindow in fitting window 3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_root_mean_square_win3": {
+        "dimensions": [
+          "number_of_calibrations",
+          "number_of_subwindows_win3"
+        ],
+        "type": "data",
+        "description": "calibration rms per subwindow in fitting window 3",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "calibration_subwindows_wavelength_win3": {
+        "dimensions": [
+          "number_of_subwindows_win3"
+        ],
+        "type": "data",
+        "description": "calibration wavelength center in each subwindow of the wavelength calibration in window 3",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_calibrations": {
+        "dimensions": [
+          "number_of_calibrations"
+        ],
+        "type": "data",
+        "description": "number_of_calibrations dimension index",
+        "data_type": "int32"
+      },
+      "degrees_of_polynomial_shift_win1": {
+        "dimensions": [
+          "degrees_of_polynomial_shift_win1"
+        ],
+        "type": "data",
+        "description": "degrees_of_polynomial_shift_win1 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_subwindows_win1": {
+        "dimensions": [
+          "number_of_subwindows_win1"
+        ],
+        "type": "data",
+        "description": "number_of_subwindows_win1 dimension index",
+        "data_type": "int32"
+      },
+      "degrees_of_polynomial_shift_win2": {
+        "dimensions": [
+          "degrees_of_polynomial_shift_win2"
+        ],
+        "type": "data",
+        "description": "degrees_of_polynomial_shift_win2 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_subwindows_win2": {
+        "dimensions": [
+          "number_of_subwindows_win2"
+        ],
+        "type": "data",
+        "description": "number_of_subwindows_win2 dimension index",
+        "data_type": "int32"
+      },
+      "degrees_of_polynomial_shift_win3": {
+        "dimensions": [
+          "degrees_of_polynomial_shift_win3"
+        ],
+        "type": "data",
+        "description": "degrees_of_polynomial_shift_win3 dimension index",
+        "data_type": "int32"
+      },
+      "number_of_subwindows_win3": {
+        "dimensions": [
+          "number_of_subwindows_win3"
+        ],
+        "type": "data",
+        "description": "number_of_subwindows_win3 dimension index",
+        "data_type": "int32"
+      },
+      "histogram_axis": {
+        "dimensions": [
+          "histogram_axis"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "pdf_axis": {
+        "dimensions": [
+          "pdf_axis"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "sulfurdioxide_total_column_histogram": {
+        "dimensions": [
+          "histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the total column SO2 in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "sulfurdioxide_total_column_pdf": {
+        "dimensions": [
+          "pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the total column SO2 in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "vertices": {
+        "dimensions": [
+          "vertices"
+        ],
+        "type": "data",
+        "description": "vertices dimension index",
+        "data_type": "int32"
+      }
+    },
+    "product:type": "L2__SO2___",
+    "processing:level": "L2",
+    "processing:facility": "ionos-s5p-4",
+    "processing:datetime": "2023-02-27T00:00:00Z",
+    "processing:version": "02.04.01",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -46.159477,
+    66.98238,
+    42.94179,
+    81.76791
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -46.159476999999995,
+          67.1218
+        ],
+        [
+          -45.32977699999999,
+          66.98237999999999
+        ],
+        [
+          -44.10174,
+          68.5792
+        ],
+        [
+          -41.80137599999999,
+          71.00434
+        ],
+        [
+          -40.004845,
+          72.49182999999998
+        ],
+        [
+          -36.390212999999996,
+          74.72497999999999
+        ],
+        [
+          -32.73234599999999,
+          76.30522999999998
+        ],
+        [
+          -28.70143699999999,
+          77.56808999999998
+        ],
+        [
+          -20.80729,
+          79.21135
+        ],
+        [
+          -13.325516,
+          80.18167999999999
+        ],
+        [
+          -8.660153999999999,
+          80.6039
+        ],
+        [
+          5.8753123,
+          81.32584
+        ],
+        [
+          17.74015,
+          81.42221
+        ],
+        [
+          31.664314,
+          81.03400400000001
+        ],
+        [
+          42.25974299999999,
+          80.31332
+        ],
+        [
+          42.94179,
+          80.625465
+        ],
+        [
+          32.806594999999994,
+          81.32619999999999
+        ],
+        [
+          16.368662,
+          81.76791000000001
+        ],
+        [
+          5.656929,
+          81.66502999999999
+        ],
+        [
+          -3.4614818,
+          81.31615999999998
+        ],
+        [
+          -9.51574,
+          80.92014
+        ],
+        [
+          -14.932169000000002,
+          80.42053999999999
+        ],
+        [
+          -22.372026,
+          79.42018
+        ],
+        [
+          -29.879478000000002,
+          77.81583
+        ],
+        [
+          -33.871337999999994,
+          76.5394
+        ],
+        [
+          -37.457806,
+          74.95119499999998
+        ],
+        [
+          -40.96382,
+          72.72101999999998
+        ],
+        [
+          -42.94824,
+          70.99570499999999
+        ],
+        [
+          -44.88423999999999,
+          68.851006
+        ],
+        [
+          -46.159476999999995,
+          67.1218
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_RPRO_L2__SO2____20211211T104909_20211211T123039_21566_03_020401_20230227T010934.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Atmospheric Sulfur Dioxide Concentrations",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "file:checksum": "d501102e6570ed3a2ea69f86848952ea45b712",
+      "file:size": 10497640,
+      "file:local_path": "S5P_RPRO_L2__SO2____20211211T104909_20211211T123039_21566_03_020401_20230227T010934.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__SO2___/2021/12/11/S5P_RPRO_L2__SO2____20211211T104909_20211211T123039_21566_03_020401_20230227T010934.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(3a888126-e510-4473-b22f-0d6210692dbb)/Nodes(S5P_RPRO_L2__SO2____20211211T104909_20211211T123039_21566_03_020401_20230227T010934.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

@@ -1,0 +1,2018 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-no2-rpro",
+  "id": "S5P_RPRO_L2__NO2____20220222T112503_20220222T130634_22602_03_020400_20221106T094213",
+  "properties": {
+    "created": "2023-03-09T19:00:34.311474Z",
+    "updated": "2025-01-24T18:03:52.365926Z",
+    "published": "2023-05-22T09:02:26.169712Z",
+    "eopf:origin_datetime": "2023-03-09T19:00:34.311474Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2022-02-22T12:41:55Z",
+    "start_datetime": "2022-02-22T12:41:55Z",
+    "end_datetime": "2022-02-22T12:45:01Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 3500,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      222,
+      450
+    ],
+    "sat:absolute_orbit": 22602,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "scanline": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "along-track dimension index",
+        "extent": [
+          0,
+          222
+        ]
+      },
+      "ground_pixel": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "across-track dimension index",
+        "extent": [
+          0,
+          450
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference time for the measurements",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2022-02-22T00:00:00.000000Z"
+        ]
+      },
+      "corner": {
+        "type": "other",
+        "description": "pixel corner index",
+        "extent": [
+          0,
+          4
+        ]
+      },
+      "polynomial_exponents": {
+        "type": "other",
+        "description": "Polynomial exponents for background polynomial",
+        "extent": [
+          0,
+          6
+        ]
+      },
+      "intensity_offset_polynomial_exponents": {
+        "type": "other",
+        "description": "Polynomial exponents for intensity offset",
+        "extent": [
+          0,
+          1
+        ]
+      },
+      "layer": {
+        "type": "other",
+        "description": "TM5 atmospheric layer numbers",
+        "extent": [
+          0,
+          34
+        ]
+      },
+      "vertices": {
+        "type": "other",
+        "description": "TM5 atmospheric layer upper and lower bound indices",
+        "extent": [
+          0,
+          2
+        ]
+      },
+      "nitrogendioxide_stratospheric_column_histogram_axis": {
+        "type": "other",
+        "description": "Histogram of the stratospheric NO2 vertical column",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "nitrogendioxide_stratospheric_column_pdf_axis": {
+        "type": "other",
+        "description": "Probability density function of the stratospheric NO2 vertical column",
+        "extent": [
+          0,
+          400
+        ]
+      },
+      "nitrogendioxide_tropospheric_column_histogram_axis": {
+        "type": "other",
+        "description": "Histogram of the tropospheric NO2 vertical column",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "nitrogendioxide_tropospheric_column_pdf_axis": {
+        "type": "other",
+        "description": "Probability density function of the tropospheric NO2 vertical column",
+        "extent": [
+          0,
+          400
+        ]
+      },
+      "nitrogendioxide_total_column_histogram_axis": {
+        "type": "other",
+        "description": "Histogram of the total NO2 vertical column",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "nitrogendioxide_total_column_pdf_axis": {
+        "type": "other",
+        "description": "Probability density function of the total NO2 vertical column",
+        "extent": [
+          0,
+          400
+        ]
+      }
+    },
+    "cube:variables": {
+      "scanline": {
+        "dimensions": [
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "along-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ground_pixel": {
+        "dimensions": [
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "description": "across-track dimension index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          383184000
+        ],
+        "description": "reference time for the measurements",
+        "unit": "seconds since 2010-01-01 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "corner": {
+        "dimensions": [
+          "corner"
+        ],
+        "type": "auxiliary",
+        "description": "pixel corner index",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "polynomial_exponents": {
+        "dimensions": [
+          "polynomial_exponents"
+        ],
+        "type": "data",
+        "description": "Polynomial exponents for background polynomial",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "intensity_offset_polynomial_exponents": {
+        "dimensions": [
+          "intensity_offset_polynomial_exponents"
+        ],
+        "type": "data",
+        "description": "Polynomial exponents for intensity offset",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "layer": {
+        "dimensions": [
+          "layer"
+        ],
+        "type": "data",
+        "description": "TM5 atmospheric layer numbers",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "vertices": {
+        "dimensions": [
+          "vertices"
+        ],
+        "type": "data",
+        "description": "TM5 atmospheric layer upper and lower bound indices",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "latitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -90.0,
+          90.0
+        ],
+        "description": "pixel center latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "auxiliary",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "delta_time": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "offset of start time of measurement relative to time_reference",
+        "unit": "milliseconds since 2022-02-22 00:00:00",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "time_utc": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "auxiliary",
+        "description": "Time of observation as ISO 8601 date-time string",
+        "data_type": "other"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "data quality value",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "nitrogendioxide_tropospheric_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Tropospheric vertical column of nitrogen dioxide",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_tropospheric_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of the tropospheric vertical column of nitrogen dioxide",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_tropospheric_column_precision_kernel": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of the tropospheric vertical column of nitrogen dioxide when applying the averaging kernel",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "averaging_kernel": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "layer"
+        ],
+        "type": "data",
+        "description": "Averaging kernel",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "air_mass_factor_troposphere": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Tropospheric air mass factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "air_mass_factor_total": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Total air mass factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "tm5_tropopause_layer_index": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "TM5 layer index of the highest layer in the tropopause",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "tm5_constant_a": {
+        "dimensions": [
+          "layer",
+          "vertices"
+        ],
+        "type": "data",
+        "description": "TM5 hybrid A coefficient at upper and lower interface levels",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "tm5_constant_b": {
+        "dimensions": [
+          "layer",
+          "vertices"
+        ],
+        "type": "data",
+        "description": "TM5 hybrid B coefficient at upper and lower interface levels",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_latitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "sub satellite latitude",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_longitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite_longitude",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_altitude": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "satellite altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "satellite_orbit_phase": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "fractional satellite orbit phase",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "solar_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "solar azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_zenith_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing zenith angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "viewing_azimuth_angle": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "viewing azimuth angle",
+        "unit": "degree",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_bounds": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "corner"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "geolocation_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "geolocation flags",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "processing_quality_flags": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Processing quality flags",
+        "nodata": 4294967295,
+        "data_type": "uint32"
+      },
+      "number_of_spectral_points_in_retrieval": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Number of spectral points used in the retrieval",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "number_of_iterations": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "number of iterations",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "wavelength_calibration_offset": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength offset",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_offset_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength offset precision",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_stretch": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength stretch",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_stretch_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength stretch precision",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_chi_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength calibration chi square",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_irradiance_offset": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "irradiance wavelength offset",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_irradiance_offset_precision": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "irradiance wavelength offset precision",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "wavelength_calibration_irradiance_chi_square": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength calibration irradiance chi squared",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_stratospheric_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Stratospheric vertical column of nitrogen dioxide, derived from the TM5-MP vertical profiles",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_stratospheric_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of stratospheric vertical column of nitrogen dioxide",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Total vertical column of nitrogen dioxide derived from the total slant column and TM5 profile in stratosphere and troposphere",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_total_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of the total vertical column of nitrogen dioxide derived from the total slant column and TM5 profile in stratosphere and troposphere",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_total_column_precision_kernel": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of the total vertical column of nitrogen dioxide derived from the total slant column and TM5 profile in stratosphere and troposphere, when the averaging kernel is applied",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_summed_total_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Sum of the tropospheric and stratospheric vertical columns",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_summed_total_column_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of the sum of the tropospheric and stratospheric vertical columns",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_slant_column_density": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "NO2 slant column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_slant_column_density_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "NO2 slant column density precision",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_slant_column_density_stripe_amplitude": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Across-track NO2 slant column stripe offset, 7-day mean, determined over the Pacific Ocean",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_slant_column_density": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "O3 slant column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_slant_column_density_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "O3 slant column density precision",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "oxygen_oxygen_dimer_slant_column_density": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Slant column density of oxygen collision induced absorption",
+        "unit": "mol2 m-5",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "oxygen_oxygen_dimer_slant_column_density_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of the slant column density of oxygen collision induced absorption",
+        "unit": "mol2 m-5",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "water_slant_column_density": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Water vapor slant column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "water_slant_column_density_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of water vapor slant column density",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "water_liquid_slant_column_density": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Liquid water column",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "water_liquid_slant_column_density_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of liquid water column",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ring_coefficient": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Fit coefficient of the Ring effect",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ring_coefficient_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Precision of fit coefficient of the Ring effect",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "polynomial_coefficients": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "polynomial_exponents"
+        ],
+        "type": "data",
+        "description": "Polynomial coefficients of the DOAS fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "polynomial_coefficients_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "polynomial_exponents"
+        ],
+        "type": "data",
+        "description": "Precision of the polynomial coefficients of the DOAS fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "intensity_offset_coefficients": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "intensity_offset_polynomial_exponents"
+        ],
+        "type": "data",
+        "description": "Polynomial coefficients of the intensity offset",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "intensity_offset_coefficients_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel",
+          "intensity_offset_polynomial_exponents"
+        ],
+        "type": "data",
+        "description": "Precision of the polynomial coefficients of the intensity offset",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb_nitrogendioxide_window": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Cloud fraction at 440 nm for NO2 retrieval",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_radiance_fraction_nitrogendioxide_window": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Cloud radiance fraction at 440 nm for NO2 retrieval",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "chi_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Chi squared of fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "root_mean_square_error_of_fit": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Root mean square residual of the fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "degrees_of_freedom": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Degrees of freedom from slant column fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "air_mass_factor_stratosphere": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Stratospheric air mass factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "air_mass_factor_cloudy": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Air mass factor for the cloud-covered part of the scene",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "air_mass_factor_clear": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Air mass factor for the cloud-free part of the scene",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_ghost_column": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Ghost column NO2: modelled NO2 column below the cloud top",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_selection_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Cloud product selection flag",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "o22cld_cloud_fraction_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective_cloud_area_fraction_assuming_fixed_cloud_albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_cloud_fraction_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective_cloud_area_fraction_assuming_fixed_cloud_albedo standard_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_cloud_pressure_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_cloud_optical_centroid",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_cloud_pressure_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_cloud_optical_centroid standard_error",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_cloud_height_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "height_of_cloud_optical_centroid",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_cloud_height_crb_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "height_of_cloud_optical_centroid standard_error",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_cloud_albedo_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_scene_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud_albedo_assuming_completely_cloudy_sky",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_scene_albedo_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud_albedo_assuming_completely_cloudy_sky standard_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_apparent_scene_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_cloud_optical_centroid_assuming_completely_cloudy_sky",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_apparent_scene_pressure_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_cloud_optical_centroid_assuming_completely_cloudy_sky standard_error",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_chi_square": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "chi squared parameter of O2-O2 cloud fit",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_continuum_at_reference_wavelength": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "continuum_reflectance_at_reference_wavelength",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_continuum_at_reference_wavelength_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "continuum_reflectance_at_reference_wavelength standard_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_polynomial_coefficient": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "first_order_background_polynomial_coefficient",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_polynomial_coefficient_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "first_order_background_polynomial_coefficient standard_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_ring_coefficient": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "ring_coefficient",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_ring_coefficient_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "ring_coefficient standard_error",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_nitrogendioxide_slant_column_density": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "slant_column_density_of_nitrogen_dioxide",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_nitrogendioxide_slant_column_density_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "slant_column_density_of_nitrogen_dioxide standard_error",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_oxygen_oxygen_dimer_slant_column_density": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "slant_column_density_of_oxygen_cia",
+        "unit": "mol2 m-5",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_oxygen_oxygen_dimer_slant_column_density_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "slant_column_density_of_oxygen_cia standard_error",
+        "unit": "mol2 m-5",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_oxygen_oxygen_dimer_slant_column_density_correction_factor": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "O2-O2 slant column density temperature profile correction factor",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_ozone_slant_column_density": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "slant_column_density_of_ozone",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_ozone_slant_column_density_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "slant_column_density_of_ozone standard_error",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_surface_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "assumed surface albedo at 475 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_wavelength_calibration_irradiance_offset": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength offset",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_wavelength_calibration_irradiance_offset_precision": {
+        "dimensions": [
+          "time",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength offset precision for the O2-O2 cloud parameters",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_wavelength_calibration_offset": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength offset",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_wavelength_calibration_offset_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength offset precision",
+        "unit": "nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_wavelength_calibration_stretch": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength stretch",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "o22cld_wavelength_calibration_stretch_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "wavelength stretch precision",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fresco_cloud_fraction_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "effective_cloud_area_fraction_assuming_fixed_cloud_albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fresco_cloud_pressure_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_cloud_optical_centroid",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fresco_scene_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud_albedo_assuming_completely_cloudy_sky",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fresco_apparent_scene_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "air_pressure_at_cloud_optical_centroid_assuming_completely_cloudy_sky",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fresco_cloud_albedo_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "cloud albedo",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "fresco_surface_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "assumed surface albedo at 758 nm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface altitude",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude_precision": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "surface altitude precision",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_classification": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Land-water mask and surface classification based on a static database",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "instrument_configuration_identifier": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcID",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "instrument_configuration_version": {
+        "dimensions": [
+          "time",
+          "scanline"
+        ],
+        "type": "data",
+        "description": "IcVersion",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "scaled_small_pixel_variance": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "scaled small pixel variance",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "eastward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Eastward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "northward_wind": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Northward wind from ECMWF at 10 meter height level",
+        "unit": "m s-1",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo_nitrogendioxide_window": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface albedo in the NO2 fit window",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Surface albedo in the cloud product",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_pressure_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Cloud optical centroid pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_fraction_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Effective cloud fraction from the cloud product",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_albedo_crb": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Cloud albedo in the cloud product",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "scene_albedo": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Scene albedo in the cloud product",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "apparent_scene_pressure": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Scene pressure from the cloud product",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "snow_ice_flag": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Snow-ice mask",
+        "nodata": 254,
+        "data_type": "uint8"
+      },
+      "aerosol_index_354_388": {
+        "dimensions": [
+          "time",
+          "scanline",
+          "ground_pixel"
+        ],
+        "type": "data",
+        "description": "Absorbing aerosol index from the TROPOMI AAI product",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_stratospheric_column_histogram_axis": {
+        "dimensions": [
+          "nitrogendioxide_stratospheric_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the stratospheric NO2 vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_stratospheric_column_pdf_axis": {
+        "dimensions": [
+          "nitrogendioxide_stratospheric_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the stratospheric NO2 vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_stratospheric_column_histogram_bounds": {
+        "dimensions": [
+          "nitrogendioxide_stratospheric_column_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_stratospheric_column_pdf_bounds": {
+        "dimensions": [
+          "nitrogendioxide_stratospheric_column_pdf_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_tropospheric_column_histogram_axis": {
+        "dimensions": [
+          "nitrogendioxide_tropospheric_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the tropospheric NO2 vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_tropospheric_column_pdf_axis": {
+        "dimensions": [
+          "nitrogendioxide_tropospheric_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the tropospheric NO2 vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_tropospheric_column_histogram_bounds": {
+        "dimensions": [
+          "nitrogendioxide_tropospheric_column_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_tropospheric_column_pdf_bounds": {
+        "dimensions": [
+          "nitrogendioxide_tropospheric_column_pdf_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_total_column_histogram_axis": {
+        "dimensions": [
+          "nitrogendioxide_total_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the total NO2 vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_total_column_pdf_axis": {
+        "dimensions": [
+          "nitrogendioxide_total_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the total NO2 vertical column",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_total_column_histogram_bounds": {
+        "dimensions": [
+          "nitrogendioxide_total_column_histogram_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_total_column_pdf_bounds": {
+        "dimensions": [
+          "nitrogendioxide_total_column_pdf_axis",
+          "vertices"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_tropospheric_column_histogram": {
+        "dimensions": [
+          "nitrogendioxide_tropospheric_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the tropospheric NO2 vertical column in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "nitrogendioxide_stratospheric_column_histogram": {
+        "dimensions": [
+          "nitrogendioxide_stratospheric_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the stratospheric NO2 vertical column in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "nitrogendioxide_total_column_histogram": {
+        "dimensions": [
+          "nitrogendioxide_total_column_histogram_axis"
+        ],
+        "type": "data",
+        "description": "Histogram of the total NO2 vertical column in the current granule",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "nitrogendioxide_tropospheric_column_pdf": {
+        "dimensions": [
+          "nitrogendioxide_tropospheric_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the tropospheric NO2 vertical column in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_stratospheric_column_pdf": {
+        "dimensions": [
+          "nitrogendioxide_stratospheric_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the stratospheric NO2 vertical column in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "nitrogendioxide_total_column_pdf": {
+        "dimensions": [
+          "nitrogendioxide_total_column_pdf_axis"
+        ],
+        "type": "data",
+        "description": "Probability density function of the total NO2 vertical column in the current granule",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      }
+    },
+    "product:type": "L2__NO2___",
+    "processing:level": "L2",
+    "processing:facility": "SENTINEL-5P ionos-s5p-4",
+    "processing:datetime": "2022-11-06T00:00:00Z",
+    "processing:version": "2.4.0",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -180.0,
+    68.06356,
+    180.0,
+    90.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -91.67136399999998,
+          68.41886
+        ],
+        [
+          -101.217476,
+          74.89695000000002
+        ],
+        [
+          -115.93675000000002,
+          80.05582400000002
+        ],
+        [
+          -147.12552999999997,
+          84.08873
+        ],
+        [
+          -180.0,
+          84.76781691866287
+        ],
+        [
+          -180.0,
+          90.0
+        ],
+        [
+          180.0,
+          90.0
+        ],
+        [
+          180.0,
+          84.76781691866287
+        ],
+        [
+          154.07668,
+          84.23264
+        ],
+        [
+          138.17814999999996,
+          85.66871999999998
+        ],
+        [
+          97.21176,
+          86.52307999999998
+        ],
+        [
+          59.94889,
+          85.31641399999998
+        ],
+        [
+          42.58358799999999,
+          83.049446
+        ],
+        [
+          7.278968000000001,
+          84.46507999999999
+        ],
+        [
+          -29.978745999999997,
+          83.107864
+        ],
+        [
+          -42.97513,
+          81.27167499999999
+        ],
+        [
+          -51.545944,
+          78.67371999999999
+        ],
+        [
+          -56.895855,
+          75.1667
+        ],
+        [
+          -61.22912,
+          68.06355999999998
+        ],
+        [
+          -91.67136399999998,
+          68.41886
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_RPRO_L2__NO2____20220222T112503_20220222T130634_22602_03_020400_20221106T094213.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Nitrogen Dioxide Concentration",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "file:checksum": "d50110d701e787398ee7fa57190c57e752607f",
+      "file:size": 4242003,
+      "file:local_path": "S5P_RPRO_L2__NO2____20220222T112503_20220222T130634_22602_03_020400_20221106T094213.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__NO2___/2022/02/22/S5P_RPRO_L2__NO2____20220222T112503_20220222T130634_22602_03_020400_20221106T094213.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(e91ed770-59ff-45a9-9c08-be2fe39db7b4)/Nodes(S5P_RPRO_L2__NO2____20220222T112503_20220222T130634_22602_03_020400_20221106T094213.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

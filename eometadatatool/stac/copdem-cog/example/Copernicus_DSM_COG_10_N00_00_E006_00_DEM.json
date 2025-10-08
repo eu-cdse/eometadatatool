@@ -1,0 +1,134 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "cop-dem-glo-30-dged-cog",
+  "id": "Copernicus_DSM_COG_10_N00_00_E006_00_DEM",
+  "properties": {
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "start_datetime": "2011-07-30T17:47:44.355853Z",
+    "end_datetime": "2013-09-20T05:22:23.436534Z",
+    "sar:polarizations": [
+      "HH"
+    ],
+    "datetime": "2011-07-30T17:47:44.355853Z",
+    "created": "2022-08-09T10:02:00.180000Z",
+    "gsd": 30,
+    "proj:code": "EPSG:4326",
+    "product:type": "DGE_30-COG",
+    "processing:version": "5.52",
+    "grid:code": "CDEM-N00E006",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    6.0,
+    0.0,
+    7.0,
+    1.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          6.0,
+          0.0
+        ],
+        [
+          7.0,
+          0.0
+        ],
+        [
+          7.0,
+          1.0
+        ],
+        [
+          6.0,
+          1.0
+        ],
+        [
+          6.0,
+          0.0
+        ]
+      ]
+    ]
+  },
+  "links": [],
+  "assets": {
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Copernicus_DSM_COG_10_N00_00_E006_00_DEM.tif",
+      "roles": [
+        "data"
+      ],
+      "href": "s3://eodata/auxdata/CopDEM_COG/copernicus-dem-30m/Copernicus_DSM_COG_10_N00_00_E006_00_DEM/Copernicus_DSM_COG_10_N00_00_E006_00_DEM.tif",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "proj:shape": [
+        3600,
+        3600
+      ],
+      "proj:transform": [
+        5.9998611111111115,
+        0.0002777777777778,
+        0.0,
+        1.000138888888889,
+        0.0,
+        -0.0002777777777778
+      ],
+      "data_type": "float32"
+    },
+    "manifest": {
+      "type": "application/xml",
+      "title": "manifest",
+      "roles": [
+        "metadata"
+      ],
+      "href": "s3://eodata/auxdata/CopDEM_COG/copernicus-dem-30m/Copernicus_DSM_COG_10_N00_00_E006_00_DEM/Copernicus_DSM_10_N00_00_E006_00.xml",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

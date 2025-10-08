@@ -1,0 +1,637 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-5p-l2-o3-tcl-offl",
+  "id": "S5P_OFFL_L2__O3_TCL_20220717T045007_20220717T123429_24657_01_020401_20220728T121640",
+  "properties": {
+    "created": "2022-07-28T12:35:04.328000Z",
+    "updated": "2025-01-24T10:13:55.719460Z",
+    "published": "2022-07-28T12:43:14.500303Z",
+    "eopf:origin_datetime": "2022-07-28T12:35:04.328000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2022-07-17T04:50:07Z",
+    "start_datetime": "2022-07-17T04:50:07Z",
+    "end_datetime": "2022-07-17T12:34:29Z",
+    "platform": "sentinel-5p",
+    "constellation": "sentinel-5p",
+    "instruments": [
+      "tropomi"
+    ],
+    "gsd": 3500,
+    "proj:code": "EPSG:4326",
+    "proj:shape": [
+      40,
+      360
+    ],
+    "sat:absolute_orbit": 24657,
+    "sat:platform_international_designator": "2017-064A",
+    "cube:dimensions": {
+      "time": {
+        "type": "temporal",
+        "description": "time of the measurements",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-01T00:00:01.000000Z"
+        ]
+      },
+      "latitude_ccd": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "pixel center latitude for CCD data",
+        "extent": [
+          -20.0,
+          20.0
+        ],
+        "reference_system": 4326
+      },
+      "longitude_ccd": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "pixel center longitude for CCD data",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "reference_system": 4326
+      },
+      "latitude_csa": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude center for CSA data",
+        "extent": [
+          -20.0,
+          20.0
+        ],
+        "reference_system": 4326
+      },
+      "longitude_csa": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude center for CSA data",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "reference_system": 4326
+      },
+      "histogram_axis_upper_tropospheric_ozone": {
+        "type": "other",
+        "extent": [
+          0,
+          100
+        ]
+      },
+      "histogram_axis_tropospheric_ozone": {
+        "type": "other",
+        "extent": [
+          0,
+          100
+        ]
+      }
+    },
+    "cube:variables": {
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          1
+        ],
+        "description": "time of the measurements",
+        "unit": "seconds",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "latitude_ccd": {
+        "dimensions": [
+          "latitude_ccd"
+        ],
+        "type": "data",
+        "extent": [
+          -20.0,
+          20.0
+        ],
+        "description": "pixel center latitude for CCD data",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_ccd": {
+        "dimensions": [
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "pixel center longitude for CCD data",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "latitude_csa": {
+        "dimensions": [
+          "latitude_csa"
+        ],
+        "type": "data",
+        "extent": [
+          -20.0,
+          20.0
+        ],
+        "description": "latitude center for CSA data",
+        "unit": "degrees_north",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "longitude_csa": {
+        "dimensions": [
+          "longitude_csa"
+        ],
+        "type": "data",
+        "extent": [
+          -180.0,
+          180.0
+        ],
+        "description": "longitude center for CSA data",
+        "unit": "degrees_east",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_tropospheric_vertical_column": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "average tropospheric ozone column based on CCD algorithm",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_tropospheric_vertical_column_precision": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "standard deviation of tropospheric ozone column based on CCD algorithm",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_tropospheric_mixing_ratio": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "average tropospheric ozone mixing ratio based on CCD algorithm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_tropospheric_mixing_ratio_precision": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "standard deviation of tropospheric ozone mixing ratio based on CCD algorithm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_upper_tropospheric_mixing_ratio": {
+        "dimensions": [
+          "time",
+          "latitude_csa",
+          "longitude_csa"
+        ],
+        "type": "data",
+        "description": "upper tropospheric ozone mixing ratio based on CSA algorithm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_upper_tropospheric_mixing_ratio_precision": {
+        "dimensions": [
+          "time",
+          "latitude_csa",
+          "longitude_csa"
+        ],
+        "type": "data",
+        "description": "standard deviation of upper tropospheric ozone mixing ratio based on CSA algorithm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_upper_tropospheric_mixing_ratio_flag": {
+        "dimensions": [
+          "time",
+          "latitude_csa",
+          "longitude_csa"
+        ],
+        "type": "data",
+        "description": "quality flag to upper tropospheric mixing ratio based on CSA algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "qa_value": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "data quality value for the CCD algorithm",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "ozone_stratospheric_vertical_column": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "average stratospheric ozone column based on the CCD algorithm",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_stratospheric_vertical_column_precision": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "standard deviation of stratospheric ozone column based on the CCD algorithm",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_stratospheric_vertical_column_reference": {
+        "dimensions": [
+          "time",
+          "latitude_ccd"
+        ],
+        "type": "data",
+        "description": "averaged stratospheric ozone column in the reference are based on the CCD algorithm",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_stratospheric_vertical_column_reference_precision": {
+        "dimensions": [
+          "time",
+          "latitude_ccd"
+        ],
+        "type": "data",
+        "description": "standard deviation of stratospheric ozone column in the reference area based on the CCD algorithm",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_stratospheric_vertical_column_reference_flag": {
+        "dimensions": [
+          "time",
+          "latitude_ccd"
+        ],
+        "type": "data",
+        "description": "quality flag of stratospheric ozone column in the reference area based on the CCD algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ozone_total_vertical_column": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "averaged total ozone column based on the CCD algorithm",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "number_of_iterations_ozone_upper_tropospheric_mixing_ratio": {
+        "dimensions": [
+          "time",
+          "latitude_csa",
+          "longitude_csa"
+        ],
+        "type": "data",
+        "description": "number of iterations in the upper tropospheric mixing ratio retrieval based on the CSA algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ozone_total_vertical_column_precision": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "standard deviation of total ozone column based on the CCD algorithm",
+        "unit": "mol m-2",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_top_pressure_min": {
+        "dimensions": [
+          "time",
+          "latitude_csa",
+          "longitude_csa"
+        ],
+        "type": "data",
+        "description": "minimum cloud top pressure minimum based on the CSA algorithm",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "cloud_top_pressure_max": {
+        "dimensions": [
+          "time",
+          "latitude_csa",
+          "longitude_csa"
+        ],
+        "type": "data",
+        "description": "maximum cloud top pressure",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_albedo": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "averaged surface albedo based on the CCD algorithm",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_altitude": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "surface altitude based on the CCD algorithm",
+        "unit": "m",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "surface_classification": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "averaged land-water mask based on the CCD algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "number_of_observations_ozone_stratospheric_vertical_column": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "number of data averaged for stratospheric ozone column based on the CCD algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "number_of_observations_ozone_stratospheric_vertical_column_reference": {
+        "dimensions": [
+          "time",
+          "latitude_ccd"
+        ],
+        "type": "data",
+        "description": "number of data averaged for stratospheric reference ozone column based on the CCD algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "number_of_observations_ozone_tropospheric_vertical_column": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "number of data averaged for tropospheric ozone column based on the CCD algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "number_of_observations_ozone_total_column": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "number of data averaged for total ozone column based on the CCD algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "number_of_observations_ozone_upper_tropospheric_mixing_ratio": {
+        "dimensions": [
+          "time",
+          "latitude_csa",
+          "longitude_csa"
+        ],
+        "type": "data",
+        "description": "number of data used in the upper tropospheric mixing ratio retrieval",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "number_of_skipped_observations_ozone_upper_tropospheric_mixing_ratio": {
+        "dimensions": [
+          "time",
+          "latitude_csa",
+          "longitude_csa"
+        ],
+        "type": "data",
+        "description": "number of data skipped in the upper tropospheric mixing ratio retrieval based on the CSA algorithm",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "surface_pressure": {
+        "dimensions": [
+          "time",
+          "latitude_ccd",
+          "longitude_ccd"
+        ],
+        "type": "data",
+        "description": "surface pressure based on the CCD algorithm",
+        "unit": "Pa",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "histogram_axis_upper_tropospheric_ozone": {
+        "dimensions": [
+          "histogram_axis_upper_tropospheric_ozone"
+        ],
+        "type": "data",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "histogram_axis_tropospheric_ozone": {
+        "dimensions": [
+          "histogram_axis_tropospheric_ozone"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e36,
+        "data_type": "other"
+      },
+      "ozone_upper_troposheric_mixing_ratio_histogram": {
+        "dimensions": [
+          "histogram_axis_upper_tropospheric_ozone"
+        ],
+        "type": "data",
+        "description": "histogram of upper tropospheric ozone mixing ratios",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      },
+      "ozone_tropospheric_vertical_column_histogram": {
+        "dimensions": [
+          "histogram_axis_tropospheric_ozone"
+        ],
+        "type": "data",
+        "description": "histogram of tropospheric ozone columns",
+        "nodata": -2147483647,
+        "data_type": "int32"
+      }
+    },
+    "product:type": "L2__O3_TCL",
+    "processing:level": "L2",
+    "product:timeliness": "P5D",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "02.04.01",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -180.0,
+    -20.0,
+    180.0,
+    20.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          180.0,
+          -20.0
+        ],
+        [
+          -180.0,
+          -20.0
+        ],
+        [
+          -180.0,
+          20.0
+        ],
+        [
+          180.0,
+          20.0
+        ],
+        [
+          180.0,
+          -20.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S5P_OFFL_L2__O3_TCL_20220717T045007_20220717T123429_24657_03_020401_20220728T121640.nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "netcdf": {
+      "type": "application/netcdf",
+      "title": "Tropospheric Ozone Concentration",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 9.969209968386869e36,
+      "file:checksum": "d501106f073458939dd329d155d0fb54e347d5",
+      "file:size": 490281,
+      "file:local_path": "S5P_OFFL_L2__O3_TCL_20220717T045007_20220717T123429_24657_03_020401_20220728T121640.nc",
+      "href": "s3://eodata/Sentinel-5P/TROPOMI/L2__O3_TCL/2022/07/17/S5P_OFFL_L2__O3_TCL_20220717T045007_20220717T123429_24657_03_020401_20220728T121640.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(60664819-1f48-590c-a206-6e6788cd123f)/Nodes(S5P_OFFL_L2__O3_TCL_20220717T045007_20220717T123429_24657_03_020401_20220728T121640.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

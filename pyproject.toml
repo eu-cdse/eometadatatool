@@ -1,0 +1,196 @@
+[project]
+dependencies = [
+  "aioboto3",
+  "aiohttp[speedups]>=3.10.10",
+  "asyncache>=0.3.1",
+  "httpx[brotli,zstd]",
+  "lrucache-rs>=1.4.0",
+  "lxml",
+  "netcdf4",
+  "numpy>=2",
+  "pyinstrument>=5.0.0",
+  "pyproj>=3.7.0",
+  "python-dateutil>=2.9.0.post0",
+  "rich-argparse>=1.6.0",
+  "rich>=13.9.4",
+  "setuptools>=75.8.0",
+  "shapely>=2.1.0rc1",
+  "sizestr>=1.1.0",
+  "stamina",
+  "orjson>=3.10.12",
+  "stac-validator>=3.6.0",
+  "h5py>=3.13.0",
+  "s3fs>=2025.3.2",
+  "h5netcdf>=1.6.1",
+]
+name = "eometadatatool"
+requires-python = "~=3.13"
+dynamic = ["version"]
+
+[project.scripts]
+metadata_extract = "eometadatatool.metadata_extract:main"
+
+[dependency-groups]
+dev = [
+  "coverage>=7.6.8",
+  "jsondiff>=2.2.1",
+  "lxml-stubs",
+  "pytest",
+  "pytest-asyncio",
+  "pytest-xdist",
+  "types-aioboto3[s3]",
+]
+
+[build-system]
+requires = ["hatchling", "versioningit==3.1.3"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+include = ["eometadatatool/**/*.py", "eometadatatool/**/*.csv"]
+artifacts = ["eometadatatool/_version.py"]
+
+[tool.hatch.version]
+source = "versioningit"
+
+[tool.versioningit.vcs]
+method = "git"
+default-tag = "0"
+
+[tool.versioningit.format]
+distance = "{committer_date:%y%m%d%H%M%S}"
+dirty = "{committer_date:%y%m%d%H%M%S}+dirty"
+distance-dirty = "{committer_date:%y%m%d%H%M%S}+dirty"
+
+[tool.versioningit.write]
+file = "eometadatatool/_version.py"
+
+[tool.uv]
+package = true
+python-downloads = "never"
+python-preference = "only-system"
+
+[tool.ruff]
+extend-exclude = ["eometadatatool/footprint_facility.py"]
+
+indent-width = 4
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+ignore = [
+  "ARG001", # unused-function-argument
+  "ARG002", # unused-method-argument
+  "ASYNC230", # blocking-open-call-in-async-function
+  "B017", # assert-raises-exception
+  "COM812", # missing-trailing-comma
+  "COM819", # prohibited-trailing-comma
+  "D206", # indent-with-spaces
+  "D300", # triple-single-quotes
+  "E111", # indentation-with-invalid-multiple
+  "E114", # indentation-with-invalid-multiple-comment
+  "E117", # over-indented
+  "E501", # line-too-long
+  "E731", # lambda-assignment
+  "ISC001", # single-line-implicit-string-concatenation
+  "ISC002", # multi-line-implicit-string-concatenation
+  "LOG015", # root-logger-call
+  "PLR09", # too-many-*
+  "PLR1702", # too-many-nested-blocks
+  "PLR2",
+  "PLW0603", # global-statement
+  "PLW2901", # redefined-loop-name
+  "PT011", # pytest-raises-too-broad
+  "PYI025", # unaliased-collections-abc-set-import
+  "Q000", # bad-quotes-inline-string
+  "Q001", # bad-quotes-multiline-string
+  "Q002", # bad-quotes-docstring
+  "Q003", # avoidable-escaped-quote
+  "S101", # assert
+  "S105", # hardcoded-password-string
+  "S320", # suspicious-xmle-tree-usage
+  "SIM108", # if-else-block-instead-of-if-exp
+  "SLF001", # private-member-access
+  "TRY003", # raise-vanilla-args
+  "W191", # tab-indentation
+]
+# see https://docs.astral.sh/ruff/rules/ for rules documentation
+select = [
+  "A", # flake8-builtins
+  "ARG", # flake8-unused-arguments
+  "ASYNC", # flake8-async
+  "B", # flake8-bugbear
+  "C4", # flake8-comprehensions
+  "DTZ", # flake8-datetimez
+  "E4", # pycodestyle
+  "E7",
+  "E9",
+  "EXE", # flake8-executable
+  "F", # pyflakes
+  "FA", # flake8-future-annotations
+  "FLY", # flynt
+  "FURB", # refurb
+  "G", # flake8-logging-format
+  "I", # isort
+  "ICN", # flake8-import-conventions
+  "INT", # flake8-gettext
+  "ISC", # flake8-implicit-str-concat
+  "LOG", # flake8-logging
+  "N", # pep8-naming
+  "NPY", # numpy
+  "PERF", # perflint
+  "PIE", # flake8-pie
+  "PLC", # pylint
+  "PLE", # pylint
+  "PLR", # pylint
+  "PLW", # pylint
+  "PT", # flake8-pytest-style
+  "PYI", # flake8-pyi
+  "Q", # flake8-quotes
+  "RSE", # flake8-raise
+  "RUF", # ruff
+  "S", # flake8-bandit
+  "SIM", # flake8-simplify
+  "SLF", # flake8-self
+  "SLOT", # flake8-slots
+  "T10", # flake8-debugger
+  "TC", # flake8-type-checking
+  "TID", # flake8-tidy-imports
+  "TRY", # tryceratops
+  "UP", # pyupgrade
+  "W6",
+  "YTT", # flake8-2020
+]
+
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+indent-style = "space"
+line-ending = "lf"
+quote-style = "single"
+skip-magic-trailing-comma = false
+preview = true
+
+[tool.ruff.lint.flake8-builtins]
+builtins-ignorelist = ["format", "id", "type", "vars", "input"]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+multiline-quotes = "double"
+
+[tool.ruff.lint.pylint]
+max-args = 10
+
+[tool.pyright]
+include = ["eometadatatool", "tests"]
+pythonPlatform = "All"
+pythonVersion = "3.13"
+typeCheckingMode = "standard"
+
+[tool.pytest.ini_options]
+addopts = "--quiet"
+asyncio_default_fixture_loop_scope = "session"
+asyncio_mode = "auto"
+minversion = "6.0"
+testpaths = ["tests"]

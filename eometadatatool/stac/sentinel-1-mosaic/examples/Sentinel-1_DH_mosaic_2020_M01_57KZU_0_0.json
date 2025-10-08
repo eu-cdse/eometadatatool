@@ -1,0 +1,267 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-1-global-mosaics",
+  "id": "Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0",
+  "properties": {
+    "created": "2024-07-01T21:51:04.304000Z",
+    "updated": "2024-07-01T21:51:04.304000Z",
+    "published": "2024-07-01T21:51:04.304000Z",
+    "eopf:origin_datetime": "2024-07-01T21:51:04.304000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2020-01-01T00:00:00.000000Z",
+    "start_datetime": "2020-01-01T00:00:00.000000Z",
+    "end_datetime": "2020-01-31T23:59:59.000000Z",
+    "constellation": "sentinel-1",
+    "instruments": [
+      "sar"
+    ],
+    "processing:level": "L3",
+    "processing:facility": "Sinergise Solutions",
+    "product:type": "S1SAR_L3_DH_MCM",
+    "product:timeliness": "P1M",
+    "sar:instrument_mode": "DH",
+    "sar:frequency_band": "C",
+    "sar:center_frequency": 5.405,
+    "sar:polarizations": [
+      "HH",
+      "HV"
+    ],
+    "gsd": 40,
+    "grid:code": "MGRS-57KZU",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    161.84873676971924,
+    -19.873918870863275,
+    162.81882050356754,
+    -18.953560792145016
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          161.86453564917363,
+          -19.873918870863275
+        ],
+        [
+          161.84873676971924,
+          -18.97059888491366
+        ],
+        [
+          162.79778548251335,
+          -18.953560792145016
+        ],
+        [
+          162.81882050356754,
+          -19.856004636926855
+        ],
+        [
+          161.86453564917363,
+          -19.873918870863275
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-1/S1SAR_L3_DH_MCM/2020/01/01/Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "userdata": {
+      "type": "application/xml",
+      "title": "userdata.json",
+      "roles": [
+        "metadata"
+      ],
+      "file:checksum": "d50110befacb4c19d995e98ba503acba12fffa",
+      "file:size": 1277,
+      "file:local_path": "Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0/userdata.json",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-1/S1SAR_L3_DH_MCM/2020/01/01/Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0/userdata.json",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(9fb48ae5-aa5c-4644-a395-084ffe86d944)/Nodes(Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0)/Nodes(userdata.json)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "HH": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "HH: Horizontal transmit, horizontal receive",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": -32768,
+      "sar:polarizations": [
+        "HH"
+      ],
+      "proj:code": "EPSG:32757",
+      "description": "Amplitude of horizontally polarized signal received horizontally.",
+      "file:size": 15480031,
+      "file:local_path": "Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0/HH.tif",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-1/S1SAR_L3_DH_MCM/2020/01/01/Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0/HH.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(9fb48ae5-aa5c-4644-a395-084ffe86d944)/Nodes(Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0)/Nodes(HH.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        2502,
+        2502
+      ],
+      "proj:transform": [
+        799980.0,
+        40.0,
+        0.0,
+        7900000.0,
+        0.0,
+        -40.0
+      ]
+    },
+    "HV": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "HV: Horizontal transmit, horizontal receive",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": -32768,
+      "sar:polarizations": [
+        "HV"
+      ],
+      "proj:code": "EPSG:32757",
+      "description": "Amplitude of horizontally polarized signal received vertically.",
+      "file:size": 16996819,
+      "file:local_path": "Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0/HV.tif",
+      "href": "s3://eodata/Global-Mosaics/Sentinel-1/S1SAR_L3_DH_MCM/2020/01/01/Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0/HV.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(9fb48ae5-aa5c-4644-a395-084ffe86d944)/Nodes(Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0)/Nodes(HV.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        2502,
+        2502
+      ],
+      "proj:transform": [
+        799980.0,
+        40.0,
+        0.0,
+        7900000.0,
+        0.0,
+        -40.0
+      ]
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:local_path": "Sentinel-1_DH_mosaic_2020_M01_57KZU_0_0.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(9fb48ae5-aa5c-4644-a395-084ffe86d944)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

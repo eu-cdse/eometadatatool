@@ -1,0 +1,28 @@
+metadata;file;mappings;datatype
+beginningDateTime;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='startTime']/text();DateTimeOffset
+endingDateTime;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='stopTime']/text();DateTimeOffset
+startTimeFromAscendingNode;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='extension']/s1:timeANX/s1:startTimeANX/text();Double
+completionTimeFromAscendingNode;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='extension']/s1:timeANX/s1:stopTimeANX/text();Double
+platformShortName;manifest.safe;//*[local-name()='platform']/*[local-name()='familyName']/text();String
+platformSerialIdentifier;manifest.safe;//*[local-name()='platform']/*[local-name()='number']/text();String
+instrumentShortName;manifest.safe;//*[local-name()='platform']/*[local-name()='instrument']/*[local-name()='familyName']/@abbreviation;String
+operationalMode;manifest.safe;//*[local-name()='platform']/*[local-name()='instrument']/*[local-name()='extension']/s1sar:instrumentMode/s1sar:mode/text();String
+swathIdentifier;manifest.safe;join(//*[local-name()='platform']/*[local-name()='instrument']/*[local-name()='extension']/*[local-name()='instrumentMode']/*[local-name()='swathNumber']/text(),', ');String
+productClass;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='productClass']/text();String
+productConsolidation;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='productConsolidation']/text();String
+instrumentConfigurationID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='instrumentConfigurationID']/text();Int64
+datatakeID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='missionDataTakeID']/text();Int64
+sliceProductFlag;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='sliceProductFlag']/text();Boolean
+sliceNumber;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='sliceNumber']/text();Int64
+totalSlices;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='totalNumberOfSlices']/text();Int64
+polarisationChannels;manifest.safe;join(//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation']/text(),', ');String
+orbitNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='orbitNumber' and @type='start']/text();Int64
+relativeOrbitNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='relativeOrbitNumber' and @type='start']/text();Int64
+cycleNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='cycleNumber']/text();Int64
+orbitDirection;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='extension']/s1:orbitProperties/s1:pass/text();String
+processingDate;manifest.safe;//*[local-name()='processing']/@start;DateTimeOffset
+processingCenter;manifest.safe;//*[local-name()='processing']/*[local-name()='facility']/@site;String
+processorName;manifest.safe;//*[local-name()='processing']/*[local-name()='software']/@name;String
+processorVersion;manifest.safe;//*[local-name()='processing']/*[local-name()='software']/@version;String
+coordinates;manifest.safe;WKT(//*[local-name()='frameSet']/*[local-name()='frame']/*[local-name()='footPrint']/*[local-name()='coordinates']/text());String
+productType;static;productType;String

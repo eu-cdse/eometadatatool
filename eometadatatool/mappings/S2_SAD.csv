@@ -1,0 +1,13 @@
+metadata;file;mappings;datatype;
+processingDate;Inventory_Metadata.xml;//general:Generation_Time/text();DateTimeOffset
+beginningDateTime;Inventory_Metadata.xml;//general:Validity_Start/text();DateTimeOffset
+endingDateTime;Inventory_Metadata.xml;//general:Validity_Stop/text();DateTimeOffset
+orbitNumber;Inventory_Metadata.xml;//general:Start_Orbit_Number/text();Int64
+lastOrbitNumber;Inventory_Metadata.xml;//general:Stop_Orbit_Number/text();Int64
+qualityStatus;Inventory_Metadata.xml;map(//general:Quality_Info,'{"100.0":"NOMINAL","default":"DEGRADED"}');String
+qualityInfo;Inventory_Metadata.xml;//general:Quality_Info/text();Double
+productType;Inventory_Metadata.xml;//general:File_Type/text();String
+instrumentShortName;Inventory_Metadata.xml;//general:Sensor_Code/text();String
+processingCenter;Inventory_Metadata.xml;//general:Processing_Station/text();String
+platformSerialIdentifier;Inventory_Metadata.xml;substring(//general:Satellite_Code/text(),3,1);String
+platformShortName;static;SENTINEL-2;String

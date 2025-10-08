@@ -1,0 +1,671 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-3-syn-2-vg1-ntc",
+  "id": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002",
+  "properties": {
+    "created": "2024-02-03T20:24:39.837000Z",
+    "updated": "2024-02-03T20:30:59.099948Z",
+    "published": "2024-02-03T20:30:31.502127Z",
+    "eopf:origin_datetime": "2024-02-03T20:24:39.837000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3"
+      }
+    },
+    "datetime": "2024-02-01T00:00:00.000000Z",
+    "start_datetime": "2024-02-01T00:00:00.000000Z",
+    "end_datetime": "2024-02-01T23:59:59.000000Z",
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "olci",
+      "slstr"
+    ],
+    "gsd": 1000,
+    "processing:level": "L2",
+    "processing:datetime": "2024-02-03T20:21:26.000000Z",
+    "proj:code": null,
+    "sat:absolute_orbit": 41168,
+    "sat:orbit_cycle": 108,
+    "sat:orbit_state": "descending",
+    "sat:platform_international_designator": "2016-011A",
+    "eo:cloud_cover": 27.28,
+    "eo:snow_cover": 5.103889,
+    "product:type": "SY_2_VG1___",
+    "product:timeliness": "P1M",
+    "product:timeliness_category": "NT",
+    "statistics": {
+      "land": 37.875345
+    },
+    "processing:version": "03.49",
+    "processing:software": {
+      "eometadatatool": "250924131919+dirty"
+    },
+    "expires": "9999-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    45.0089,
+    40.0,
+    179.991,
+    75.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          45.008900000000004,
+          40.0
+        ],
+        [
+          179.991,
+          40.0
+        ],
+        [
+          179.991,
+          75.0
+        ],
+        [
+          45.008900000000004,
+          75.0
+        ],
+        [
+          45.008900000000004,
+          40.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    },
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/xfdumanifest.xml",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/xfdumanifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(xfdumanifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/quicklook.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(b51a93fd-4775-4567-bb7a-237207f13e28)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/quicklook.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "B0": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B0 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B0",
+          "description": "OLCI channels Oa02, Oa03",
+          "eo:center_wavelength": 0.45,
+          "eo:full_width_half_max": 0.02
+        }
+      ],
+      "file:checksum": "d501102d8fdb1522a8b064dbb1c6e5faab7972",
+      "file:size": 8047155,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/B0.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/B0.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(B0.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B2": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B2 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B2",
+          "description": "OLCI channels Oa06, Oa07, Oa08, Oa09, Oa10",
+          "eo:center_wavelength": 0.645,
+          "eo:full_width_half_max": 0.035
+        }
+      ],
+      "file:checksum": "d50110abe2206595a0b5beba0a2e493e80370d",
+      "file:size": 8159391,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/B2.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/B2.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(B2.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B3": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-B3 channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B3",
+          "description": "OLCI channels Oa16, Oa17, Oa18, Oa21",
+          "eo:center_wavelength": 0.835,
+          "eo:full_width_half_max": 0.055
+        }
+      ],
+      "file:checksum": "d50110386bc3c0f62b97d2ae473cbecd5835b0",
+      "file:size": 8384853,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/B3.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/B3.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(B3.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "MIR": {
+      "type": "application/netcdf",
+      "title": "Surface Reflectance Data Set associated with VGT-MIR channel",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "MIR",
+          "description": "SLSTR nadir and oblique channels S5, S6",
+          "eo:center_wavelength": 1.665,
+          "eo:full_width_half_max": 0.085
+        }
+      ],
+      "file:checksum": "d50110b78a38ddcb9c83d76ece7685ec201467",
+      "file:size": 18008721,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/MIR.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/MIR.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(MIR.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "og": {
+      "type": "application/netcdf",
+      "title": "Total Ozone column data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110553b78e8af87912bb767b4f967f0c0ff",
+      "file:size": 525831,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/og.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/og.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(og.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "saa": {
+      "type": "application/netcdf",
+      "title": "Solar azimuth angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011008abef9ebdaf41e9859c8a05c48d692c",
+      "file:size": 1054113,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/saa.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/saa.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(saa.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "sm": {
+      "type": "application/netcdf",
+      "title": "Status Map data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011026b16e19e2ea806e874a6088dfc0a061",
+      "file:size": 4085909,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/sm.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/sm.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(sm.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "sza": {
+      "type": "application/netcdf",
+      "title": "Solar zenith angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d5011045e1ae556dd54146d742218f8e328388",
+      "file:size": 1033233,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/sza.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/sza.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(sza.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "vaa": {
+      "type": "application/netcdf",
+      "title": "View azimuth angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110a2bc136f8063a9096889507554ab1909",
+      "file:size": 1160989,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/vaa.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/vaa.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(vaa.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "vza": {
+      "type": "application/netcdf",
+      "title": "View zenith angle data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501103688389b06b16a3b7fce1043ef1fa48b",
+      "file:size": 2005985,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/vza.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/vza.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(vza.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "wvg": {
+      "type": "application/netcdf",
+      "title": "Total column water vapour data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110fd748b9ef717fec899f7771bdb0fa13e",
+      "file:size": 1331987,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/wvg.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/wvg.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(wvg.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ag": {
+      "type": "application/netcdf",
+      "title": "Aerosol optical thickness data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501103d22dd317c0044cb763b566839bea759",
+      "file:size": 4434764,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/ag.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/ag.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(ag.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "NDVI": {
+      "type": "application/netcdf",
+      "title": "Normalised difference vegetation index",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: B2, B3",
+      "file:checksum": "d50110d3a7e4736574ab5b67cd5d524fd85eb0",
+      "file:size": 4677905,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/NDVI.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/NDVI.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(NDVI.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tg": {
+      "type": "application/netcdf",
+      "title": "Synthesis time data",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d50110f41d07ee206d6d8a8d08e89617c185ec",
+      "file:size": 1872644,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/tg.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/tg.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(tg.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "toa_ndvi": {
+      "type": "application/netcdf",
+      "title": "Normalised difference vegetation index, computed using TOA reflectance",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: B2, B3",
+      "file:checksum": "d50110ca08fde63f80d14d0983f8c44bb6b3c0",
+      "file:size": 4245952,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/TOA_NDVI.nc",
+      "href": "s3://eodata/Sentinel-3/SYNERGY/SY_2_VG1___/2024/02/01/S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3/TOA_NDVI.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://zipper.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/Nodes(S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3)/Nodes(TOA_NDVI.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501109ff209b51b01131ad178ab3d8291d0b6",
+      "file:size": 69805077,
+      "file:local_path": "S3A_SY_2_VG1____20240201T000000_20240201T235959_20240203T201505_NORTH_ASIA________PS1_O_NT_002.SEN3.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(15faf4f3-5775-462a-b196-724927572348)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

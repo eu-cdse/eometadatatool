@@ -1,0 +1,402 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "id": "sentinel-2-global-mosaics",
+  "type": "Collection",
+  "title": "Sentinel-2 Global Mosaics",
+  "description": "The mosaics have four bands of data (Red (B04), Green (B03), Blue (B02) and wide band Near Infrared (B08)). First, cloud masking based on the scene classification layer of the Sentinel-2 level 2 algorithm was applied, then for each pixel and band, within three-month time periods, the first quartile of the distribution of the pixel values was taken as the output value to filter out any bright pixels misclassified as not clouds. If there are no valid pixels for the given timeframe, the pixel is left empty. Sentinel-2 cloudless mosaics can be used for various purposes such as land cover classification, land use planning, or for the creation of basemaps. These images are especially useful for showing large and cloudy areas with interesting large-scale patterns. Iceland is a prime example, with frequent cloud cover and large areal extent spanning several Sentinel-2 swaths.",
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "license": "other",
+  "keywords": [
+    "10m",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "Global",
+    "Imagery",
+    "MSI",
+    "P3M",
+    "Reflectance",
+    "S2MSI_L3__MCQ",
+    "Satellite",
+    "Sentinel",
+    "Sentinel-2"
+  ],
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-2",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ]
+    }
+  ],
+  "auth:schemes": {
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+    },
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "cdse-s3": {
+      "title": "Copernicus Data Space Ecosystem S3",
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false,
+      "type": "custom-s3"
+    },
+    "creodias-s3": {
+      "title": "CREODIAS S3",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true,
+      "type": "custom-s3"
+    }
+  },
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/Global-Mosaics.jpg",
+      "type": "image/jpeg",
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ],
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Sentinel 2 Global Mosaics Thumbnail"
+    }
+  },
+  "bands": [
+    {
+      "name": "B02",
+      "eo:common_name": "blue",
+      "description": "Blue (band 2)",
+      "gsd": 10
+    },
+    {
+      "name": "B03",
+      "eo:common_name": "green",
+      "description": "Green (band 3)",
+      "gsd": 10
+    },
+    {
+      "name": "B04",
+      "eo:common_name": "red",
+      "description": "Red (band 4)",
+      "gsd": 10
+    },
+    {
+      "name": "B08",
+      "eo:common_name": "nir",
+      "description": "NIR 1 (band 8)",
+      "gsd": 10
+    },
+    {
+      "name": "observations",
+      "description": "Number of valid observations for each pixel",
+      "gsd": 10
+    }
+  ],
+  "summaries": {
+    "gsd": [
+      10
+    ],
+    "instruments": [
+      "msi"
+    ],
+    "constellation": [
+      "sentinel-2"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "processing:facility": [
+      "Copernicus Data Space Ecosystem"
+    ],
+    "product:type": [
+      "S2MSI_L3__MCQ"
+    ],
+    "product:timeliness": [
+      "P3M"
+    ]
+  },
+  "item_assets": {
+    "Product": {
+      "title": "Zipped product",
+      "type": "application/zip",
+      "auth:refs": [
+        "oidc"
+      ],
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ]
+    },
+    "B02": {
+      "type": "image/tiff; application=geotiff; cloud-optimized=true",
+      "auth:refs": [
+        "s3"
+      ],
+      "alternate:name": "S3",
+      "title": "Blue (band 2)",
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "bands": [
+        {
+          "name": "B02",
+          "eo:common_name": "blue"
+        }
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "B03": {
+      "type": "image/tiff; application=geotiff; cloud-optimized=true",
+      "auth:refs": [
+        "s3"
+      ],
+      "alternate:name": "S3",
+      "title": "Green (band 3)",
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "bands": [
+        {
+          "name": "B03",
+          "eo:common_name": "green"
+        }
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "B04": {
+      "type": "image/tiff; application=geotiff; cloud-optimized=true",
+      "auth:refs": [
+        "s3"
+      ],
+      "alternate:name": "S3",
+      "title": "Red (band 4)",
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "bands": [
+        {
+          "name": "B04",
+          "eo:common_name": "red"
+        }
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "B08": {
+      "type": "image/tiff; application=geotiff; cloud-optimized=true",
+      "auth:refs": [
+        "s3"
+      ],
+      "alternate:name": "S3",
+      "title": "NIR 1 (band 8)",
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "bands": [
+        {
+          "name": "B08",
+          "eo:common_name": "nir"
+        }
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "observations": {
+      "type": "image/tiff; application=geotiff; cloud-optimized=true",
+      "auth:refs": [
+        "s3"
+      ],
+      "alternate:name": "S3",
+      "title": "Observations",
+      "description": "Number of valid observations for each pixel",
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "data_type": "uint16",
+      "nodata": 0,
+      "gsd": 10,
+      "proj:shape": [
+        10008,
+        10008
+      ],
+      "roles": [
+        "data"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "userdata": {
+      "type": "application/json",
+      "auth:refs": [
+        "s3"
+      ],
+      "alternate:name": "S3",
+      "title": "Product Odata Response File (JSON)",
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "roles": [
+        "metadata"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ]
+}
