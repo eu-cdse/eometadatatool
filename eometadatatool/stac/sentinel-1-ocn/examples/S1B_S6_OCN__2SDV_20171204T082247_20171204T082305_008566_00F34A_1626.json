@@ -1,0 +1,1188 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-1-ocn",
+  "id": "S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626",
+  "properties": {
+    "created": "2017-12-04T10:46:24.117000Z",
+    "updated": "2025-10-21T23:37:23.317099Z",
+    "published": "2017-12-04T11:05:10.660000Z",
+    "eopf:origin_datetime": "2017-12-04T10:46:24.117000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2017-12-04T08:22:47.211674Z",
+    "start_datetime": "2017-12-04T08:22:47.211674Z",
+    "end_datetime": "2017-12-04T08:23:05.946027Z",
+    "platform": "sentinel-1b",
+    "constellation": "sentinel-1",
+    "instruments": [
+      "sar"
+    ],
+    "processing:level": "L2",
+    "processing:facility": "Airbus DS-Newport",
+    "processing:datetime": "2017-12-04T09:36:26.717374Z",
+    "processing:version": "02.84",
+    "processing:software": {
+      "Sentinel-1 IPF": "002.84",
+      "eometadatatool": "260908113235"
+    },
+    "product:type": "S6_OCN__2S",
+    "sat:orbit_state": "ascending",
+    "sat:orbit_cycle": 55,
+    "sat:relative_orbit": 140,
+    "sat:absolute_orbit": 8566,
+    "sat:platform_international_designator": "2016-025A",
+    "sat:anx_datetime": "2017-12-04T06:44:50.934816Z",
+    "sar:frequency_band": "C",
+    "sar:center_frequency": 5.405,
+    "sar:instrument_mode": "SM",
+    "sar:beam_ids": [
+      "s6"
+    ],
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "eopf:datatake_id": "62282",
+    "eopf:instrument_configuration_id": 1,
+    "product:timeliness": "PT24H",
+    "product:timeliness_category": "Fast-24h",
+    "_private": {
+      "product_size": 4561561,
+      "product_uuid": "eba9dd67-e95f-5d38-be19-2c200546ccd8",
+      "product_name": "S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE",
+      "visible": true
+    },
+    "sar:resolution_range": 5,
+    "sar:resolution_azimuth": 5,
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    149.402451,
+    -1.883527,
+    150.349075,
+    -0.600285
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          149.402451,
+          -0.753154
+        ],
+        [
+          149.643204,
+          -1.883527
+        ],
+        [
+          150.349075,
+          -1.72934
+        ],
+        [
+          150.108307,
+          -0.600285
+        ],
+        [
+          149.402451,
+          -0.753154
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-1/SAR/OCN/2017/12/04/S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "safe_manifest": {
+      "type": "application/xml",
+      "title": "manifest.safe",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d50110817e178cb5398031376aa1d52e939d98",
+      "file:size": 14785,
+      "file:local_path": "S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE/manifest.safe",
+      "href": "s3://eodata/Sentinel-1/SAR/OCN/2017/12/04/S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE/manifest.safe",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(eba9dd67-e95f-5d38-be19-2c200546ccd8)/Nodes(S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE)/Nodes(manifest.safe)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "sm-ocn-vv": {
+      "type": "application/netcdf",
+      "title": "OCN Measurement Data (VV)",
+      "roles": [
+        "data",
+        "sm"
+      ],
+      "data_type": "float32",
+      "sar:polarizations": [
+        "VV"
+      ],
+      "cube:dimensions": {
+        "oswRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            3
+          ]
+        },
+        "oswAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            6
+          ]
+        },
+        "oswWavenumberBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            60
+          ]
+        },
+        "oswAngularBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            72
+          ]
+        },
+        "oswPartitions": {
+          "type": "other",
+          "description": "wave partition numbers",
+          "extent": [
+            0,
+            5
+          ]
+        },
+        "rvlRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            99
+          ]
+        },
+        "rvlAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            154
+          ]
+        },
+        "length": {
+          "type": "other",
+          "extent": [
+            0,
+            26
+          ]
+        },
+        "owiRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            80
+          ]
+        },
+        "owiAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            126
+          ]
+        },
+        "owiIncSize": {
+          "type": "other",
+          "extent": [
+            0,
+            42
+          ]
+        }
+      },
+      "cube:variables": {
+        "oswLon": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "longitude",
+          "unit": "degree (decimal)",
+          "data_type": "other"
+        },
+        "oswLat": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "latitude",
+          "unit": "degree (decimal)",
+          "data_type": "other"
+        },
+        "oswGroundRngSize": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "ground range size of estimation area",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswAziSize": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "azimuth size of estimation area",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswIncidenceAngle": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "incidence angle",
+          "unit": "degree",
+          "data_type": "other"
+        },
+        "oswHeading": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "platform heading",
+          "unit": "degree",
+          "data_type": "other"
+        },
+        "oswInten": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "image intensity",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswNv": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "normalized variance",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswSkew": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "image skewness",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswKurt": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "image kurtosis",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswPolSpec": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "estimated swell spectrum on log-polar grid",
+          "unit": "m^4",
+          "data_type": "other"
+        },
+        "oswPartitions": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "wave partition numbers",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswQualityCrossSpectraRe": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "real part of cross spectra log-polar grid",
+          "unit": "(m/rad)^2",
+          "data_type": "other"
+        },
+        "oswQualityCrossSpectraIm": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "imaginary part of cross spectra log-polar grid",
+          "unit": "(m/rad)^2",
+          "data_type": "other"
+        },
+        "oswK": {
+          "dimensions": [
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "array of the wavenumbers for polar spectra",
+          "unit": "rad/m",
+          "data_type": "other"
+        },
+        "oswPhi": {
+          "dimensions": [
+            "oswAngularBinSize"
+          ],
+          "type": "data",
+          "description": "array of angular values for polar spectra",
+          "unit": "deg",
+          "data_type": "other"
+        },
+        "oswLookSeparationTime": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "inter look separation time",
+          "unit": "s",
+          "data_type": "other"
+        },
+        "oswNrcs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "normalized radar cross section",
+          "unit": "dB",
+          "data_type": "other"
+        },
+        "oswWindSeaHs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "wind sea significant waveheights",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswWaveAge": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "wave age",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswNlWidth": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "non linear inverse spectral width",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswSnr": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "signal to noise ratio of cross spectra",
+          "unit": "dB",
+          "data_type": "other"
+        },
+        "oswAzCutoff": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "azimuth cut-off wavelength",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswRaCutoff": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "range cut-off wavelength",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswSpecRes": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize"
+          ],
+          "type": "data",
+          "description": "azimuth cut-off wavelength as function of wave direction",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswHs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "significant wave height for each partition",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswWl": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Dominant wave length for each partition",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswDirmet": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "dominant wave direction for each partition",
+          "unit": "degrees clockwise from north",
+          "data_type": "other"
+        },
+        "oswAmbiFac": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "ambiguity ratio",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswIconf": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "confidence of inversion for partition",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswWindSpeed": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "wind speed",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "oswWindDirection": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "wind direction (where the wind comes from)",
+          "unit": "degree clockwise from north",
+          "data_type": "other"
+        },
+        "oswEcmwfWindSpeed": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "wind speed (ecmwf)",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "oswEcmwfWindDirection": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "wind direction (ecmwf)(where the wind comes from)",
+          "unit": "degree clockwise from north",
+          "data_type": "other"
+        },
+        "oswLandCoverage": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within a cell",
+          "unit": "%",
+          "data_type": "other"
+        },
+        "oswLandFlag": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "oswDepth": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "water detph",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "owiLon": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Longitude at wind cell center",
+          "unit": "degrees_east",
+          "data_type": "other"
+        },
+        "owiLat": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Latitude at wind cell center",
+          "unit": "degrees_north",
+          "data_type": "other"
+        },
+        "owiIncidenceAngle": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Incidence angle at wind cell center",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "owiElevationAngle": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Elevation Angle at wind cell center",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "owiWindSpeed": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Wind speed",
+          "unit": "m s^-1",
+          "data_type": "other"
+        },
+        "owiWindDirection": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Wind direction (meteorological convention)",
+          "unit": "degrees_north",
+          "data_type": "other"
+        },
+        "owiEcmwfWindSpeed": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "ECMWF Wind speed",
+          "unit": "m s^-1",
+          "data_type": "other"
+        },
+        "owiEcmwfWindDirection": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "ECMWF Wind direction (meteorological convention)",
+          "unit": "degrees_north",
+          "data_type": "other"
+        },
+        "owiNrcs": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Normalized Radar Cross Section",
+          "unit": "m^2 / m^2",
+          "data_type": "other"
+        },
+        "owiNesz": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Noise Equivalent SigmaNaught",
+          "unit": "m^2 / m^2",
+          "data_type": "other"
+        },
+        "owiPBright": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Percentage of bright targets pixels detectied in cell",
+          "unit": "%",
+          "nodata": 999.989990234375,
+          "data_type": "other"
+        },
+        "owiNrcsCmod": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "predicted Normalized Radar Cross Section from CMOD and ECMWF",
+          "unit": "m^2 / m^2",
+          "data_type": "other"
+        },
+        "owiCalConstObsi": {
+          "dimensions": [
+            "owiIncSize"
+          ],
+          "type": "data",
+          "description": "geophysical calibration constant estimated from ECMWF and CMOD GMF",
+          "data_type": "other"
+        },
+        "owiCalConstInci": {
+          "dimensions": [
+            "owiIncSize"
+          ],
+          "type": "data",
+          "description": "Incidence angles vector corresponding to the onstant estimated from geophysical calibration constant estimated from ECMWF and CMOD GMF",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "owiInversionQuality": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "inversion quality flag",
+          "data_type": "int8"
+        },
+        "owiLandFlag": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Mask of data",
+          "data_type": "int8"
+        },
+        "owiHeading": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Platform heading (azimuth from North)",
+          "unit": "degrees",
+          "nodata": 9999.990234375,
+          "data_type": "other"
+        },
+        "owiWindQuality": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Quality flag taking into account the consistency_between_wind_inverted_and_NRCS_and_Doppler_measured",
+          "nodata": -1,
+          "data_type": "int8"
+        },
+        "rvlLon": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "longitude",
+          "unit": "degree (decimal)",
+          "data_type": "other"
+        },
+        "rvlLat": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "latitude",
+          "unit": "degree (decimal)",
+          "data_type": "other"
+        },
+        "rvlSlantRangeTime": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "two way slant range time to cell centre",
+          "unit": "s",
+          "data_type": "other"
+        },
+        "rvlZeroDopplerTime": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "length"
+          ],
+          "type": "data",
+          "description": "zero doppler time at cell centre",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "rvlGroundRngSize": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "ground range size of estimation area",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "rvlAziSize": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "azimuth size of estimation area",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "rvlIncidenceAngle": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "incidence angle",
+          "unit": "degree",
+          "data_type": "other"
+        },
+        "rvlHeading": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "platform heading",
+          "unit": "degree",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlDcObs": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "doppler frequency",
+          "unit": "Hz",
+          "data_type": "other"
+        },
+        "rvlNrcs": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "normalized radar cross-section",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "rvlDcObsStd": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "doppler frequency std",
+          "unit": "Hz",
+          "data_type": "other"
+        },
+        "rvlRadVel": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "radial velocity",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "rvlRadVelStd": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "radial velocity std",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "rvlDcGeo": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "predicted (geometric) doppler frequency",
+          "unit": "Hz",
+          "data_type": "other"
+        },
+        "rvlDcMiss": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "doppler frequency from antenna mispointing at cell centre",
+          "unit": "Hz",
+          "data_type": "other"
+        },
+        "rvlSweepAngle": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "sweep angle of antenna",
+          "unit": "deg",
+          "data_type": "other"
+        },
+        "rvlYaw": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "satellite yaw at zero Doppler time",
+          "unit": "deg",
+          "data_type": "other"
+        },
+        "rvlPitch": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "satellite pitch at zero Doppler time",
+          "unit": "deg",
+          "data_type": "other"
+        },
+        "rvlRoll": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "satellite roll at zero Doppler time",
+          "unit": "deg",
+          "data_type": "other"
+        },
+        "rvlSnr": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "signal to noise ratio",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "rvlConfDcObs": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "confidence level of Doppler estimate",
+          "unit": "adimentional",
+          "data_type": "other"
+        },
+        "rvlUssX": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "zonal Stokes drift",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "rvlUssY": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "meridional Stokes drift",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "rvlLandCoverage": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within a cell",
+          "unit": "%",
+          "data_type": "other"
+        },
+        "rvlLandFlag": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead",
+          "unit": "adimentinoal",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiWl": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Dominant wave length for each partition",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiHs": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "significant wave height for each partition",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiDirmet": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "dominant wave direction for each partition",
+          "unit": "degrees clockwise from north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiRadVel": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "radial velocity",
+          "unit": "m/s",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiWindSeaHs": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "wind sea significant waveheights",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        }
+      },
+      "description": "Level-2 Ocean Product measurement file containing Ocean Wind Field Component (OWI) and Radial Surface Velocity Component (RVL).",
+      "file:checksum": "d50110d4cadfafba866da3f3595f61156ca594",
+      "file:size": 4367460,
+      "file:local_path": "S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE/measurement/s1b-s6-ocn-vv-20171204t082246-20171204t082306-008566-00F34A-001.nc",
+      "href": "s3://eodata/Sentinel-1/SAR/OCN/2017/12/04/S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE/measurement/s1b-s6-ocn-vv-20171204t082246-20171204t082306-008566-00F34A-001.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(eba9dd67-e95f-5d38-be19-2c200546ccd8)/Nodes(S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE)/Nodes(measurement)/Nodes(s1b-s6-ocn-vv-20171204t082246-20171204t082306-008566-00F34A-001.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011082d675d5f396e4d55a33ce7ea780baf1",
+      "file:size": 4565997,
+      "file:local_path": "S1B_S6_OCN__2SDV_20171204T082247_20171204T082305_008566_00F34A_1626.SAFE.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(eba9dd67-e95f-5d38-be19-2c200546ccd8)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

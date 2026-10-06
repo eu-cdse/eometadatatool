@@ -1,0 +1,624 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "landsat-5-l1t",
+  "id": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895",
+  "properties": {
+    "created": "2018-04-01T00:00:00.000000Z",
+    "updated": "2016-07-10T14:22:04.168929Z",
+    "published": "2016-07-10T14:22:04.168929Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "1984-04-25T09:48:38.4000000Z",
+    "platform": "landsat-5",
+    "constellation": "landsat",
+    "instruments": [
+      "tm"
+    ],
+    "instrument_modes": [
+      "sam"
+    ],
+    "gsd": 30,
+    "processing:level": "L1",
+    "processing:datetime": "2014-09-23T19:50:22.000000Z",
+    "processing:software": {
+      "SLAP": "03.03",
+      "ESA SPPA Landsat": "1.0.10",
+      "eometadatatool": "260512134513+dirty"
+    },
+    "product:acquisition_type": "nominal",
+    "grid:code": "WRS2-196024",
+    "sat:platform_international_designator": "1984-021A",
+    "view:sun_elevation": 47.0120107,
+    "view:sun_azimuth": 144.4186585,
+    "product:type": "TM__GTC_1P",
+    "start_datetime": "1984-04-25T09:48:24.000000Z",
+    "end_datetime": "1984-04-25T09:48:52.000000Z",
+    "eo:cloud_cover": 1.0,
+    "sat:absolute_orbit": 800,
+    "sat:orbit_state": "descending",
+    "_private": {
+      "product_size": 391538217,
+      "product_uuid": "ae72df71-6885-5ebb-90f0-b839a51b79e5",
+      "product_name": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895",
+      "visible": true
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    6.57254,
+    50.694,
+    9.9396,
+    52.6737
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          6.57254,
+          52.6525
+        ],
+        [
+          6.6751,
+          50.694
+        ],
+        [
+          9.89987,
+          50.7137
+        ],
+        [
+          9.9396,
+          52.6737
+        ],
+        [
+          6.57254,
+          52.6525
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "product_metadata": {
+      "type": "text/plain",
+      "title": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895_MTL.txt",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF)/Nodes(LT51960241984116ESA00_MTL.txt)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product_metadata_esa": {
+      "type": "application/xml",
+      "title": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.MTR.XML",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.MTR.XML",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.MTR.XML",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.MTR.XML)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "proj:code": "EPSG: 4326",
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.BP.PNG",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(7fae95ad-4bf1-4abb-8d11-821a107ba320)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.BP.PNG",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "B1": {
+      "type": "image/tiff; application=geotiff",
+      "title": "Blue (band 1) - 30m",
+      "roles": [
+        "data",
+        "radiance"
+      ],
+      "bands": [
+        {
+          "name": "B1",
+          "description": "Blue (band 1)",
+          "eo:center_wavelength": 0.485,
+          "eo:full_width_half_max": 0.07,
+          "eo:common_name": "blue"
+        }
+      ],
+      "gsd": 30,
+      "data_type": "uint8",
+      "nodata:": 0,
+      "proj:code": "EPSG:32632",
+      "proj:bbox": [
+        335800.594,
+        5618374.0,
+        563530.625,
+        5836384.0
+      ],
+      "proj:shape": [
+        7268,
+        7592
+      ],
+      "raster:spatial_resolution": 30.0,
+      "raster:scale": 0.671,
+      "raster:offset": -2.191,
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF)/Nodes(LT51960241984116ESA00_MTL.txt)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B2": {
+      "type": "image/tiff; application=geotiff",
+      "title": "Green (band 2) - 30m",
+      "roles": [
+        "data",
+        "radiance"
+      ],
+      "bands": [
+        {
+          "name": "B2",
+          "description": "Green (band 2)",
+          "eo:center_wavelength": 0.56,
+          "eo:full_width_half_max": 0.08,
+          "eo:common_name": "green"
+        }
+      ],
+      "gsd": 30,
+      "data_type": "uint8",
+      "nodata:": 0,
+      "proj:code": "EPSG:32632",
+      "proj:bbox": [
+        335800.594,
+        5618374.0,
+        563530.625,
+        5836384.0
+      ],
+      "proj:shape": [
+        7268,
+        7592
+      ],
+      "raster:spatial_resolution": 30.0,
+      "raster:scale": 1.322,
+      "raster:offset": -4.162,
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF)/Nodes(LT51960241984116ESA00_MTL.txt)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B3": {
+      "type": "image/tiff; application=geotiff",
+      "title": "Red (band 3) - 30m",
+      "roles": [
+        "data",
+        "radiance"
+      ],
+      "bands": [
+        {
+          "name": "B3",
+          "description": "Red (band 3)",
+          "eo:center_wavelength": 0.66,
+          "eo:full_width_half_max": 0.06,
+          "eo:common_name": "red"
+        }
+      ],
+      "gsd": 30,
+      "data_type": "uint8",
+      "nodata:": 0,
+      "proj:code": "EPSG:32632",
+      "proj:bbox": [
+        335800.594,
+        5618374.0,
+        563530.625,
+        5836384.0
+      ],
+      "proj:shape": [
+        7268,
+        7592
+      ],
+      "raster:spatial_resolution": 30.0,
+      "raster:scale": 1.044,
+      "raster:offset": -2.214,
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF)/Nodes(LT51960241984116ESA00_MTL.txt)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B4": {
+      "type": "image/tiff; application=geotiff",
+      "title": "Near Infrared (band 4) - 30m",
+      "roles": [
+        "data",
+        "radiance"
+      ],
+      "bands": [
+        {
+          "name": "B4",
+          "description": "Near Infrared (band 4)",
+          "eo:center_wavelength": 0.83,
+          "eo:full_width_half_max": 0.14,
+          "eo:common_name": "nir"
+        }
+      ],
+      "gsd": 30,
+      "data_type": "uint8",
+      "nodata:": 0,
+      "proj:code": "EPSG:32632",
+      "proj:bbox": [
+        335800.594,
+        5618374.0,
+        563530.625,
+        5836384.0
+      ],
+      "proj:shape": [
+        7268,
+        7592
+      ],
+      "raster:spatial_resolution": 30.0,
+      "raster:scale": 0.876,
+      "raster:offset": -2.386,
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF)/Nodes(LT51960241984116ESA00_MTL.txt)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B5": {
+      "type": "image/tiff; application=geotiff",
+      "title": "Short-wave Infrared 1.6 (band 5) - 30m",
+      "roles": [
+        "data",
+        "radiance"
+      ],
+      "bands": [
+        {
+          "name": "B5",
+          "description": "Short-wave Infrared 1.6 (band 5)",
+          "eo:center_wavelength": 1.65,
+          "eo:full_width_half_max": 0.2,
+          "eo:common_name": "swir16"
+        }
+      ],
+      "gsd": 30,
+      "data_type": "uint8",
+      "nodata:": 0,
+      "proj:code": "EPSG:32632",
+      "proj:bbox": [
+        335800.594,
+        5618374.0,
+        563530.625,
+        5836384.0
+      ],
+      "proj:shape": [
+        7268,
+        7592
+      ],
+      "raster:spatial_resolution": 30.0,
+      "raster:scale": 0.12,
+      "raster:offset": -0.49,
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF)/Nodes(LT51960241984116ESA00_MTL.txt)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B6": {
+      "type": "image/tiff; application=geotiff",
+      "title": "Long-wave Infrared (band 6) - 120m",
+      "roles": [
+        "data",
+        "temperature",
+        "radiance"
+      ],
+      "bands": [
+        {
+          "name": "B6",
+          "description": "Long-wave Infrared (band 6)",
+          "eo:center_wavelength": 11.45,
+          "eo:full_width_half_max": 2.1,
+          "eo:common_name": "lwir"
+        }
+      ],
+      "gsd": 120,
+      "data_type": "uint8",
+      "nodata:": 0,
+      "proj:code": "EPSG:32632",
+      "proj:bbox": [
+        335800.594,
+        5618374.0,
+        563530.625,
+        5836384.0
+      ],
+      "proj:shape": [
+        7268,
+        7592
+      ],
+      "raster:spatial_resolution": 30.0,
+      "raster:scale": 0.055,
+      "raster:offset": 1.182,
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF)/Nodes(LT51960241984116ESA00_MTL.txt)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "B7": {
+      "type": "image/tiff; application=geotiff",
+      "title": "Short-wave Infrared 2.2 (band 7) - 30m",
+      "roles": [
+        "data",
+        "radiance"
+      ],
+      "bands": [
+        {
+          "name": "B7",
+          "description": "Short-wave Infrared 2.2 (band 7)",
+          "eo:center_wavelength": 2.215,
+          "eo:full_width_half_max": 0.27,
+          "eo:common_name": "swir22"
+        }
+      ],
+      "gsd": 30,
+      "data_type": "uint8",
+      "nodata:": 0,
+      "proj:code": "EPSG:32632",
+      "proj:bbox": [
+        335800.594,
+        5618374.0,
+        563530.625,
+        5836384.0
+      ],
+      "proj:shape": [
+        7268,
+        7592
+      ],
+      "raster:spatial_resolution": 30.0,
+      "raster:scale": 0.066,
+      "raster:offset": -0.216,
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "href": "s3://eodata/Landsat-5/TM/L1T/1984/04/25/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895/LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF/LT51960241984116ESA00_MTL.txt",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895)/Nodes(LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.TIFF)/Nodes(LT51960241984116ESA00_MTL.txt)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:local_path": "LS05_RFUI_TM__GTC_1P_19840425T094824_19840425T094852_000800_0196_0024_2895.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ae72df71-6885-5ebb-90f0-b839a51b79e5)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/instruments/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.1.0/schema.json"
+  ]
+}

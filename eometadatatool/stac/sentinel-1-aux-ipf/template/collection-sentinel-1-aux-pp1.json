@@ -1,0 +1,144 @@
+{
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2014-04-06T13:30:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "type": "Collection",
+  "id": "sentinel-1-aux-pp1",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "title": "Sentinel-1 Processor Parameters for L1 processing Auxiliary Data (AUX PP1)",
+  "description": "Contains the configuration parameters that control the IPF Level-1 (SLC and GRD) processing chain.",
+  "license": "other",
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S1_AUX_IPF.jpg",
+      "type": "image/jpeg",
+      "title": "Sentinel-1 Processor Parameters for L1 processing Auxiliary Data (AUX PP1) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    }
+  ],
+  "summaries": {
+    "platform": [
+      "sentinel-1a",
+      "sentinel-1c",
+      "sentinel-1b",
+      "sentinel-1d"
+    ],
+    "sat:platform_international_designator": [
+      "2014-016A",
+      "2024-235A",
+      "2016-025A",
+      "2025-251A"
+    ],
+    "processing:level": [
+      "L1"
+    ],
+    "product:type": [
+      "AUX_PP1"
+    ],
+    "constellation": [
+      "sentinel-1"
+    ],
+    "instruments": [
+      "aux"
+    ]
+  },
+  "keywords": [
+    "AUX",
+    "Copernicus",
+    "EC",
+    "ESA",
+    "EU",
+    "SAR",
+    "Sentinel",
+    "Sentinel-1"
+  ],
+  "item_assets": {
+    "product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    }
+  },
+  "links": [
+    {
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "rel": "license",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  }
+}

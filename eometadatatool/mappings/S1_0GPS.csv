@@ -1,0 +1,17 @@
+metadata;file;mappings;datatype
+beginningDateTime;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='startTime']/text();DateTimeOffset
+endingDateTime;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='stopTime']/text();DateTimeOffset
+startTimeFromAscendingNode;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='extension']/s1:timeANX/s1:startTimeANX/text();Double
+completionTimeFromAscendingNode;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='extension']/s1:timeANX/s1:stopTimeANX/text();Double
+platformShortName;manifest.safe;//*[local-name()='platform']/*[local-name()='familyName']/text();String
+platformSerialIdentifier;manifest.safe;//*[local-name()='platform']/*[local-name()='number']/text();String
+instrumentShortName;manifest.safe;//*[local-name()='platform']/*[local-name()='instrument']/*[local-name()='familyName']/@abbreviation;String
+orbitNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='orbitNumber' and @type='start']/text();Int64
+relativeOrbitNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='relativeOrbitNumber' and @type='start']/text();Int64
+cycleNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='cycleNumber']/text();Int64
+orbitDirection;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='extension']/s1:orbitProperties/s1:pass/text();String
+processingDate;manifest.safe;//*[local-name()='processing']/@start;DateTimeOffset
+processingCenter;manifest.safe;//*[local-name()='processing']/*[local-name()='facility']/@site;String
+processorName;manifest.safe;//*[local-name()='processing']/*[local-name()='software']/@name;String
+processorVersion;manifest.safe;//*[local-name()='processing']/*[local-name()='software']/@version;String
+productType;static;productType;String

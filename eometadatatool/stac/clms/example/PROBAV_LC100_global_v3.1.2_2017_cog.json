@@ -1,0 +1,1000 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lc_global_100m_yearly_v3_cog",
+  "id": "PROBAV_LC100_global_v3.1.2_2017_cog",
+  "properties": {
+    "created": "2025-09-29T11:14:20.835637Z",
+    "updated": "2025-10-01T13:26:11.348909Z",
+    "published": "2025-10-01T13:26:11.348909Z",
+    "eopf:origin_datetime": "2025-09-29T11:14:20.835637Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2017-01-01T00:00:00.000000Z",
+    "start_datetime": "2017-01-01T00:00:00.000000Z",
+    "end_datetime": "2017-12-31T23:59:59.999999Z",
+    "instruments": [
+      "vegetation"
+    ],
+    "gsd": 100,
+    "proj:code": "EPSG:4326",
+    "product:type": "dynamic_land_cover",
+    "processing:level": "L3",
+    "platform": "proba-v",
+    "constellation": "proba-1",
+    "processing:version": "v3.1.2",
+    "_private": {
+      "product_size": 44086565411,
+      "product_uuid": "c2b7b2c8-a110-4e6b-b16d-43663703c79e",
+      "product_name": "PROBAV_LC100_global_v3.1.2_2017_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -60.0,
+    179.9999999,
+    80.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0
+        ],
+        [
+          -179.9999999,
+          -60.0
+        ],
+        [
+          0.0,
+          -60.0
+        ],
+        [
+          179.9999999,
+          -60.0
+        ],
+        [
+          179.9999999,
+          80.0
+        ],
+        [
+          0.0,
+          80.0
+        ],
+        [
+          -179.9999999,
+          80.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/PROBAV_LC100_global_v3.1.2_2017_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "bare_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for bare-sparse-vegetation land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "bare_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for bare-sparse-vegetation land cover class"
+        }
+      ],
+      "file:size": 3286450959,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Bare-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Bare-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Bare-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "builtup_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Ground Cover for built-up land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "builtup_coverfraction_layer",
+          "description": "Percent Ground Cover for built-up land cover class"
+        }
+      ],
+      "file:size": 564672300,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_BuiltUp-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_BuiltUp-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_BuiltUp-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "change_confidence_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Change Confidence for detected land cover changes compared to previous year",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "change_confidence_layer",
+          "description": "Change Confidence for detected land cover changes compared to previous year"
+        }
+      ],
+      "file:size": 166764964,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Change-Confidence-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Change-Confidence-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Change-Confidence-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "crops_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for cropland land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "crops_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for cropland land cover class"
+        }
+      ],
+      "file:size": 3013406591,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Crops-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Crops-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Crops-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "datadensityindicator": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Data Density Indicator for Algorithm input data",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "datadensityindicator",
+          "description": "Data Density Indicator for Algorithm input data"
+        }
+      ],
+      "file:size": 4429215077,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_DataDensityIndicator_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_DataDensityIndicator_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_DataDensityIndicator_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "discrete_classification_map": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Land Cover Classification",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "discrete_classification_map",
+          "description": "Land Cover Classification"
+        }
+      ],
+      "file:size": 1919439322,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Discrete-Classification-map_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Discrete-Classification-map_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Discrete-Classification-map_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "discrete_classification_proba": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "quality indicator (classification probability) of the discrete classification",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "discrete_classification_proba",
+          "description": "quality indicator (classification probability) of the discrete classification"
+        }
+      ],
+      "file:size": 8393997654,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Discrete-Classification-proba_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Discrete-Classification-proba_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Discrete-Classification-proba_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "forest_type_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Forest Type for all pixels with tree PVC bigger than 1%",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "forest_type_layer",
+          "description": "Forest Type for all pixels with tree PVC bigger than 1%"
+        }
+      ],
+      "file:size": 1142185016,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Forest-Type-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Forest-Type-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Forest-Type-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "grass_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for herbaceous vegetation land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "grass_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for herbaceous vegetation land cover class"
+        }
+      ],
+      "file:size": 7827509913,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Grass-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Grass-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Grass-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "mosslichen_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for moss&lichen land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "mosslichen_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for moss&lichen land cover class"
+        }
+      ],
+      "file:size": 256495661,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_MossLichen-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_MossLichen-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_MossLichen-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "permanentwater_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Ground Cover for permanent water land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "permanentwater_coverfraction_layer",
+          "description": "Percent Ground Cover for permanent water land cover class"
+        }
+      ],
+      "file:size": 489759211,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_PermanentWater-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_PermanentWater-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_PermanentWater-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "seasonalwater_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Ground Cover for seasonal water land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "seasonalwater_coverfraction_layer",
+          "description": "Percent Ground Cover for seasonal water land cover class"
+        }
+      ],
+      "file:size": 613491097,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_SeasonalWater-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_SeasonalWater-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_SeasonalWater-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "shrub_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for shrubland land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "shrub_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for shrubland land cover class"
+        }
+      ],
+      "file:size": 5870724892,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Shrub-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Shrub-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Shrub-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "snow_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Ground Cover for snow&ice land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "snow_coverfraction_layer",
+          "description": "Percent Ground Cover for snow&ice land cover class"
+        }
+      ],
+      "file:size": 91774768,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Snow-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Snow-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Snow-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tree_coverfraction_layer": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for forest land cover class",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        141120,
+        362880
+      ],
+      "proj:transform": [
+        0.0009920634920635,
+        0.0,
+        -180.0,
+        0.0,
+        -0.0009920634920635,
+        80.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "tree_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for forest land cover class"
+        }
+      ],
+      "file:size": 6020677986,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Tree-CoverFraction-layer_EPSG-4326.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Tree-CoverFraction-layer_EPSG-4326.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/Nodes(PROBAV_LC100_global_v3.1.2_2017_cog)/Nodes(PROBAV_LC100_global_v3.1.2_2017-conso_Tree-CoverFraction-layer_EPSG-4326.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0,
+        -60.00000000000114,
+        180.0000000000029,
+        80.0
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lc_global_100m_yearly_v3/2017/01/01/PROBAV_LC100_global_v3.1.2_2017_cog/PROBAV_LC100_global_v3.1.2_2017-conso_Forest-Type-layer_EPSG-4326.tif&CRS=EPSG:4326&BBOX=-180.0,-60.00000000000114,180.0000000000029,80.0&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110bf8dddbe6a6bb2f742a45c9af97b5a5b",
+      "file:size": 44086570695,
+      "file:local_path": "PROBAV_LC100_global_v3.1.2_2017_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c2b7b2c8-a110-4e6b-b16d-43663703c79e)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

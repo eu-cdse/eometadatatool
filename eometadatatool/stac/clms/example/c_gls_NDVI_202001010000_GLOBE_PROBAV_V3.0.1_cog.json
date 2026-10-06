@@ -1,0 +1,455 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_ndvi_global_1km_10daily_v3_cog",
+  "id": "c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog",
+  "properties": {
+    "created": "2024-06-18T13:17:16.540353Z",
+    "updated": "2025-07-17T00:42:05.513084Z",
+    "published": "2025-02-21T16:48:22.129916Z",
+    "eopf:origin_datetime": "2024-06-18T13:17:16.540353Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2020-01-01T00:00:00.000000Z",
+    "start_datetime": "2020-01-01T00:00:00.000000Z",
+    "end_datetime": "2020-01-10T23:59:59.999999Z",
+    "instruments": [
+      "vegetation"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "vegetation_indices",
+    "processing:level": "L3",
+    "platform": "proba-v",
+    "constellation": "proba-1",
+    "processing:version": "V3.0.1",
+    "_private": {
+      "product_size": 408780795,
+      "product_uuid": "08bfb339-da8b-4bc4-baff-05af782d1e58",
+      "product_name": "c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.9955357,
+    179.9955357,
+    80.0044643
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0044643
+        ],
+        [
+          -179.9999999,
+          -59.9955357
+        ],
+        [
+          -0.0022321499999975,
+          -59.9955357
+        ],
+        [
+          179.9955357,
+          -59.9955357
+        ],
+        [
+          179.9955357,
+          80.0044643
+        ],
+        [
+          -0.0022321499999975,
+          80.0044643
+        ],
+        [
+          -179.9999999,
+          80.0044643
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi_global_1km_10daily_v3/2020/01/01/c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "ndvi": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Normalized Difference Vegetation Index",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004,
+      "raster:offset": -0.08,
+      "bands": [
+        {
+          "name": "ndvi",
+          "description": "Normalized Difference Vegetation Index"
+        }
+      ],
+      "file:size": 104241780,
+      "file:local_path": "c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-NDVI_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi_global_1km_10daily_v3/2020/01/01/c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-NDVI_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(08bfb339-da8b-4bc4-baff-05af782d1e58)/Nodes(c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-NDVI_202001010000_GLOBE_PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "nobs": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Number of observation",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 0,
+      "bands": [
+        {
+          "name": "nobs",
+          "description": "Number of observation"
+        }
+      ],
+      "file:size": 45304161,
+      "file:local_path": "c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-NOBS_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi_global_1km_10daily_v3/2020/01/01/c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-NOBS_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(08bfb339-da8b-4bc4-baff-05af782d1e58)/Nodes(c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-NOBS_202001010000_GLOBE_PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Normalized Difference Vegetation Index",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 0,
+      "bands": [
+        {
+          "name": "qflag",
+          "description": "Quality Flag on Normalized Difference Vegetation Index"
+        }
+      ],
+      "file:checksum": "d501109c5dccfb58a3dab4cccb54bc96fc78b6",
+      "file:size": 17103361,
+      "file:local_path": "c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-QFLAG_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi_global_1km_10daily_v3/2020/01/01/c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-QFLAG_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(08bfb339-da8b-4bc4-baff-05af782d1e58)/Nodes(c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-QFLAG_202001010000_GLOBE_PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "timegrid": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Time Grid",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "bands": [
+        {
+          "name": "timegrid",
+          "description": "Time Grid"
+        }
+      ],
+      "file:size": 92190783,
+      "file:local_path": "c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-TIMEGRID_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi_global_1km_10daily_v3/2020/01/01/c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-TIMEGRID_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(08bfb339-da8b-4bc4-baff-05af782d1e58)/Nodes(c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-TIMEGRID_202001010000_GLOBE_PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "unc": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Uncertainty on Normalized Difference Vegetation Index",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "int16",
+      "nodata": -1,
+      "raster:scale": 0.001,
+      "bands": [
+        {
+          "name": "unc",
+          "description": "Uncertainty on Normalized Difference Vegetation Index"
+        }
+      ],
+      "file:size": 149940710,
+      "file:local_path": "c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-UNC_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi_global_1km_10daily_v3/2020/01/01/c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-UNC_202001010000_GLOBE_PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(08bfb339-da8b-4bc4-baff-05af782d1e58)/Nodes(c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-UNC_202001010000_GLOBE_PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi_global_1km_10daily_v3/2020/01/01/c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog/c_gls_NDVI-UNC_202001010000_GLOBE_PROBAV_V3.0.1.tiff&CRS=EPSG:4326&BBOX=-180.00446428571428,-59.995535714253904,179.9955357147765,80.00446428571429&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/ndvi_global_1km_10daily_v3/clms_global_ndvi-unc_1km_v3_10daily.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110f4ebd7baeb0f85dfb6b3b5c03fd65bc8",
+      "file:size": 408782295,
+      "file:local_path": "c_gls_NDVI_202001010000_GLOBE_PROBAV_V3.0.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(08bfb339-da8b-4bc4-baff-05af782d1e58)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

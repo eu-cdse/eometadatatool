@@ -1,0 +1,517 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_swi_europe_1km_daily_v1_nc",
+  "id": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_nc",
+  "properties": {
+    "created": "2019-03-20T15:48:52.187652Z",
+    "updated": "2025-07-18T02:55:44.023788Z",
+    "published": "2025-03-26T16:29:54.286764Z",
+    "eopf:origin_datetime": "2019-03-20T15:48:52.187652Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2014-12-31T12:00:01.000000Z",
+    "start_datetime": "2014-12-31T12:00:01.000000Z",
+    "end_datetime": "2015-01-01T12:00:00.000000Z",
+    "instruments": [
+      "ascat",
+      "csar"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "soil_water_index",
+    "processing:level": "L3",
+    "cube:dimensions": {
+      "lat": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude",
+        "extent": [
+          35.004464285714285,
+          71.99553571427731
+        ]
+      },
+      "lon": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude",
+        "extent": [
+          -10.995535714285714,
+          49.99553571428398
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "time",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-01T04:33:56.000000Z"
+        ]
+      }
+    },
+    "cube:variables": {
+      "lat": {
+        "dimensions": [
+          "lat"
+        ],
+        "type": "data",
+        "description": "latitude",
+        "unit": "degrees_north",
+        "data_type": "other"
+      },
+      "lon": {
+        "dimensions": [
+          "lon"
+        ],
+        "type": "data",
+        "description": "longitude",
+        "unit": "degrees_east",
+        "data_type": "other"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          16436.0
+        ],
+        "description": "time",
+        "unit": "days since 1970-01-01 12:00:00",
+        "data_type": "other"
+      },
+      "SSF": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Surface State Flag",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "SWI_002": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Soil Water Index with T=2",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG_002": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag with T=2",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "SWI_005": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Soil Water Index with T=5",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG_005": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag with T=5",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "SWI_010": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Soil Water Index with T=10",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG_010": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag with T=10",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "SWI_015": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Soil Water Index with T=15",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG_015": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag with T=15",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "SWI_020": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Soil Water Index with T=20",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG_020": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag with T=20",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "SWI_040": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Soil Water Index with T=40",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG_040": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag with T=40",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "SWI_060": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Soil Water Index with T=60",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG_060": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag with T=60",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "SWI_100": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Soil Water Index with T=100",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG_100": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag with T=100",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      }
+    },
+    "product:timeliness": "P2D",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "V1.0.1",
+    "_private": {
+      "product_size": 61810321,
+      "product_uuid": "cdc67258-ef42-4804-8c90-f99ae8622ea5",
+      "product_name": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_nc",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260924120453+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -11.0,
+    35.0,
+    50.0,
+    72.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          50.0,
+          72.0
+        ],
+        [
+          -11.0,
+          72.0
+        ],
+        [
+          -11.0,
+          35.0
+        ],
+        [
+          50.0,
+          35.0
+        ],
+        [
+          50.0,
+          72.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_nc/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "Product": {
+      "type": "application/netcdf",
+      "title": "Daily Soil Water Index 1km: CEURO 2015-01-01T12:00:00Z",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "SSF",
+          "description": "Surface State Flag"
+        },
+        {
+          "name": "SWI_002",
+          "description": "Soil Water Index with T=2"
+        },
+        {
+          "name": "QFLAG_002",
+          "description": "Quality Flag with T=2"
+        },
+        {
+          "name": "SWI_005",
+          "description": "Soil Water Index with T=5"
+        },
+        {
+          "name": "QFLAG_005",
+          "description": "Quality Flag with T=5"
+        },
+        {
+          "name": "SWI_010",
+          "description": "Soil Water Index with T=10"
+        },
+        {
+          "name": "QFLAG_010",
+          "description": "Quality Flag with T=10"
+        },
+        {
+          "name": "SWI_015",
+          "description": "Soil Water Index with T=15"
+        },
+        {
+          "name": "QFLAG_015",
+          "description": "Quality Flag with T=15"
+        },
+        {
+          "name": "SWI_020",
+          "description": "Soil Water Index with T=20"
+        },
+        {
+          "name": "QFLAG_020",
+          "description": "Quality Flag with T=20"
+        },
+        {
+          "name": "SWI_040",
+          "description": "Soil Water Index with T=40"
+        },
+        {
+          "name": "QFLAG_040",
+          "description": "Quality Flag with T=40"
+        },
+        {
+          "name": "SWI_060",
+          "description": "Soil Water Index with T=60"
+        },
+        {
+          "name": "QFLAG_060",
+          "description": "Quality Flag with T=60"
+        },
+        {
+          "name": "SWI_100",
+          "description": "Soil Water Index with T=100"
+        },
+        {
+          "name": "QFLAG_100",
+          "description": "Quality Flag with T=100"
+        }
+      ],
+      "file:size": 61810321,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_nc/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1.nc",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_nc/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(cdc67258-ef42-4804-8c90-f99ae8622ea5)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_nc)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        455,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SSF_201501011200_CEURO_SCATSAR_V1.0.1.tiff&CRS=EPSG:4326&BBOX=-11.0,35.00000000000001,49.999999999998444,71.9999999999916&WIDTH=750&HEIGHT=455&FORMAT=image/png&TRANSPARENT=false"
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

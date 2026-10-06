@@ -1,0 +1,315 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-1-etad",
+  "id": "S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A",
+  "properties": {
+    "created": "2025-12-17T12:47:07.514000Z",
+    "updated": "2025-12-17T12:49:03.895369Z",
+    "published": "2025-12-17T12:49:03.895369Z",
+    "eopf:origin_datetime": "2025-12-17T12:47:07.514000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2025-12-10T11:22:50.791789Z",
+    "start_datetime": "2025-12-10T11:22:50.791789Z",
+    "end_datetime": "2025-12-10T11:23:10.645161Z",
+    "platform": "sentinel-1a",
+    "constellation": "sentinel-1",
+    "instruments": [
+      "sar"
+    ],
+    "processing:level": "L1",
+    "processing:facility": "Production Service-SERCO",
+    "processing:datetime": "2025-12-17T12:41:33.936459Z",
+    "processing:version": "03.00",
+    "processing:software": {
+      "SETAP-EW": "003.00",
+      "eometadatatool": "260409140520"
+    },
+    "product:type": "EW_ETA__AX",
+    "sat:orbit_state": "descending",
+    "sat:orbit_cycle": 370,
+    "sat:relative_orbit": 55,
+    "sat:absolute_orbit": 62252,
+    "sat:platform_international_designator": "2014-016A",
+    "sat:anx_datetime": "2025-12-10T10:52:44.896569Z",
+    "sar:frequency_band": "C",
+    "sar:center_frequency": 5.405,
+    "sar:instrument_mode": "EW",
+    "sar:beam_ids": [
+      "ew1",
+      "ew2",
+      "ew3",
+      "ew4",
+      "ew5"
+    ],
+    "sar:polarizations": [
+      "HH"
+    ],
+    "eopf:datatake_id": "510795",
+    "eopf:instrument_configuration_id": 0,
+    "view:incidence_angle": 24.100031873378715,
+    "_private": {
+      "product_size": 62090268,
+      "product_uuid": "e2e4ead2-354e-4140-adac-92a55c5b2aca",
+      "product_name": "S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE",
+      "visible": true
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -75.157,
+    68.2649,
+    -64.1095,
+    70.3414
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -64.1095,
+          69.4068
+        ],
+        [
+          -74.601,
+          70.3414
+        ],
+        [
+          -75.157,
+          69.1634
+        ],
+        [
+          -65.2094,
+          68.2649
+        ],
+        [
+          -64.1095,
+          69.4068
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-1/AUX/EW_ETA__AX/2025/12/10/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "safe_manifest": {
+      "type": "application/xml",
+      "title": "manifest.safe",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d501102fb74ceef2acfef77dfa245a63c3a985",
+      "file:size": 11969,
+      "file:local_path": "S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/manifest.safe",
+      "href": "s3://eodata/Sentinel-1/AUX/EW_ETA__AX/2025/12/10/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/manifest.safe",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(e2e4ead2-354e-4140-adac-92a55c5b2aca)/Nodes(S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE)/Nodes(manifest.safe)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "annotation_schema": {
+      "type": "application/xml",
+      "title": "Schema annotation",
+      "roles": [
+        "metadata"
+      ],
+      "description": "Annotation schema file defining the metadata structure.",
+      "file:checksum": "d50110b97f96380fb078dc12036fd8e592de7b",
+      "file:size": 351158,
+      "file:local_path": "S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/annotation/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B.xml",
+      "href": "s3://eodata/Sentinel-1/AUX/EW_ETA__AX/2025/12/10/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/annotation/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(e2e4ead2-354e-4140-adac-92a55c5b2aca)/Nodes(S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE)/Nodes(annotation)/Nodes(S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "annotation_orbit": {
+      "type": "application/xml",
+      "title": "Orbit annotation",
+      "roles": [
+        "metadata"
+      ],
+      "description": "Precise Orbit Ephemerides (POE) Orbit File",
+      "file:checksum": "d501100f065d0e76693ee506fcf46e6318fa53",
+      "file:size": 13055,
+      "file:local_path": "S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/annotation/S1A_OPER_AUX_MOEORB_ETAD_20251217T124133_V20251210T112102_20251210T112452.EOF",
+      "href": "s3://eodata/Sentinel-1/AUX/EW_ETA__AX/2025/12/10/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/annotation/S1A_OPER_AUX_MOEORB_ETAD_20251217T124133_V20251210T112102_20251210T112452.EOF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(e2e4ead2-354e-4140-adac-92a55c5b2aca)/Nodes(S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE)/Nodes(annotation)/Nodes(S1A_OPER_AUX_MOEORB_ETAD_20251217T124133_V20251210T112102_20251210T112452.EOF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "application/vnd.google-earth.kmz",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:checksum": "d50110d5845869ac29fa7611d7efe1bd011b53",
+      "file:size": 713178,
+      "file:local_path": "S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/preview/s1a-ew-eta-dh-20251210t112250-20251210t112310-062252-07cb4b-000.kmz",
+      "href": "s3://eodata/Sentinel-1/AUX/EW_ETA__AX/2025/12/10/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/preview/s1a-ew-eta-dh-20251210t112250-20251210t112310-062252-07cb4b-000.kmz",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "measurement": {
+      "type": "application/netcdf",
+      "title": "AUX ETA Measurement",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float64",
+      "proj:code": null,
+      "proj:shape": [
+        120,
+        461
+      ],
+      "description": "NetCDF measurement file from a Sentinel-1 auxiliary product, containing timing and along track deviation related calibration data.",
+      "file:checksum": "d50110754185208507a99ac2679810140f453d",
+      "file:size": 60799298,
+      "file:local_path": "S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/measurement/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B.nc",
+      "href": "s3://eodata/Sentinel-1/AUX/EW_ETA__AX/2025/12/10/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE/measurement/S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(e2e4ead2-354e-4140-adac-92a55c5b2aca)/Nodes(S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE)/Nodes(measurement)/Nodes(S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110e515673ab62cc5bb274dd17630e73a17",
+      "file:size": 62093284,
+      "file:local_path": "S1A_EW_ETA__AXDH_20251210T112250_20251210T112310_062252_07CB4B_3D1A.SAFE.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(e2e4ead2-354e-4140-adac-92a55c5b2aca)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.1.0/schema.json"
+  ]
+}

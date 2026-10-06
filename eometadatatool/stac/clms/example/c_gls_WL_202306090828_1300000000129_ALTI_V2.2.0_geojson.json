@@ -1,0 +1,133 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_wl-lakes_global_vector_daily_v2_geojson",
+  "id": "c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0_geojson",
+  "properties": {
+    "created": "2023-06-20T15:43:00.000000Z",
+    "updated": "2025-05-16T12:09:09.419596Z",
+    "published": "2025-05-16T12:09:09.419596Z",
+    "eopf:origin_datetime": "2023-06-20T15:43:00.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2016-03-06T08:21:00.000000Z",
+    "start_datetime": "2016-03-06T08:21:00.000000Z",
+    "end_datetime": "2023-06-09T08:28:00.000000Z",
+    "proj:code": "EPSG:4326",
+    "product:type": "river_and_lake_water_level",
+    "processing:level": "L3",
+    "product:timeliness": "P4D",
+    "product:timeliness_category": "NRT",
+    "_private": {
+      "product_size": 165711,
+      "product_uuid": "d4f4a7b1-743c-49c3-a5bc-0bc2c58cd369",
+      "product_name": "c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0_geojson",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    34.5,
+    47.55,
+    34.5,
+    47.55
+  ],
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      34.5,
+      47.55
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/river_and_lake_water_level/wl-lakes_global_vector_daily_v2/2023/06/09/c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0_geojson/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0_geojson",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "json": {
+      "type": "application/json",
+      "title": "Lake and River Water Level",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501100eae15e12fbbd40c463782c9de1b4841",
+      "file:size": 165711,
+      "file:local_path": "c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0_geojson/c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0.json",
+      "href": "s3://eodata/CLMS/bio-geophysical/river_and_lake_water_level/wl-lakes_global_vector_daily_v2/2023/06/09/c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0_geojson/c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0.json",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(d4f4a7b1-743c-49c3-a5bc-0bc2c58cd369)/Nodes(c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0_geojson)/Nodes(c_gls_WL_202306090828_1300000000129_ALTI_V2.2.0.json)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

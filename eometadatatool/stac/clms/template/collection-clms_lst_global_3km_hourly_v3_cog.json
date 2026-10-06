@@ -1,0 +1,491 @@
+{
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9999999,
+          -79.97868240000001,
+          179.9999999,
+          80.0233214
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2018-01-01T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "sci:doi": "10.2909/1012ec6a-a073-4cb5-95f4-95dad6f4f423",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json"
+  ],
+  "type": "Collection",
+  "id": "clms_lst_global_3km_hourly_v3_cog",
+  "title": "CLMS Land Surface Temperature (LST) Global 3km hourly V3 (COG)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "LST",
+    "Land Surface Temperature",
+    "thermal infrared",
+    "global",
+    "hourly",
+    "3km"
+  ],
+  "description": "Provides hourly land surface temperature from geostationary sensors observations. The data are available at global scale in the spatial resolution of about 3 km and cover the period from January 2018 to the present.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_lst_global_3km_hourly_v3.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS Land Surface Temperature (LST) Global 3km hourly V3 (COG) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "processing:level": [
+      "L4"
+    ],
+    "product:type": [
+      "land_surface_temperature"
+    ],
+    "processing:version": [
+      "V3.0.1"
+    ],
+    "instruments": [
+      "seviri",
+      "ahi",
+      "abi"
+    ],
+    "product:timeliness_category": [
+      "NRT"
+    ],
+    "gsd": [
+      3000.0
+    ],
+    "product:timeliness": [
+      "PT4H"
+    ],
+    "proj:shape": [
+      5601,
+      14400
+    ]
+  },
+  "item_assets": {
+    "errorbar": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -9999,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Standard error on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "errorbar",
+          "description": "Standard error on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "lst": {
+      "raster:offset": 273.15,
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -9999,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Land Surface Temperature",
+      "bands": [
+        {
+          "name": "lst",
+          "description": "Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "qflag": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -9999,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "qflag",
+          "description": "Quality Flag on Land Surface Temperature",
+          "classification:classes": [
+            {
+              "value": 0,
+              "name": "unprocessed",
+              "description": "No data or pixel out of disk",
+              "nodata": true
+            },
+            {
+              "value": 5,
+              "name": "sea",
+              "description": "Sea pixel"
+            },
+            {
+              "value": 10,
+              "name": "msg",
+              "description": "MSG (0° service) – processed pixel, clear sky"
+            },
+            {
+              "value": 15,
+              "name": "msg_unprocessed",
+              "description": "MSG (0° service) – unprocessed pixel, cloud conditions"
+            },
+            {
+              "value": 20,
+              "name": "iodc",
+              "description": "MSG IODC service – processed pixel, clear sky"
+            },
+            {
+              "value": 25,
+              "name": "iodc_unprocessed",
+              "description": "MSG IODC service – unprocessed pixel, cloud conditions"
+            },
+            {
+              "value": 30,
+              "name": "hmwr",
+              "description": "Himawari – processed pixel, clear sky"
+            },
+            {
+              "value": 35,
+              "name": "hmwr_unprocessed",
+              "description": "Himawari – unprocessed pixel, cloud conditions"
+            },
+            {
+              "value": 40,
+              "name": "goes",
+              "description": "GOES – processed pixel, clear sky"
+            },
+            {
+              "value": 45,
+              "name": "goes_unprocessed",
+              "description": "GOES – unprocessed pixel, cloud conditions"
+            },
+            {
+              "value": 50,
+              "name": "multi",
+              "description": "Multi-mission (overlapping regions) – processed pixel, clear sky"
+            },
+            {
+              "value": 55,
+              "name": "multi_unprocessed",
+              "description": "Multi-mission (overlapping regions) – unprocessed pixel, cloud conditions"
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "tdelta": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -9999,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Time delta between observation and reference time on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "tdelta",
+          "description": "Time delta between observation and reference time on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    },
+    {
+      "rel": "about",
+      "href": "https://land.copernicus.eu/en/products/temperature-and-reflectance/hourly-land-surface-temperature-global-v3-0-3km",
+      "type": "text/html",
+      "title": "Product page"
+    }
+  ],
+  "bands": [
+    {
+      "name": "errorbar",
+      "description": "Standard error on Land Surface Temperature"
+    },
+    {
+      "name": "lst",
+      "description": "Land Surface Temperature"
+    },
+    {
+      "name": "qflag",
+      "description": "Quality Flag on Land Surface Temperature",
+      "classification:classes": [
+        {
+          "value": 0,
+          "name": "unprocessed",
+          "description": "No data or pixel out of disk",
+          "nodata": true
+        },
+        {
+          "value": 5,
+          "name": "sea",
+          "description": "Sea pixel"
+        },
+        {
+          "value": 10,
+          "name": "msg",
+          "description": "MSG (0° service) – processed pixel, clear sky"
+        },
+        {
+          "value": 15,
+          "name": "msg_unprocessed",
+          "description": "MSG (0° service) – unprocessed pixel, cloud conditions"
+        },
+        {
+          "value": 20,
+          "name": "iodc",
+          "description": "MSG IODC service – processed pixel, clear sky"
+        },
+        {
+          "value": 25,
+          "name": "iodc_unprocessed",
+          "description": "MSG IODC service – unprocessed pixel, cloud conditions"
+        },
+        {
+          "value": 30,
+          "name": "hmwr",
+          "description": "Himawari – processed pixel, clear sky"
+        },
+        {
+          "value": 35,
+          "name": "hmwr_unprocessed",
+          "description": "Himawari – unprocessed pixel, cloud conditions"
+        },
+        {
+          "value": 40,
+          "name": "goes",
+          "description": "GOES – processed pixel, clear sky"
+        },
+        {
+          "value": 45,
+          "name": "goes_unprocessed",
+          "description": "GOES – unprocessed pixel, cloud conditions"
+        },
+        {
+          "value": 50,
+          "name": "multi",
+          "description": "Multi-mission (overlapping regions) – processed pixel, clear sky"
+        },
+        {
+          "value": 55,
+          "name": "multi_unprocessed",
+          "description": "Multi-mission (overlapping regions) – unprocessed pixel, cloud conditions"
+        }
+      ]
+    },
+    {
+      "name": "tdelta",
+      "description": "Time delta between observation and reference time on Land Surface Temperature"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

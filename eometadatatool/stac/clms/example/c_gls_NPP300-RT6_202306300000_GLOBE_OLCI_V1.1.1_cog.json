@@ -1,0 +1,288 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_npp_global_300m_10daily_v1_cog",
+  "id": "c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog",
+  "properties": {
+    "created": "2024-06-04T07:01:39.896098Z",
+    "updated": "2025-07-17T18:25:33.939332Z",
+    "published": "2025-03-21T13:23:00.178656Z",
+    "eopf:origin_datetime": "2024-06-04T07:01:39.896098Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2023-06-21T00:00:00.000000Z",
+    "start_datetime": "2023-06-21T00:00:00.000000Z",
+    "end_datetime": "2023-06-30T23:59:59.999999Z",
+    "instruments": [
+      "olci"
+    ],
+    "gsd": 300,
+    "proj:code": "EPSG:4326",
+    "product:type": "net-gross_primary_production",
+    "processing:level": "L3",
+    "constellation": "sentinel-3",
+    "product:timeliness": "P5D",
+    "product:timeliness_category": "NRT",
+    "processing:version": "V1.1.1",
+    "_private": {
+      "product_size": 2077773582,
+      "product_uuid": "4c040099-dacc-42fc-a9c7-116a752d8524",
+      "product_name": "c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.9985119,
+    179.9985119,
+    80.0014881
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          -59.9985119
+        ],
+        [
+          -0.0007440499999944,
+          -59.9985119
+        ],
+        [
+          179.9985119,
+          -59.9985119
+        ],
+        [
+          179.9985119,
+          80.0014881
+        ],
+        [
+          -0.0007440499999944,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          80.0014881
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/net-gross_primary_production/npp_global_300m_10daily_v1/2023/06/30/c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "npp": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Net Primary Production",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "int16",
+      "nodata": -1,
+      "raster:scale": 0.0005,
+      "bands": [
+        {
+          "name": "npp",
+          "description": "Net Primary Production"
+        }
+      ],
+      "file:size": 1955885218,
+      "file:local_path": "c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog/c_gls_NPP300-NPP-RT6_202306300000_GLOBE_OLCI_V1.1.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/net-gross_primary_production/npp_global_300m_10daily_v1/2023/06/30/c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog/c_gls_NPP300-NPP-RT6_202306300000_GLOBE_OLCI_V1.1.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(4c040099-dacc-42fc-a9c7-116a752d8524)/Nodes(c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog)/Nodes(c_gls_NPP300-NPP-RT6_202306300000_GLOBE_OLCI_V1.1.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Net Primary Production",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "qflag",
+          "description": "Quality Flag on Net Primary Production"
+        }
+      ],
+      "file:size": 121888364,
+      "file:local_path": "c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog/c_gls_NPP300-QFLAG-RT6_202306300000_GLOBE_OLCI_V1.1.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/net-gross_primary_production/npp_global_300m_10daily_v1/2023/06/30/c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog/c_gls_NPP300-QFLAG-RT6_202306300000_GLOBE_OLCI_V1.1.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(4c040099-dacc-42fc-a9c7-116a752d8524)/Nodes(c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog)/Nodes(c_gls_NPP300-QFLAG-RT6_202306300000_GLOBE_OLCI_V1.1.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/net-gross_primary_production/npp_global_300m_10daily_v1/2023/06/30/c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog/c_gls_NPP300-NPP-RT6_202306300000_GLOBE_OLCI_V1.1.1.tiff&CRS=EPSG:4326&BBOX=-180.0014880952381,-59.99851190473011,179.99851190639774,80.00148809523809&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/npp_global_300m_10daily_v2/clms_global_npp_300m_v2_10daily.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011028bc06ca03d490b9f1128108052dcd9d",
+      "file:size": 2077774224,
+      "file:local_path": "c_gls_NPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(4c040099-dacc-42fc-a9c7-116a752d8524)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

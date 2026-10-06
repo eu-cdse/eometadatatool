@@ -1,0 +1,284 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_vlcc_grassland-change-confidence-layer_europe_20m_3yearly_v1",
+  "id": "CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01",
+  "properties": {
+    "created": "2026-07-15T14:12:04.754227Z",
+    "updated": "2026-07-29T18:46:16.615612Z",
+    "published": "2026-07-29T18:46:16.615612Z",
+    "eopf:origin_datetime": "2026-07-15T14:12:04.754227Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "gsd": 20,
+    "proj:code": "EPSG:3035",
+    "product:type": "grassland_and_herbaceous",
+    "datetime": "2018-01-01T00:00:00.000000Z",
+    "end_datetime": "2021-12-31T23:59:59.999999Z",
+    "classification:classes": [
+      {
+        "value": 0,
+        "name": "change_confidence",
+        "title": "change confidence",
+        "description": "Values 0-100 represents change confidence"
+      },
+      {
+        "value": 253,
+        "name": "all_non_change_areas",
+        "title": "all non-change areas"
+      },
+      {
+        "value": 255,
+        "name": "outside_area",
+        "title": "outside area"
+      }
+    ],
+    "_private": {
+      "product_size": 373705,
+      "product_uuid": "d256c107-3812-4368-a028-bb3409861de8",
+      "product_name": "CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01",
+      "visible": true,
+      "cellID": "100kmE18N09",
+      "component": "landcover_landuse",
+      "gridLabel": "20m",
+      "fileFormat": "cog",
+      "nominalDate": "2021-01-01T00:00:00.000000Z",
+      "datasetAlias": "clms_vlcc_grassland-change-confidence-layer",
+      "areaOfInterest": "europe",
+      "collectionName": "CLMS",
+      "datasetVersion": 1,
+      "productVersion": "v01_r01",
+      "platformAcronym": "unspecified",
+      "datasetShortName": "graccl",
+      "missionShortName": "unspecified",
+      "processingCenter": "unspecified",
+      "datasetIdentifier": "clms_vlcc_grassland-change-confidence-layer_europe_20m_3yearly_v1",
+      "metricGridSpacing": 20,
+      "platformShortName": "unspecified",
+      "temporalRepeatRate": "3yearly",
+      "instrumentShortName": "unspecified",
+      "productDeliveryDate": "2026-07-29T18:25:38.000000Z"
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "start_datetime": "2018-01-01T00:00:00.000000Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -15.6327067,
+    27.3403159,
+    -14.4109034,
+    28.500276
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -15.3746718,
+          27.3403159
+        ],
+        [
+          -14.4109034,
+          27.6270062
+        ],
+        [
+          -14.6610319,
+          28.500276
+        ],
+        [
+          -15.6327067,
+          28.210284
+        ],
+        [
+          -15.3746718,
+          27.3403159
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_and_herbaceous/clms_vlcc_grassland-change-confidence-layer_europe_20m_3yearly_v1/2021/01/01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d501102e94ed6bad4d955d1557c6fab3ac3478",
+      "file:size": 34629,
+      "file:local_path": "CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.xml",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_and_herbaceous/clms_vlcc_grassland-change-confidence-layer_europe_20m_3yearly_v1/2021/01/01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(d256c107-3812-4368-a028-bb3409861de8)/Nodes(CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01)/Nodes(CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Grassland Change Confidence Layer Raster (20m)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        5000,
+        5000
+      ],
+      "proj:transform": [
+        20.0,
+        0.0,
+        1800000.0,
+        0.0,
+        -20.0,
+        1000000.0
+      ],
+      "proj:bbox": [
+        1800000.0,
+        900000.0,
+        1900000.0,
+        1000000.0
+      ],
+      "data_type": "uint8",
+      "bands": [
+        {
+          "description": "Grassland Change Confidence Layer",
+          "name": "graccl"
+        }
+      ],
+      "file:checksum": "d50110f2962462310d0e79b012b325e88436e2",
+      "file:size": 224944,
+      "file:local_path": "CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_and_herbaceous/clms_vlcc_grassland-change-confidence-layer_europe_20m_3yearly_v1/2021/01/01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(d256c107-3812-4368-a028-bb3409861de8)/Nodes(CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01)/Nodes(CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        1800000.0,
+        900000.0,
+        1900000.0,
+        1000000.0
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        750,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/grassland_and_herbaceous/clms_vlcc_grassland-change-confidence-layer_europe_20m_3yearly_v1/2021/01/01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01/CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.tif&CRS=EPSG:3035&BBOX=1800000.0,900000.0,1900000.0,1000000.0&WIDTH=750&HEIGHT=750&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/clms_vlcc_grassland-change-confidence-layer/clms_vlcc_grassland-change-confidence-layer_europe_20m_3yearly_v1.sld"
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011031c2ca1bc2a65deac6d34e5be21e367b",
+      "file:size": 375795,
+      "file:local_path": "CLMS_HRLVLCC_GRACCL_C2018-2021_R20m_E18N09_03035_V01_R01.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(d256c107-3812-4368-a028-bb3409861de8)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

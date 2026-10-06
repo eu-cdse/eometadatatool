@@ -1,0 +1,505 @@
+{
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9999999,
+          -59.9955357,
+          179.9955357,
+          80.0044643
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1998-04-01T00:00:00.000Z",
+          "2018-03-31T23:59:59.000Z"
+        ]
+      ]
+    }
+  },
+  "id": "clms_wb_global_1km_10daily_v2_cog",
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json"
+  ],
+  "title": "CLMS Water Bodies (WB) Global 1km 10-daily V2 (COG)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "WB",
+    "Water Bodies",
+    "inland water",
+    "global",
+    "10-daily",
+    "1km",
+    "SPOT",
+    "VEGETATION",
+    "PROBA-V"
+  ],
+  "description": "Provides information about the surface extent covered by water on a permanent basis at global scale in the spatial resolution of 1 km, available every 10 days.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_wb_global_100m_monthly_v1.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS Water Bodies (WB) Global 1km 10-daily V2 (COG) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "platform": [
+      "spot 5",
+      "spot 4",
+      "proba-v"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "water_bodies"
+    ],
+    "constellation": [
+      "spot",
+      "proba-1"
+    ],
+    "processing:version": [
+      "V2.1.1"
+    ],
+    "instruments": [
+      "vegetation-2",
+      "vegetation-1",
+      "vegetation"
+    ],
+    "gsd": [
+      1000.0
+    ],
+    "proj:shape": [
+      15680,
+      40320
+    ]
+  },
+  "item_assets": {
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "qual": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 251.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Water Bodies",
+      "bands": [
+        {
+          "name": "qual",
+          "description": "Quality Flag on Water Bodies",
+          "classification:classes": [
+            {
+              "value": 0,
+              "name": "sea",
+              "description": "Sea"
+            },
+            {
+              "value": 71,
+              "name": "very_low",
+              "description": "Water body occurrence: Very Low"
+            },
+            {
+              "value": 72,
+              "name": "low",
+              "description": "Water body occurrence: Low"
+            },
+            {
+              "value": 73,
+              "name": "medium",
+              "description": "Water body occurrence: Medium"
+            },
+            {
+              "value": 74,
+              "name": "high",
+              "description": "Water body occurrence: High"
+            },
+            {
+              "value": 75,
+              "name": "very_high",
+              "description": "Water body occurrence: Very High"
+            },
+            {
+              "value": 76,
+              "name": "permanent",
+              "description": "Water body occurrence: Permanent (WBf ≥ 95%)"
+            },
+            {
+              "value": 151,
+              "name": "lowland_vegetation",
+              "description": "Masked: lowland vegetation (NDVI mask)"
+            },
+            {
+              "value": 152,
+              "name": "mountain_vegetation",
+              "description": "Masked: mountain vegetation"
+            },
+            {
+              "value": 241,
+              "name": "glacier",
+              "description": "Masked: permanent glacier"
+            },
+            {
+              "value": 242,
+              "name": "volcanic",
+              "description": "Masked: volcanic soils"
+            },
+            {
+              "value": 243,
+              "name": "mountain_no_vegetation",
+              "description": "Masked: mountain without vegetation"
+            },
+            {
+              "value": 244,
+              "name": "lowland_no_vegetation",
+              "description": "Masked: lowland without vegetation"
+            },
+            {
+              "value": 252,
+              "name": "cloud",
+              "description": "Masked: cloud"
+            },
+            {
+              "value": 253,
+              "name": "snow",
+              "description": "Masked: snow/ice"
+            },
+            {
+              "value": 254,
+              "name": "sza_gt_65",
+              "description": "Masked: solar zenith angle > 65°"
+            },
+            {
+              "value": 255,
+              "name": "not_water",
+              "description": "Not water"
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "wb": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 251.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Water Bodies",
+      "bands": [
+        {
+          "name": "wb",
+          "description": "Water Bodies",
+          "classification:classes": [
+            {
+              "value": 0,
+              "name": "sea",
+              "description": "Sea"
+            },
+            {
+              "value": 70,
+              "name": "water",
+              "description": "Water body detected"
+            },
+            {
+              "value": 251,
+              "name": "no_data",
+              "description": "No data"
+            },
+            {
+              "value": 255,
+              "name": "no_water",
+              "description": "No water"
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    }
+  ],
+  "bands": [
+    {
+      "name": "qual",
+      "description": "Quality Flag on Water Bodies",
+      "classification:classes": [
+        {
+          "value": 0,
+          "name": "sea",
+          "description": "Sea"
+        },
+        {
+          "value": 71,
+          "name": "very_low",
+          "description": "Water body occurrence: Very Low"
+        },
+        {
+          "value": 72,
+          "name": "low",
+          "description": "Water body occurrence: Low"
+        },
+        {
+          "value": 73,
+          "name": "medium",
+          "description": "Water body occurrence: Medium"
+        },
+        {
+          "value": 74,
+          "name": "high",
+          "description": "Water body occurrence: High"
+        },
+        {
+          "value": 75,
+          "name": "very_high",
+          "description": "Water body occurrence: Very High"
+        },
+        {
+          "value": 76,
+          "name": "permanent",
+          "description": "Water body occurrence: Permanent (WBf ≥ 95%)"
+        },
+        {
+          "value": 151,
+          "name": "lowland_vegetation",
+          "description": "Masked: lowland vegetation (NDVI mask)"
+        },
+        {
+          "value": 152,
+          "name": "mountain_vegetation",
+          "description": "Masked: mountain vegetation"
+        },
+        {
+          "value": 241,
+          "name": "glacier",
+          "description": "Masked: permanent glacier"
+        },
+        {
+          "value": 242,
+          "name": "volcanic",
+          "description": "Masked: volcanic soils"
+        },
+        {
+          "value": 243,
+          "name": "mountain_no_vegetation",
+          "description": "Masked: mountain without vegetation"
+        },
+        {
+          "value": 244,
+          "name": "lowland_no_vegetation",
+          "description": "Masked: lowland without vegetation"
+        },
+        {
+          "value": 252,
+          "name": "cloud",
+          "description": "Masked: cloud"
+        },
+        {
+          "value": 253,
+          "name": "snow",
+          "description": "Masked: snow/ice"
+        },
+        {
+          "value": 254,
+          "name": "sza_gt_65",
+          "description": "Masked: solar zenith angle > 65°"
+        },
+        {
+          "value": 255,
+          "name": "not_water",
+          "description": "Not water"
+        }
+      ]
+    },
+    {
+      "name": "wb",
+      "description": "Water Bodies",
+      "classification:classes": [
+        {
+          "value": 0,
+          "name": "sea",
+          "description": "Sea"
+        },
+        {
+          "value": 70,
+          "name": "water",
+          "description": "Water body detected"
+        },
+        {
+          "value": 251,
+          "name": "no_data",
+          "description": "No data"
+        },
+        {
+          "value": 255,
+          "name": "no_water",
+          "description": "No water"
+        }
+      ]
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

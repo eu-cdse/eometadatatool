@@ -1,0 +1,108 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-6-aux-comb",
+  "id": "S6ACOMB24156",
+  "properties": {
+    "created": "2026-06-11T12:32:46.026000Z",
+    "updated": "2026-06-12T08:47:37.286823Z",
+    "published": "2026-06-12T08:47:37.286823Z",
+    "eopf:origin_datetime": "2026-06-11T12:32:46.026000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2026-04-24T23:59:42.000000Z",
+    "start_datetime": "2026-04-24T23:59:42.000000Z",
+    "end_datetime": "2026-04-25T23:59:42.000000Z",
+    "platform": "sentinel-6a",
+    "constellation": "sentinel-6",
+    "instruments": [
+      "aux"
+    ],
+    "product:type": "AUX_COMB__",
+    "processing:facility": "CPOD",
+    "_private": {
+      "product_size": 419982,
+      "product_uuid": "ecc41541-2518-44d8-aa23-13e3e08b5b07",
+      "product_name": "S6ACOMB24156.sp3.gz",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "geometry": null,
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-6/AUX/AUX_COMB__/2026/04/24/S6ACOMB24156.sp3.gz/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S6ACOMB24156.sp3.gz.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "product": {
+      "type": "application/gzip",
+      "title": "Gzipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110fa7a46fb8e1ea549eaa9721d0d9967e2",
+      "file:size": 419982,
+      "file:local_path": "S6ACOMB24156.sp3.gz",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ecc41541-2518-44d8-aa23-13e3e08b5b07)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

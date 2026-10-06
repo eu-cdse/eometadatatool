@@ -1,0 +1,284 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_vlcc_herbaceous-cover_europe_10m_yearly_v1",
+  "id": "CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00",
+  "properties": {
+    "created": "2025-12-18T09:12:38.999117Z",
+    "updated": "2025-12-19T20:53:40.303843Z",
+    "published": "2025-12-19T20:53:40.303843Z",
+    "eopf:origin_datetime": "2025-12-18T09:12:38.999117Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "gsd": 10,
+    "proj:code": "EPSG:3035",
+    "product:type": "grassland_and_herbaceous",
+    "datetime": "2017-01-01T00:00:00.000000Z",
+    "end_datetime": "2017-12-31T23:59:59.999999Z",
+    "classification:classes": [
+      {
+        "value": 0,
+        "name": "non_grassland_in_reference_year",
+        "title": "non-grassland in reference year"
+      },
+      {
+        "value": 1,
+        "name": "temporary_grassland_in_reference_year",
+        "title": "temporary grassland in reference year"
+      },
+      {
+        "value": 255,
+        "name": "outside_area",
+        "title": "outside area"
+      }
+    ],
+    "_private": {
+      "product_size": 5687903,
+      "product_uuid": "debef9f2-5c39-43dd-9680-9dd218ec4199",
+      "product_name": "CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00",
+      "visible": true,
+      "cellID": "100kmE39N29",
+      "component": "landcover_landuse",
+      "gridLabel": "10m",
+      "fileFormat": "cog",
+      "nominalDate": "2017-01-01T00:00:00.000000Z",
+      "datasetAlias": "clms_vlcc_herbaceous-cover",
+      "areaOfInterest": "europe",
+      "collectionName": "CLMS",
+      "datasetVersion": 1,
+      "productVersion": "v01_r00",
+      "platformAcronym": "unspecified",
+      "datasetShortName": "her",
+      "missionShortName": "unspecified",
+      "processingCenter": "unspecified",
+      "datasetIdentifier": "clms_vlcc_herbaceous-cover_europe_10m_yearly_v1",
+      "metricGridSpacing": 10,
+      "platformShortName": "unspecified",
+      "temporalRepeatRate": "yearly",
+      "instrumentShortName": "unspecified",
+      "productDeliveryDate": "2025-12-19T18:40:03.000000Z",
+      "SDIResourceIdentifier": "copernicus_r_3035_10_m_her_p_2017-now_v01_r00"
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "start_datetime": "2017-01-01T00:00:00.000000Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    4.1262305,
+    49.0646679,
+    5.6000267,
+    50.0241188
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          4.2337523,
+          49.0646679
+        ],
+        [
+          5.6000267,
+          49.1267325
+        ],
+        [
+          5.5177962,
+          50.0241188
+        ],
+        [
+          4.1262305,
+          49.9607209
+        ],
+        [
+          4.2337523,
+          49.0646679
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_and_herbaceous/clms_vlcc_herbaceous-cover_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d50110ae43dea7b9212d3411968f9c28e76800",
+      "file:size": 35294,
+      "file:local_path": "CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.xml",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_and_herbaceous/clms_vlcc_herbaceous-cover_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(debef9f2-5c39-43dd-9680-9dd218ec4199)/Nodes(CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00)/Nodes(CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Herbaceous Cover Raster (10m)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        10000,
+        10000
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        3900000.0,
+        0.0,
+        -10.0,
+        3000000.0
+      ],
+      "proj:bbox": [
+        3900000.0,
+        2900000.0,
+        4000000.0,
+        3000000.0
+      ],
+      "data_type": "uint8",
+      "bands": [
+        {
+          "description": "Herbaceous Cover",
+          "name": "her"
+        }
+      ],
+      "file:checksum": "d50110fd77e4327e73c13979ad45360c64d07a",
+      "file:size": 5579628,
+      "file:local_path": "CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_and_herbaceous/clms_vlcc_herbaceous-cover_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(debef9f2-5c39-43dd-9680-9dd218ec4199)/Nodes(CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00)/Nodes(CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        3900000.0,
+        2900000.0,
+        4000000.0,
+        3000000.0
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        750,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/grassland_and_herbaceous/clms_vlcc_herbaceous-cover_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00/CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.tif&CRS=EPSG:3035&BBOX=3900000.0,2900000.0,4000000.0,3000000.0&WIDTH=750&HEIGHT=750&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/clms_vlcc_herbaceous-cover/clms_vlcc_herbaceous-cover_europe_10m_yearly_v1.sld"
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110cad96de65d892f993d0b5d1f4b4a8a86",
+      "file:size": 5689799,
+      "file:local_path": "CLMS_HRLVLCC_HER_S2017_R10m_E39N29_03035_V01_R00.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(debef9f2-5c39-43dd-9680-9dd218ec4199)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

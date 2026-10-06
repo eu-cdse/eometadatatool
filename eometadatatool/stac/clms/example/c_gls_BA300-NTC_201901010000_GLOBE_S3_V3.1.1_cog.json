@@ -1,0 +1,232 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_ba_global_300m_monthly_v3_cog",
+  "id": "c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog",
+  "properties": {
+    "created": "2024-06-05T14:11:29.239511Z",
+    "updated": "2025-07-18T00:53:48.585761Z",
+    "published": "2025-03-21T17:51:35.015800Z",
+    "eopf:origin_datetime": "2024-06-05T14:11:29.239511Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2019-01-01T00:00:00.000000Z",
+    "start_datetime": "2019-01-01T00:00:00.000000Z",
+    "end_datetime": "2019-01-31T23:59:59.999999Z",
+    "instruments": [
+      "olci",
+      "slstr"
+    ],
+    "gsd": 300,
+    "proj:code": "EPSG:4326",
+    "product:type": "burnt_area",
+    "processing:level": "L3",
+    "constellation": "sentinel-3",
+    "product:timeliness": "P2M",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "V3.1.1",
+    "_private": {
+      "product_size": 64578817,
+      "product_uuid": "0f55be30-2c8d-43de-bd67-719acb8e36ea",
+      "product_name": "c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.9985119,
+    179.9985119,
+    80.0014881
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          -59.9985119
+        ],
+        [
+          -0.0007440499999944,
+          -59.9985119
+        ],
+        [
+          179.9985119,
+          -59.9985119
+        ],
+        [
+          179.9985119,
+          80.0014881
+        ],
+        [
+          -0.0007440499999944,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          80.0014881
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/burnt_area/ba_global_300m_monthly_v3/2019/01/01/c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "dob_ntc": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Day Of Burn",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "int16",
+      "nodata": -1,
+      "bands": [
+        {
+          "name": "dob_ntc",
+          "description": "Day Of Burn"
+        }
+      ],
+      "file:size": 64578817,
+      "file:local_path": "c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog/c_gls_BA300-DOB-NTC_201901010000_GLOBE_S3_V3.1.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/burnt_area/ba_global_300m_monthly_v3/2019/01/01/c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog/c_gls_BA300-DOB-NTC_201901010000_GLOBE_S3_V3.1.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(0f55be30-2c8d-43de-bd67-719acb8e36ea)/Nodes(c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog)/Nodes(c_gls_BA300-DOB-NTC_201901010000_GLOBE_S3_V3.1.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/burnt_area/ba_global_300m_monthly_v3/2019/01/01/c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog/c_gls_BA300-DOB-NTC_201901010000_GLOBE_S3_V3.1.1.tiff&CRS=EPSG:4326&BBOX=-180.0014880952381,-59.99851190473011,179.99851190639774,80.00148809523809&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/ba_global_300m_monthly_v4/clms_global_ba-dob_300m_v4_monthly.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110f9943b79a4c99f90220f62fae72c77cb",
+      "file:size": 64579135,
+      "file:local_path": "c_gls_BA300-NTC_201901010000_GLOBE_S3_V3.1.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(0f55be30-2c8d-43de-bd67-719acb8e36ea)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

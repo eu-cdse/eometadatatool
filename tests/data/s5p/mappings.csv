@@ -1,0 +1,25 @@
+metadata;file;mappings;datatype
+properties/version;static;Version 1.0;String
+properties/created;*.nc;regex-match(history,'....-..-..[ T]..:..:..(\.[^ ]*)?');DateTime
+properties/updated;*.nc;regex-match(history,'....-..-..[ T]..:..:..(\.[^ ]*)?');DateTime
+properties/start_datetime;*.nc;time_coverage_start;DateTime
+properties/end_datetime;*.nc;time_coverage_end;DateTime
+properties/platform;static;Sentinel-5P;String
+properties/instrument;static;TROPOMI;String
+properties/constellation;static;Sentinel-5P;String
+properties/license;static;CC-BY 4.0;String
+properties/proj:epsg;static;4326;Int
+properties/sat:orbit_state;static;ASCENDING;String
+properties/processing:facility;static;OP;String
+properties/processing:level;static;L3;String
+properties/s5p:resolution;*.nc;spatial_resolution;String
+properties/s5p:datasource;*.nc;source;String
+providers/name;*.nc;institution;String
+providers/description;*.nc;creator_name;String
+providers/roles;static;producer;String
+providers/url;*.nc;creator_url;String
+bbox/0;*.nc;geospatial_lon_min;Double
+bbox/1;*.nc;geospatial_lon_max;Double
+bbox/2;*.nc;geospatial_lat_min;Double
+bbox/3;*.nc;geospatial_lat_max;Double
+new_date;*.nc;now;DateTime

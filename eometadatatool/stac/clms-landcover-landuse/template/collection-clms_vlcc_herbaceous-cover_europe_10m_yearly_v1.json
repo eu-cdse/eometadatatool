@@ -1,0 +1,186 @@
+{
+  "id": "clms_vlcc_herbaceous-cover_europe_10m_yearly_v1",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-01-01T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "stac_version": "1.1.0",
+  "type": "Collection",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "title": "CLMS VLCC Herbaceous Cover (HER) Europe 10m yearly V1 (COG)",
+  "description": "The High Resolution Layer Herbaceous Cover (HER) dataset provides a basic land cover classification with 2 thematic classes (temporal and permanent herbaceous / non-herbaceous). The production of the herbaceous layer is primarily based on the probability estimates obtained from the Base Vegetation Layer (BVL) which also serves to harmonize the different vegetated HRL products (Grasslands, Tree Cover and Forests, Croplands). HER is further used as input for the Grassland status layer (GRA) extracting the permanent herbaceous in combination with the Ploughing indicator (PLOUGH). This dataset is provided annually starting in 2017 with 10 meter rasters (fully conformant with the EEA reference grid) in 100 x 100 km tiles covering the EEA38 countries. High Resolution Layer Grasslands product is part of the European Union’s Copernicus Land Monitoring Service. This dataset includes data from the French Overseas Territories (DOMs).",
+  "license": "proprietary",
+  "keywords": [
+    "CLMS",
+    "Copernicus",
+    "Europe",
+    "Raster",
+    "Land cover",
+    "Land use",
+    "Grassland",
+    "Herbaceous",
+    "HER"
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/CLMS_HRLVLCC_HER_.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS VLCC Herbaceous Cover (HER) Europe 10m yearly V1 (COG) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:3035",
+      "EPSG:32620",
+      "EPSG:32622",
+      "EPSG:32738",
+      "EPSG:32740"
+    ],
+    "product:type": [
+      "grassland_and_herbaceous"
+    ],
+    "gsd": [
+      10.0
+    ]
+  },
+  "bands": [
+    {
+      "description": "Herbaceous Cover",
+      "name": "her"
+    }
+  ],
+  "item_assets": {
+    "data": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Herbaceous Cover Raster (10m)",
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "bands": [
+        {
+          "description": "Herbaceous Cover",
+          "name": "her"
+        }
+      ],
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "metadata": {
+      "alternate:name": "S3",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "auth:refs": [
+        "s3"
+      ],
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "title": "Copernicus Land Monitoring Service Data Policy"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  }
+}

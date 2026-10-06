@@ -1,0 +1,245 @@
+{
+  "id": "clms_sce_europe_500m_daily_v1_nc",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json"
+  ],
+  "sci:doi": "10.2909/e2dd658f-8835-4b17-bcd5-eeb921a79a61",
+  "type": "Collection",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -11.0,
+          35.0,
+          50.0,
+          72.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2017-03-01T06:35:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "title": "CLMS Snow Cover Extent (SCE) Europe 500m daily V1 (NetCDF)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "SCE",
+    "Snow Cover Extent",
+    "cryosphere",
+    "Europe",
+    "daily",
+    "500m",
+    "TERRA",
+    "MODIS"
+  ],
+  "description": "Provides for Europe daily updates of the fraction of snow cover on the ground (also in forested areas) per pixel in percentage (0% to 100%). The data is available in near real time in the spatial resolution of 500 m and with the temporal extent from March 2017 to present.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_sce_europe_500m_daily_v1.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS Snow Cover Extent (SCE) Europe 500m daily V1 (NetCDF) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "platform": [
+      "terra",
+      "noaa-20"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "snow_cover_extent"
+    ],
+    "constellation": [
+      "a-train",
+      "jpss"
+    ],
+    "processing:version": [
+      "V1.0.1",
+      "V1.0.2",
+      "V1.0.3"
+    ],
+    "instruments": [
+      "modis",
+      "viirs"
+    ],
+    "product:timeliness_category": [
+      "NRT"
+    ],
+    "gsd": [
+      500.0
+    ],
+    "product:timeliness": [
+      "P1D"
+    ]
+  },
+  "item_assets": {
+    "Product": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "auth:refs": [
+        "s3"
+      ],
+      "type": "application/netcdf",
+      "title": "Daily Snow Cover Extent, Continental Europe, NOAA-20 VIIRS (0.005deg., 2025-09-02)",
+      "bands": [
+        {
+          "name": "sce500",
+          "description": "Snow Cover Extent"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    },
+    {
+      "rel": "about",
+      "href": "https://land.copernicus.eu/en/products/snow/snow-cover-extent-europe-v1-0-500m",
+      "type": "text/html",
+      "title": "Product page"
+    }
+  ],
+  "bands": [
+    {
+      "name": "sce500",
+      "description": "Snow Cover Extent"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

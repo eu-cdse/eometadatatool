@@ -1,0 +1,315 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_vlcc_secondary-crop-duration_europe_10m_yearly_v1",
+  "id": "CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00",
+  "properties": {
+    "created": "2025-12-18T05:37:24.257999Z",
+    "updated": "2025-12-19T17:49:20.736962Z",
+    "published": "2025-12-19T17:49:20.736962Z",
+    "eopf:origin_datetime": "2025-12-18T05:37:24.257999Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "gsd": 10,
+    "proj:code": "EPSG:3035",
+    "product:type": "cropping_patterns",
+    "datetime": "2017-01-01T00:00:00.000000Z",
+    "end_datetime": "2017-12-31T23:59:59.999999Z",
+    "classification:classes": [
+      {
+        "value": 0,
+        "name": "no_annual_cropland",
+        "title": "no annual cropland"
+      },
+      {
+        "value": 1,
+        "name": "duration_days",
+        "title": "secondary crop duration in days",
+        "description": "Values 40-366 represent days"
+      },
+      {
+        "value": 65526,
+        "name": "fallow_land",
+        "title": "fallow land occurrence"
+      },
+      {
+        "value": 65527,
+        "name": "no_field_geometry",
+        "title": "no delineated field geometry overlaps with annual cropland"
+      },
+      {
+        "value": 65530,
+        "name": "no_secondary_season",
+        "title": "no secondary crop growing season beyond main season"
+      },
+      {
+        "value": 65531,
+        "name": "insufficient_observations",
+        "title": "insufficient satellite observations"
+      },
+      {
+        "value": 65532,
+        "name": "no_season_delineation",
+        "title": "no season delineation possible"
+      },
+      {
+        "value": 65533,
+        "name": "season_outside_timeframe",
+        "title": "season outside defined timeframe"
+      },
+      {
+        "value": 65535,
+        "name": "outside_area",
+        "title": "outside area"
+      }
+    ],
+    "_private": {
+      "product_size": 250000,
+      "product_uuid": "5492f108-fc7e-4824-a063-5ac42513330b",
+      "product_name": "CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00",
+      "visible": true,
+      "cellID": "100kmE09N27",
+      "component": "landcover_landuse",
+      "gridLabel": "10m",
+      "fileFormat": "cog",
+      "nominalDate": "2017-01-01T00:00:00.000000Z",
+      "datasetAlias": "clms_vlcc_secondary-crop-duration",
+      "areaOfInterest": "europe",
+      "collectionName": "CLMS",
+      "datasetVersion": 1,
+      "productVersion": "v01_r00",
+      "platformAcronym": "unspecified",
+      "datasetShortName": "cpscd",
+      "missionShortName": "unspecified",
+      "processingCenter": "unspecified",
+      "datasetIdentifier": "clms_vlcc_secondary-crop-duration_europe_10m_yearly_v1",
+      "metricGridSpacing": 10,
+      "platformShortName": "unspecified",
+      "temporalRepeatRate": "yearly",
+      "instrumentShortName": "unspecified",
+      "productDeliveryDate": "2025-12-19T16:07:09.000000Z",
+      "SDIResourceIdentifier": "copernicus_r_3035_10_m_cpscd_p_2017-now_v01_r00"
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "start_datetime": "2017-01-01T00:00:00.000000Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -31.9004047,
+    38.678776,
+    -30.31475,
+    39.9106471
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -31.345018,
+          38.678776
+        ],
+        [
+          -30.31475,
+          39.1512461
+        ],
+        [
+          -30.863786,
+          39.9106471
+        ],
+        [
+          -31.9004047,
+          39.431576
+        ],
+        [
+          -31.345018,
+          38.678776
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/cropping_patterns/clms_vlcc_secondary-crop-duration_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d50110c65bf3ded59139098d2c579563614761",
+      "file:size": 33678,
+      "file:local_path": "CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.xml",
+      "href": "s3://eodata/CLMS/landcover_landuse/cropping_patterns/clms_vlcc_secondary-crop-duration_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5492f108-fc7e-4824-a063-5ac42513330b)/Nodes(CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00)/Nodes(CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Secondary Crop Duration Raster (10m)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        10000,
+        10000
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        900000.0,
+        0.0,
+        -10.0,
+        2800000.0
+      ],
+      "proj:bbox": [
+        900000.0,
+        2700000.0,
+        1000000.0,
+        2800000.0
+      ],
+      "data_type": "uint16",
+      "bands": [
+        {
+          "description": "Secondary Crops Duration",
+          "name": "cpscd"
+        }
+      ],
+      "file:checksum": "d501104564a1abaa636d862552b1ed625424c8",
+      "file:size": 189681,
+      "file:local_path": "CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/cropping_patterns/clms_vlcc_secondary-crop-duration_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5492f108-fc7e-4824-a063-5ac42513330b)/Nodes(CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00)/Nodes(CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        900000.0,
+        2700000.0,
+        1000000.0,
+        2800000.0
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        750,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/cropping_patterns/clms_vlcc_secondary-crop-duration_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00/CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.tif&CRS=EPSG:3035&BBOX=900000.0,2700000.0,1000000.0,2800000.0&WIDTH=750&HEIGHT=750&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/clms_vlcc_secondary-crop-duration/clms_vlcc_secondary-crop-duration_europe_10m_yearly_v1.sld"
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501105758f5c9fdc578809672e321c9002c3c",
+      "file:size": 251952,
+      "file:local_path": "CLMS_HRLVLCC_CPSCD_S2017_R10m_E09N27_03035_V01_R00.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5492f108-fc7e-4824-a063-5ac42513330b)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

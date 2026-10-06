@@ -1,0 +1,302 @@
+metadata;file;mappings;datatype
+processingDate;manifest.safe;//safe:processing/@start;DateTimeOffset
+processingCenter;manifest.safe;//safe:processing/safe:facility/@site;String
+processorName;manifest.safe;//safe:processing/safe:facility/safe:software/@name;String
+processorVersion;manifest.safe;//safe:processing/safe:facility/safe:software/@version;String
+beginningDateTime;manifest.safe;//safe:acquisitionPeriod/safe:startTime/text();DateTimeOffset
+endingDateTime;manifest.safe;//safe:acquisitionPeriod/safe:stopTime/text();DateTimeOffset
+platformIdentifier;manifest.safe;//safe:platform/safe:nssdcIdentifier/text();String
+platformShortName;manifest.safe;//safe:platform/safe:familyName/text();String
+platformSerialIdentifier;manifest.safe;//safe:platform/safe:number/text();String
+instrumentShortName;manifest.safe;//safe:platform/safe:instrument/safe:familyName/@abbreviation;String
+operationalMode;manifest.safe;//safe:platform/safe:instrument/safe:extension/*[local-name()='instrumentMode']/*[local-name()='mode']/text();String
+orbitNumber;manifest.safe;"//safe:orbitReference/safe:orbitNumber[@type=""start""]/text()";Int64
+relativeOrbitNumber;manifest.safe;"//safe:orbitReference/safe:relativeOrbitNumber[@type=""start""]/text()";Int64
+cycleNumber;manifest.safe;//safe:orbitReference/safe:cycleNumber/text();Int64
+orbitDirection;manifest.safe;//safe:orbitReference/safe:extension/s1:orbitProperties/s1:pass/text();String
+coordinates;manifest.safe;WKT(//safe:frameSet/safe:frame/safe:footPrint/gml:coordinates/text());String
+instrumentConfigurationID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='instrumentConfigurationID']/text();Int64
+datatakeID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='missionDataTakeID']/text();Int64
+timeliness;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='productTimelinessCategory']/text();String
+polarisationChannel:1;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation'][1]/text();String
+polarisationChannel:2;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation'][2]/text();String
+anxTime;manifest.safe;//s1:ascendingNodeTime/text();DateTimeOffset
+asset:iw1:vh:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slcvh')]/byteStream/fileLocation/@href;String
+asset:iw1:vh:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slcvh')]/byteStream/fileLocation/@href;String
+asset:iw1:vh:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slcvh')]/byteStream/fileLocation/@href;String
+asset:iw1:vh:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slcvh')]/byteStream/fileLocation/@href;String
+asset:iw1:vv:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slcvv')]/byteStream/fileLocation/@href;String
+asset:iw1:vv:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slcvv')]/byteStream/fileLocation/@href;String
+asset:iw1:vv:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slcvv')]/byteStream/fileLocation/@href;String
+asset:iw1:vv:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slcvv')]/byteStream/fileLocation/@href;String
+asset:iw1:hh:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slchh')]/byteStream/fileLocation/@href;String
+asset:iw1:hh:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slchh')]/byteStream/fileLocation/@href;String
+asset:iw1:hh:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slchh')]/byteStream/fileLocation/@href;String
+asset:iw1:hh:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slchh')]/byteStream/fileLocation/@href;String
+asset:iw1:hv:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slchv')]/byteStream/fileLocation/@href;String
+asset:iw1:hv:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slchv')]/byteStream/fileLocation/@href;String
+asset:iw1:hv:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slchv')]/byteStream/fileLocation/@href;String
+asset:iw1:hv:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slchv')]/byteStream/fileLocation/@href;String
+asset:iw1:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slcvh')]/byteStream/checksum/text();String
+asset:iw1:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slcvh')]/byteStream/checksum/text();String
+asset:iw1:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slcvh')]/byteStream/checksum/text();String
+asset:iw1:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slcvh')]/byteStream/checksum/text();String
+asset:iw1:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slcvv')]/byteStream/checksum/text();String
+asset:iw1:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slcvv')]/byteStream/checksum/text();String
+asset:iw1:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slcvv')]/byteStream/checksum/text();String
+asset:iw1:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slcvv')]/byteStream/checksum/text();String
+asset:iw1:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slchh')]/byteStream/checksum/text();String
+asset:iw1:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slchh')]/byteStream/checksum/text();String
+asset:iw1:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slchh')]/byteStream/checksum/text();String
+asset:iw1:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slchh')]/byteStream/checksum/text();String
+asset:iw1:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slchv')]/byteStream/checksum/text();String
+asset:iw1:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slchv')]/byteStream/checksum/text();String
+asset:iw1:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slchv')]/byteStream/checksum/text();String
+asset:iw1:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slchv')]/byteStream/checksum/text();String
+asset:iw1:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slcvh')]/byteStream/@size;Int64
+asset:iw1:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slcvh')]/byteStream/@size;Int64
+asset:iw1:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slcvh')]/byteStream/@size;Int64
+asset:iw1:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slcvh')]/byteStream/@size;Int64
+asset:iw1:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slcvv')]/byteStream/@size;Int64
+asset:iw1:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slcvv')]/byteStream/@size;Int64
+asset:iw1:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slcvv')]/byteStream/@size;Int64
+asset:iw1:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slcvv')]/byteStream/@size;Int64
+asset:iw1:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slchh')]/byteStream/@size;Int64
+asset:iw1:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slchh')]/byteStream/@size;Int64
+asset:iw1:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slchh')]/byteStream/@size;Int64
+asset:iw1:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slchh')]/byteStream/@size;Int64
+asset:iw1:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw1slchv')]/byteStream/@size;Int64
+asset:iw1:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw1slchv')]/byteStream/@size;Int64
+asset:iw1:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw1slchv')]/byteStream/@size;Int64
+asset:iw1:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw1slchv')]/byteStream/@size;Int64
+asset:iw1:vh:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slcvh')]/byteStream/fileLocation/@href;String
+asset:iw1:vv:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slcvv')]/byteStream/fileLocation/@href;String
+asset:iw1:hh:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slchh')]/byteStream/fileLocation/@href;String
+asset:iw1:hv:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slchv')]/byteStream/fileLocation/@href;String
+asset:iw1:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slcvh')]/byteStream/checksum/text();String
+asset:iw1:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slcvv')]/byteStream/checksum/text();String
+asset:iw1:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slchh')]/byteStream/checksum/text();String
+asset:iw1:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slchv')]/byteStream/checksum/text();String
+asset:iw1:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slcvv')]/byteStream/@size;Int64
+asset:iw1:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slcvh')]/byteStream/@size;Int64
+asset:iw1:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slchh')]/byteStream/@size;Int64
+asset:iw1:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw1slchv')]/byteStream/@size;Int64
+azimuthAngle:iw1:vh;annotation/s1*iw1*vh*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw1:vh;annotation/s1*iw1*vh*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw1:vh;annotation/s1*iw1*vh*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw1:vh;annotation/s1*iw1*vh*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw1:vh;annotation/s1*iw1*vh*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw1:vh;annotation/s1*iw1*vh*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw1:vh;annotation/s1*iw1*vh*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw1:vh;annotation/s1*iw1*vh*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw1:vv;annotation/s1*iw1*vv*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw1:vv;annotation/s1*iw1*vv*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw1:vv;annotation/s1*iw1*vv*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw1:vv;annotation/s1*iw1*vv*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw1:vv;annotation/s1*iw1*vv*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw1:vv;annotation/s1*iw1*vv*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw1:vv;annotation/s1*iw1*vv*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw1:vv;annotation/s1*iw1*vv*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw1:hh;annotation/s1*iw1*hh*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw1:hh;annotation/s1*iw1*hh*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw1:hh;annotation/s1*iw1*hh*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw1:hh;annotation/s1*iw1*hh*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw1:hh;annotation/s1*iw1*hh*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw1:hh;annotation/s1*iw1*hh*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw1:hh;annotation/s1*iw1*hh*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw1:hh;annotation/s1*iw1*hh*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw1:hv;annotation/s1*iw1*hv*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw1:hv;annotation/s1*iw1*hv*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw1:hv;annotation/s1*iw1*hv*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw1:hv;annotation/s1*iw1*hv*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw1:hv;annotation/s1*iw1*hv*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw1:hv;annotation/s1*iw1*hv*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw1:hv;annotation/s1*iw1*hv*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw1:hv;annotation/s1*iw1*hv*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+asset:iw2:vh:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slcvh')]/byteStream/fileLocation/@href;String
+asset:iw2:vh:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slcvh')]/byteStream/fileLocation/@href;String
+asset:iw2:vh:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slcvh')]/byteStream/fileLocation/@href;String
+asset:iw2:vh:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slcvh')]/byteStream/fileLocation/@href;String
+asset:iw2:vv:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slcvv')]/byteStream/fileLocation/@href;String
+asset:iw2:vv:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slcvv')]/byteStream/fileLocation/@href;String
+asset:iw2:vv:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slcvv')]/byteStream/fileLocation/@href;String
+asset:iw2:vv:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slcvv')]/byteStream/fileLocation/@href;String
+asset:iw2:hh:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slchh')]/byteStream/fileLocation/@href;String
+asset:iw2:hh:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slchh')]/byteStream/fileLocation/@href;String
+asset:iw2:hh:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slchh')]/byteStream/fileLocation/@href;String
+asset:iw2:hh:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slchh')]/byteStream/fileLocation/@href;String
+asset:iw2:hv:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slchv')]/byteStream/fileLocation/@href;String
+asset:iw2:hv:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slchv')]/byteStream/fileLocation/@href;String
+asset:iw2:hv:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slchv')]/byteStream/fileLocation/@href;String
+asset:iw2:hv:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slchv')]/byteStream/fileLocation/@href;String
+asset:iw2:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slcvh')]/byteStream/checksum/text();String
+asset:iw2:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slcvh')]/byteStream/checksum/text();String
+asset:iw2:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slcvh')]/byteStream/checksum/text();String
+asset:iw2:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slcvh')]/byteStream/checksum/text();String
+asset:iw2:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slcvv')]/byteStream/checksum/text();String
+asset:iw2:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slcvv')]/byteStream/checksum/text();String
+asset:iw2:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slcvv')]/byteStream/checksum/text();String
+asset:iw2:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slcvv')]/byteStream/checksum/text();String
+asset:iw2:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slchh')]/byteStream/checksum/text();String
+asset:iw2:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slchh')]/byteStream/checksum/text();String
+asset:iw2:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slchh')]/byteStream/checksum/text();String
+asset:iw2:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slchh')]/byteStream/checksum/text();String
+asset:iw2:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slchv')]/byteStream/checksum/text();String
+asset:iw2:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slchv')]/byteStream/checksum/text();String
+asset:iw2:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slchv')]/byteStream/checksum/text();String
+asset:iw2:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slchv')]/byteStream/checksum/text();String
+asset:iw2:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slcvh')]/byteStream/@size;Int64
+asset:iw2:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slcvh')]/byteStream/@size;Int64
+asset:iw2:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slcvh')]/byteStream/@size;Int64
+asset:iw2:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slcvh')]/byteStream/@size;Int64
+asset:iw2:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slcvv')]/byteStream/@size;Int64
+asset:iw2:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slcvv')]/byteStream/@size;Int64
+asset:iw2:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slcvv')]/byteStream/@size;Int64
+asset:iw2:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slcvv')]/byteStream/@size;Int64
+asset:iw2:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slchh')]/byteStream/@size;Int64
+asset:iw2:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slchh')]/byteStream/@size;Int64
+asset:iw2:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slchh')]/byteStream/@size;Int64
+asset:iw2:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slchh')]/byteStream/@size;Int64
+asset:iw2:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw2slchv')]/byteStream/@size;Int64
+asset:iw2:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw2slchv')]/byteStream/@size;Int64
+asset:iw2:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw2slchv')]/byteStream/@size;Int64
+asset:iw2:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw2slchv')]/byteStream/@size;Int64
+asset:iw2:vh:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slcvh')]/byteStream/fileLocation/@href;String
+asset:iw2:vv:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slcvv')]/byteStream/fileLocation/@href;String
+asset:iw2:hh:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slchh')]/byteStream/fileLocation/@href;String
+asset:iw2:hv:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slchv')]/byteStream/fileLocation/@href;String
+asset:iw2:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slcvh')]/byteStream/checksum/text();String
+asset:iw2:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slcvv')]/byteStream/checksum/text();String
+asset:iw2:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slchh')]/byteStream/checksum/text();String
+asset:iw2:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slchv')]/byteStream/checksum/text();String
+asset:iw2:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slcvv')]/byteStream/@size;Int64
+asset:iw2:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slcvh')]/byteStream/@size;Int64
+asset:iw2:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slchh')]/byteStream/@size;Int64
+asset:iw2:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw2slchv')]/byteStream/@size;Int64
+azimuthAngle:iw2:vh;annotation/s1*iw2*vh*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw2:vh;annotation/s1*iw2*vh*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw2:vh;annotation/s1*iw2*vh*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw2:vh;annotation/s1*iw2*vh*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw2:vh;annotation/s1*iw2*vh*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw2:vh;annotation/s1*iw2*vh*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw2:vh;annotation/s1*iw1*vh*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw2:vh;annotation/s1*iw1*vh*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw2:vv;annotation/s1*iw2*vv*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw2:vv;annotation/s1*iw2*vv*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw2:vv;annotation/s1*iw2*vv*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw2:vv;annotation/s1*iw2*vv*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw2:vv;annotation/s1*iw2*vv*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw2:vv;annotation/s1*iw2*vv*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw2:vv;annotation/s1*iw1*vv*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw2:vv;annotation/s1*iw1*vv*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw2:hh;annotation/s1*iw2*hh*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw2:hh;annotation/s1*iw2*hh*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw2:hh;annotation/s1*iw2*hh*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw2:hh;annotation/s1*iw2*hh*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw2:hh;annotation/s1*iw2*hh*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw2:hh;annotation/s1*iw2*hh*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw2:hh;annotation/s1*iw1*hh*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw2:hh;annotation/s1*iw1*hh*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw2:hv;annotation/s1*iw2*hv*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw2:hv;annotation/s1*iw2*hv*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw2:hv;annotation/s1*iw2*hv*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw2:hv;annotation/s1*iw2*hv*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw2:hv;annotation/s1*iw2*hv*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw2:hv;annotation/s1*iw2*hv*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw2:hv;annotation/s1*iw1*hv*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw2:hv;annotation/s1*iw1*hv*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+asset:iw3:vh:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slcvh')]/byteStream/fileLocation/@href;String
+asset:iw3:vh:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slcvh')]/byteStream/fileLocation/@href;String
+asset:iw3:vh:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slcvh')]/byteStream/fileLocation/@href;String
+asset:iw3:vh:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slcvh')]/byteStream/fileLocation/@href;String
+asset:iw3:vv:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slcvv')]/byteStream/fileLocation/@href;String
+asset:iw3:vv:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slcvv')]/byteStream/fileLocation/@href;String
+asset:iw3:vv:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slcvv')]/byteStream/fileLocation/@href;String
+asset:iw3:vv:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slcvv')]/byteStream/fileLocation/@href;String
+asset:iw3:hh:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slchh')]/byteStream/fileLocation/@href;String
+asset:iw3:hh:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slchh')]/byteStream/fileLocation/@href;String
+asset:iw3:hh:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slchh')]/byteStream/fileLocation/@href;String
+asset:iw3:hh:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slchh')]/byteStream/fileLocation/@href;String
+asset:iw3:hv:product;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slchv')]/byteStream/fileLocation/@href;String
+asset:iw3:hv:noises;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slchv')]/byteStream/fileLocation/@href;String
+asset:iw3:hv:rfis;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slchv')]/byteStream/fileLocation/@href;String
+asset:iw3:hv:calibration;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slchv')]/byteStream/fileLocation/@href;String
+asset:iw3:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slcvh')]/byteStream/checksum/text();String
+asset:iw3:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slcvh')]/byteStream/checksum/text();String
+asset:iw3:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slcvh')]/byteStream/checksum/text();String
+asset:iw3:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slcvh')]/byteStream/checksum/text();String
+asset:iw3:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slcvv')]/byteStream/checksum/text();String
+asset:iw3:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slcvv')]/byteStream/checksum/text();String
+asset:iw3:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slcvv')]/byteStream/checksum/text();String
+asset:iw3:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slcvv')]/byteStream/checksum/text();String
+asset:iw3:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slchh')]/byteStream/checksum/text();String
+asset:iw3:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slchh')]/byteStream/checksum/text();String
+asset:iw3:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slchh')]/byteStream/checksum/text();String
+asset:iw3:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slchh')]/byteStream/checksum/text();String
+asset:iw3:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slchv')]/byteStream/checksum/text();String
+asset:iw3:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slchv')]/byteStream/checksum/text();String
+asset:iw3:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slchv')]/byteStream/checksum/text();String
+asset:iw3:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slchv')]/byteStream/checksum/text();String
+asset:iw3:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slcvh')]/byteStream/@size;Int64
+asset:iw3:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slcvh')]/byteStream/@size;Int64
+asset:iw3:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slcvh')]/byteStream/@size;Int64
+asset:iw3:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slcvh')]/byteStream/@size;Int64
+asset:iw3:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slcvv')]/byteStream/@size;Int64
+asset:iw3:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slcvv')]/byteStream/@size;Int64
+asset:iw3:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slcvv')]/byteStream/@size;Int64
+asset:iw3:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slcvv')]/byteStream/@size;Int64
+asset:iw3:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slchh')]/byteStream/@size;Int64
+asset:iw3:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slchh')]/byteStream/@size;Int64
+asset:iw3:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slchh')]/byteStream/@size;Int64
+asset:iw3:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slchh')]/byteStream/@size;Int64
+asset:iw3:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1ciw3slchv')]/byteStream/@size;Int64
+asset:iw3:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1ciw3slchv')]/byteStream/@size;Int64
+asset:iw3:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1ciw3slchv')]/byteStream/@size;Int64
+asset:iw3:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1ciw3slchv')]/byteStream/@size;Int64
+asset:iw3:vh:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slcvh')]/byteStream/fileLocation/@href;String
+asset:iw3:vv:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slcvv')]/byteStream/fileLocation/@href;String
+asset:iw3:hh:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slchh')]/byteStream/fileLocation/@href;String
+asset:iw3:hv:measurement;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slchv')]/byteStream/fileLocation/@href;String
+asset:iw3:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slcvh')]/byteStream/checksum/text();String
+asset:iw3:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slcvv')]/byteStream/checksum/text();String
+asset:iw3:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slchh')]/byteStream/checksum/text();String
+asset:iw3:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slchv')]/byteStream/checksum/text();String
+asset:iw3:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slcvv')]/byteStream/@size;Int64
+asset:iw3:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slcvh')]/byteStream/@size;Int64
+asset:iw3:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slchh')]/byteStream/@size;Int64
+asset:iw3:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1ciw3slchv')]/byteStream/@size;Int64
+azimuthAngle:iw3:vh;annotation/s1*iw3*vh*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw3:vh;annotation/s1*iw3*vh*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw3:vh;annotation/s1*iw3*vh*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw3:vh;annotation/s1*iw3*vh*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw3:vh;annotation/s1*iw3*vh*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw3:vh;annotation/s1*iw3*vh*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw3:vh;annotation/s1*iw1*vh*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw3:vh;annotation/s1*iw1*vh*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw3:vv;annotation/s1*iw3*vv*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw3:vv;annotation/s1*iw3*vv*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw3:vv;annotation/s1*iw3*vv*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw3:vv;annotation/s1*iw3*vv*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw3:vv;annotation/s1*iw3*vv*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw3:vv;annotation/s1*iw3*vv*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw3:vv;annotation/s1*iw1*vv*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw3:vv;annotation/s1*iw1*vv*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw3:hh;annotation/s1*iw3*hh*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw3:hh;annotation/s1*iw3*hh*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw3:hh;annotation/s1*iw3*hh*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw3:hh;annotation/s1*iw3*hh*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw3:hh;annotation/s1*iw3*hh*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw3:hh;annotation/s1*iw3*hh*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw3:hh;annotation/s1*iw1*hh*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw3:hh;annotation/s1*iw1*hh*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+azimuthAngle:iw3:hv;annotation/s1*iw3*hv*.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid:iw3:hv;annotation/s1*iw3*hv*.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing:iw3:hv;annotation/s1*iw3*hv*.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing:iw3:hv;annotation/s1*iw3*hv*.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1:iw3:hv;annotation/s1*iw3*hv*.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2:iw3:hv;annotation/s1*iw3*hv*.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+looksRange:iw3:hv;annotation/s1*iw1*hv*.xml;//rangeProcessing/numberOfLooks/text();Int64
+looksAzimuth:iw3:hv;annotation/s1*iw1*hv*.xml;//azimuthProcessing/numberOfLooks/text();Int64
+asset:quicklook;manifest.safe;//dataObject[starts-with(@ID, 'quicklook')]/byteStream/fileLocation/@href;String
+asset:quicklook:checksum;manifest.safe;//dataObject[starts-with(@ID, 'quicklook')]/byteStream/checksum/text();String
+asset:quicklook:size;manifest.safe;//dataObject[starts-with(@ID, 'quicklook')]/byteStream/@size;Int64

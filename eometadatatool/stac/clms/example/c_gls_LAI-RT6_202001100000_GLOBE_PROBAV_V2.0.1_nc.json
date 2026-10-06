@@ -1,0 +1,344 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lai_global_1km_10daily_v2_nc",
+  "id": "c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1_nc",
+  "properties": {
+    "created": "2020-03-12T11:52:48.584869Z",
+    "updated": "2025-07-17T00:41:34.125618Z",
+    "published": "2025-03-07T15:13:36.669742Z",
+    "eopf:origin_datetime": "2020-03-12T11:52:48.584869Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2020-01-01T00:00:00.000000Z",
+    "start_datetime": "2020-01-01T00:00:00.000000Z",
+    "end_datetime": "2020-01-10T23:59:59.999999Z",
+    "instruments": [
+      "vegetation"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "vegetation_properties",
+    "processing:level": "L3",
+    "cube:dimensions": {
+      "lon": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude",
+        "extent": [
+          -180.0,
+          179.99107142906257
+        ]
+      },
+      "lat": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude",
+        "extent": [
+          -59.99107142853961,
+          80.0
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "Time",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-01T05:04:31.000000Z"
+        ]
+      }
+    },
+    "cube:variables": {
+      "lon": {
+        "dimensions": [
+          "lon"
+        ],
+        "type": "data",
+        "description": "longitude",
+        "unit": "degrees_east",
+        "data_type": "other"
+      },
+      "lat": {
+        "dimensions": [
+          "lat"
+        ],
+        "type": "data",
+        "description": "latitude",
+        "unit": "degrees_north",
+        "data_type": "other"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          18271.0
+        ],
+        "description": "Time",
+        "unit": "days since 1970-01-01 00:00:00",
+        "data_type": "other"
+      },
+      "LAI": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Leaf Area Index 1km",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "LENGTH_AFTER": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Length of semi-period after product date",
+        "unit": "days",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "LENGTH_BEFORE": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Length of semi-period before product date",
+        "unit": "days",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "NOBS": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "leaf_area_index number_of_observations",
+        "data_type": "uint8"
+      },
+      "RMSE": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "RMSE on LAI 1km",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "QFLAG": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality flag on LAI 1km",
+        "nodata": 65535,
+        "data_type": "uint16"
+      }
+    },
+    "platform": "proba-v",
+    "constellation": "proba-1",
+    "processing:version": "V2.0.1",
+    "_private": {
+      "product_size": 337224305,
+      "product_uuid": "3f73d7be-2d3c-4b5d-9397-c9a26f88d7db",
+      "product_name": "c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1_nc",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260924120453+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.9955357,
+    179.9955357,
+    80.0044643
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0044643
+        ],
+        [
+          -179.9999999,
+          -59.9955357
+        ],
+        [
+          -0.0022321499999975,
+          -59.9955357
+        ],
+        [
+          179.9955357,
+          -59.9955357
+        ],
+        [
+          179.9955357,
+          80.0044643
+        ],
+        [
+          -0.0022321499999975,
+          80.0044643
+        ],
+        [
+          -179.9999999,
+          80.0044643
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/lai_global_1km_10daily_v2/2020/01/10/c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1_nc/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1_nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "Product": {
+      "type": "application/netcdf",
+      "title": "10-daily Leaf Area Index 1KM: GLOBE 2020-01-10T00:00:00Z",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "LAI",
+          "description": "Leaf Area Index 1km"
+        },
+        {
+          "name": "LENGTH_AFTER",
+          "description": "Length of semi-period after product date"
+        },
+        {
+          "name": "LENGTH_BEFORE",
+          "description": "Length of semi-period before product date"
+        },
+        {
+          "name": "NOBS",
+          "description": "leaf_area_index number_of_observations"
+        },
+        {
+          "name": "RMSE",
+          "description": "RMSE on LAI 1km"
+        },
+        {
+          "name": "QFLAG",
+          "description": "Quality flag on LAI 1km"
+        }
+      ],
+      "file:size": 337224305,
+      "file:local_path": "c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1_nc/c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1.nc",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/lai_global_1km_10daily_v2/2020/01/10/c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1_nc/c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3f73d7be-2d3c-4b5d-9397-c9a26f88d7db)/Nodes(c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1_nc)/Nodes(c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/vegetation_properties/lai_global_1km_10daily_v2/2020/01/10/c_gls_LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1_cog/c_gls_LAI-LAI-RT6_202001100000_GLOBE_PROBAV_V2.0.1.tiff&CRS=EPSG:4326&BBOX=-180.00446428571428,-59.995535714253904,179.9955357147765,80.00446428571429&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/lai_global_1km_10daily_v2/clms_global_lai_1km_v2_10daily.sld"
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

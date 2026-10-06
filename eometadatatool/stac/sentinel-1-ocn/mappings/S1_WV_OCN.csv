@@ -1,0 +1,34 @@
+metadata;file;mappings;datatype
+processingDate;manifest.safe;//safe:processing/@start;DateTimeOffset
+processingCenter;manifest.safe;//safe:processing/safe:facility/@site;String
+processorName;manifest.safe;//safe:processing/safe:facility/safe:software/@name;String
+processorVersion;manifest.safe;//safe:processing/safe:facility/safe:software/@version;String
+beginningDateTime;manifest.safe;//safe:acquisitionPeriod/safe:startTime/text();DateTimeOffset
+endingDateTime;manifest.safe;//safe:acquisitionPeriod/safe:stopTime/text();DateTimeOffset
+platformIdentifier;manifest.safe;//safe:platform/safe:nssdcIdentifier/text();String
+platformShortName;manifest.safe;//safe:platform/safe:familyName/text();String
+platformSerialIdentifier;manifest.safe;//safe:platform/safe:number/text();String
+instrumentShortName;manifest.safe;//safe:platform/safe:instrument/safe:familyName/@abbreviation;String
+operationalMode;manifest.safe;//safe:platform/safe:instrument/safe:extension/*[local-name()='instrumentMode']/*[local-name()='mode']/text();String
+orbitNumber;manifest.safe;"//safe:orbitReference/safe:orbitNumber[@type=""start""]/text()";Int64
+relativeOrbitNumber;manifest.safe;"//safe:orbitReference/safe:relativeOrbitNumber[@type=""start""]/text()";Int64
+cycleNumber;manifest.safe;//safe:orbitReference/safe:cycleNumber/text();Int64
+orbitDirection;manifest.safe;//safe:orbitReference/safe:extension/*[local-name()='orbitProperties']/*[local-name()='pass']/text();String
+coordinates;manifest.safe;WKT(//safe:frameSet/safe:frame/safe:footPrint/gml:coordinates/text());String
+instrumentConfigurationID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='instrumentConfigurationID']/text();Int64
+datatakeID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='missionDataTakeID']/text();Int64
+timeliness;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='productTimelinessCategory']/text();String
+polarisationChannel:1;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation']/text();String
+anxTime;manifest.safe;//*[local-name()='orbitProperties']/*[local-name()='ascendingNodeTime']/text();DateTimeOffset
+asset:wv1:vv:ocn;manifest.safe;[//dataObject[contains(@ID, 'wv1ocnvv')]/byteStream/fileLocation/@href];String
+asset:wv1:vv:ocn:checksum;manifest.safe;[//dataObject[contains(@ID, 'wv1ocnvv')]/byteStream/checksum/text()];String
+asset:wv1:vv:ocn:size;manifest.safe;[//dataObject[contains(@ID, 'wv1ocnvv')]/byteStream/@size];Int64
+asset:wv2:vv:ocn;manifest.safe;[//dataObject[contains(@ID, 'wv2ocnvv')]/byteStream/fileLocation/@href];String
+asset:wv2:vv:ocn:checksum;manifest.safe;[//dataObject[contains(@ID, 'wv2ocnvv')]/byteStream/checksum/text()];String
+asset:wv2:vv:ocn:size;manifest.safe;[//dataObject[contains(@ID, 'wv2ocnvv')]/byteStream/@size];Int64
+asset:wv1:hh:ocn;manifest.safe;[//dataObject[contains(@ID, 'wv1ocnhh')]/byteStream/fileLocation/@href];String
+asset:wv1:hh:ocn:checksum;manifest.safe;[//dataObject[contains(@ID, 'wv1ocnhh')]/byteStream/checksum/text()];String
+asset:wv1:hh:ocn:size;manifest.safe;[//dataObject[contains(@ID, 'wv1ocnhh')]/byteStream/@size];Int64
+asset:wv2:hh:ocn;manifest.safe;[//dataObject[contains(@ID, 'wv2ocnhh')]/byteStream/fileLocation/@href];String
+asset:wv2:hh:ocn:checksum;manifest.safe;[//dataObject[contains(@ID, 'wv2ocnhh')]/byteStream/checksum/text()];String
+asset:wv2:hh:ocn:size;manifest.safe;[//dataObject[contains(@ID, 'wv2ocnhh')]/byteStream/@size];Int64

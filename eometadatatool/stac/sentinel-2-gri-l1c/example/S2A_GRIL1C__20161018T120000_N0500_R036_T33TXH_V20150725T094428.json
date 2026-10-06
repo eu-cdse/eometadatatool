@@ -1,0 +1,182 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-2-gri-l1c",
+  "id": "S2A_GRIL1C__20161018T120000_N0500_R036_T33TXH_V20150725T094428",
+  "properties": {
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2015-07-25T09:44:28.988511Z",
+    "start_datetime": "2015-07-25T09:44:28.988511Z",
+    "end_datetime": "2015-07-25T09:52:49.000000Z",
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "gsd": 10,
+    "processing:level": "L1",
+    "processing:datetime": "2015-07-25T09:44:28.988511Z",
+    "sat:orbit_state": "descending",
+    "sat:relative_orbit": 36,
+    "product:type": "S2GRIL1C",
+    "grid:code": "MGRS-33TXH",
+    "processing:version": "05.00",
+    "_private": {
+      "product_size": 95093601,
+      "product_uuid": "07b7bfdd-0b16-572b-b5cc-e37787e1c29c",
+      "product_name": "S2A_GRIL1C__20161018T120000_N0500_R036_T33TXH_V20150725T094428",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    16.21428713417307,
+    42.33578223880906,
+    17.5875361840958,
+    43.34620000938223
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          16.233812137756846,
+          43.34620000938223
+        ],
+        [
+          16.21428713417307,
+          42.35764145272198
+        ],
+        [
+          17.546630572289967,
+          42.33578223880906
+        ],
+        [
+          17.5875361840958,
+          43.32357659590352
+        ],
+        [
+          16.233812137756846,
+          43.34620000938223
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-2/AUX/S2_GRI_L1C/T33/T33TXH/S2A_GRIL1C__20161018T120000_N0500_R036_T33TXH_V20150725T094428.SAFE/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "datastrip_metadata": {
+      "type": "application/xml",
+      "title": "Datastrip metadata",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 26243011,
+      "href": "s3://eodata/Sentinel-2/AUX/S2_GRI_L1C/T33/T33TXH/S2A_GRIL1C__20161018T120000_N0500_R036_T33TXH_V20150725T094428.SAFE/DATASTRIP/S2A_OPER_MSI_L1C_DS_MPC__20161018T120000_S20150725T094428_N05.00/S2A_OPER_MTD_L1C_DS_MPC__20161018T120000_S20150725T094428.xml",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "B04": {
+      "type": "image/jp2",
+      "title": "Red (band 4) - 10m",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B04",
+          "description": "Red (band 4)",
+          "eo:center_wavelength": 0.665,
+          "eo:full_width_half_max": 0.342,
+          "eo:common_name": "red"
+        }
+      ],
+      "data_type": "uint16",
+      "gsd": 10,
+      "proj:code": "EPSG:32633",
+      "proj:shape": [
+        10980,
+        10980
+      ],
+      "file:size": 68118221,
+      "href": "s3://eodata/Sentinel-2/AUX/S2_GRI_L1C/T33/T33TXH/S2A_GRIL1C__20161018T120000_N0500_R036_T33TXH_V20150725T094428.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_MPC__20161018T120000_A000036_T33TXH_N05.00/IMG_DATA/S2A_OPER_MSI_L1C_TL_MPC__20161018T120000_A000036_T33TXH_B04.jp2",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "tile_metadata": {
+      "type": "application/xml",
+      "title": "Tile metadata",
+      "roles": [
+        "metadata"
+      ],
+      "file:size": 41146,
+      "href": "s3://eodata/Sentinel-2/AUX/S2_GRI_L1C/T33/T33TXH/S2A_GRIL1C__20161018T120000_N0500_R036_T33TXH_V20150725T094428.SAFE/GRANULE/S2A_OPER_MSI_L1C_TL_MPC__20161018T120000_A000036_T33TXH_N05.00/S2A_OPER_MTD_L1C_TL_MPC__20161018T120000_A000036_T33TXH.xml",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

@@ -1,0 +1,59 @@
+metadata;file;mappings;datatype
+processingDate;manifest.safe;//safe:processing/@start;DateTimeOffset
+processingCenter;manifest.safe;//safe:processing/safe:facility/@site;String
+processorName;manifest.safe;//safe:processing/safe:facility/safe:software/@name;String
+processorVersion;manifest.safe;//safe:processing/safe:facility/safe:software/@version;String
+beginningDateTime;manifest.safe;//safe:acquisitionPeriod/safe:startTime/text();DateTimeOffset
+endingDateTime;manifest.safe;//safe:acquisitionPeriod/safe:stopTime/text();DateTimeOffset
+platformIdentifier;manifest.safe;//safe:platform/safe:nssdcIdentifier/text();String
+platformShortName;manifest.safe;//safe:platform/safe:familyName/text();String
+platformSerialIdentifier;manifest.safe;//safe:platform/safe:number/text();String
+instrumentShortName;manifest.safe;//safe:platform/safe:instrument/safe:familyName/@abbreviation;String
+operationalMode;manifest.safe;//safe:platform/safe:instrument/safe:extension/*[local-name()='instrumentMode']/*[local-name()='mode']/text();String
+orbitNumber;manifest.safe;"//safe:orbitReference/safe:orbitNumber[@type=""start""]/text()";Int64
+relativeOrbitNumber;manifest.safe;"//safe:orbitReference/safe:relativeOrbitNumber[@type=""start""]/text()";Int64
+cycleNumber;manifest.safe;//safe:orbitReference/safe:cycleNumber/text();Int64
+orbitDirection;manifest.safe;//safe:orbitReference/safe:extension/*[local-name()='orbitProperties']/*[local-name()='pass']/text();String
+coordinates;manifest.safe;WKT(//safe:frameSet/safe:frame/safe:footPrint/gml:coordinates/text());String
+instrumentConfigurationID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='instrumentConfigurationID']/text();Int64
+datatakeID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='missionDataTakeID']/text();Int64
+timeliness;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='productTimelinessCategory']/text();String
+polarisationChannel:1;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation'][1]/text();String
+polarisationChannel:2;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation'][2]/text();String
+anxTime;manifest.safe;//*[local-name()='orbitProperties']/*[local-name()='ascendingNodeTime']/text();DateTimeOffset
+asset:product:vv;manifest.safe;[//dataObject[contains(@ID, 'iwocnvv')]/byteStream/fileLocation/@href];String
+asset:product:vv:checksum;manifest.safe;[//dataObject[contains(@ID, 'iwocnvv')]/byteStream/checksum/text()];String
+asset:product:vv:size;manifest.safe;[//dataObject[contains(@ID, 'iwocnvv')]/byteStream/@size];Int64
+asset:iw1:vv:osw;manifest.safe;[//dataObject[contains(@ID, 'iw1oswvv')]/byteStream/fileLocation/@href];String
+asset:iw1:vv:osw:checksum;manifest.safe;[//dataObject[contains(@ID, 'iw1oswvv')]/byteStream/checksum/text()];String
+asset:iw1:vv:osw:size;manifest.safe;[//dataObject[contains(@ID, 'iw1oswvv')]/byteStream/@size];Int64
+asset:iw2:vv:osw;manifest.safe;[//dataObject[contains(@ID, 'iw2oswvv')]/byteStream/fileLocation/@href];String
+asset:iw2:vv:osw:checksum;manifest.safe;[//dataObject[contains(@ID, 'iw2oswvv')]/byteStream/checksum/text()];String
+asset:iw2:vv:osw:size;manifest.safe;[//dataObject[contains(@ID, 'iw2oswvv')]/byteStream/@size];Int64
+asset:iw3:vv:osw;manifest.safe;[//dataObject[contains(@ID, 'iw3oswvv')]/byteStream/fileLocation/@href];String
+asset:iw3:vv:osw:checksum;manifest.safe;[//dataObject[contains(@ID, 'iw3oswvv')]/byteStream/checksum/text()];String
+asset:iw3:vv:osw:size;manifest.safe;[//dataObject[contains(@ID, 'iw3oswvv')]/byteStream/@size];Int64
+asset:product:hh;manifest.safe;[//dataObject[contains(@ID, 'iwocnhh')]/byteStream/fileLocation/@href];String
+asset:product:hh:checksum;manifest.safe;[//dataObject[contains(@ID, 'iwocnhh')]/byteStream/checksum/text()];String
+asset:product:hh:size;manifest.safe;[//dataObject[contains(@ID, 'iwocnhh')]/byteStream/@size];Int64
+asset:iw1:hh:osw;manifest.safe;[//dataObject[contains(@ID, 'iw1oswhh')]/byteStream/fileLocation/@href];String
+asset:iw1:hh:osw:checksum;manifest.safe;[//dataObject[contains(@ID, 'iw1oswhh')]/byteStream/checksum/text()];String
+asset:iw1:hh:osw:size;manifest.safe;[//dataObject[contains(@ID, 'iw1oswhh')]/byteStream/@size];Int64
+asset:iw2:hh:osw;manifest.safe;[//dataObject[contains(@ID, 'iw2oswhh')]/byteStream/fileLocation/@href];String
+asset:iw2:hh:osw:checksum;manifest.safe;[//dataObject[contains(@ID, 'iw2oswhh')]/byteStream/checksum/text()];String
+asset:iw2:hh:osw:size;manifest.safe;[//dataObject[contains(@ID, 'iw2oswhh')]/byteStream/@size];Int64
+asset:iw3:hh:osw;manifest.safe;[//dataObject[contains(@ID, 'iw3oswhh')]/byteStream/fileLocation/@href];String
+asset:iw3:hh:osw:checksum;manifest.safe;[//dataObject[contains(@ID, 'iw3oswhh')]/byteStream/checksum/text()];String
+asset:iw3:hh:osw:size;manifest.safe;[//dataObject[contains(@ID, 'iw3oswhh')]/byteStream/@size];Int64
+asset:quicklook:rvl;manifest.safe;//dataObject[@ID='s1level2rvlquicklook']/byteStream/fileLocation/@href;String
+asset:quicklook:rvl:checksum;manifest.safe;//dataObject[@ID='s1level2rvlquicklook']/byteStream/checksum/text();String
+asset:quicklook:rvl:size;manifest.safe;//dataObject[@ID='s1level2rvlquicklook']/byteStream/@size;Int64
+asset:quicklook:rvl:colorbar;manifest.safe;//dataObject[@ID='s1level2rvlcolorbar']/byteStream/fileLocation/@href;String
+asset:quicklook:rvl:colorbar:checksum;manifest.safe;//dataObject[@ID='s1level2rvlcolorbar']/byteStream/checksum/text();String
+asset:quicklook:rvl:colorbar:size;manifest.safe;//dataObject[@ID='s1level2rvlcolorbar']/byteStream/@size;Int64
+asset:quicklook:owi;manifest.safe;//dataObject[@ID='s1level2owiquicklook']/byteStream/fileLocation/@href;String
+asset:quicklook:owi:checksum;manifest.safe;//dataObject[@ID='s1level2owiquicklook']/byteStream/checksum/text();String
+asset:quicklook:owi:size;manifest.safe;//dataObject[@ID='s1level2owiquicklook']/byteStream/@size;Int64
+asset:quicklook:owi:colorbar;manifest.safe;//dataObject[@ID='s1level2owicolorbar']/byteStream/fileLocation/@href;String
+asset:quicklook:owi:colorbar:checksum;manifest.safe;//dataObject[@ID='s1level2owicolorbar']/byteStream/checksum/text();String
+asset:quicklook:owi:colorbar:size;manifest.safe;//dataObject[@ID='s1level2owicolorbar']/byteStream/@size;Int64

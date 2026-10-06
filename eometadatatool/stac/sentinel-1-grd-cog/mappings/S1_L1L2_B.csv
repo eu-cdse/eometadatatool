@@ -1,0 +1,512 @@
+metadata;file;mappings;datatype
+processingDate;manifest.safe;//safe:processing/@start;DateTimeOffset
+processingCenter;manifest.safe;//safe:processing/safe:facility/@site;String
+processorVersion;manifest.safe;//safe:processing/safe:facility/safe:software/@version;String
+beginningDateTime;manifest.safe;//safe:acquisitionPeriod/safe:startTime/text();DateTimeOffset
+endingDateTime;manifest.safe;//safe:acquisitionPeriod/safe:stopTime/text();DateTimeOffset
+platformIdentifier;manifest.safe;//safe:platform/safe:nssdcIdentifier/text();String
+platformShortName;manifest.safe;//safe:platform/safe:familyName/text();String
+platformSerialIdentifier;manifest.safe;//safe:platform/safe:number/text();String
+instrumentShortName;manifest.safe;//safe:platform/safe:instrument/safe:familyName/@abbreviation;String
+operationalMode;manifest.safe;//safe:platform/safe:instrument/safe:extension/*[local-name()='instrumentMode']/*[local-name()='mode']/text();String
+swathIdentifier;manifest.safe;join(//safe:platform/safe:instrument/safe:extension/*[local-name()='instrumentMode']/*[local-name()='swath']/text(),', ');String
+orbitNumber;manifest.safe;"//safe:orbitReference/safe:orbitNumber[@type=""start""]/text()";Int64
+relativeOrbitNumber;manifest.safe;"//safe:orbitReference/safe:relativeOrbitNumber[@type=""start""]/text()";Int64
+cycleNumber;manifest.safe;//safe:orbitReference/safe:cycleNumber/text();Int64
+orbitDirection;manifest.safe;//safe:orbitReference/safe:extension/s1:orbitProperties/s1:pass/text();String
+coordinates;manifest.safe;WKT(//safe:frameSet/safe:frame/safe:footPrint/gml:coordinates/text());String
+instrumentConfigurationID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='instrumentConfigurationID']/text();Int64
+datatakeID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='missionDataTakeID']/text();String
+productType;static;productType;String
+timeliness;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='productTimelinessCategory']/text();String
+polarisationChannel:1;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation'][1]/text();String
+polarisationChannel:2;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation'][2]/text();String
+asset:quicklook;manifest.safe;//dataObject[starts-with(@ID, 'quicklook')]/byteStream/fileLocation/@href;String
+asset:quicklook:checksum;manifest.safe;//dataObject[starts-with(@ID, 'quicklook')]/byteStream/checksum/text();String
+asset:quicklook:size;manifest.safe;//dataObject[starts-with(@ID, 'quicklook')]/byteStream/@size;Int64
+azimuthAngle;/annotation/s1*001-cog.xml;//product/generalAnnotation/productInformation/platformHeading/text();Double
+incidenceAngleMid;/annotation/s1*001-cog.xml;//product/imageAnnotation/imageInformation/incidenceAngleMidSwath/text();Double
+rangePixelSpacing;/annotation/s1*001-cog.xml;//product/imageAnnotation/imageInformation/rangePixelSpacing/text();Double
+azimuthPixelSpacing;/annotation/s1*001-cog.xml;//product/imageAnnotation/imageInformation/azimuthPixelSpacing/text();Double
+shape1;/annotation/s1*001-cog.xml;//product/imageAnnotation/imageInformation/numberOfSamples/text();Int64
+shape2;/annotation/s1*001-cog.xml;//product/imageAnnotation/imageInformation/numberOfLines/text();Int64
+asset:iw:vh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1biwgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1biwgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1biwgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1biwgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1biwgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1biwgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1biwgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1biwgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1biwgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1biwgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1biwgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1biwgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1biwgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1biwgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1biwgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1biwgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bewgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bewgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bewgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bewgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bewgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bewgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bewgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bewgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bewgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bewgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bewgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bewgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bewgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bewgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bewgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bewgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs1grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs1grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs1grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs1grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs1grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs1grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs1grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs1grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs1grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs1grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs1grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs1grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs1grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs1grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs1grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs1grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs2grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs2grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs2grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs2grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs2grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs2grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs2grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs2grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs2grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs2grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs2grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs2grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs2grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs2grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs2grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs2grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs3grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs3grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs3grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs3grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs3grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs3grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs3grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs3grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs3grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs3grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs3grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs3grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs3grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs3grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs3grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs3grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs4grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs4grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs4grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs4grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs4grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs4grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs4grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs4grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs4grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs4grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs4grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs4grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs4grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs4grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs4grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs4grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs5grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs5grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs5grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs5grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs5grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs5grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs5grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs5grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs5grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs5grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs5grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs5grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs5grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs5grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs5grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs5grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs6grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs6grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs6grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs6grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs6grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs6grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs6grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs6grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hh:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs6grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hh:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs6grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hh:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs6grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hh:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs6grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hv:product;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'products1bs6grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hv:noises;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'noises1bs6grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hv:rfis;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'rfis1bs6grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hv:calibration;manifest.safe;substring-after(//dataObject[starts-with(@ID, 'calibrations1bs6grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1biwgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1biwgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1biwgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:iw:hv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1biwgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bewgrdvh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:vv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bewgrdvv')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bewgrdhh')]/byteStream/fileLocation/@href, '.');String
+asset:ew:hv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bewgrdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs1grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:vv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs1grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs1grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s1:hv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs1grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs2grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:vv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs2grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs2grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s2:hv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs2grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs3grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:vv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs3grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs3grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s3:hv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs3grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs4grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:vv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs4grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs4grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s4:hv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs4grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs5grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:vv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs5grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs5grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s5:hv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs5grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs6grdvh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:vv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs6grdvv')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hh:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs6grdhh')]/byteStream/fileLocation/@href, '.');String
+asset:s6:hv:measurement;manifest.safe;substring-after(//dataObject[starts-with(@ID, 's1bs6grdhv')]/byteStream/fileLocation/@href, '.');String
+asset:iw:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1biwgrdvh')]/byteStream/checksum/text();String
+asset:iw:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1biwgrdvv')]/byteStream/checksum/text();String
+asset:iw:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1biwgrdhh')]/byteStream/checksum/text();String
+asset:iw:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1biwgrdhv')]/byteStream/checksum/text();String
+asset:ew:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bewgrdvh')]/byteStream/checksum/text();String
+asset:ew:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bewgrdvv')]/byteStream/checksum/text();String
+asset:ew:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bewgrdhh')]/byteStream/checksum/text();String
+asset:ew:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bewgrdhv')]/byteStream/checksum/text();String
+asset:s1:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs1grdvh')]/byteStream/checksum/text();String
+asset:s1:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs1grdvv')]/byteStream/checksum/text();String
+asset:s1:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs1grdhh')]/byteStream/checksum/text();String
+asset:s1:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs1grdhv')]/byteStream/checksum/text();String
+asset:s2:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs2grdvh')]/byteStream/checksum/text();String
+asset:s2:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs2grdvv')]/byteStream/checksum/text();String
+asset:s2:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs2grdhh')]/byteStream/checksum/text();String
+asset:s2:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs2grdhv')]/byteStream/checksum/text();String
+asset:s3:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs3grdvh')]/byteStream/checksum/text();String
+asset:s3:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs3grdvv')]/byteStream/checksum/text();String
+asset:s3:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs3grdhh')]/byteStream/checksum/text();String
+asset:s3:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs3grdhv')]/byteStream/checksum/text();String
+asset:s4:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs4grdvh')]/byteStream/checksum/text();String
+asset:s4:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs4grdvv')]/byteStream/checksum/text();String
+asset:s4:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs4grdhh')]/byteStream/checksum/text();String
+asset:s4:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs4grdhv')]/byteStream/checksum/text();String
+asset:s5:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs5grdvh')]/byteStream/checksum/text();String
+asset:s5:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs5grdvv')]/byteStream/checksum/text();String
+asset:s5:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs5grdhh')]/byteStream/checksum/text();String
+asset:s5:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs5grdhv')]/byteStream/checksum/text();String
+asset:s6:vh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs6grdvh')]/byteStream/checksum/text();String
+asset:s6:vv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs6grdvv')]/byteStream/checksum/text();String
+asset:s6:hh:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs6grdhh')]/byteStream/checksum/text();String
+asset:s6:hv:measurement:checksum;manifest.safe;//dataObject[starts-with(@ID, 's1bs6grdhv')]/byteStream/checksum/text();String
+asset:iw:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1biwgrdvv')]/byteStream/@size;Int64
+asset:iw:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1biwgrdvh')]/byteStream/@size;Int64
+asset:iw:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1biwgrdhh')]/byteStream/@size;Int64
+asset:iw:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1biwgrdhv')]/byteStream/@size;Int64
+asset:ew:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bewgrdvh')]/byteStream/@size;Int64
+asset:ew:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bewgrdvv')]/byteStream/@size;Int64
+asset:ew:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bewgrdhh')]/byteStream/@size;Int64
+asset:ew:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bewgrdhv')]/byteStream/@size;Int64
+asset:s1:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs1grdvh')]/byteStream/@size;Int64
+asset:s1:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs1grdvv')]/byteStream/@size;Int64
+asset:s1:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs1grdhh')]/byteStream/@size;Int64
+asset:s1:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs1grdhv')]/byteStream/@size;Int64
+asset:s2:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs2grdvh')]/byteStream/@size;Int64
+asset:s2:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs2grdvv')]/byteStream/@size;Int64
+asset:s2:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs2grdhh')]/byteStream/@size;Int64
+asset:s2:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs2grdhv')]/byteStream/@size;Int64
+asset:s3:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs3grdvh')]/byteStream/@size;Int64
+asset:s3:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs3grdvv')]/byteStream/@size;Int64
+asset:s3:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs3grdhh')]/byteStream/@size;Int64
+asset:s3:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs3grdhv')]/byteStream/@size;Int64
+asset:s4:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs4grdvh')]/byteStream/@size;Int64
+asset:s4:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs4grdvv')]/byteStream/@size;Int64
+asset:s4:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs4grdhh')]/byteStream/@size;Int64
+asset:s4:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs4grdhv')]/byteStream/@size;Int64
+asset:s5:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs5grdvh')]/byteStream/@size;Int64
+asset:s5:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs5grdvv')]/byteStream/@size;Int64
+asset:s5:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs5grdhh')]/byteStream/@size;Int64
+asset:s5:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs5grdhv')]/byteStream/@size;Int64
+asset:s6:vh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs6grdvh')]/byteStream/@size;Int64
+asset:s6:vv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs6grdvv')]/byteStream/@size;Int64
+asset:s6:hh:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs6grdhh')]/byteStream/@size;Int64
+asset:s6:hv:measurement:size;manifest.safe;//dataObject[starts-with(@ID, 's1bs6grdhv')]/byteStream/@size;Int64
+asset:iw:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1biwgrdvh')]/byteStream/checksum/text();String
+asset:iw:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1biwgrdvh')]/byteStream/checksum/text();String
+asset:iw:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1biwgrdvh')]/byteStream/checksum/text();String
+asset:iw:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1biwgrdvh')]/byteStream/checksum/text();String
+asset:iw:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1biwgrdvv')]/byteStream/checksum/text();String
+asset:iw:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1biwgrdvv')]/byteStream/checksum/text();String
+asset:iw:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1biwgrdvv')]/byteStream/checksum/text();String
+asset:iw:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1biwgrdvv')]/byteStream/checksum/text();String
+asset:iw:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1biwgrdhh')]/byteStream/checksum/text();String
+asset:iw:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1biwgrdhh')]/byteStream/checksum/text();String
+asset:iw:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1biwgrdhh')]/byteStream/checksum/text();String
+asset:iw:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1biwgrdhh')]/byteStream/checksum/text();String
+asset:iw:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1biwgrdhv')]/byteStream/checksum/text();String
+asset:iw:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1biwgrdhv')]/byteStream/checksum/text();String
+asset:iw:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1biwgrdhv')]/byteStream/checksum/text();String
+asset:iw:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1biwgrdhv')]/byteStream/checksum/text();String
+asset:ew:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bewgrdvh')]/byteStream/checksum/text();String
+asset:ew:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bewgrdvh')]/byteStream/checksum/text();String
+asset:ew:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bewgrdvh')]/byteStream/checksum/text();String
+asset:ew:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bewgrdvh')]/byteStream/checksum/text();String
+asset:ew:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bewgrdvv')]/byteStream/checksum/text();String
+asset:ew:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bewgrdvv')]/byteStream/checksum/text();String
+asset:ew:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bewgrdvv')]/byteStream/checksum/text();String
+asset:ew:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bewgrdvv')]/byteStream/checksum/text();String
+asset:ew:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bewgrdhh')]/byteStream/checksum/text();String
+asset:ew:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bewgrdhh')]/byteStream/checksum/text();String
+asset:ew:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bewgrdhh')]/byteStream/checksum/text();String
+asset:ew:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bewgrdhh')]/byteStream/checksum/text();String
+asset:ew:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bewgrdhv')]/byteStream/checksum/text();String
+asset:ew:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bewgrdhv')]/byteStream/checksum/text();String
+asset:ew:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bewgrdhv')]/byteStream/checksum/text();String
+asset:ew:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bewgrdhv')]/byteStream/checksum/text();String
+asset:s1:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs1grdvh')]/byteStream/checksum/text();String
+asset:s1:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs1grdvh')]/byteStream/checksum/text();String
+asset:s1:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs1grdvh')]/byteStream/checksum/text();String
+asset:s1:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs1grdvh')]/byteStream/checksum/text();String
+asset:s1:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs1grdvv')]/byteStream/checksum/text();String
+asset:s1:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs1grdvv')]/byteStream/checksum/text();String
+asset:s1:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs1grdvv')]/byteStream/checksum/text();String
+asset:s1:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs1grdvv')]/byteStream/checksum/text();String
+asset:s1:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs1grdhh')]/byteStream/checksum/text();String
+asset:s1:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs1grdhh')]/byteStream/checksum/text();String
+asset:s1:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs1grdhh')]/byteStream/checksum/text();String
+asset:s1:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs1grdhh')]/byteStream/checksum/text();String
+asset:s1:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs1grdhv')]/byteStream/checksum/text();String
+asset:s1:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs1grdhv')]/byteStream/checksum/text();String
+asset:s1:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs1grdhv')]/byteStream/checksum/text();String
+asset:s1:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs1grdhv')]/byteStream/checksum/text();String
+asset:s2:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs2grdvh')]/byteStream/checksum/text();String
+asset:s2:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs2grdvh')]/byteStream/checksum/text();String
+asset:s2:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs2grdvh')]/byteStream/checksum/text();String
+asset:s2:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs2grdvh')]/byteStream/checksum/text();String
+asset:s2:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs2grdvv')]/byteStream/checksum/text();String
+asset:s2:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs2grdvv')]/byteStream/checksum/text();String
+asset:s2:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs2grdvv')]/byteStream/checksum/text();String
+asset:s2:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs2grdvv')]/byteStream/checksum/text();String
+asset:s2:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs2grdhh')]/byteStream/checksum/text();String
+asset:s2:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs2grdhh')]/byteStream/checksum/text();String
+asset:s2:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs2grdhh')]/byteStream/checksum/text();String
+asset:s2:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs2grdhh')]/byteStream/checksum/text();String
+asset:s2:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs2grdhv')]/byteStream/checksum/text();String
+asset:s2:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs2grdhv')]/byteStream/checksum/text();String
+asset:s2:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs2grdhv')]/byteStream/checksum/text();String
+asset:s2:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs2grdhv')]/byteStream/checksum/text();String
+asset:s3:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs3grdvh')]/byteStream/checksum/text();String
+asset:s3:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs3grdvh')]/byteStream/checksum/text();String
+asset:s3:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs3grdvh')]/byteStream/checksum/text();String
+asset:s3:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs3grdvh')]/byteStream/checksum/text();String
+asset:s3:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs3grdvv')]/byteStream/checksum/text();String
+asset:s3:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs3grdvv')]/byteStream/checksum/text();String
+asset:s3:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs3grdvv')]/byteStream/checksum/text();String
+asset:s3:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs3grdvv')]/byteStream/checksum/text();String
+asset:s3:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs3grdhh')]/byteStream/checksum/text();String
+asset:s3:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs3grdhh')]/byteStream/checksum/text();String
+asset:s3:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs3grdhh')]/byteStream/checksum/text();String
+asset:s3:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs3grdhh')]/byteStream/checksum/text();String
+asset:s3:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs3grdhv')]/byteStream/checksum/text();String
+asset:s3:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs3grdhv')]/byteStream/checksum/text();String
+asset:s3:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs3grdhv')]/byteStream/checksum/text();String
+asset:s3:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs3grdhv')]/byteStream/checksum/text();String
+asset:s4:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs4grdvh')]/byteStream/checksum/text();String
+asset:s4:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs4grdvh')]/byteStream/checksum/text();String
+asset:s4:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs4grdvh')]/byteStream/checksum/text();String
+asset:s4:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs4grdvh')]/byteStream/checksum/text();String
+asset:s4:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs4grdvv')]/byteStream/checksum/text();String
+asset:s4:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs4grdvv')]/byteStream/checksum/text();String
+asset:s4:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs4grdvv')]/byteStream/checksum/text();String
+asset:s4:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs4grdvv')]/byteStream/checksum/text();String
+asset:s4:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs4grdhh')]/byteStream/checksum/text();String
+asset:s4:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs4grdhh')]/byteStream/checksum/text();String
+asset:s4:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs4grdhh')]/byteStream/checksum/text();String
+asset:s4:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs4grdhh')]/byteStream/checksum/text();String
+asset:s4:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs4grdhv')]/byteStream/checksum/text();String
+asset:s4:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs4grdhv')]/byteStream/checksum/text();String
+asset:s4:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs4grdhv')]/byteStream/checksum/text();String
+asset:s4:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs4grdhv')]/byteStream/checksum/text();String
+asset:s5:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs5grdvh')]/byteStream/checksum/text();String
+asset:s5:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs5grdvh')]/byteStream/checksum/text();String
+asset:s5:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs5grdvh')]/byteStream/checksum/text();String
+asset:s5:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs5grdvh')]/byteStream/checksum/text();String
+asset:s5:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs5grdvv')]/byteStream/checksum/text();String
+asset:s5:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs5grdvv')]/byteStream/checksum/text();String
+asset:s5:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs5grdvv')]/byteStream/checksum/text();String
+asset:s5:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs5grdvv')]/byteStream/checksum/text();String
+asset:s5:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs5grdhh')]/byteStream/checksum/text();String
+asset:s5:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs5grdhh')]/byteStream/checksum/text();String
+asset:s5:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs5grdhh')]/byteStream/checksum/text();String
+asset:s5:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs5grdhh')]/byteStream/checksum/text();String
+asset:s5:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs5grdhv')]/byteStream/checksum/text();String
+asset:s5:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs5grdhv')]/byteStream/checksum/text();String
+asset:s5:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs5grdhv')]/byteStream/checksum/text();String
+asset:s5:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs5grdhv')]/byteStream/checksum/text();String
+asset:s6:vh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs6grdvh')]/byteStream/checksum/text();String
+asset:s6:vh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs6grdvh')]/byteStream/checksum/text();String
+asset:s6:vh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs6grdvh')]/byteStream/checksum/text();String
+asset:s6:vh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs6grdvh')]/byteStream/checksum/text();String
+asset:s6:vv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs6grdvv')]/byteStream/checksum/text();String
+asset:s6:vv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs6grdvv')]/byteStream/checksum/text();String
+asset:s6:vv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs6grdvv')]/byteStream/checksum/text();String
+asset:s6:vv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs6grdvv')]/byteStream/checksum/text();String
+asset:s6:hh:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs6grdhh')]/byteStream/checksum/text();String
+asset:s6:hh:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs6grdhh')]/byteStream/checksum/text();String
+asset:s6:hh:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs6grdhh')]/byteStream/checksum/text();String
+asset:s6:hh:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs6grdhh')]/byteStream/checksum/text();String
+asset:s6:hv:product:checksum;manifest.safe;//dataObject[starts-with(@ID, 'products1bs6grdhv')]/byteStream/checksum/text();String
+asset:s6:hv:noises:checksum;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs6grdhv')]/byteStream/checksum/text();String
+asset:s6:hv:rfis:checksum;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs6grdhv')]/byteStream/checksum/text();String
+asset:s6:hv:calibration:checksum;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs6grdhv')]/byteStream/checksum/text();String
+asset:iw:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1biwgrdvh')]/byteStream/@size;Int64
+asset:iw:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1biwgrdvh')]/byteStream/@size;Int64
+asset:iw:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1biwgrdvh')]/byteStream/@size;Int64
+asset:iw:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1biwgrdvh')]/byteStream/@size;Int64
+asset:iw:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1biwgrdvv')]/byteStream/@size;Int64
+asset:iw:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1biwgrdvv')]/byteStream/@size;Int64
+asset:iw:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1biwgrdvv')]/byteStream/@size;Int64
+asset:iw:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1biwgrdvv')]/byteStream/@size;Int64
+asset:iw:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1biwgrdhh')]/byteStream/@size;Int64
+asset:iw:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1biwgrdhh')]/byteStream/@size;Int64
+asset:iw:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1biwgrdhh')]/byteStream/@size;Int64
+asset:iw:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1biwgrdhh')]/byteStream/@size;Int64
+asset:iw:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1biwgrdhv')]/byteStream/@size;Int64
+asset:iw:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1biwgrdhv')]/byteStream/@size;Int64
+asset:iw:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1biwgrdhv')]/byteStream/@size;Int64
+asset:iw:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1biwgrdhv')]/byteStream/@size;Int64
+asset:ew:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bewgrdvh')]/byteStream/@size;Int64
+asset:ew:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bewgrdvh')]/byteStream/@size;Int64
+asset:ew:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bewgrdvh')]/byteStream/@size;Int64
+asset:ew:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bewgrdvh')]/byteStream/@size;Int64
+asset:ew:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bewgrdvv')]/byteStream/@size;Int64
+asset:ew:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bewgrdvv')]/byteStream/@size;Int64
+asset:ew:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bewgrdvv')]/byteStream/@size;Int64
+asset:ew:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bewgrdvv')]/byteStream/@size;Int64
+asset:ew:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bewgrdhh')]/byteStream/@size;Int64
+asset:ew:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bewgrdhh')]/byteStream/@size;Int64
+asset:ew:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bewgrdhh')]/byteStream/@size;Int64
+asset:ew:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bewgrdhh')]/byteStream/@size;Int64
+asset:ew:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bewgrdhv')]/byteStream/@size;Int64
+asset:ew:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bewgrdhv')]/byteStream/@size;Int64
+asset:ew:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bewgrdhv')]/byteStream/@size;Int64
+asset:ew:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bewgrdhv')]/byteStream/@size;Int64
+asset:s1:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs1grdvh')]/byteStream/@size;Int64
+asset:s1:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs1grdvh')]/byteStream/@size;Int64
+asset:s1:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs1grdvh')]/byteStream/@size;Int64
+asset:s1:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs1grdvh')]/byteStream/@size;Int64
+asset:s1:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs1grdvv')]/byteStream/@size;Int64
+asset:s1:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs1grdvv')]/byteStream/@size;Int64
+asset:s1:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs1grdvv')]/byteStream/@size;Int64
+asset:s1:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs1grdvv')]/byteStream/@size;Int64
+asset:s1:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs1grdhh')]/byteStream/@size;Int64
+asset:s1:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs1grdhh')]/byteStream/@size;Int64
+asset:s1:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs1grdhh')]/byteStream/@size;Int64
+asset:s1:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs1grdhh')]/byteStream/@size;Int64
+asset:s1:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs1grdhv')]/byteStream/@size;Int64
+asset:s1:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs1grdhv')]/byteStream/@size;Int64
+asset:s1:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs1grdhv')]/byteStream/@size;Int64
+asset:s1:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs1grdhv')]/byteStream/@size;Int64
+asset:s2:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs2grdvh')]/byteStream/@size;Int64
+asset:s2:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs2grdvh')]/byteStream/@size;Int64
+asset:s2:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs2grdvh')]/byteStream/@size;Int64
+asset:s2:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs2grdvh')]/byteStream/@size;Int64
+asset:s2:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs2grdvv')]/byteStream/@size;Int64
+asset:s2:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs2grdvv')]/byteStream/@size;Int64
+asset:s2:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs2grdvv')]/byteStream/@size;Int64
+asset:s2:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs2grdvv')]/byteStream/@size;Int64
+asset:s2:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs2grdhh')]/byteStream/@size;Int64
+asset:s2:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs2grdhh')]/byteStream/@size;Int64
+asset:s2:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs2grdhh')]/byteStream/@size;Int64
+asset:s2:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs2grdhh')]/byteStream/@size;Int64
+asset:s2:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs2grdhv')]/byteStream/@size;Int64
+asset:s2:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs2grdhv')]/byteStream/@size;Int64
+asset:s2:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs2grdhv')]/byteStream/@size;Int64
+asset:s2:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs2grdhv')]/byteStream/@size;Int64
+asset:s3:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs3grdvh')]/byteStream/@size;Int64
+asset:s3:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs3grdvh')]/byteStream/@size;Int64
+asset:s3:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs3grdvh')]/byteStream/@size;Int64
+asset:s3:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs3grdvh')]/byteStream/@size;Int64
+asset:s3:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs3grdvv')]/byteStream/@size;Int64
+asset:s3:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs3grdvv')]/byteStream/@size;Int64
+asset:s3:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs3grdvv')]/byteStream/@size;Int64
+asset:s3:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs3grdvv')]/byteStream/@size;Int64
+asset:s3:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs3grdhh')]/byteStream/@size;Int64
+asset:s3:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs3grdhh')]/byteStream/@size;Int64
+asset:s3:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs3grdhh')]/byteStream/@size;Int64
+asset:s3:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs3grdhh')]/byteStream/@size;Int64
+asset:s3:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs3grdhv')]/byteStream/@size;Int64
+asset:s3:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs3grdhv')]/byteStream/@size;Int64
+asset:s3:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs3grdhv')]/byteStream/@size;Int64
+asset:s3:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs3grdhv')]/byteStream/@size;Int64
+asset:s4:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs4grdvh')]/byteStream/@size;Int64
+asset:s4:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs4grdvh')]/byteStream/@size;Int64
+asset:s4:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs4grdvh')]/byteStream/@size;Int64
+asset:s4:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs4grdvh')]/byteStream/@size;Int64
+asset:s4:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs4grdvv')]/byteStream/@size;Int64
+asset:s4:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs4grdvv')]/byteStream/@size;Int64
+asset:s4:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs4grdvv')]/byteStream/@size;Int64
+asset:s4:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs4grdvv')]/byteStream/@size;Int64
+asset:s4:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs4grdhh')]/byteStream/@size;Int64
+asset:s4:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs4grdhh')]/byteStream/@size;Int64
+asset:s4:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs4grdhh')]/byteStream/@size;Int64
+asset:s4:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs4grdhh')]/byteStream/@size;Int64
+asset:s4:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs4grdhv')]/byteStream/@size;Int64
+asset:s4:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs4grdhv')]/byteStream/@size;Int64
+asset:s4:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs4grdhv')]/byteStream/@size;Int64
+asset:s4:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs4grdhv')]/byteStream/@size;Int64
+asset:s5:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs5grdvh')]/byteStream/@size;Int64
+asset:s5:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs5grdvh')]/byteStream/@size;Int64
+asset:s5:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs5grdvh')]/byteStream/@size;Int64
+asset:s5:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs5grdvh')]/byteStream/@size;Int64
+asset:s5:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs5grdvv')]/byteStream/@size;Int64
+asset:s5:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs5grdvv')]/byteStream/@size;Int64
+asset:s5:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs5grdvv')]/byteStream/@size;Int64
+asset:s5:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs5grdvv')]/byteStream/@size;Int64
+asset:s5:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs5grdhh')]/byteStream/@size;Int64
+asset:s5:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs5grdhh')]/byteStream/@size;Int64
+asset:s5:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs5grdhh')]/byteStream/@size;Int64
+asset:s5:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs5grdhh')]/byteStream/@size;Int64
+asset:s5:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs5grdhv')]/byteStream/@size;Int64
+asset:s5:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs5grdhv')]/byteStream/@size;Int64
+asset:s5:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs5grdhv')]/byteStream/@size;Int64
+asset:s5:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs5grdhv')]/byteStream/@size;Int64
+asset:s6:vh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs6grdvh')]/byteStream/@size;Int64
+asset:s6:vh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs6grdvh')]/byteStream/@size;Int64
+asset:s6:vh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs6grdvh')]/byteStream/@size;Int64
+asset:s6:vh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs6grdvh')]/byteStream/@size;Int64
+asset:s6:vv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs6grdvv')]/byteStream/@size;Int64
+asset:s6:vv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs6grdvv')]/byteStream/@size;Int64
+asset:s6:vv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs6grdvv')]/byteStream/@size;Int64
+asset:s6:vv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs6grdvv')]/byteStream/@size;Int64
+asset:s6:hh:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs6grdhh')]/byteStream/@size;Int64
+asset:s6:hh:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs6grdhh')]/byteStream/@size;Int64
+asset:s6:hh:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs6grdhh')]/byteStream/@size;Int64
+asset:s6:hh:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs6grdhh')]/byteStream/@size;Int64
+asset:s6:hv:product:size;manifest.safe;//dataObject[starts-with(@ID, 'products1bs6grdhv')]/byteStream/@size;Int64
+asset:s6:hv:noises:size;manifest.safe;//dataObject[starts-with(@ID, 'noises1bs6grdhv')]/byteStream/@size;Int64
+asset:s6:hv:rfis:size;manifest.safe;//dataObject[starts-with(@ID, 'rfis1bs6grdhv')]/byteStream/@size;Int64
+asset:s6:hv:calibration:size;manifest.safe;//dataObject[starts-with(@ID, 'calibrations1bs6grdhv')]/byteStream/@size;Int64

@@ -1,0 +1,913 @@
+{
+  "stac_version": "1.1.0",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9999999,
+          -59.9955357,
+          179.9955357,
+          80.0044643
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1998-11-11T00:00:00.000Z",
+          "2020-06-30T23:59:59.000Z"
+        ]
+      ]
+    }
+  },
+  "type": "Collection",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json"
+  ],
+  "id": "clms_lai_global_1km_10daily_v2_cog",
+  "sci:doi": "10.2909/d5fdc595-2e03-4cbe-a39e-5f006f9cef07",
+  "title": "CLMS Leaf Area Index (LAI) Global 1km 10-daily V2 (COG)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "LAI",
+    "Leaf Area Index",
+    "vegetation biophysical",
+    "global",
+    "10-daily",
+    "1km",
+    "SPOT",
+    "VEGETATION",
+    "PROBA-V"
+  ],
+  "description": "Defined as half the total area of green elements of the canopy per unit horizontal ground area. Every 10-days estimates are available at global scale in the spatial resolution of about 1 km and with the temporal extent from 1999 to June 2020.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_lai_global_1km_10daily_v2.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS Leaf Area Index (LAI) Global 1km 10-daily V2 (COG) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "platform": [
+      "proba-v",
+      "spot 5",
+      "spot 4"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "vegetation_properties"
+    ],
+    "constellation": [
+      "proba-1",
+      "spot"
+    ],
+    "processing:version": [
+      "V2.0.1",
+      "V2.0.2"
+    ],
+    "instruments": [
+      "vegetation",
+      "vegetation-2",
+      "vegetation-1"
+    ],
+    "gsd": [
+      1000.0
+    ],
+    "proj:shape": [
+      15680,
+      40320
+    ]
+  },
+  "item_assets": {
+    "lafter": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Length of semi-period after product date on Leaf Area Index",
+      "bands": [
+        {
+          "name": "lafter",
+          "description": "Length of semi-period after product date on Leaf Area Index"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "lai": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Leaf Area Index",
+      "bands": [
+        {
+          "name": "lai",
+          "description": "Leaf Area Index"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.033332999795675,
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "lbefore": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Length of semi-period before product date on Leaf Area Index",
+      "bands": [
+        {
+          "name": "lbefore",
+          "description": "Length of semi-period before product date on Leaf Area Index"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "nobs": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 0.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Number of observation",
+      "bands": [
+        {
+          "name": "nobs",
+          "description": "Number of observation"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "qflag": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 65535.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Leaf Area Index",
+      "bands": [
+        {
+          "name": "qflag",
+          "description": "Quality Flag on Leaf Area Index",
+          "classification:bitfields": [
+            {
+              "name": "land_sea",
+              "description": "Land/sea mask based on GLC-2000",
+              "offset": 0,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "land",
+                  "description": "Land pixel"
+                },
+                {
+                  "value": 1,
+                  "name": "sea",
+                  "description": "Sea pixel"
+                }
+              ]
+            },
+            {
+              "name": "unused_bit1",
+              "description": "Reserved, not used",
+              "offset": 1,
+              "length": 1,
+              "classes": []
+            },
+            {
+              "name": "filled",
+              "description": "Gap-filling applied (fewer than 6 valid obs in the ±60-day compositing window)",
+              "offset": 2,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "not_filled",
+                  "description": "No gap-filling applied"
+                },
+                {
+                  "value": 1,
+                  "name": "filled",
+                  "description": "Gap-filling applied"
+                }
+              ]
+            },
+            {
+              "name": "unused_bit3",
+              "description": "Reserved, not used",
+              "offset": 3,
+              "length": 1,
+              "classes": []
+            },
+            {
+              "name": "unused_bit4",
+              "description": "Reserved, not used",
+              "offset": 4,
+              "length": 1,
+              "classes": []
+            },
+            {
+              "name": "input_status",
+              "description": "Input reflectance data status",
+              "offset": 5,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "ok",
+                  "description": "Valid reflectance data available"
+                },
+                {
+                  "value": 1,
+                  "name": "invalid",
+                  "description": "All reflectances within ±60 days are out of range or invalid"
+                }
+              ]
+            },
+            {
+              "name": "lai_status",
+              "description": "LAI value status",
+              "offset": 6,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "ok",
+                  "description": "LAI in expected range including tolerance"
+                },
+                {
+                  "value": 1,
+                  "name": "invalid",
+                  "description": "LAI out of range or invalid"
+                }
+              ]
+            },
+            {
+              "name": "fapar_status",
+              "description": "FAPAR value status",
+              "offset": 7,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "ok",
+                  "description": "FAPAR in expected range including tolerance"
+                },
+                {
+                  "value": 1,
+                  "name": "invalid",
+                  "description": "FAPAR out of range or invalid"
+                }
+              ]
+            },
+            {
+              "name": "fcover_status",
+              "description": "FCover value status",
+              "offset": 8,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "ok",
+                  "description": "FCover in expected range including tolerance"
+                },
+                {
+                  "value": 1,
+                  "name": "invalid",
+                  "description": "FCover out of range or invalid"
+                }
+              ]
+            },
+            {
+              "name": "hlat_status",
+              "description": "High-latitude correction status",
+              "offset": 9,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "no_correction",
+                  "description": "No high-latitude correction applied"
+                },
+                {
+                  "value": 1,
+                  "name": "corrected",
+                  "description": "High-latitude correction applied (lat > 55° and SZA > 70°)"
+                }
+              ]
+            },
+            {
+              "name": "ebf_status",
+              "description": "Evergreen Broadleaf Forest classification (from GEOCLIM climatology)",
+              "offset": 10,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "not_ebf",
+                  "description": "Pixel not recognized as Evergreen Broadleaf Forest"
+                },
+                {
+                  "value": 1,
+                  "name": "ebf",
+                  "description": "Pixel recognized as Evergreen Broadleaf Forest"
+                }
+              ]
+            },
+            {
+              "name": "bs_status",
+              "description": "Bare Soil classification (from GEOCLIM climatology; may include inland water)",
+              "offset": 11,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "not_bare_soil",
+                  "description": "Pixel not recognized as Bare Soil"
+                },
+                {
+                  "value": 1,
+                  "name": "bare_soil",
+                  "description": "Pixel recognized as Bare Soil"
+                }
+              ]
+            },
+            {
+              "name": "climatology_fill",
+              "description": "Climatology-based gap-filling status",
+              "offset": 12,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "not_filled",
+                  "description": "Not filled with climatology"
+                },
+                {
+                  "value": 1,
+                  "name": "filled_climatology",
+                  "description": "Gap filled using CACAO climatology"
+                }
+              ]
+            },
+            {
+              "name": "interpolation_fill",
+              "description": "Interpolation-based gap-filling status",
+              "offset": 13,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "not_filled",
+                  "description": "Not filled with interpolation"
+                },
+                {
+                  "value": 1,
+                  "name": "filled_interpolation",
+                  "description": "Gap filled using linear interpolation"
+                }
+              ]
+            },
+            {
+              "name": "unused_bit14",
+              "description": "Reserved, not used",
+              "offset": 14,
+              "length": 1,
+              "classes": []
+            },
+            {
+              "name": "unused_bit15",
+              "description": "Reserved, not used",
+              "offset": 15,
+              "length": 1,
+              "classes": []
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "rmse": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Root Mean Square Error on Leaf Area Index",
+      "bands": [
+        {
+          "name": "rmse",
+          "description": "Root Mean Square Error on Leaf Area Index"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.033332999795675,
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    },
+    {
+      "rel": "about",
+      "href": "https://land.copernicus.eu/en/products/vegetation/leaf-area-index-v2-0-1km",
+      "type": "text/html",
+      "title": "Product page"
+    }
+  ],
+  "bands": [
+    {
+      "name": "lafter",
+      "description": "Length of semi-period after product date on Leaf Area Index"
+    },
+    {
+      "name": "lai",
+      "description": "Leaf Area Index"
+    },
+    {
+      "name": "lbefore",
+      "description": "Length of semi-period before product date on Leaf Area Index"
+    },
+    {
+      "name": "nobs",
+      "description": "Number of observation"
+    },
+    {
+      "name": "qflag",
+      "description": "Quality Flag on Leaf Area Index",
+      "classification:bitfields": [
+        {
+          "name": "land_sea",
+          "description": "Land/sea mask based on GLC-2000",
+          "offset": 0,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "land",
+              "description": "Land pixel"
+            },
+            {
+              "value": 1,
+              "name": "sea",
+              "description": "Sea pixel"
+            }
+          ]
+        },
+        {
+          "name": "unused_bit1",
+          "description": "Reserved, not used",
+          "offset": 1,
+          "length": 1,
+          "classes": []
+        },
+        {
+          "name": "filled",
+          "description": "Gap-filling applied (fewer than 6 valid obs in the ±60-day compositing window)",
+          "offset": 2,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "not_filled",
+              "description": "No gap-filling applied"
+            },
+            {
+              "value": 1,
+              "name": "filled",
+              "description": "Gap-filling applied"
+            }
+          ]
+        },
+        {
+          "name": "unused_bit3",
+          "description": "Reserved, not used",
+          "offset": 3,
+          "length": 1,
+          "classes": []
+        },
+        {
+          "name": "unused_bit4",
+          "description": "Reserved, not used",
+          "offset": 4,
+          "length": 1,
+          "classes": []
+        },
+        {
+          "name": "input_status",
+          "description": "Input reflectance data status",
+          "offset": 5,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "ok",
+              "description": "Valid reflectance data available"
+            },
+            {
+              "value": 1,
+              "name": "invalid",
+              "description": "All reflectances within ±60 days are out of range or invalid"
+            }
+          ]
+        },
+        {
+          "name": "lai_status",
+          "description": "LAI value status",
+          "offset": 6,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "ok",
+              "description": "LAI in expected range including tolerance"
+            },
+            {
+              "value": 1,
+              "name": "invalid",
+              "description": "LAI out of range or invalid"
+            }
+          ]
+        },
+        {
+          "name": "fapar_status",
+          "description": "FAPAR value status",
+          "offset": 7,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "ok",
+              "description": "FAPAR in expected range including tolerance"
+            },
+            {
+              "value": 1,
+              "name": "invalid",
+              "description": "FAPAR out of range or invalid"
+            }
+          ]
+        },
+        {
+          "name": "fcover_status",
+          "description": "FCover value status",
+          "offset": 8,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "ok",
+              "description": "FCover in expected range including tolerance"
+            },
+            {
+              "value": 1,
+              "name": "invalid",
+              "description": "FCover out of range or invalid"
+            }
+          ]
+        },
+        {
+          "name": "hlat_status",
+          "description": "High-latitude correction status",
+          "offset": 9,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "no_correction",
+              "description": "No high-latitude correction applied"
+            },
+            {
+              "value": 1,
+              "name": "corrected",
+              "description": "High-latitude correction applied (lat > 55° and SZA > 70°)"
+            }
+          ]
+        },
+        {
+          "name": "ebf_status",
+          "description": "Evergreen Broadleaf Forest classification (from GEOCLIM climatology)",
+          "offset": 10,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "not_ebf",
+              "description": "Pixel not recognized as Evergreen Broadleaf Forest"
+            },
+            {
+              "value": 1,
+              "name": "ebf",
+              "description": "Pixel recognized as Evergreen Broadleaf Forest"
+            }
+          ]
+        },
+        {
+          "name": "bs_status",
+          "description": "Bare Soil classification (from GEOCLIM climatology; may include inland water)",
+          "offset": 11,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "not_bare_soil",
+              "description": "Pixel not recognized as Bare Soil"
+            },
+            {
+              "value": 1,
+              "name": "bare_soil",
+              "description": "Pixel recognized as Bare Soil"
+            }
+          ]
+        },
+        {
+          "name": "climatology_fill",
+          "description": "Climatology-based gap-filling status",
+          "offset": 12,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "not_filled",
+              "description": "Not filled with climatology"
+            },
+            {
+              "value": 1,
+              "name": "filled_climatology",
+              "description": "Gap filled using CACAO climatology"
+            }
+          ]
+        },
+        {
+          "name": "interpolation_fill",
+          "description": "Interpolation-based gap-filling status",
+          "offset": 13,
+          "length": 1,
+          "classes": [
+            {
+              "value": 0,
+              "name": "not_filled",
+              "description": "Not filled with interpolation"
+            },
+            {
+              "value": 1,
+              "name": "filled_interpolation",
+              "description": "Gap filled using linear interpolation"
+            }
+          ]
+        },
+        {
+          "name": "unused_bit14",
+          "description": "Reserved, not used",
+          "offset": 14,
+          "length": 1,
+          "classes": []
+        },
+        {
+          "name": "unused_bit15",
+          "description": "Reserved, not used",
+          "offset": 15,
+          "length": 1,
+          "classes": []
+        }
+      ]
+    },
+    {
+      "name": "rmse",
+      "description": "Root Mean Square Error on Leaf Area Index"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

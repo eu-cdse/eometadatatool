@@ -1,0 +1,477 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_clcplus_lulucf-instance_europe_100m_yearly_v1",
+  "id": "CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00",
+  "properties": {
+    "created": "2026-05-05T07:06:47.920071Z",
+    "updated": "2026-05-28T13:51:27.728782Z",
+    "published": "2026-05-18T13:12:42.567518Z",
+    "eopf:origin_datetime": "2026-05-05T07:06:47.920071Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "gsd": 100,
+    "proj:code": "EPSG:3035",
+    "product:type": "clcplus_instance",
+    "datetime": "2018-01-01T00:00:00.000000Z",
+    "end_datetime": "2018-12-31T23:59:59.999999Z",
+    "classification:classes": [
+      {
+        "value": 11,
+        "name": "s_burnt_areas",
+        "title": "S Burnt areas"
+      },
+      {
+        "value": 12,
+        "name": "s_settlements",
+        "title": "S Settlements"
+      },
+      {
+        "value": 13,
+        "name": "s_green_urban_areas",
+        "title": "S Green urban areas"
+      },
+      {
+        "value": 14,
+        "name": "s_other_settlements",
+        "title": "S Other settlements"
+      },
+      {
+        "value": 21,
+        "name": "fl_burnt_areas",
+        "title": "FL Burnt areas"
+      },
+      {
+        "value": 22,
+        "name": "fl_transitional_woodland",
+        "title": "FL Transitional woodland"
+      },
+      {
+        "value": 23,
+        "name": "fl_deciduous",
+        "title": "FL Deciduous"
+      },
+      {
+        "value": 24,
+        "name": "fl_coniferous_evergreen",
+        "title": "FL Coniferous/Evergreen"
+      },
+      {
+        "value": 25,
+        "name": "fl_other_forestland",
+        "title": "FL Other forestland"
+      },
+      {
+        "value": 31,
+        "name": "cl_burnt_areas",
+        "title": "CL Burnt areas"
+      },
+      {
+        "value": 32,
+        "name": "cl_annual_crops",
+        "title": "CL Annual crops"
+      },
+      {
+        "value": 33,
+        "name": "cl_perennial_crops",
+        "title": "CL Perennial crops"
+      },
+      {
+        "value": 34,
+        "name": "cl_other_cropland",
+        "title": "CL Other cropland"
+      },
+      {
+        "value": 41,
+        "name": "gl_burnt_areas",
+        "title": "GL Burnt areas"
+      },
+      {
+        "value": 42,
+        "name": "gl_pastures",
+        "title": "GL Pastures"
+      },
+      {
+        "value": 43,
+        "name": "gl_shrubs",
+        "title": "GL Shrubs"
+      },
+      {
+        "value": 44,
+        "name": "gl_natural_grassland",
+        "title": "GL Natural grassland"
+      },
+      {
+        "value": 45,
+        "name": "gl_other_grassland",
+        "title": "GL Other grassland"
+      },
+      {
+        "value": 51,
+        "name": "wl_wetland_managed",
+        "title": "WL Wetland managed"
+      },
+      {
+        "value": 52,
+        "name": "wl_wetland_unmanaged",
+        "title": "WL Wetland unmanaged"
+      },
+      {
+        "value": 53,
+        "name": "wl_water_managed",
+        "title": "WL Water managed"
+      },
+      {
+        "value": 54,
+        "name": "wl_water_unmanaged",
+        "title": "WL Water unmanaged"
+      },
+      {
+        "value": 55,
+        "name": "wl_burnt_areas",
+        "title": "WL Burnt areas"
+      },
+      {
+        "value": 61,
+        "name": "ol_bare_soil_and_rocks",
+        "title": "OL Bare soil and rocks"
+      },
+      {
+        "value": 62,
+        "name": "ol_permanent_snow_and_ice",
+        "title": "OL Permanent snow and ice"
+      },
+      {
+        "value": 63,
+        "name": "ol_lichens_and_mosses",
+        "title": "OL Lichens and mosses"
+      },
+      {
+        "value": 64,
+        "name": "ol_other_otherland",
+        "title": "OL Other otherland"
+      },
+      {
+        "value": 254,
+        "name": "unclassified_clouds",
+        "title": "Unclassified, clouds"
+      },
+      {
+        "value": 255,
+        "name": "outside_area",
+        "title": "Outside area"
+      }
+    ],
+    "_private": {
+      "product_size": 230356025,
+      "product_uuid": "ed28eec8-f1e8-4b31-99d5-f0fc4f2ab800",
+      "product_name": "CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00",
+      "visible": true,
+      "component": "landcover_landuse",
+      "gridLabel": "100m",
+      "fileFormat": "cog",
+      "nominalDate": "2018-01-01T00:00:00.000000Z",
+      "datasetAlias": "clms_clcplus_lulucf-instance",
+      "areaOfInterest": "europe",
+      "collectionName": "CLMS",
+      "datasetVersion": 1,
+      "productVersion": "v01_r00",
+      "platformAcronym": "unspecified",
+      "datasetShortName": "clcplus-lulucf",
+      "missionShortName": "unspecified",
+      "processingCenter": "unspecified",
+      "datasetIdentifier": "clms_clcplus_lulucf-instance_europe_100m_yearly_v1",
+      "metricGridSpacing": 100,
+      "platformShortName": "unspecified",
+      "temporalRepeatRate": "yearly",
+      "instrumentShortName": "unspecified",
+      "productDeliveryDate": "2026-05-18T12:53:16.000000Z",
+      "SDIResourceIdentifier": "copernicus_r_3035_100_m_clcplus-lulucf-in_p_2018-now_v01_r00"
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "start_datetime": "2018-01-01T00:00:00.000000Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -54.9355433,
+    24.8008093,
+    70.7810072,
+    71.8828381
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          32.3499082,
+          28.5910559
+        ],
+        [
+          40.002645699999995,
+          26.189243399999995
+        ],
+        [
+          45.1038722,
+          37.7125175
+        ],
+        [
+          51.8232963,
+          46.9043589
+        ],
+        [
+          60.12416769999999,
+          53.8289973
+        ],
+        [
+          70.78100719999999,
+          59.1122997
+        ],
+        [
+          58.5827145,
+          64.8533863
+        ],
+        [
+          43.683260499999996,
+          68.9236276
+        ],
+        [
+          24.143244499999998,
+          71.42553539999999
+        ],
+        [
+          4.592869,
+          71.83593229999998
+        ],
+        [
+          -14.060050399999998,
+          70.46576639999999
+        ],
+        [
+          -29.4825085,
+          67.62652569999999
+        ],
+        [
+          -42.86395339999999,
+          63.15137709999999
+        ],
+        [
+          -54.9355433,
+          56.4147312
+        ],
+        [
+          -44.50839959999999,
+          51.51850699999999
+        ],
+        [
+          -36.0636465,
+          44.948864099999994
+        ],
+        [
+          -29.01866469999999,
+          36.0724261
+        ],
+        [
+          -23.5560165,
+          24.8008093
+        ],
+        [
+          -8.2475089,
+          29.565708200000003
+        ],
+        [
+          8.0228344,
+          31.449246199999994
+        ],
+        [
+          32.3499082,
+          28.5910559
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/clcplus_instance/clms_clcplus_lulucf-instance_europe_100m_yearly_v1/2018/01/01/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d50110d153ee4d576d2eccffce8974c1908601",
+      "file:size": 43285,
+      "file:local_path": "CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.xml",
+      "href": "s3://eodata/CLMS/landcover_landuse/clcplus_instance/clms_clcplus_lulucf-instance_europe_100m_yearly_v1/2018/01/01/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ed28eec8-f1e8-4b31-99d5-f0fc4f2ab800)/Nodes(CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00)/Nodes(CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "CLCplus LULUCF Instance Raster (100m)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        44750,
+        63730
+      ],
+      "proj:transform": [
+        100.0,
+        0.0,
+        943600.0,
+        0.0,
+        -100.0,
+        5416600.0
+      ],
+      "proj:bbox": [
+        943600.0,
+        941600.0,
+        7316600.0,
+        5416600.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "description": "CLCplus LULUCF Instance",
+          "name": "clcplus_lulucf_instance"
+        }
+      ],
+      "file:size": 230280695,
+      "file:local_path": "CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/clcplus_instance/clms_clcplus_lulucf-instance_europe_100m_yearly_v1/2018/01/01/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ed28eec8-f1e8-4b31-99d5-f0fc4f2ab800)/Nodes(CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00)/Nodes(CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        943600.0,
+        941600.0,
+        7316600.0,
+        5416600.0
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        525,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/clcplus_instance/clms_clcplus_lulucf-instance_europe_100m_yearly_v1/2018/01/01/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00/CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.tif&CRS=EPSG:3035&BBOX=943600.0,941600.0,7316600.0,5416600.0&WIDTH=750&HEIGHT=525&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/clms_clcplus_lulucf-instance/clms_clcplus_lulucf-instance_europe_100m_yearly_v1.sld"
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110767fb3608f7dc7e79cef25d94f887f21",
+      "file:size": 230358093,
+      "file:local_path": "CLMS_CLCPLUS_LULUCF-INSTANCE_S2018_R100m_EUROPE_03035_V01_R00.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ed28eec8-f1e8-4b31-99d5-f0fc4f2ab800)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

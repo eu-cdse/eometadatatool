@@ -1,0 +1,1258 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "landsat-c2-l2-oli-tirs",
+  "id": "LC09_L2SP_186025_20230101_20230315_02_T1_ST",
+  "properties": {
+    "created": "2026-01-17T19:27:54.789000Z",
+    "updated": "2026-06-02T16:02:31.538495Z",
+    "published": "2026-06-02T16:02:31.538495Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2023-01-01T09:20:32.455242Z",
+    "platform": "landsat-9",
+    "constellation": "landsat",
+    "instruments": [
+      "oli",
+      "tirs"
+    ],
+    "gsd": 30,
+    "processing:level": "L2",
+    "processing:datetime": "2023-03-15T05:38:23.000000Z",
+    "processing:version": "LPGS_16.2.0",
+    "product:type": "L2SP",
+    "product:timeliness": "PT24H",
+    "product:timeliness_category": "STC",
+    "grid:code": "WRS2-186025",
+    "view:off_nadir": 0,
+    "view:sun_elevation": 15.04662468,
+    "view:sun_azimuth": 163.14192872,
+    "eo:cloud_cover": 57.64,
+    "statistics": {
+      "cloud_cover_land": 57.64
+    },
+    "sat:platform_international_designator": "2021-088A",
+    "processing:software": {
+      "LaSRC": "LaSRC_1.5.0",
+      "LPGS": "LPGS_16.2.0",
+      "Landsat Surface Temperature": "st_1.3.0",
+      "eometadatatool": "260924120453+dirty"
+    },
+    "accuracy:geometric_x_stddev": 7.21,
+    "accuracy:geometric_y_stddev": 9.508,
+    "accuracy:geometric_rmse": 11.933,
+    "_private": {
+      "product_size": 321573020,
+      "product_uuid": "5bf6935a-72c2-4315-8018-22253f5504fe",
+      "product_name": "LC09_L2SP_186025_20230101_20230315_02_T1_ST",
+      "visible": true
+    },
+    "start_datetime": "2023-01-01T09:20:32.455242Z",
+    "end_datetime": "2023-01-01T09:20:32.455242Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    21.385947128584924,
+    49.20160416194198,
+    24.650696862339856,
+    51.34234521226983
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          22.065525378475925,
+          51.34234521226983
+        ],
+        [
+          21.385947128584924,
+          49.6411511251104
+        ],
+        [
+          23.88163214891653,
+          49.20160416194198
+        ],
+        [
+          24.650696862339856,
+          50.89595533003474
+        ],
+        [
+          22.065525378475925,
+          51.34234521226983
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/LC09_L2SP_186025_20230101_20230315_02_T1_ST.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "product_metadata": {
+      "type": "application/xml",
+      "title": "LC09_L2SP_186025_20230101_20230315_02_T1_MTL.xml",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_MTL.xml",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_MTL.xml",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "qa_pixel": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Assessment Band",
+      "roles": [
+        "cloud",
+        "cloud-shadow",
+        "snow-ice",
+        "water-mask"
+      ],
+      "classification:bitfields": [
+        {
+          "name": "fill",
+          "description": "Corresponding pixels in L1 image bands are fill",
+          "offset": 0,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_fill",
+              "description": "L1 image band pixels are not fill",
+              "value": 0
+            },
+            {
+              "name": "fill",
+              "description": "L1 image band pixels are fill",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "dilated",
+          "description": "Dilated cloud",
+          "offset": 1,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_dilated",
+              "description": "Cloud is not dilated or no cloud",
+              "value": 0
+            },
+            {
+              "name": "dilated",
+              "description": "Cloud dilation",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "cirrus",
+          "description": "Cirrus mask",
+          "offset": 2,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_cirrus",
+              "description": "No confidence level set or low confidence cirrus",
+              "value": 0
+            },
+            {
+              "name": "cirrus",
+              "description": "High confidence cirrus",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "cloud",
+          "description": "Cloud mask",
+          "offset": 3,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_cloud",
+              "description": "Cloud confidence is not high",
+              "value": 0
+            },
+            {
+              "name": "cloud",
+              "description": "High confidence cloud",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "shadow",
+          "description": "Cloud shadow mask",
+          "offset": 4,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_shadow",
+              "description": "Cloud shadow confidence is not high",
+              "value": 0
+            },
+            {
+              "name": "shadow",
+              "description": "High confidence cloud shadow",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "snow",
+          "description": "Snow/Ice mask",
+          "offset": 5,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_snow",
+              "description": "Snow/Ice confidence is not high",
+              "value": 0
+            },
+            {
+              "name": "snow",
+              "description": "High confidence snow cover",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "clear",
+          "description": "Cloud or dilated cloud bits set",
+          "offset": 6,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_clear",
+              "description": "Cloud or dilated cloud bits are set",
+              "value": 0
+            },
+            {
+              "name": "clear",
+              "description": "Cloud and dilated cloud bits are not set",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "water",
+          "description": "Water mask",
+          "offset": 7,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_water",
+              "description": "Land or cloud",
+              "value": 0
+            },
+            {
+              "name": "water",
+              "description": "Water",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "cloud_confidence",
+          "description": "Cloud confidence levels",
+          "offset": 8,
+          "length": 2,
+          "classes": [
+            {
+              "name": "not_set",
+              "description": "No confidence level set",
+              "value": 0
+            },
+            {
+              "name": "low",
+              "description": "Low confidence cloud",
+              "value": 1
+            },
+            {
+              "name": "medium",
+              "description": "Medium confidence cloud",
+              "value": 2
+            },
+            {
+              "name": "high",
+              "description": "High confidence cloud",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "name": "shadow_confidence",
+          "description": "Cloud shadow confidence levels",
+          "offset": 10,
+          "length": 2,
+          "classes": [
+            {
+              "name": "not_set",
+              "description": "No confidence level set",
+              "value": 0
+            },
+            {
+              "name": "low",
+              "description": "Low confidence cloud shadow",
+              "value": 1
+            },
+            {
+              "name": "reserved",
+              "description": "Reserved - value not used",
+              "value": 2
+            },
+            {
+              "name": "high",
+              "description": "High confidence cloud shadow",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "name": "snow_confidence",
+          "description": "Snow/Ice confidence levels",
+          "offset": 12,
+          "length": 2,
+          "classes": [
+            {
+              "name": "not_set",
+              "description": "No confidence level set",
+              "value": 0
+            },
+            {
+              "name": "low",
+              "description": "Low confidence snow/ice",
+              "value": 1
+            },
+            {
+              "name": "reserved",
+              "description": "Reserved - value not used",
+              "value": 2
+            },
+            {
+              "name": "high",
+              "description": "High confidence snow/ice",
+              "value": 3
+            }
+          ]
+        },
+        {
+          "name": "cirrus_confidence",
+          "description": "Cirrus confidence levels",
+          "offset": 14,
+          "length": 2,
+          "classes": [
+            {
+              "name": "not_set",
+              "description": "No confidence level set",
+              "value": 0
+            },
+            {
+              "name": "low",
+              "description": "Low confidence cirrus",
+              "value": 1
+            },
+            {
+              "name": "reserved",
+              "description": "Reserved - value not used",
+              "value": 2
+            },
+            {
+              "name": "high",
+              "description": "High confidence cirrus",
+              "value": 3
+            }
+          ]
+        }
+      ],
+      "data_type": "uint16",
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_QA_PIXEL.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_QA_PIXEL.TIF",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "qa_radsat": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Radiometric Saturation Quality Assessment Band",
+      "roles": [
+        "data",
+        "saturation"
+      ],
+      "classification:bitfields": [
+        {
+          "name": "band1",
+          "description": "Band 1 radiometric saturation",
+          "offset": 0,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_saturated",
+              "description": "Band 1 is not saturated",
+              "value": 0
+            },
+            {
+              "name": "saturated",
+              "description": "Band 1 is saturated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "band2",
+          "description": "Band 2 radiometric saturation",
+          "offset": 1,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_saturated",
+              "description": "Band 2 is not saturated",
+              "value": 0
+            },
+            {
+              "name": "saturated",
+              "description": "Band 2 is saturated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "band3",
+          "description": "Band 3 radiometric saturation",
+          "offset": 2,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_saturated",
+              "description": "Band 3 is not saturated",
+              "value": 0
+            },
+            {
+              "name": "saturated",
+              "description": "Band 3 is saturated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "band4",
+          "description": "Band 4 radiometric saturation",
+          "offset": 3,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_saturated",
+              "description": "Band 4 is not saturated",
+              "value": 0
+            },
+            {
+              "name": "saturated",
+              "description": "Band 4 is saturated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "band5",
+          "description": "Band 5 radiometric saturation",
+          "offset": 4,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_saturated",
+              "description": "Band 5 is not saturated",
+              "value": 0
+            },
+            {
+              "name": "saturated",
+              "description": "Band 5 is saturated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "band6",
+          "description": "Band 6 radiometric saturation",
+          "offset": 5,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_saturated",
+              "description": "Band 6 is not saturated",
+              "value": 0
+            },
+            {
+              "name": "saturated",
+              "description": "Band 6 is saturated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "band7",
+          "description": "Band 7 radiometric saturation",
+          "offset": 6,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_saturated",
+              "description": "Band 7 is not saturated",
+              "value": 0
+            },
+            {
+              "name": "saturated",
+              "description": "Band 7 is saturated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 7,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "band9",
+          "description": "Band 9 radiometric saturation",
+          "offset": 8,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_saturated",
+              "description": "Band 9 is not saturated",
+              "value": 0
+            },
+            {
+              "name": "saturated",
+              "description": "Band 9 is saturated",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 9,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 10,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "occlusion",
+          "description": "Terrain not visible from sensor due to intervening terrain",
+          "offset": 11,
+          "length": 1,
+          "classes": [
+            {
+              "name": "not_occluded",
+              "description": "Terrain is not occluded",
+              "value": 0
+            },
+            {
+              "name": "occluded",
+              "description": "Terrain is occluded",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 12,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 13,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 14,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        },
+        {
+          "name": "unused",
+          "description": "Unused bit",
+          "offset": 15,
+          "length": 1,
+          "classes": [
+            {
+              "name": "unused",
+              "description": "Unused bit",
+              "value": 0
+            }
+          ]
+        }
+      ],
+      "data_type": "uint16",
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_QA_RADSAT.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_QA_RADSAT.TIF",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "ANG": {
+      "type": "text/plain",
+      "title": "Angle Coefficients File",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ANG.txt",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ANG.txt",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_thumb_large.jpeg",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_thumb_large.jpeg",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "ST_ATRAN": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Atmospheric Transmittance Band",
+      "roles": [
+        "data"
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "raster:scale": 0.0001,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_ATRAN.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_ATRAN.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_ATRAN.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ST_B10": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Surface Temperature Band 10",
+      "roles": [
+        "data",
+        "temperature"
+      ],
+      "data_type": "uint16",
+      "nodata": 0,
+      "raster:scale": 0.00341802,
+      "raster:offset": 149.0,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_B10.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_B10.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_B10.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ST_CDIST": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Cloud Distance Band",
+      "roles": [
+        "data"
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "raster:scale": 0.01,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_CDIST.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_CDIST.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_CDIST.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ST_DRAD": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Downwelled Radiance Band",
+      "roles": [
+        "data"
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "raster:scale": 0.001,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_DRAD.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_DRAD.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_DRAD.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ST_EMIS": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Emissivity Band",
+      "roles": [
+        "data"
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "raster:scale": 0.0001,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_EMIS.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_EMIS.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_EMIS.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ST_EMSD": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Emissivity Standard Deviation Band",
+      "roles": [
+        "data"
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "raster:scale": 0.0001,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_EMSD.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_EMSD.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_EMSD.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ST_QA": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Surface Temperature Quality Assessment Band",
+      "roles": [
+        "data"
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "raster:scale": 0.01,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_QA.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_QA.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_QA.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ST_TRAD": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Thermal Radiance Band",
+      "roles": [
+        "data"
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "raster:scale": 0.001,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_TRAD.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_TRAD.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_TRAD.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ST_URAD": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Upwelled Radiance Band",
+      "roles": [
+        "data"
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "raster:scale": 0.001,
+      "gsd": 30.0,
+      "proj:code": "EPSG:32634",
+      "proj:shape": [
+        7861,
+        7771
+      ],
+      "proj:bbox": [
+        21.34752,
+        49.17892,
+        24.70665,
+        51.35351
+      ],
+      "proj:transform": [
+        30.0,
+        0,
+        525285.0,
+        0,
+        -30.0,
+        5689215.0
+      ],
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_URAD.TIF",
+      "href": "s3://eodata/Landsat-9/OLI_TIRS/L2SP/2023/01/01/LC09_L2SP_186025_20230101_20230315_02_T1_ST/LC09_L2SP_186025_20230101_20230315_02_T1_ST_URAD.TIF",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST)/Nodes(LC09_L2SP_186025_20230101_20230315_02_T1_ST_URAD.TIF)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501100238ecdd69590f4df0c1641c4955291e",
+      "file:size": 321578150,
+      "file:local_path": "LC09_L2SP_186025_20230101_20230315_02_T1_ST.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5bf6935a-72c2-4315-8018-22253f5504fe)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/accuracy/v1.0.0-beta.1/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.1.0/schema.json"
+  ]
+}

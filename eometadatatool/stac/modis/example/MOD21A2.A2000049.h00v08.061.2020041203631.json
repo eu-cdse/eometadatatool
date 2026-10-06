@@ -1,0 +1,315 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "modis-terra-mod21a2",
+  "id": "MOD21A2.A2000049.h00v08.061.2020041203631",
+  "properties": {
+    "created": "2020-02-10T20:36:31.000000Z",
+    "updated": "2025-10-11T09:10:36.764070Z",
+    "published": "2025-10-11T09:10:36.764070Z",
+    "eopf:origin_datetime": "2020-02-10T20:36:31.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2000-02-18T00:00:00.000000Z",
+    "start_datetime": "2000-02-18T00:00:00.000000Z",
+    "end_datetime": "2000-02-25T23:59:59.000000Z",
+    "constellation": "modis",
+    "processing:datetime": "2020-02-10T20:36:31.000000Z",
+    "processing:version": "6.1.1",
+    "product:type": "MOD21A2",
+    "grid:code": "MSIN-08",
+    "gsd": 1000,
+    "instruments": [
+      "modis"
+    ],
+    "platform": "terra",
+    "sat:platform_international_designator": "1999-068A",
+    "processing:level": "L3",
+    "eo:cloud_cover": 0.0,
+    "statistics": {
+      "missing_data": 50.0,
+      "out_of_bounds_data": 0.0,
+      "interpolated_data": 0.0
+    },
+    "_private": {
+      "product_size": 104265,
+      "product_uuid": "f87dd779-71a4-449e-8e86-4f480a3be065",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260512134513+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -0.0068357003079556,
+    179.9999999,
+    9.99897831672069
+  ],
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -179.9999999,
+            9.998921615137636
+          ],
+          [
+            -179.9999999,
+            -0.0000672312562528532
+          ],
+          [
+            -179.999951582871,
+            -0.0068357003079556
+          ],
+          [
+            -169.99173290556,
+            5.67994760615426e-6
+          ],
+          [
+            -169.920147289013,
+            9.9909309627606
+          ],
+          [
+            -179.9999999,
+            9.998921615137636
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            179.9999999,
+            -0.0000672312562528532
+          ],
+          [
+            179.9999999,
+            9.998921615137636
+          ],
+          [
+            179.928473473918,
+            9.99897831672069
+          ],
+          [
+            179.9999999,
+            -0.0000672312562528532
+          ]
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Terra/MODIS/MOD21A2.061/2000/02/18/MOD21A2.A2000049.h00v08.061.2020041203631/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/MOD21A2.A2000049.h00v08.061.2020041203631.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "MOD21A2.A2000049.h00v08.061.2020041203631.cmr.xml",
+      "roles": [
+        "metadata"
+      ],
+      "file:checksum": "d5011008653f82f72d89eabc6c0bbdefa9ac8f",
+      "file:size": 10522,
+      "file:local_path": "MOD21A2.A2000049.h00v08.061.2020041203631/MOD21A2.A2000049.h00v08.061.2020041203631.cmr.xml",
+      "href": "s3://eodata/Terra/MODIS/MOD21A2.061/2000/02/18/MOD21A2.A2000049.h00v08.061.2020041203631/MOD21A2.A2000049.h00v08.061.2020041203631.cmr.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(f87dd779-71a4-449e-8e86-4f480a3be065)/Nodes(MOD21A2.A2000049.h00v08.061.2020041203631)/Nodes(MOD21A2.A2000049.h00v08.061.2020041203631.cmr.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "application/x-hdf",
+      "title": "MOD21A2.A2000049.h00v08.061.2020041203631.hdf",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "LST_Day_1KM",
+          "description": " 8-day daytime 1km grid Land-surface Temperature"
+        },
+        {
+          "name": "QC_Day",
+          "description": "Quality control for daytime LST and emissivity"
+        },
+        {
+          "name": "View_Angle_Day",
+          "description": "Average view zenith angle of daytime Land-surface Temperature"
+        },
+        {
+          "name": "View_Time_Day",
+          "description": "Average time of daytime Land-surface Temperature observation"
+        },
+        {
+          "name": "LST_Night_1KM",
+          "description": " 8-day nighttime 1km grid Land-surface Temperature"
+        },
+        {
+          "name": "QC_Night",
+          "description": "Quality control for nighttime LST and emissivity"
+        },
+        {
+          "name": "View_Angle_Night",
+          "description": "Average view zenith angle of nighttime Land-surface Temperature"
+        },
+        {
+          "name": "View_Time_Night",
+          "description": "Average time of nighttime Land-surface Temperature observation"
+        },
+        {
+          "name": "Emis_29",
+          "description": "Average Band 29 emissivity"
+        },
+        {
+          "name": "Emis_31",
+          "description": "Average Band 31 emissivity"
+        },
+        {
+          "name": "Emis_32",
+          "description": "Average Band 32 emissivity"
+        }
+      ],
+      "proj:shape": [
+        1200,
+        1200
+      ],
+      "file:checksum": "d5011006023cde21983fe1be4d65125b20a861",
+      "file:size": 85057,
+      "file:local_path": "MOD21A2.A2000049.h00v08.061.2020041203631/MOD21A2.A2000049.h00v08.061.2020041203631.hdf",
+      "href": "s3://eodata/Terra/MODIS/MOD21A2.061/2000/02/18/MOD21A2.A2000049.h00v08.061.2020041203631/MOD21A2.A2000049.h00v08.061.2020041203631.hdf",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(f87dd779-71a4-449e-8e86-4f480a3be065)/Nodes(MOD21A2.A2000049.h00v08.061.2020041203631)/Nodes(MOD21A2.A2000049.h00v08.061.2020041203631.hdf)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "BROWSE.MOD21A2.A2000049.h00v08.061.2020041153631.1.jpg",
+      "roles": [
+        "thumbnail",
+        "graphic"
+      ],
+      "file:checksum": "d5011044074cf782223079c6e1f98dbda0ef05",
+      "file:size": 4343,
+      "file:local_path": "MOD21A2.A2000049.h00v08.061.2020041203631/BROWSE.MOD21A2.A2000049.h00v08.061.2020041153631.1.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(584e12b2-2ec6-4085-b8a3-ba22a9e5180c)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Terra/MODIS/MOD21A2.061/2000/02/18/MOD21A2.A2000049.h00v08.061.2020041203631/BROWSE.MOD21A2.A2000049.h00v08.061.2020041153631.1.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110ae35995db5da8de1c3f94e69201344d5",
+      "file:size": 105395,
+      "file:local_path": "MOD21A2.A2000049.h00v08.061.2020041203631.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(f87dd779-71a4-449e-8e86-4f480a3be065)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

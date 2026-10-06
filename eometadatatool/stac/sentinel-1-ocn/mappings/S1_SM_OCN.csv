@@ -1,0 +1,109 @@
+metadata;file;mappings;datatype
+processingDate;manifest.safe;//safe:processing/@start;DateTimeOffset
+processingCenter;manifest.safe;//safe:processing/safe:facility/@site;String
+processorName;manifest.safe;//safe:processing/safe:facility/safe:software/@name;String
+processorVersion;manifest.safe;//safe:processing/safe:facility/safe:software/@version;String
+beginningDateTime;manifest.safe;//safe:acquisitionPeriod/safe:startTime/text();DateTimeOffset
+endingDateTime;manifest.safe;//safe:acquisitionPeriod/safe:stopTime/text();DateTimeOffset
+platformIdentifier;manifest.safe;//safe:platform/safe:nssdcIdentifier/text();String
+platformShortName;manifest.safe;//safe:platform/safe:familyName/text();String
+platformSerialIdentifier;manifest.safe;//safe:platform/safe:number/text();String
+instrumentShortName;manifest.safe;//safe:platform/safe:instrument/safe:familyName/@abbreviation;String
+operationalMode;manifest.safe;//safe:platform/safe:instrument/safe:extension/*[local-name()='instrumentMode']/*[local-name()='mode']/text();String
+orbitNumber;manifest.safe;"//safe:orbitReference/safe:orbitNumber[@type=""start""]/text()";Int64
+relativeOrbitNumber;manifest.safe;"//safe:orbitReference/safe:relativeOrbitNumber[@type=""start""]/text()";Int64
+cycleNumber;manifest.safe;//safe:orbitReference/safe:cycleNumber/text();Int64
+orbitDirection;manifest.safe;//safe:orbitReference/safe:extension/*[local-name()='orbitProperties']/*[local-name()='pass']/text();String
+coordinates;manifest.safe;WKT(//safe:frameSet/safe:frame/safe:footPrint/gml:coordinates/text());String
+instrumentConfigurationID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='instrumentConfigurationID']/text();Int64
+datatakeID;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='missionDataTakeID']/text();Int64
+timeliness;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='productTimelinessCategory']/text();String
+polarisationChannel:1;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation'][1]/text();String
+polarisationChannel:2;manifest.safe;//*[local-name()='standAloneProductInformation']/*[local-name()='transmitterReceiverPolarisation'][2]/text();String
+anxTime;manifest.safe;//*[local-name()='orbitProperties']/*[local-name()='ascendingNodeTime']/text();DateTimeOffset
+asset:product:vv:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnvv')]/byteStream/fileLocation/@href];String
+asset:product:vv:checksum:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnvv')]/byteStream/checksum/text()];String
+asset:product:vv:size:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnvv')]/byteStream/@size];Int64
+asset:product:vh:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnvh')]/byteStream/fileLocation/@href];String
+asset:product:vh:checksum:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnvh')]/byteStream/checksum/text()];String
+asset:product:vh:size:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnvh')]/byteStream/@size];Int64
+asset:product:hh:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnhh')]/byteStream/fileLocation/@href];String
+asset:product:hh:checksum:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnhh')]/byteStream/checksum/text()];String
+asset:product:hh:size:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnhh')]/byteStream/@size];Int64
+asset:product:hv:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnhv')]/byteStream/fileLocation/@href];String
+asset:product:hv:checksum:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnhv')]/byteStream/checksum/text()];String
+asset:product:hv:size:s1;manifest.safe;[//dataObject[contains(@ID, 's1ocnhv')]/byteStream/@size];Int64
+asset:product:vv:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnvv')]/byteStream/fileLocation/@href];String
+asset:product:vv:checksum:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnvv')]/byteStream/checksum/text()];String
+asset:product:vv:size:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnvv')]/byteStream/@size];Int64
+asset:product:vh:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnvh')]/byteStream/fileLocation/@href];String
+asset:product:vh:checksum:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnvh')]/byteStream/checksum/text()];String
+asset:product:vh:size:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnvh')]/byteStream/@size];Int64
+asset:product:hh:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnhh')]/byteStream/fileLocation/@href];String
+asset:product:hh:checksum:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnhh')]/byteStream/checksum/text()];String
+asset:product:hh:size:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnhh')]/byteStream/@size];Int64
+asset:product:hv:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnhv')]/byteStream/fileLocation/@href];String
+asset:product:hv:checksum:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnhv')]/byteStream/checksum/text()];String
+asset:product:hv:size:s2;manifest.safe;[//dataObject[contains(@ID, 's2ocnhv')]/byteStream/@size];Int64
+asset:product:vv:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnvv')]/byteStream/fileLocation/@href];String
+asset:product:vv:checksum:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnvv')]/byteStream/checksum/text()];String
+asset:product:vv:size:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnvv')]/byteStream/@size];Int64
+asset:product:vh:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnvh')]/byteStream/fileLocation/@href];String
+asset:product:vh:checksum:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnvh')]/byteStream/checksum/text()];String
+asset:product:vh:size:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnvh')]/byteStream/@size];Int64
+asset:product:hh:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnhh')]/byteStream/fileLocation/@href];String
+asset:product:hh:checksum:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnhh')]/byteStream/checksum/text()];String
+asset:product:hh:size:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnhh')]/byteStream/@size];Int64
+asset:product:hv:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnhv')]/byteStream/fileLocation/@href];String
+asset:product:hv:checksum:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnhv')]/byteStream/checksum/text()];String
+asset:product:hv:size:s3;manifest.safe;[//dataObject[contains(@ID, 's3ocnhv')]/byteStream/@size];Int64
+asset:product:vv:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnvv')]/byteStream/fileLocation/@href];String
+asset:product:vv:checksum:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnvv')]/byteStream/checksum/text()];String
+asset:product:vv:size:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnvv')]/byteStream/@size];Int64
+asset:product:vh:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnvh')]/byteStream/fileLocation/@href];String
+asset:product:vh:checksum:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnvh')]/byteStream/checksum/text()];String
+asset:product:vh:size:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnvh')]/byteStream/@size];Int64
+asset:product:hh:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnhh')]/byteStream/fileLocation/@href];String
+asset:product:hh:checksum:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnhh')]/byteStream/checksum/text()];String
+asset:product:hh:size:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnhh')]/byteStream/@size];Int64
+asset:product:hv:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnhv')]/byteStream/fileLocation/@href];String
+asset:product:hv:checksum:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnhv')]/byteStream/checksum/text()];String
+asset:product:hv:size:s4;manifest.safe;[//dataObject[contains(@ID, 's4ocnhv')]/byteStream/@size];Int64
+asset:product:vv:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnvv')]/byteStream/fileLocation/@href];String
+asset:product:vv:checksum:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnvv')]/byteStream/checksum/text()];String
+asset:product:vv:size:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnvv')]/byteStream/@size];Int64
+asset:product:vh:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnvh')]/byteStream/fileLocation/@href];String
+asset:product:vh:checksum:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnvh')]/byteStream/checksum/text()];String
+asset:product:vh:size:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnvh')]/byteStream/@size];Int64
+asset:product:hh:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnhh')]/byteStream/fileLocation/@href];String
+asset:product:hh:checksum:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnhh')]/byteStream/checksum/text()];String
+asset:product:hh:size:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnhh')]/byteStream/@size];Int64
+asset:product:hv:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnhv')]/byteStream/fileLocation/@href];String
+asset:product:hv:checksum:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnhv')]/byteStream/checksum/text()];String
+asset:product:hv:size:s5;manifest.safe;[//dataObject[contains(@ID, 's5ocnhv')]/byteStream/@size];Int64
+asset:product:vv:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnvv')]/byteStream/fileLocation/@href];String
+asset:product:vv:checksum:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnvv')]/byteStream/checksum/text()];String
+asset:product:vv:size:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnvv')]/byteStream/@size];Int64
+asset:product:vh:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnvh')]/byteStream/fileLocation/@href];String
+asset:product:vh:checksum:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnvh')]/byteStream/checksum/text()];String
+asset:product:vh:size:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnvh')]/byteStream/@size];Int64
+asset:product:hh:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnhh')]/byteStream/fileLocation/@href];String
+asset:product:hh:checksum:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnhh')]/byteStream/checksum/text()];String
+asset:product:hh:size:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnhh')]/byteStream/@size];Int64
+asset:product:hv:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnhv')]/byteStream/fileLocation/@href];String
+asset:product:hv:checksum:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnhv')]/byteStream/checksum/text()];String
+asset:product:hv:size:s6;manifest.safe;[//dataObject[contains(@ID, 's6ocnhv')]/byteStream/@size];Int64
+asset:quicklook:rvl;manifest.safe;//dataObject[@ID='s1level2rvlquicklook']/byteStream/fileLocation/@href;String
+asset:quicklook:rvl:checksum;manifest.safe;//dataObject[@ID='s1level2rvlquicklook']/byteStream/checksum/text();String
+asset:quicklook:rvl:size;manifest.safe;//dataObject[@ID='s1level2rvlquicklook']/byteStream/@size;Int64
+asset:quicklook:rvl:colorbar;manifest.safe;//dataObject[@ID='s1level2rvlcolorbar']/byteStream/fileLocation/@href;String
+asset:quicklook:rvl:colorbar:checksum;manifest.safe;//dataObject[@ID='s1level2rvlcolorbar']/byteStream/checksum/text();String
+asset:quicklook:rvl:colorbar:size;manifest.safe;//dataObject[@ID='s1level2rvlcolorbar']/byteStream/@size;Int64
+asset:quicklook:owi;manifest.safe;//dataObject[@ID='s1level2owiquicklook']/byteStream/fileLocation/@href;String
+asset:quicklook:owi:checksum;manifest.safe;//dataObject[@ID='s1level2owiquicklook']/byteStream/checksum/text();String
+asset:quicklook:owi:size;manifest.safe;//dataObject[@ID='s1level2owiquicklook']/byteStream/@size;Int64
+asset:quicklook:owi:colorbar;manifest.safe;//dataObject[@ID='s1level2owicolorbar']/byteStream/fileLocation/@href;String
+asset:quicklook:owi:colorbar:checksum;manifest.safe;//dataObject[@ID='s1level2owicolorbar']/byteStream/checksum/text();String
+asset:quicklook:owi:colorbar:size;manifest.safe;//dataObject[@ID='s1level2owicolorbar']/byteStream/@size;Int64
+dimensions;*.nc;dimensions;Dict
+variables;*.nc;variables;Dict

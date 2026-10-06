@@ -1,0 +1,651 @@
+{
+  "stac_version": "1.1.0",
+  "id": "landsat-7-l1t",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "auth:schemes": {
+    "s3": { "type": "s3" },
+    "oidc": {
+      "type": "openIdConnect",
+      "openIdConnectUrl": "https://identity.cloudferro.com/auth/realms/CODE-DE3/.well-known/openid-configuration"
+    }
+  },
+  "storage:schemes": {
+    "code-de-s3": {
+      "type": "custom-s3",
+      "title": "CODE-DE S3",
+      "platform": "https://eodata.code-de.org",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive of the CODE-DE platform",
+      "requester_pays": true
+    }
+  },
+  "extent": {
+    "spatial": {
+      "bbox": [[-60, -20, 60, 80]]
+    },
+    "temporal": {
+      "interval": [["1999-07-09T00:00:00.000Z", "2003-12-31T23:59:59.999Z"]]
+    }
+  },
+  "sci:doi": "10.57780/esa-5018efb",
+  "sci:citation": "European Space Agency, 2021, Landsat ETM+ ESA archive, Version SLAP_03.08",
+  "type": "Collection",
+  "title": "Landsat 7 Level-1 Terrain Corrected (ESA)",
+  "description": "Landsat-7 L1T stands for Landsat-7 Enhanced Thematic Mapper Plus (ETM+) Level-1 Terrain corrected data. The Level-1 terrain-corrected data refer to the correction of the topographic displacement effects in the images, also known as relief displacement or parallax. The L1T processing level provides more precise geolocation information, which is particularly important for applications such as land-cover mapping and change detection. This product allows for more accurate and consistent image interpretation and analysis, making it a valuable tool for scientific research and environmental management.",
+  "license": "other",
+  "keywords": [
+    "Landsat",
+    "ESA",
+    "USGS",
+    "Satellite",
+    "Global",
+    "Imagery",
+    "Reflectance",
+    "Thermal"
+  ],
+  "providers": [
+    {
+      "name": "USGS",
+      "roles": ["licensor", "producer"],
+      "url": "https://www.usgs.gov/landsat-missions"
+    },
+    {
+      "name": "ESA",
+      "roles": ["processor"],
+      "url": "https://earth.esa.int/eogateway/catalog/landsat-tm-esa-archive"
+    },
+    {
+      "name": "CloudFerro",
+      "roles": ["host"],
+      "url": "https://cloudferro.com/"
+    }
+  ],
+  "summaries": {
+    "platform": [
+      "landsat-7"
+    ],
+    "sat:platform_international_designator": [
+      "1999-020A"
+    ],
+    "processing:level": [
+      "L1"
+    ],
+    "constellation": [
+      "landsat"
+    ],
+    "instruments": [
+      "etm"
+    ],
+    "gsd": [
+      15.0
+    ]
+  },
+  "item_assets": {
+    "B1": {
+      "raster:offset": -0.010763,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to reflectance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Blue (band 1) - 30m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 0.07,
+          "name": "B1",
+          "description": "Blue (band 1)",
+          "eo:common_name": "blue",
+          "eo:center_wavelength": 0.485
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.001201,
+      "raster:spatial_resolution": 30.0,
+      "data_type": "uint8",
+      "gsd": 30,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "B2": {
+      "raster:offset": -0.011874,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to reflectance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Green (band 2) - 30m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 0.08,
+          "name": "B2",
+          "description": "Green (band 2)",
+          "eo:common_name": "green",
+          "eo:center_wavelength": 0.56
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.0013176,
+      "raster:spatial_resolution": 30.0,
+      "data_type": "uint8",
+      "gsd": 30,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "B3": {
+      "raster:offset": -0.011041,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to reflectance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Red (band 3) - 30m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 0.06,
+          "name": "B3",
+          "description": "Red (band 3)",
+          "eo:common_name": "red",
+          "eo:center_wavelength": 0.66
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.0012209,
+      "raster:spatial_resolution": 30.0,
+      "data_type": "uint8",
+      "gsd": 30,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "B4": {
+      "raster:offset": -0.017663,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to reflectance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Near Infrared (band 4) - 30m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 0.13,
+          "name": "B4",
+          "description": "Near Infrared (band 4)",
+          "eo:common_name": "nir",
+          "eo:center_wavelength": 0.835
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.0028208,
+      "raster:spatial_resolution": 30.0,
+      "data_type": "uint8",
+      "gsd": 30,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "B5": {
+      "raster:offset": -0.01516,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to reflectance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Short-wave Infrared 1.6 (band 5) - 30m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 0.2,
+          "name": "B5",
+          "description": "Short-wave Infrared 1.6 (band 5)",
+          "eo:common_name": "swir16",
+          "eo:center_wavelength": 1.65
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.0016991,
+      "raster:spatial_resolution": 30.0,
+      "data_type": "uint8",
+      "gsd": 30,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "B6_VCID_1": {
+      "raster:offset": -0.06709,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "temperature",
+        "radiance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Long-wave Infrared (band 6) - VCD 1: Low Gain - 60m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 2.1,
+          "name": "B6",
+          "description": "Long-wave Infrared (band 6) - VCD 1: Low Gain",
+          "eo:common_name": "lwir",
+          "eo:center_wavelength": 11.45
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.067087,
+      "raster:spatial_resolution": 30.0,
+      "data_type": "uint8",
+      "gsd": 60,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "B6_VCID_2": {
+      "raster:offset": 3.1628,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "temperature",
+        "radiance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to radiance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Long-wave Infrared (band 6) - VCD 2: High Gain - 60m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 2.1,
+          "name": "B6",
+          "description": "Long-wave Infrared (band 6) - VCD 2: High Gain",
+          "eo:common_name": "lwir",
+          "eo:center_wavelength": 11.45
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.037205,
+      "raster:spatial_resolution": 30.0,
+      "data_type": "uint8",
+      "gsd": 60,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "B7": {
+      "raster:offset": -0.014584,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "reflectance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to reflectance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Short-wave Infrared 2.2 (band 7) - 30m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 0.27,
+          "name": "B7",
+          "description": "Short-wave Infrared 2.2 (band 7)",
+          "eo:common_name": "swir22",
+          "eo:center_wavelength": 2.215
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.0016253,
+      "raster:spatial_resolution": 30.0,
+      "data_type": "uint8",
+      "gsd": 30,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "B8": {
+      "raster:offset": -0.012596,
+      "alternate:name": "S3",
+      "roles": [
+        "data",
+        "panchromatic",
+        "reflectance"
+      ],
+      "description": "Applying scale and offset will convert the pixel values to reflectance.",
+      "nodata:": 0,
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "image/tiff; application=geotiff",
+      "title": "Panchromatic (band 8) - 15m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 0.38,
+          "name": "B8",
+          "description": "Panchromatic (band 8)",
+          "eo:common_name": "pan",
+          "eo:center_wavelength": 0.71
+        }
+      ],
+      "storage:refs": [
+        "code-de-s3"
+      ],
+      "raster:scale": 0.0021651,
+      "raster:spatial_resolution": 15.0,
+      "data_type": "uint8",
+      "gsd": 15,
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "product_metadata": {
+      "alternate:name": "S3",
+      "roles": [
+        "metadata"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "auth:refs": [
+        "s3"
+      ],
+      "type": "text/plain",
+      "title": "LE70960702017010ASA00_MTL.txt",
+      "storage:refs": [
+        "code-de-s3"
+      ]
+    },
+    "thumbnail": {
+      "alternate:name": "HTTPS",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "code-de-s3"
+          ]
+        }
+      },
+      "type": "image/jpeg",
+      "title": "Thumbnail"
+    },
+    "thumbnail_tir": {
+      "alternate:name": "HTTPS",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "code-de-s3"
+          ]
+        }
+      },
+      "type": "image/jpeg",
+      "title": "Thumbnail"
+    },
+    "visual": {
+      "alternate:name": "HTTPS",
+      "roles": [
+        "overview",
+        "visual"
+      ],
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "code-de-s3"
+          ]
+        }
+      },
+      "type": "image/tiff",
+      "title": "Thumbnail"
+    },
+    "visual_tir": {
+      "alternate:name": "HTTPS",
+      "roles": [
+        "overview",
+        "visual"
+      ],
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "code-de-s3"
+          ]
+        }
+      },
+      "type": "image/tiff",
+      "title": "Thumbnail"
+    }
+  },
+  "links": [
+    {
+      "href": "https://www.usgs.gov/faqs/are-there-any-restrictions-use-or-redistribution-landsat-data",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Landsat data policy"
+    }
+  ],
+  "bands": [
+    {
+      "name": "B1",
+      "description": "Blue (band 1)",
+      "eo:center_wavelength": 0.485,
+      "eo:full_width_half_max": 0.07,
+      "eo:common_name": "blue"
+    },
+    {
+      "name": "B2",
+      "description": "Green (band 2)",
+      "eo:center_wavelength": 0.56,
+      "eo:full_width_half_max": 0.08,
+      "eo:common_name": "green"
+    },
+    {
+      "name": "B3",
+      "description": "Red (band 3)",
+      "eo:center_wavelength": 0.66,
+      "eo:full_width_half_max": 0.06,
+      "eo:common_name": "red"
+    },
+    {
+      "name": "B4",
+      "description": "Near Infrared (band 4)",
+      "eo:center_wavelength": 0.835,
+      "eo:full_width_half_max": 0.13,
+      "eo:common_name": "nir"
+    },
+    {
+      "name": "B5",
+      "description": "Short-wave Infrared 1.6 (band 5)",
+      "eo:center_wavelength": 1.65,
+      "eo:full_width_half_max": 0.2,
+      "eo:common_name": "swir16"
+    },
+    {
+      "name": "B6",
+      "description": "Long-wave Infrared (band 6)",
+      "eo:center_wavelength": 11.45,
+      "eo:full_width_half_max": 2.1,
+      "eo:common_name": "lwir"
+    },
+    {
+      "name": "B7",
+      "description": "Short-wave Infrared 2.2 (band 7)",
+      "eo:center_wavelength": 2.22,
+      "eo:full_width_half_max": 0.27,
+      "eo:common_name": "swir22"
+    },
+    {
+      "name": "B8",
+      "description": "Panchromatic (band 8)",
+      "eo:center_wavelength": 0.71,
+      "eo:full_width_half_max": 0.38,
+      "eo:common_name": "pan"
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/landsat_7.jpg",
+      "type": "image/jpeg",
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ],
+      "roles": [
+        "thumbnail"
+      ],
+      "title": "Landsat 7 Level-1 Terrain Corrected"
+    }
+  }
+}

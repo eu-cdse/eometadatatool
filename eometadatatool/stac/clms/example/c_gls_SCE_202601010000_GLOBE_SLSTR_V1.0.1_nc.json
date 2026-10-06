@@ -1,0 +1,303 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_sce_global_1km_daily_v1_nc",
+  "id": "c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1_nc",
+  "properties": {
+    "created": "2026-01-02T04:03:00.000000Z",
+    "updated": "2026-01-02T04:18:00.652304Z",
+    "published": "2026-01-02T04:18:00.652304Z",
+    "eopf:origin_datetime": "2026-01-02T04:03:00.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2026-01-01T00:00:40.000000Z",
+    "start_datetime": "2026-01-01T00:00:40.000000Z",
+    "end_datetime": "2026-01-01T23:49:29.000000Z",
+    "instruments": [
+      "slstr"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "snow_cover_extent",
+    "processing:level": "L3",
+    "cube:dimensions": {
+      "time": {
+        "type": "temporal",
+        "description": "time",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-08T17:03:36.000000Z"
+        ]
+      },
+      "lat": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude",
+        "extent": [
+          -89.995,
+          89.995
+        ]
+      },
+      "lon": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude",
+        "extent": [
+          -179.995,
+          179.995
+        ]
+      }
+    },
+    "cube:variables": {
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          666216.0
+        ],
+        "description": "time",
+        "unit": "hours since 1950-01-01 00:00:00",
+        "data_type": "other"
+      },
+      "lat": {
+        "dimensions": [
+          "lat"
+        ],
+        "type": "data",
+        "description": "latitude",
+        "unit": "degrees_north",
+        "data_type": "other"
+      },
+      "lon": {
+        "dimensions": [
+          "lon"
+        ],
+        "type": "data",
+        "description": "longitude",
+        "unit": "degrees_east",
+        "data_type": "other"
+      },
+      "sce": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Snow Cover Extent",
+        "unit": "percent",
+        "nodata": 255,
+        "data_type": "int16"
+      },
+      "sce_unc": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Unbiased Root Mean Square Error for Snow Cover Extent",
+        "unit": "percent",
+        "nodata": 255,
+        "data_type": "int16"
+      }
+    },
+    "product:timeliness": "P1D",
+    "product:timeliness_category": "NRT",
+    "processing:version": "V1.0.1",
+    "_private": {
+      "product_size": 35708908,
+      "product_uuid": "fd0eaab0-7508-4406-ac63-6a6debdff39c",
+      "product_name": "c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1_nc",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260924120453+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -89.9999999,
+    179.9999999,
+    89.9999999
+  ],
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -179.9999999,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            89.9999999
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            1e-8,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            89.9999999
+          ],
+          [
+            1e-8,
+            89.9999999
+          ],
+          [
+            1e-8,
+            -89.9999999
+          ]
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/snow_cover_extent/sce_global_1km_daily_v1/2026/01/01/c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1_nc/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1_nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "Product": {
+      "type": "application/netcdf",
+      "title": "Daily Snow Cover Extent, Global Land Areas, Sentinel-3 SLSTR (0.01deg., 2026-01-01)",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "sce",
+          "description": "Snow Cover Extent"
+        },
+        {
+          "name": "sce_unc",
+          "description": "Unbiased Root Mean Square Error for Snow Cover Extent"
+        }
+      ],
+      "file:size": 35708908,
+      "file:local_path": "c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1_nc/c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1.nc",
+      "href": "s3://eodata/CLMS/bio-geophysical/snow_cover_extent/sce_global_1km_daily_v1/2026/01/01/c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1_nc/c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(fd0eaab0-7508-4406-ac63-6a6debdff39c)/Nodes(c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1_nc)/Nodes(c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0,
+        -90.0,
+        180.0,
+        90.0
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        375,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/snow_cover_extent/sce_global_1km_daily_v1/2026/01/01/c_gls_SCE_202601010000_GLOBE_SLSTR_V1.0.1_cog/c_gls_SCE-SCE_202601010000_GLOBE_SLSTR_V1.0.1.tiff&CRS=EPSG:4326&BBOX=-180.0,-90.0,180.0,90.0&WIDTH=750&HEIGHT=375&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/sce_global_1km_daily_v1/clms_global_sce_1km_v1_daily.sld"
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

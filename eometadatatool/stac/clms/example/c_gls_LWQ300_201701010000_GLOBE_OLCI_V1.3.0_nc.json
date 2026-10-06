@@ -1,0 +1,737 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lwq-nrt_global_300m_10daily_v1_nc",
+  "id": "c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0_nc",
+  "properties": {
+    "created": "2020-09-09T16:21:21.337461Z",
+    "updated": "2025-07-18T02:03:00.563013Z",
+    "published": "2025-04-10T18:24:33.501476Z",
+    "eopf:origin_datetime": "2020-09-09T16:21:21.337461Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2017-01-01T00:00:00.000000Z",
+    "start_datetime": "2017-01-01T00:00:00.000000Z",
+    "end_datetime": "2017-01-10T23:59:59.999999Z",
+    "instruments": [
+      "olci"
+    ],
+    "gsd": 300,
+    "proj:code": "EPSG:4326",
+    "product:type": "lake_water_quality",
+    "processing:level": "L3",
+    "cube:dimensions": {
+      "lat": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude",
+        "extent": [
+          -89.99888392857142,
+          89.99888392857143
+        ]
+      },
+      "lon": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude",
+        "extent": [
+          -179.99888392857144,
+          179.99888392857142
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "reference time of the lwq file",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-01T04:46:07.000000Z"
+        ]
+      }
+    },
+    "cube:variables": {
+      "num_obs": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "number of observations of the pixel area",
+        "data_type": "int32"
+      },
+      "first_obs": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "age in days after the start of the observation period of the first observation included in the pixel area",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "last_obs": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "age in days after the start of the observation period of the last observation included in the pixel area",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "n_obs_quality_risk_sum": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "number of observations potentially affected by suboptimal observation conditions",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "stats_valid_obs_tsi_sum": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "number of valid tsi observations of the pixel area",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "stats_valid_obs_turbidity_sum": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "number of valid turbidity observations of the pixel area",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "turbidity_mean": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "pixel-mean turbidity derived with Calimnos optical water type dependant blending of total suspended matter algorithms as tuned in the GloboLakes project",
+        "unit": "NTU",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "turbidity_sigma": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "pixel-stdev turbidity derived with Calimnos optical water type dependant blending of total suspended matter algorithms as tuned in the GloboLakes project",
+        "unit": "NTU",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw1020_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 1020 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw400_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 400 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw412_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 412 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw443_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 443 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw490_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 490 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw510_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 510 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw560_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 560 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw620_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 620 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw665_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 665 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw674_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 674 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw681_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 681 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw709_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 709 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw754_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 754 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw760_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 764 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw764_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 767 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw767_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 760 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw779_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 779 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw865_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 865 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw885_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 885 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw900_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 900 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw940_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "reflectance at 940 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "RwDayNum_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "age in days after the start of the observation period of the most representative water-leaving reflectance spectrum",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "trophic_state_index": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "trophic state index derived with Calimnos blending of chlorophyll-a algorithms tuned in the GloboLakes project",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "lat": {
+        "dimensions": [
+          "lat"
+        ],
+        "type": "data",
+        "description": "latitude",
+        "unit": "degrees_north",
+        "data_type": "other"
+      },
+      "lon": {
+        "dimensions": [
+          "lon"
+        ],
+        "type": "data",
+        "description": "longitude",
+        "unit": "degrees_east",
+        "data_type": "other"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          17167.0
+        ],
+        "description": "reference time of the lwq file",
+        "unit": "days since 1970-01-01 00:00:00",
+        "data_type": "other"
+      }
+    },
+    "product:timeliness": "P3D",
+    "product:timeliness_category": "NRT",
+    "processing:version": "1.3.0",
+    "_private": {
+      "product_size": 2867461173,
+      "product_uuid": "75efee47-e78b-4b0d-a709-059874729637",
+      "product_name": "c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0_nc",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260924120453+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -89.9999999,
+    179.9999999,
+    89.9999999
+  ],
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -179.9999999,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            89.9999999
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            1e-8,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            89.9999999
+          ],
+          [
+            1e-8,
+            89.9999999
+          ],
+          [
+            1e-8,
+            -89.9999999
+          ]
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_300m_10daily_v1/2017/01/01/c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0_nc/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0_nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "Product": {
+      "type": "application/netcdf",
+      "title": "Water Quality, Calimnos L3 Aggregated product",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "num_obs",
+          "description": "number of observations of the pixel area"
+        },
+        {
+          "name": "first_obs",
+          "description": "age in days after the start of the observation period of the first observation included in the pixel area"
+        },
+        {
+          "name": "last_obs",
+          "description": "age in days after the start of the observation period of the last observation included in the pixel area"
+        },
+        {
+          "name": "n_obs_quality_risk_sum",
+          "description": "number of observations potentially affected by suboptimal observation conditions"
+        },
+        {
+          "name": "stats_valid_obs_tsi_sum",
+          "description": "number of valid tsi observations of the pixel area"
+        },
+        {
+          "name": "stats_valid_obs_turbidity_sum",
+          "description": "number of valid turbidity observations of the pixel area"
+        },
+        {
+          "name": "turbidity_mean",
+          "description": "pixel-mean turbidity derived with Calimnos optical water type dependant blending of total suspended matter algorithms as tuned in the GloboLakes project"
+        },
+        {
+          "name": "turbidity_sigma",
+          "description": "pixel-stdev turbidity derived with Calimnos optical water type dependant blending of total suspended matter algorithms as tuned in the GloboLakes project"
+        },
+        {
+          "name": "Rw1020_rep",
+          "description": "reflectance at 1020 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw400_rep",
+          "description": "reflectance at 400 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw412_rep",
+          "description": "reflectance at 412 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw443_rep",
+          "description": "reflectance at 443 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw490_rep",
+          "description": "reflectance at 490 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw510_rep",
+          "description": "reflectance at 510 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw560_rep",
+          "description": "reflectance at 560 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw620_rep",
+          "description": "reflectance at 620 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw665_rep",
+          "description": "reflectance at 665 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw674_rep",
+          "description": "reflectance at 674 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw681_rep",
+          "description": "reflectance at 681 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw709_rep",
+          "description": "reflectance at 709 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw754_rep",
+          "description": "reflectance at 754 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw760_rep",
+          "description": "reflectance at 764 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw764_rep",
+          "description": "reflectance at 767 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw767_rep",
+          "description": "reflectance at 760 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw779_rep",
+          "description": "reflectance at 779 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw865_rep",
+          "description": "reflectance at 865 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw885_rep",
+          "description": "reflectance at 885 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw900_rep",
+          "description": "reflectance at 900 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "Rw940_rep",
+          "description": "reflectance at 940 nm in the most representative spectrum of fully normalized water-leaving obtained from polymer atmospheric correction processor"
+        },
+        {
+          "name": "RwDayNum_rep",
+          "description": "age in days after the start of the observation period of the most representative water-leaving reflectance spectrum"
+        },
+        {
+          "name": "trophic_state_index",
+          "description": "trophic state index derived with Calimnos blending of chlorophyll-a algorithms tuned in the GloboLakes project"
+        }
+      ],
+      "file:size": 2867461173,
+      "file:local_path": "c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0_nc/c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0.nc",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_300m_10daily_v1/2017/01/01/c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0_nc/c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(75efee47-e78b-4b0d-a709-059874729637)/Nodes(c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0_nc)/Nodes(c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.00000000000003,
+        -90.00000000000344,
+        180.00000000000685,
+        90.0
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        375,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_300m_10daily_v1/2017/01/01/c_gls_LWQ300_201701010000_GLOBE_OLCI_V1.3.0_cog/c_gls_LWQ300-TSI_201701010000_GLOBE_OLCI_V1.3.0.tiff&CRS=EPSG:4326&BBOX=-180.00000000000003,-90.00000000000344,180.00000000000685,90.0&WIDTH=750&HEIGHT=375&FORMAT=image/png&TRANSPARENT=false"
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

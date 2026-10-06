@@ -1,0 +1,1014 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_eta_global_300m_10daily_v1_cog",
+  "id": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog",
+  "properties": {
+    "created": "2025-11-25T09:49:44.139035Z",
+    "updated": "2025-11-28T22:13:08.889629Z",
+    "published": "2025-11-28T11:06:24.651332Z",
+    "eopf:origin_datetime": "2025-11-25T09:49:44.139035Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2025-11-01T00:00:00.000000Z",
+    "start_datetime": "2025-11-01T00:00:00.000000Z",
+    "end_datetime": "2025-11-10T23:59:59.999999Z",
+    "instruments": [
+      "olci",
+      "slstr"
+    ],
+    "gsd": 300,
+    "proj:code": "EPSG:4326",
+    "product:type": "evapotranspiration",
+    "processing:level": "L4",
+    "product:timeliness": "P2D",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "V1.0.1",
+    "_private": {
+      "product_size": 5825106542,
+      "product_uuid": "a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf",
+      "product_name": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -65.0,
+    179.9999999,
+    85.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          85.0
+        ],
+        [
+          -179.9999999,
+          -65.0
+        ],
+        [
+          0.0,
+          -65.0
+        ],
+        [
+          179.9999999,
+          -65.0
+        ],
+        [
+          179.9999999,
+          85.0
+        ],
+        [
+          0.0,
+          85.0
+        ],
+        [
+          -179.9999999,
+          85.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "e_ensemble": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual evaporation (from soil) Ensemble (average)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "e_ensemble",
+          "description": "Dekadal actual evaporation (from soil) Ensemble (average)"
+        }
+      ],
+      "file:size": 475145487,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_E-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_E-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_E-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "e_etlook": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual evaporation (from soil) ETLook",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "e_etlook",
+          "description": "Dekadal actual evaporation (from soil) ETLook"
+        }
+      ],
+      "file:size": 314728349,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_E-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_E-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_E-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "e_std": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual evaporation (from soil) Standard Deviation (Ensemble)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "e_std",
+          "description": "Dekadal actual evaporation (from soil) Standard Deviation (Ensemble)"
+        }
+      ],
+      "file:size": 307342880,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_E-STD_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_E-STD_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_E-STD_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "e_tsebpt": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual evaporation (from soil) TSEB-PT",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761931,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190507925,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "e_tsebpt",
+          "description": "Dekadal actual evaporation (from soil) TSEB-PT"
+        }
+      ],
+      "file:size": 576124363,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_E-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_E-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_E-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "et_ensemble": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual evapotranspiration Ensemble (average)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "et_ensemble",
+          "description": "Dekadal actual evapotranspiration Ensemble (average)"
+        }
+      ],
+      "file:size": 507094106,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_ET-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_ET-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_ET-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "et_etlook": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual evapotranspiration ETLook",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "et_etlook",
+          "description": "Dekadal actual evapotranspiration ETLook"
+        }
+      ],
+      "file:size": 464474624,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_ET-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_ET-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_ET-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "et_std": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual evapotranspiration Standard Deviation (Ensemble)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "et_std",
+          "description": "Dekadal actual evapotranspiration Standard Deviation (Ensemble)"
+        }
+      ],
+      "file:size": 325335828,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_ET-STD_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_ET-STD_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_ET-STD_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "et_tsebpt": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual evapotranspiration TSEB-PT",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761931,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190507925,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "et_tsebpt",
+          "description": "Dekadal actual evapotranspiration TSEB-PT"
+        }
+      ],
+      "file:size": 571400837,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_ET-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_ET-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_ET-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "flag": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Annotation flags",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761931,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190507925,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "flag",
+          "description": "Annotation flags"
+        }
+      ],
+      "file:size": 54445098,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_FLAG_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_FLAG_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_FLAG_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "gfd": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Gap-filling distance",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761931,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190507925,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "gfd",
+          "description": "Gap-filling distance"
+        }
+      ],
+      "file:size": 309534924,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_GFD_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_GFD_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_GFD_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "nobs": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Number of cloud free observations in a given dekade",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761931,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190507925,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "nobs",
+          "description": "Number of cloud free observations in a given dekade"
+        }
+      ],
+      "file:size": 218254907,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_NOBS_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_NOBS_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_NOBS_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "t_ensemble": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual transpiration (from canopy) Ensemble (average)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "t_ensemble",
+          "description": "Dekadal actual transpiration (from canopy) Ensemble (average)"
+        }
+      ],
+      "file:size": 470505804,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_T-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_T-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_T-ENSEMBLE_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "t_etlook": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual transpiration (from canopy) ETLook",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "t_etlook",
+          "description": "Dekadal actual transpiration (from canopy) ETLook"
+        }
+      ],
+      "file:size": 434504963,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_T-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_T-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_T-ETLOOK_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "t_std": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual transpiration (from canopy) Standard Deviation (Ensemble)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761929,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "t_std",
+          "description": "Dekadal actual transpiration (from canopy) Standard Deviation (Ensemble)"
+        }
+      ],
+      "file:size": 291848013,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_T-STD_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_T-STD_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_T-STD_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "t_tsebpt": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dekadal actual transpiration (from canopy) TSEB-PT",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761904761931,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761899,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190507925,
+        80.0014880952381
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.1,
+      "bands": [
+        {
+          "name": "t_tsebpt",
+          "description": "Dekadal actual transpiration (from canopy) TSEB-PT"
+        }
+      ],
+      "file:size": 504366359,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_T-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif",
+      "href": "s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_T-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/Nodes(clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog)/Nodes(clms_ETA300_T-TSEBPT_202511010000_GLOBE_S3_V1.0.1.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473481,
+        179.99851190505504,
+        80.0014880952381
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/evapotranspiration/eta_global_300m_10daily_v1/2025/11/01/clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog/clms_ETA300_GFD_202511010000_GLOBE_S3_V1.0.1.tif&CRS=EPSG:4326&BBOX=-180.0014880952381,-59.99851190473481,179.99851190505504,80.0014880952381&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/eta_global_300m_10daily_v1/clms_global_eta-gfd_300m_v1_10daily.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011098bed6677ecec0e879f902606769db37",
+      "file:size": 5825111032,
+      "file:local_path": "clms_ETA300_202511010000_GLOBE_S3_V1.0.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a2d2e5a9-1bf7-46b6-84dd-60bf68f129bf)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

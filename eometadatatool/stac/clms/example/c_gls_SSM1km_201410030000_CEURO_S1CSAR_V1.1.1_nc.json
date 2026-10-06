@@ -1,0 +1,279 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_ssm_europe_1km_daily_v1_nc",
+  "id": "c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1_nc",
+  "properties": {
+    "created": "2019-03-28T18:09:42.153442Z",
+    "updated": "2025-07-18T02:55:56.203105Z",
+    "published": "2025-03-26T15:06:32.804540Z",
+    "eopf:origin_datetime": "2019-03-28T18:09:42.153442Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2014-10-03T00:00:00.000000Z",
+    "start_datetime": "2014-10-03T00:00:00.000000Z",
+    "end_datetime": "2014-10-03T23:59:59.999999Z",
+    "instruments": [
+      "csar"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "surface_soil_moisture",
+    "processing:level": "L2",
+    "cube:dimensions": {
+      "lat": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude",
+        "extent": [
+          35.004464285714285,
+          71.99553571427731
+        ]
+      },
+      "lon": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude",
+        "extent": [
+          -10.995535714285714,
+          49.99553571428398
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "time",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-01T04:32:25.500000Z"
+        ]
+      }
+    },
+    "cube:variables": {
+      "lat": {
+        "dimensions": [
+          "lat"
+        ],
+        "type": "data",
+        "description": "latitude",
+        "unit": "degrees_north",
+        "data_type": "other"
+      },
+      "lon": {
+        "dimensions": [
+          "lon"
+        ],
+        "type": "data",
+        "description": "longitude",
+        "unit": "degrees_east",
+        "data_type": "other"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          16345.5
+        ],
+        "description": "time",
+        "unit": "days since 1970-01-01 12:00:00",
+        "data_type": "other"
+      },
+      "ssm": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Surface Soil Moisture",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "ssm_noise": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Surface Soil Moisture Noise",
+        "unit": "%",
+        "nodata": 255,
+        "data_type": "uint8"
+      }
+    },
+    "constellation": "sentinel-1",
+    "product:timeliness": "P1D",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "V1.1.1",
+    "_private": {
+      "product_size": 2672430,
+      "product_uuid": "d1ebbea4-119b-40cf-bdf7-c5cb07b6671a",
+      "product_name": "c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1_nc",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260924120453+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -11.0,
+    35.0,
+    50.0,
+    72.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          50.0,
+          72.0
+        ],
+        [
+          -11.0,
+          72.0
+        ],
+        [
+          -11.0,
+          35.0
+        ],
+        [
+          50.0,
+          35.0
+        ],
+        [
+          50.0,
+          72.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/surface_soil_moisture/ssm_europe_1km_daily_v1/2014/10/03/c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1_nc/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1_nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "Product": {
+      "type": "application/netcdf",
+      "title": "Daily Surface Soil Moisture 1km: CEURO 2014-10-03T00:00:00Z",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "ssm",
+          "description": "Surface Soil Moisture"
+        },
+        {
+          "name": "ssm_noise",
+          "description": "Surface Soil Moisture Noise"
+        }
+      ],
+      "file:checksum": "d501108f8963d5600dbd858211467f6783c954",
+      "file:size": 2672430,
+      "file:local_path": "c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1_nc/c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1.nc",
+      "href": "s3://eodata/CLMS/bio-geophysical/surface_soil_moisture/ssm_europe_1km_daily_v1/2014/10/03/c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1_nc/c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(d1ebbea4-119b-40cf-bdf7-c5cb07b6671a)/Nodes(c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1_nc)/Nodes(c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        455,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/surface_soil_moisture/ssm_europe_1km_daily_v1/2014/10/03/c_gls_SSM1km_201410030000_CEURO_S1CSAR_V1.1.1_cog/c_gls_SSM1km-SSM_201410030000_CEURO_S1CSAR_V1.1.1.tiff&CRS=EPSG:4326&BBOX=-11.0,35.00000000000001,49.999999999998444,71.9999999999916&WIDTH=750&HEIGHT=455&FORMAT=image/png&TRANSPARENT=false"
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

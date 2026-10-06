@@ -1,0 +1,986 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lst-daily-cycle_global_5km_10daily_v2_cog",
+  "id": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog",
+  "properties": {
+    "created": "2025-09-04T13:05:40.000000Z",
+    "updated": "2025-09-04T13:15:54.814349Z",
+    "published": "2025-09-04T13:15:54.814349Z",
+    "eopf:origin_datetime": "2025-09-04T13:05:40.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2021-01-21T00:00:00.000000Z",
+    "start_datetime": "2021-01-21T00:00:00.000000Z",
+    "end_datetime": "2021-01-31T23:00:00.000000Z",
+    "instruments": [
+      "seviri",
+      "abi",
+      "ahi"
+    ],
+    "gsd": 5000,
+    "proj:code": "EPSG:4326",
+    "product:type": "land_surface_temperature",
+    "processing:level": "L4",
+    "product:timeliness": "P2D",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "V2.2.1",
+    "_private": {
+      "product_size": 434313154,
+      "product_uuid": "a843a204-be12-475c-bcd6-d7aad2640adf",
+      "product_name": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -79.9776824,
+    179.9776872,
+    80.0223214
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0223214
+        ],
+        [
+          -179.9999999,
+          -79.9776824
+        ],
+        [
+          -0.0111564000000044,
+          -79.9776824
+        ],
+        [
+          179.9776872,
+          -79.9776824
+        ],
+        [
+          179.9776872,
+          80.0223214
+        ],
+        [
+          -0.0111564000000044,
+          80.0223214
+        ],
+        [
+          -179.9999999,
+          80.0223214
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "dc_fobs_00_11": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fraction of valid observations at 00-11 hr on Land Surface Temperature",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        3584,
+        8064
+      ],
+      "proj:transform": [
+        0.0446428582072258,
+        0.0,
+        -180.0223214291036,
+        0.0,
+        -0.0446428582072258,
+        80.02232142910361
+      ],
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "data_type": "int16",
+      "nodata": -8000,
+      "raster:scale": 0.01,
+      "bands": [
+        {
+          "name": "dc_fobs_00",
+          "description": "Fraction of valid observations at 0 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_01",
+          "description": "Fraction of valid observations at 1 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_02",
+          "description": "Fraction of valid observations at 2 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_03",
+          "description": "Fraction of valid observations at 3 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_04",
+          "description": "Fraction of valid observations at 4 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_05",
+          "description": "Fraction of valid observations at 5 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_06",
+          "description": "Fraction of valid observations at 6 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_07",
+          "description": "Fraction of valid observations at 7 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_08",
+          "description": "Fraction of valid observations at 8 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_09",
+          "description": "Fraction of valid observations at 9 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_10",
+          "description": "Fraction of valid observations at 10 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_11",
+          "description": "Fraction of valid observations at 11 hr on Land Surface Temperature"
+        }
+      ],
+      "file:checksum": "d50110513ab8d22c6f9d3c955bbf4f61fc1c88",
+      "file:size": 26000529,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-FOBS_202101210000_GLOBE_GEO_V2.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-FOBS_202101210000_GLOBE_GEO_V2.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/Nodes(c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog)/Nodes(c_gls_LST10-DC-FOBS_202101210000_GLOBE_GEO_V2.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "dc_fobs_12_23": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fraction of valid observations at 12-23 hr on Land Surface Temperature",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        3584,
+        8064
+      ],
+      "proj:transform": [
+        0.0446428582072258,
+        0.0,
+        -180.0223214291036,
+        0.0,
+        -0.0446428582072258,
+        80.02232142910361
+      ],
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "data_type": "int16",
+      "nodata": -8000,
+      "raster:scale": 0.01,
+      "bands": [
+        {
+          "name": "dc_fobs_12",
+          "description": "Fraction of valid observations at 12 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_13",
+          "description": "Fraction of valid observations at 13 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_14",
+          "description": "Fraction of valid observations at 14 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_15",
+          "description": "Fraction of valid observations at 15 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_16",
+          "description": "Fraction of valid observations at 16 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_17",
+          "description": "Fraction of valid observations at 17 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_18",
+          "description": "Fraction of valid observations at 18 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_19",
+          "description": "Fraction of valid observations at 19 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_20",
+          "description": "Fraction of valid observations at 20 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_21",
+          "description": "Fraction of valid observations at 21 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_22",
+          "description": "Fraction of valid observations at 22 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_23",
+          "description": "Fraction of valid observations at 23 hr on Land Surface Temperature"
+        }
+      ],
+      "file:checksum": "d50110e31183ffe1beeca6a2d90dae80bd86ee",
+      "file:size": 25690278,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-FOBS_202101211200_GLOBE_GEO_V2.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-FOBS_202101211200_GLOBE_GEO_V2.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/Nodes(c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog)/Nodes(c_gls_LST10-DC-FOBS_202101211200_GLOBE_GEO_V2.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "dc_max_00_11": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Maximum at 00-11 hr on Land Surface Temperature",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        3584,
+        8064
+      ],
+      "proj:transform": [
+        0.0446428582072258,
+        0.0,
+        -180.0223214291036,
+        0.0,
+        -0.0446428582072258,
+        80.02232142910361
+      ],
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "data_type": "int16",
+      "nodata": -8000,
+      "raster:scale": 0.01,
+      "raster:offset": 273.15,
+      "bands": [
+        {
+          "name": "dc_max_00",
+          "description": "Maximum at 0 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_01",
+          "description": "Maximum at 1 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_02",
+          "description": "Maximum at 2 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_03",
+          "description": "Maximum at 3 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_04",
+          "description": "Maximum at 4 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_05",
+          "description": "Maximum at 5 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_06",
+          "description": "Maximum at 6 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_07",
+          "description": "Maximum at 7 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_08",
+          "description": "Maximum at 8 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_09",
+          "description": "Maximum at 9 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_10",
+          "description": "Maximum at 10 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_11",
+          "description": "Maximum at 11 hr on Land Surface Temperature"
+        }
+      ],
+      "file:size": 64554978,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MAX_202101210000_GLOBE_GEO_V2.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MAX_202101210000_GLOBE_GEO_V2.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/Nodes(c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog)/Nodes(c_gls_LST10-DC-MAX_202101210000_GLOBE_GEO_V2.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "dc_max_12_23": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Maximum at 12-23 hr on Land Surface Temperature",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        3584,
+        8064
+      ],
+      "proj:transform": [
+        0.0446428582072258,
+        0.0,
+        -180.0223214291036,
+        0.0,
+        -0.0446428582072258,
+        80.02232142910361
+      ],
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "data_type": "int16",
+      "nodata": -8000,
+      "raster:scale": 0.01,
+      "raster:offset": 273.15,
+      "bands": [
+        {
+          "name": "dc_max_12",
+          "description": "Maximum at 12 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_13",
+          "description": "Maximum at 13 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_14",
+          "description": "Maximum at 14 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_15",
+          "description": "Maximum at 15 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_16",
+          "description": "Maximum at 16 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_17",
+          "description": "Maximum at 17 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_18",
+          "description": "Maximum at 18 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_19",
+          "description": "Maximum at 19 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_20",
+          "description": "Maximum at 20 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_21",
+          "description": "Maximum at 21 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_22",
+          "description": "Maximum at 22 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_23",
+          "description": "Maximum at 23 hr on Land Surface Temperature"
+        }
+      ],
+      "file:size": 63068501,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MAX_202101211200_GLOBE_GEO_V2.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MAX_202101211200_GLOBE_GEO_V2.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/Nodes(c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog)/Nodes(c_gls_LST10-DC-MAX_202101211200_GLOBE_GEO_V2.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "dc_median_00_11": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Median at 00-11 hr on Land Surface Temperature",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        3584,
+        8064
+      ],
+      "proj:transform": [
+        0.0446428582072258,
+        0.0,
+        -180.0223214291036,
+        0.0,
+        -0.0446428582072258,
+        80.02232142910361
+      ],
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "data_type": "int16",
+      "nodata": -8000,
+      "raster:scale": 0.01,
+      "raster:offset": 273.15,
+      "bands": [
+        {
+          "name": "dc_median_00",
+          "description": "Median at 0 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_01",
+          "description": "Median at 1 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_02",
+          "description": "Median at 2 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_03",
+          "description": "Median at 3 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_04",
+          "description": "Median at 4 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_05",
+          "description": "Median at 5 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_06",
+          "description": "Median at 6 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_07",
+          "description": "Median at 7 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_08",
+          "description": "Median at 8 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_09",
+          "description": "Median at 9 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_10",
+          "description": "Median at 10 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_11",
+          "description": "Median at 11 hr on Land Surface Temperature"
+        }
+      ],
+      "file:size": 64345001,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MEDIAN_202101210000_GLOBE_GEO_V2.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MEDIAN_202101210000_GLOBE_GEO_V2.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/Nodes(c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog)/Nodes(c_gls_LST10-DC-MEDIAN_202101210000_GLOBE_GEO_V2.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "dc_median_12_23": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Median at 12-23 hr on Land Surface Temperature",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        3584,
+        8064
+      ],
+      "proj:transform": [
+        0.0446428582072258,
+        0.0,
+        -180.0223214291036,
+        0.0,
+        -0.0446428582072258,
+        80.02232142910361
+      ],
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "data_type": "int16",
+      "nodata": -8000,
+      "raster:scale": 0.01,
+      "raster:offset": 273.15,
+      "bands": [
+        {
+          "name": "dc_median_12",
+          "description": "Median at 12 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_13",
+          "description": "Median at 13 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_14",
+          "description": "Median at 14 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_15",
+          "description": "Median at 15 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_16",
+          "description": "Median at 16 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_17",
+          "description": "Median at 17 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_18",
+          "description": "Median at 18 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_19",
+          "description": "Median at 19 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_20",
+          "description": "Median at 20 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_21",
+          "description": "Median at 21 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_22",
+          "description": "Median at 22 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_23",
+          "description": "Median at 23 hr on Land Surface Temperature"
+        }
+      ],
+      "file:size": 62833268,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MEDIAN_202101211200_GLOBE_GEO_V2.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MEDIAN_202101211200_GLOBE_GEO_V2.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/Nodes(c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog)/Nodes(c_gls_LST10-DC-MEDIAN_202101211200_GLOBE_GEO_V2.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "dc_min_00_11": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Minimum at 00-11 hr on Land Surface Temperature",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        3584,
+        8064
+      ],
+      "proj:transform": [
+        0.0446428582072258,
+        0.0,
+        -180.0223214291036,
+        0.0,
+        -0.0446428582072258,
+        80.02232142910361
+      ],
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "data_type": "int16",
+      "nodata": -8000,
+      "raster:scale": 0.01,
+      "raster:offset": 273.15,
+      "bands": [
+        {
+          "name": "dc_min_00",
+          "description": "Minimum at 0 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_01",
+          "description": "Minimum at 1 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_02",
+          "description": "Minimum at 2 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_03",
+          "description": "Minimum at 3 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_04",
+          "description": "Minimum at 4 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_05",
+          "description": "Minimum at 5 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_06",
+          "description": "Minimum at 6 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_07",
+          "description": "Minimum at 7 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_08",
+          "description": "Minimum at 8 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_09",
+          "description": "Minimum at 9 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_10",
+          "description": "Minimum at 10 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_11",
+          "description": "Minimum at 11 hr on Land Surface Temperature"
+        }
+      ],
+      "file:size": 64685386,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MIN_202101210000_GLOBE_GEO_V2.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MIN_202101210000_GLOBE_GEO_V2.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/Nodes(c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog)/Nodes(c_gls_LST10-DC-MIN_202101210000_GLOBE_GEO_V2.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "dc_min_12_23": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Minimum at 12-23 hr on Land Surface Temperature",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        3584,
+        8064
+      ],
+      "proj:transform": [
+        0.0446428582072258,
+        0.0,
+        -180.0223214291036,
+        0.0,
+        -0.0446428582072258,
+        80.02232142910361
+      ],
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "data_type": "int16",
+      "nodata": -8000,
+      "raster:scale": 0.01,
+      "raster:offset": 273.15,
+      "bands": [
+        {
+          "name": "dc_min_12",
+          "description": "Minimum at 12 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_13",
+          "description": "Minimum at 13 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_14",
+          "description": "Minimum at 14 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_15",
+          "description": "Minimum at 15 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_16",
+          "description": "Minimum at 16 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_17",
+          "description": "Minimum at 17 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_18",
+          "description": "Minimum at 18 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_19",
+          "description": "Minimum at 19 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_20",
+          "description": "Minimum at 20 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_21",
+          "description": "Minimum at 21 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_22",
+          "description": "Minimum at 22 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_23",
+          "description": "Minimum at 23 hr on Land Surface Temperature"
+        }
+      ],
+      "file:size": 63135213,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MIN_202101211200_GLOBE_GEO_V2.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MIN_202101211200_GLOBE_GEO_V2.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/Nodes(c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog)/Nodes(c_gls_LST10-DC-MIN_202101211200_GLOBE_GEO_V2.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0223214291036,
+        -79.97768238559365,
+        179.97768715396523,
+        80.02232142910361
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        333,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst-daily-cycle_global_5km_10daily_v2/2021/01/21/c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog/c_gls_LST10-DC-MAX_202101210000_GLOBE_GEO_V2.2.1.tiff&CRS=EPSG:4326&BBOX=-180.0223214291036,-79.97768238559365,179.97768715396523,80.02232142910361&WIDTH=750&HEIGHT=333&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/lst-daily-cycle_global_5km_10daily_v2/clms_global_lst_5km_v2_max_10daily-daily-cycle.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501103ef5ce2ceda5e69084222f0f3ea55577",
+      "file:size": 434315560,
+      "file:local_path": "c_gls_LST10-DC_202101210000_GLOBE_GEO_V2.2.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(a843a204-be12-475c-bcd6-d7aad2640adf)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

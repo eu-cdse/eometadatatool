@@ -1,0 +1,110 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-6-aux-gnssrd",
+  "id": "S6A_OPER_AUX_GNSSRD_POD__20260907T123109_V20260831T235942_20260901T235941",
+  "properties": {
+    "created": "2026-09-07T12:32:25.165000Z",
+    "updated": "2026-09-07T12:33:04.916801Z",
+    "published": "2026-09-07T12:33:04.916801Z",
+    "eopf:origin_datetime": "2026-09-07T12:32:25.165000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2026-08-31T23:59:42.000000Z",
+    "start_datetime": "2026-08-31T23:59:42.000000Z",
+    "end_datetime": "2026-09-01T23:59:41.000000Z",
+    "platform": "sentinel-6a",
+    "constellation": "sentinel-6",
+    "instruments": [
+      "aux"
+    ],
+    "product:type": "AUX_GNSSRD",
+    "processing:facility": "CPOD",
+    "processing:datetime": "2026-09-07T12:31:09.000000Z",
+    "processing:version": "4.2.0",
+    "_private": {
+      "product_size": 25606421,
+      "product_uuid": "e76558fe-9197-44ff-bfbb-0b9374cf49db",
+      "product_name": "S6A_OPER_AUX_GNSSRD_POD__20260907T123109_V20260831T235942_20260901T235941",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "geometry": null,
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-6/AUX/AUX_GNSSRD/2026/08/31/S6A_OPER_AUX_GNSSRD_POD__20260907T123109_V20260831T235942_20260901T235941.TGZ/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S6A_OPER_AUX_GNSSRD_POD__20260907T123109_V20260831T235942_20260901T235941.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "product": {
+      "type": "application/gzip",
+      "title": "Gzipped TAR archive",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110c7b9bc131293a47cf1ebd7e384d66525",
+      "file:size": 25606421,
+      "file:local_path": "S6A_OPER_AUX_GNSSRD_POD__20260907T123109_V20260831T235942_20260901T235941.TGZ",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(e76558fe-9197-44ff-bfbb-0b9374cf49db)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

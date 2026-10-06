@@ -1,0 +1,431 @@
+{
+  "type": "Collection",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9999999,
+          -59.9985119,
+          179.9985119,
+          80.0014881
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2013-11-01T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "id": "clms_dmp_global_300m_10daily_v2_cog",
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json"
+  ],
+  "title": "CLMS Dry Matter Productivity (DMP) Global 300m 10-daily V2 (COG)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "DMP",
+    "Dry Matter Productivity",
+    "vegetation productivity",
+    "global",
+    "10-daily",
+    "300m",
+    "PROBA-V",
+    "Sentinel-3",
+    "OLCI"
+  ],
+  "description": "Represents the overall growth rate, or dry biomass increase, of the vegetation. It is directly related to ecosystem Net Primary Production (NPP) but expressed in kg of Dry Matter per hectare and per day (kg DM/ha/day). Every 10-days estimates are available in near real time at global scale in the spatial resolution of about 300 m from January 2014 to the present.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_dmp_global_300m_10daily_v1.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS Dry Matter Productivity (DMP) Global 300m 10-daily V2 (COG) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "platform": [
+      "proba-v"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "dry-gross_dry_matter_productivity"
+    ],
+    "constellation": [
+      "proba-1"
+    ],
+    "processing:version": [
+      "V2.0.1"
+    ],
+    "instruments": [
+      "olci",
+      "probav"
+    ],
+    "product:timeliness_category": [
+      "NRT"
+    ],
+    "gsd": [
+      300.0
+    ],
+    "product:timeliness": [
+      "P2D"
+    ],
+    "proj:shape": [
+      47040,
+      120960
+    ]
+  },
+  "item_assets": {
+    "dmp": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -1.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dry Matter Productivity",
+      "bands": [
+        {
+          "name": "dmp",
+          "description": "Dry Matter Productivity",
+          "classification:classes": [
+            {
+              "value": -1,
+              "name": "missing",
+              "description": "Missing value"
+            },
+            {
+              "value": -2,
+              "name": "sea",
+              "description": "Specific value for sea"
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "qflag": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Dry Matter Productivity",
+      "bands": [
+        {
+          "name": "qflag",
+          "description": "Quality Flag on Dry Matter Productivity",
+          "classification:bitfields": [
+            {
+              "name": "fapar_availability",
+              "description": "fAPAR missing or invalid",
+              "offset": 0,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "available",
+                  "description": "Available fAPAR value"
+                },
+                {
+                  "value": 1,
+                  "name": "missing",
+                  "description": "Missing fAPAR value"
+                }
+              ]
+            },
+            {
+              "name": "meteo_availability",
+              "description": "Meteorological input missing or invalid",
+              "offset": 1,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "available",
+                  "description": "Available meteorological value"
+                },
+                {
+                  "value": 1,
+                  "name": "missing",
+                  "description": "Missing meteorological value"
+                }
+              ]
+            },
+            {
+              "name": "not_used_bit3",
+              "description": "Not used",
+              "offset": 2,
+              "length": 1
+            },
+            {
+              "name": "evergreen_broadleaf_forest",
+              "description": "Evergreen Broadleaf Forest (EBF)",
+              "offset": 3,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "no_ebf",
+                  "description": "Not Evergreen Broadleaf Forest"
+                },
+                {
+                  "value": 1,
+                  "name": "ebf",
+                  "description": "Evergreen Broadleaf Forest"
+                }
+              ]
+            },
+            {
+              "name": "not_used_bit5",
+              "description": "Not used",
+              "offset": 4,
+              "length": 1
+            },
+            {
+              "name": "low_fapar_correction",
+              "description": "Low fAPAR correction applied (Not used in v1.0 products)",
+              "offset": 5,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "unchanged",
+                  "description": "fAPAR is unchanged"
+                },
+                {
+                  "value": 1,
+                  "name": "rescaled",
+                  "description": "fAPAR < 0.15 and rescaled"
+                }
+              ]
+            },
+            {
+              "name": "fapar_ebf_computation",
+              "description": "fAPAR computation method for EBF",
+              "offset": 6,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "daily_observations",
+                  "description": "fAPAR from daily observations"
+                },
+                {
+                  "value": 1,
+                  "name": "previous_dekad",
+                  "description": "fAPAR filled from previous dekad"
+                }
+              ]
+            },
+            {
+              "name": "fapar_gap_filling",
+              "description": "fAPAR gap filling by interpolation",
+              "offset": 7,
+              "length": 1,
+              "classes": [
+                {
+                  "value": 0,
+                  "name": "not_interpolated",
+                  "description": "fAPAR not interpolated"
+                },
+                {
+                  "value": 1,
+                  "name": "interpolated",
+                  "description": "fAPAR interpolated"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    },
+    {
+      "rel": "about",
+      "href": "https://land.copernicus.eu/en/products/vegetation/dry-matter-productivity-v2-0-300m",
+      "type": "text/html",
+      "title": "Product page"
+    }
+  ],
+  "bands": [
+    {
+      "description": "Quality Flag on Dry Matter Productivity",
+      "name": "qflag"
+    },
+    {
+      "name": "dmp",
+      "description": "Dry Matter Productivity"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

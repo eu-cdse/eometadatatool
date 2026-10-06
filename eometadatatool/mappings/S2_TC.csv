@@ -1,0 +1,17 @@
+metadata;file;mappings;datatype
+processorVersion;xml:BOX_0;//*[local-name()='File_Version']/text();String
+processingDate;xml:BOX_0;//*[local-name()='Generation_Time']/text();DateTimeOffset
+beginningDateTime;xml:BOX_0;//*[local-name()='Validity_Start']/text();DateTimeOffset
+endingDateTime;xml:BOX_0;//*[local-name()='Validity_Stop']/text();DateTimeOffset
+orbitNumber;xml:BOX_0;//*[local-name()='Start_Orbit_Number']/text();Int64
+coordinates;xml:BOX_0;geo_pnt2wkt(//*[local-name()='Geographic_Localization']/*[local-name()='List_Of_Geo_Pnt']/*[local-name()='Geo_Pnt']);Geography
+qualityStatus;xml:BOX_0;map(//*[local-name()='Quality_Info'],'{"100.0":"NOMINAL","default":"DEGRADED"}');String
+qualityInfo;xml:BOX_0;//*[local-name()='Quality_Info']/text();Double
+productType;xml:BOX_0;//*[local-name()='File_Type']/text();String
+instrumentShortName;xml:BOX_0;//*[local-name()='Sensor_Code']/text();String
+processingCenter;xml:BOX_0;//*[local-name()='System']/text();String
+platformSerialIdentifier;xml:BOX_0;substring(//*[local-name()='Satellite_Code']/text(),3,1);String
+cloudCover;xml:BOX_0;//*[local-name()='CloudPercentage']/text();Double
+tileId;xml:BOX_0;quote(substring(//*[local-name()='File_Name']/text(),50,6));String
+orbitDirection;xml:BOX_0;//*[local-name()='Ascending_Flag']/text();Ascending_Flag
+platformShortName;static;SENTINEL-2;String

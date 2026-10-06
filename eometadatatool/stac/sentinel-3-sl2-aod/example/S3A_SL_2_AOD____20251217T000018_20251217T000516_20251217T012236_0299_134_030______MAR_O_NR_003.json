@@ -1,0 +1,295 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-3-sl-2-aod-nrt",
+  "id": "S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003",
+  "properties": {
+    "created": "2025-12-17T01:24:38.203000Z",
+    "updated": "2025-12-17T02:51:57.902872Z",
+    "published": "2025-12-17T02:51:57.902872Z",
+    "eopf:origin_datetime": "2025-12-17T01:24:38.203000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2025-12-17T00:00:18.015112Z",
+    "start_datetime": "2025-12-17T00:00:18.015112Z",
+    "end_datetime": "2025-12-17T00:05:15.602302Z",
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "instruments": [
+      "slstr"
+    ],
+    "gsd": 9500,
+    "processing:level": "L2",
+    "processing:datetime": "2025-12-17T01:22:31.456217Z",
+    "proj:code": null,
+    "sat:absolute_orbit": 51208,
+    "sat:relative_orbit": 30,
+    "sat:orbit_cycle": 134,
+    "sat:orbit_state": "descending",
+    "sat:platform_international_designator": "2016-011A",
+    "eo:cloud_cover": 97.91,
+    "product:type": "SL_2_AOD___",
+    "product:timeliness": "PT3H",
+    "product:timeliness_category": "NR",
+    "statistics": {
+      "saline_water": 1.093967,
+      "land": 98.906033
+    },
+    "processing:version": "04.02",
+    "_private": {
+      "product_size": 1435187,
+      "product_uuid": "ee0f82c4-b575-4338-9c0d-b7ef60bd0932",
+      "product_name": "S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260409140520"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -11.4801,
+    -85.8651,
+    117.997,
+    -69.1926
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          80.76039999999999,
+          -71.2752
+        ],
+        [
+          51.7985,
+          -72.3192
+        ],
+        [
+          25.8855,
+          -69.1926
+        ],
+        [
+          10.846899999999998,
+          -74.901
+        ],
+        [
+          -11.4801,
+          -78.2645
+        ],
+        [
+          4.249139999999999,
+          -82.93189999999998
+        ],
+        [
+          30.355700000000002,
+          -85.3143
+        ],
+        [
+          76.3863,
+          -85.71709999999999
+        ],
+        [
+          117.99700000000001,
+          -82.3488
+        ],
+        [
+          94.54579999999999,
+          -78.4046
+        ],
+        [
+          80.76039999999999,
+          -71.2752
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_AOD___/2025/12/17/S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "xfdumanifest": {
+      "type": "application/xml",
+      "title": "Product manifest",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/xfdumanifest.xml",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_AOD___/2025/12/17/S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/xfdumanifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ee0f82c4-b575-4338-9c0d-b7ef60bd0932)/Nodes(S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3)/Nodes(xfdumanifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "manifest": {
+      "type": "application/xml",
+      "title": "Manifest file",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/manifest.xml",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_AOD___/2025/12/17/S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/manifest.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ee0f82c4-b575-4338-9c0d-b7ef60bd0932)/Nodes(S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3)/Nodes(manifest.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "eop_metadata": {
+      "type": "application/xml",
+      "title": "EOP Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "file:local_path": "S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/EOPMetadata.xml",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_AOD___/2025/12/17/S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/EOPMetadata.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ee0f82c4-b575-4338-9c0d-b7ef60bd0932)/Nodes(S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3)/Nodes(EOPMetadata.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "nrt_aod": {
+      "type": "application/netcdf",
+      "title": "NRT Aerosol Optical Depth",
+      "roles": [
+        "data"
+      ],
+      "processing:lineage": "Input bands: S2, S3, S5, S6",
+      "file:checksum": "d5011016c1940e905c898d66d8959f9ebf20f9",
+      "file:size": 1234911.0,
+      "file:local_path": "S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/NRT_AOD.nc",
+      "href": "s3://eodata/Sentinel-3/SLSTR/SL_2_AOD___/2025/12/17/S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3/NRT_AOD.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ee0f82c4-b575-4338-9c0d-b7ef60bd0932)/Nodes(S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3)/Nodes(NRT_AOD.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110309fb7e939b9572abcefbb2aed4e3d48",
+      "file:size": 1437289,
+      "file:local_path": "S3A_SL_2_AOD____20251217T000018_20251217T000516_20251217T012236_0299_134_030______MAR_O_NR_003.SEN3.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(ee0f82c4-b575-4338-9c0d-b7ef60bd0932)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

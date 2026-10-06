@@ -1,0 +1,289 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_vlcc_dominant-leaf-type_europe_10m_yearly_v1",
+  "id": "CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00",
+  "properties": {
+    "created": "2025-12-17T17:48:43.198965Z",
+    "updated": "2025-12-19T17:20:23.381455Z",
+    "published": "2025-12-19T17:20:23.381455Z",
+    "eopf:origin_datetime": "2025-12-17T17:48:43.198965Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "gsd": 10,
+    "proj:code": "EPSG:3035",
+    "product:type": "dominant_leaf_type",
+    "datetime": "2023-01-01T00:00:00.000000Z",
+    "end_datetime": "2023-12-31T23:59:59.999999Z",
+    "classification:classes": [
+      {
+        "value": 0,
+        "name": "all_non_tree_covered_areas",
+        "title": "all non-tree covered areas"
+      },
+      {
+        "value": 1,
+        "name": "broadleaved_trees",
+        "title": "broadleaved trees"
+      },
+      {
+        "value": 2,
+        "name": "coniferous_trees",
+        "title": "coniferous trees"
+      },
+      {
+        "value": 255,
+        "name": "outside_area",
+        "title": "outside area"
+      }
+    ],
+    "_private": {
+      "product_size": 448102,
+      "product_uuid": "2450fe03-94d6-4ad9-968e-200586b56f80",
+      "product_name": "CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00",
+      "visible": true,
+      "cellID": "100kmE12N23",
+      "component": "landcover_landuse",
+      "gridLabel": "10m",
+      "fileFormat": "cog",
+      "nominalDate": "2023-01-01T00:00:00.000000Z",
+      "datasetAlias": "clms_vlcc_dominant-leaf-type",
+      "areaOfInterest": "europe",
+      "collectionName": "CLMS",
+      "datasetVersion": 1,
+      "productVersion": "v01_r00",
+      "platformAcronym": "unspecified",
+      "datasetShortName": "dlt",
+      "missionShortName": "unspecified",
+      "processingCenter": "unspecified",
+      "datasetIdentifier": "clms_vlcc_dominant-leaf-type_europe_10m_yearly_v1",
+      "metricGridSpacing": 10,
+      "platformShortName": "unspecified",
+      "temporalRepeatRate": "yearly",
+      "instrumentShortName": "unspecified",
+      "productDeliveryDate": "2025-12-19T15:36:48.000000Z",
+      "SDIResourceIdentifier": "copernicus_r_3035_10_m_dlt_p_2018-now_v01_r00"
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "start_datetime": "2023-01-01T00:00:00.000000Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -26.7174956,
+    36.9232923,
+    -25.2150208,
+    38.1359561
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -26.2494651,
+          36.9232923
+        ],
+        [
+          -25.2150208,
+          37.3381217
+        ],
+        [
+          -25.6751244,
+          38.1359561
+        ],
+        [
+          -26.7174956,
+          37.715377
+        ],
+        [
+          -26.2494651,
+          36.9232923
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/dominant_leaf_type/clms_vlcc_dominant-leaf-type_europe_10m_yearly_v1/2023/01/01/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d501100648f26ea0accd40ddca6e8249897de5",
+      "file:size": 35041,
+      "file:local_path": "CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.xml",
+      "href": "s3://eodata/CLMS/landcover_landuse/dominant_leaf_type/clms_vlcc_dominant-leaf-type_europe_10m_yearly_v1/2023/01/01/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(2450fe03-94d6-4ad9-968e-200586b56f80)/Nodes(CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00)/Nodes(CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Dominant Leaf Type Raster (10m)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        10000,
+        10000
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        1200000.0,
+        0.0,
+        -10.0,
+        2400000.0
+      ],
+      "proj:bbox": [
+        1200000.0,
+        2300000.0,
+        1300000.0,
+        2400000.0
+      ],
+      "data_type": "uint8",
+      "bands": [
+        {
+          "description": "Dominant Leaf Type",
+          "name": "dlt"
+        }
+      ],
+      "file:checksum": "d50110779600b0e540290c7488f145807b0ca4",
+      "file:size": 400213,
+      "file:local_path": "CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dominant_leaf_type/clms_vlcc_dominant-leaf-type_europe_10m_yearly_v1/2023/01/01/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(2450fe03-94d6-4ad9-968e-200586b56f80)/Nodes(CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00)/Nodes(CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        1200000.0,
+        2300000.0,
+        1300000.0,
+        2400000.0
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        750,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/dominant_leaf_type/clms_vlcc_dominant-leaf-type_europe_10m_yearly_v1/2023/01/01/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00/CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.tif&CRS=EPSG:3035&BBOX=1200000.0,2300000.0,1300000.0,2400000.0&WIDTH=750&HEIGHT=750&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/clms_vlcc_dominant-leaf-type/clms_vlcc_dominant-leaf-type_europe_10m_yearly_v1.sld"
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501105c42b6d7b6de0d185b6656865b0cd00f",
+      "file:size": 449998,
+      "file:local_path": "CLMS_HRLVLCC_DLT_S2023_R10m_E12N23_03035_V01_R00.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(2450fe03-94d6-4ad9-968e-200586b56f80)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

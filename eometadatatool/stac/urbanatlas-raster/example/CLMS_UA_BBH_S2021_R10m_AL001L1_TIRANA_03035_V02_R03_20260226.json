@@ -1,0 +1,238 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_ua_building-height_europe_10m_3yearly_v1",
+  "id": "CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226",
+  "properties": {
+    "created": "2026-03-11T14:18:53.090466Z",
+    "updated": "2026-03-12T13:19:48.483330Z",
+    "published": "2026-03-12T13:19:48.483330Z",
+    "eopf:origin_datetime": "2026-03-11T14:18:53.090466Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "gsd": 10,
+    "proj:code": "EPSG:3035",
+    "product:type": "urban_atlas",
+    "datetime": "2021-01-01T00:00:00.000000Z",
+    "end_datetime": "2021-12-31T23:59:59.999999Z",
+    "region:country": "AL",
+    "region:name": "Tirana",
+    "_private": {
+      "product_size": 1699208,
+      "product_uuid": "857af3d3-6d78-4ece-80e9-157d655faa1b",
+      "product_name": "CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226",
+      "visible": true,
+      "cellID": "AL001L1",
+      "fuaCode": "AL001L1",
+      "fuaName": "TIRANA",
+      "component": "land_cover_use_in_priority_areas",
+      "gridLabel": "10m",
+      "fileFormat": "cog",
+      "countryCode": "AL",
+      "nominalDate": "2021-01-01T00:00:00.000000Z",
+      "datasetAlias": "clms_ua_building-height",
+      "areaOfInterest": "europe",
+      "collectionName": "CLMS",
+      "datasetVersion": 1,
+      "productVersion": "v02_r03",
+      "platformAcronym": "unspecified",
+      "datasetShortName": "ua-bbh",
+      "missionShortName": "unspecified",
+      "processingCenter": "unspecified",
+      "datasetIdentifier": "clms_ua_building-height_europe_10m_3yearly_v1",
+      "metricGridSpacing": 10,
+      "platformShortName": "unspecified",
+      "temporalRepeatRate": "3yearly",
+      "instrumentShortName": "unspecified",
+      "productDeliveryDate": "2026-03-12T13:18:54.000000Z",
+      "SDIResourceIdentifier": "copernicus_r_3035_10_m_ua-bh-2021_p_2021_v01_r00"
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "start_datetime": "2021-01-01T00:00:00.000000Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    19.3531588,
+    41.0815464,
+    20.263128,
+    41.5914948
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          19.3531588,
+          41.1645317
+        ],
+        [
+          20.1924342,
+          41.0815464
+        ],
+        [
+          20.263128,
+          41.5078435
+        ],
+        [
+          19.4181977,
+          41.5914948
+        ],
+        [
+          19.3531588,
+          41.1645317
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/land_cover_use_in_priority_areas/urban_atlas/clms_ua_building-height_europe_10m_3yearly_v1/2021/01/01/CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d501108d14faec19f11b2eb2fefccd777edc19",
+      "file:size": 38632,
+      "file:local_path": "CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226/CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226.xml",
+      "href": "s3://eodata/CLMS/land_cover_use_in_priority_areas/urban_atlas/clms_ua_building-height_europe_10m_3yearly_v1/2021/01/01/CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226/CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(857af3d3-6d78-4ece-80e9-157d655faa1b)/Nodes(CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226)/Nodes(CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Urban Atlas Building Height Raster (10m)",
+      "roles": [
+        "data"
+      ],
+      "file:checksum": "d501104fee89ba12e843a8f782dc25e932e823",
+      "file:size": 1625999,
+      "file:local_path": "CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226/CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226.tif",
+      "href": "s3://eodata/CLMS/land_cover_use_in_priority_areas/urban_atlas/clms_ua_building-height_europe_10m_3yearly_v1/2021/01/01/CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226/CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(857af3d3-6d78-4ece-80e9-157d655faa1b)/Nodes(CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226)/Nodes(CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4764,
+        7121
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        5107060.0,
+        0.0,
+        -10.0,
+        2103470.0
+      ],
+      "data_type": "uint16",
+      "nodata": 65535
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501104cbbd5dfdd3032b26ad688ebbf178325",
+      "file:size": 1701268,
+      "file:local_path": "CLMS_UA_BBH_S2021_R10m_AL001L1_TIRANA_03035_V02_R03_20260226.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(857af3d3-6d78-4ece-80e9-157d655faa1b)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/region/v0.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

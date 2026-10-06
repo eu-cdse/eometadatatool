@@ -1,0 +1,9 @@
+metadata;file;mappings;datatype
+s2msi:tileId;MTD_MSIL[12][ABC].xml;substring(//PRODUCT_URI,40,5);String
+s2msi:tileIdentifier;MTD_TL.xml;//TILE_ID/text();String
+s2msi:qualityStatus;MTD_MSIL[12][ABC].xml;concat(//quality_check[1],'+',//quality_check[2]/text(),'+',//quality_check[3]/text(),'+',//quality_check[4]/text());map("PASSED+PASSED+PASSED+PASSED":"NOMINAL","default":"DEGRADED")
+#s2msi:qualityFlags;MTD_MSIL[12][ABC].xml;concat(//quality_check[1]/text(),'+',//quality_check[2]/text(),'+',//quality_check[3]/text(),'+',//quality_check[4]/text());String
+eop:browse;MTD_TL.xml;concat('#',//PVI_FILENAME/text());String
+eop:browsePath;MTD_TL.xml;//PVI_FILENAME/text()#^[^/]*;String
+coordinates;MTD_MSIL[12][ABC].xml;//Global_Footprint/EXT_POS_LIST/text();WKT
+eop:sensorType;static;OPTICAL;String

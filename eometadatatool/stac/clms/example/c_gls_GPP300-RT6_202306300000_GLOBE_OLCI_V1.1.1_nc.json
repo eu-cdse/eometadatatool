@@ -1,0 +1,285 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_gpp_global_300m_10daily_v1_nc",
+  "id": "c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_nc",
+  "properties": {
+    "created": "2023-09-05T10:17:05.033148Z",
+    "updated": "2025-07-17T18:24:43.562766Z",
+    "published": "2025-03-22T01:28:58.201465Z",
+    "eopf:origin_datetime": "2023-09-05T10:17:05.033148Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2023-06-21T00:00:00.000000Z",
+    "start_datetime": "2023-06-21T00:00:00.000000Z",
+    "end_datetime": "2023-06-30T23:59:59.999999Z",
+    "instruments": [
+      "olci"
+    ],
+    "gsd": 300,
+    "proj:code": "EPSG:4326",
+    "product:type": "net-gross_primary_production",
+    "processing:level": "L3",
+    "cube:dimensions": {
+      "lat": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude",
+        "extent": [
+          -59.997023809491964,
+          80.0
+        ]
+      },
+      "lon": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude",
+        "extent": [
+          -180.0,
+          179.9970238111609
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "Time",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-01T05:25:38.000000Z"
+        ]
+      }
+    },
+    "cube:variables": {
+      "GPP": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Gross Primary Production 333m",
+        "unit": "gC / m2 / day",
+        "nodata": -1,
+        "data_type": "int16"
+      },
+      "QFLAG": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality Flag on GPP 333m",
+        "nodata": 255,
+        "data_type": "uint8"
+      },
+      "lat": {
+        "dimensions": [
+          "lat"
+        ],
+        "type": "data",
+        "description": "latitude",
+        "unit": "degrees_north",
+        "data_type": "other"
+      },
+      "lon": {
+        "dimensions": [
+          "lon"
+        ],
+        "type": "data",
+        "description": "longitude",
+        "unit": "degrees_east",
+        "data_type": "other"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          19538.0
+        ],
+        "description": "Time",
+        "unit": "days since 1970-01-01 00:00:00",
+        "data_type": "other"
+      }
+    },
+    "constellation": "sentinel-3",
+    "product:timeliness": "P5D",
+    "product:timeliness_category": "NRT",
+    "processing:version": "V1.1.1",
+    "_private": {
+      "product_size": 1846072689,
+      "product_uuid": "922a996c-5b83-410d-aea8-856db1e45f29",
+      "product_name": "c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_nc",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260924120453+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.9985119,
+    179.9985119,
+    80.0014881
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          -59.9985119
+        ],
+        [
+          -0.0007440499999944,
+          -59.9985119
+        ],
+        [
+          179.9985119,
+          -59.9985119
+        ],
+        [
+          179.9985119,
+          80.0014881
+        ],
+        [
+          -0.0007440499999944,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          80.0014881
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/net-gross_primary_production/gpp_global_300m_10daily_v1/2023/06/30/c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_nc/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "Product": {
+      "type": "application/netcdf",
+      "title": "10-daily Gross Primary Production 333M: GLOBE 2023-06-30T00:00:00Z",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "GPP",
+          "description": "Gross Primary Production 333m"
+        },
+        {
+          "name": "QFLAG",
+          "description": "Quality Flag on GPP 333m"
+        }
+      ],
+      "file:size": 1846072689,
+      "file:local_path": "c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_nc/c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1.nc",
+      "href": "s3://eodata/CLMS/bio-geophysical/net-gross_primary_production/gpp_global_300m_10daily_v1/2023/06/30/c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_nc/c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(922a996c-5b83-410d-aea8-856db1e45f29)/Nodes(c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_nc)/Nodes(c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/net-gross_primary_production/gpp_global_300m_10daily_v1/2023/06/30/c_gls_GPP300-RT6_202306300000_GLOBE_OLCI_V1.1.1_cog/c_gls_GPP300-GPP-RT6_202306300000_GLOBE_OLCI_V1.1.1.tiff&CRS=EPSG:4326&BBOX=-180.0014880952381,-59.99851190473011,179.99851190639774,80.00148809523809&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/gpp_global_300m_10daily_v2/clms_global_gpp_300m_v2_10daily.sld"
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

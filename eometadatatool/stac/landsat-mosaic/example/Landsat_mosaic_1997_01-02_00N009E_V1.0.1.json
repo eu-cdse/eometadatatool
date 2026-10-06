@@ -1,0 +1,574 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "opengeohub-landsat-bimonthly-mosaic-v1.0.1",
+  "id": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1",
+  "properties": {
+    "created": "1997-01-01T00:00:00.000000Z",
+    "updated": "2026-02-04T09:25:55.583092Z",
+    "published": "2026-02-04T09:25:55.583092Z",
+    "eopf:origin_datetime": "1997-01-01T00:00:00.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "start_datetime": "1997-01-01T00:00:00.000000Z",
+    "end_datetime": "1997-02-28T23:59:59.000000Z",
+    "datetime": "1997-01-01T00:00:00.000000Z",
+    "gsd": 30,
+    "constellation": "Landsat",
+    "instruments": [
+      "TM",
+      "ETM+",
+      "OLI",
+      "TIRS"
+    ],
+    "product:type": "landsat_mosaic",
+    "proj:code": "EPSG:4326",
+    "processing:version": "1.0.1",
+    "processing:level": "L2",
+    "_private": {
+      "product_size": 23683384,
+      "product_uuid": "18151f6a-04fb-4630-9e1f-e063798618af",
+      "product_name": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1",
+      "visible": true
+    },
+    "grid:code": "CDEM-N00E009",
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    9.0,
+    0.0,
+    10.0,
+    1.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          9.0,
+          0.0
+        ],
+        [
+          10.0,
+          0.0
+        ],
+        [
+          10.0,
+          1.0
+        ],
+        [
+          9.0,
+          1.0
+        ],
+        [
+          9.0,
+          0.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "B01": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Band 1",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B01",
+          "description": "Blue",
+          "eo:center_wavelength": 0.482,
+          "eo:full_width_half_max": 0.06,
+          "eo:common_name": "blue"
+        }
+      ],
+      "file:size": 2883824,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B01_1997.tif",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B01_1997.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/Nodes(Landsat_mosaic_1997_01-02_00N009E_V1.0.1)/Nodes(B01_1997.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4000,
+        4000
+      ],
+      "proj:transform": [
+        0.00025,
+        0.0,
+        9.0,
+        0.0,
+        -0.00025,
+        1.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004
+    },
+    "B02": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Band 2",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B02",
+          "description": "Green",
+          "eo:center_wavelength": 0.561,
+          "eo:full_width_half_max": 0.057,
+          "eo:common_name": "green"
+        }
+      ],
+      "file:size": 2967587,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B02_1997.tif",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B02_1997.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/Nodes(Landsat_mosaic_1997_01-02_00N009E_V1.0.1)/Nodes(B02_1997.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4000,
+        4000
+      ],
+      "proj:transform": [
+        0.00025,
+        0.0,
+        9.0,
+        0.0,
+        -0.00025,
+        1.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004
+    },
+    "B03": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Band 3",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B03",
+          "description": "Red",
+          "eo:center_wavelength": 0.655,
+          "eo:full_width_half_max": 0.037,
+          "eo:common_name": "red"
+        }
+      ],
+      "file:size": 3091234,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B03_1997.tif",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B03_1997.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/Nodes(Landsat_mosaic_1997_01-02_00N009E_V1.0.1)/Nodes(B03_1997.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4000,
+        4000
+      ],
+      "proj:transform": [
+        0.00025,
+        0.0,
+        9.0,
+        0.0,
+        -0.00025,
+        1.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004
+    },
+    "B04": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Band 4",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B04",
+          "description": "Near Infrared",
+          "eo:center_wavelength": 0.865,
+          "eo:full_width_half_max": 0.028,
+          "eo:common_name": "nir08"
+        }
+      ],
+      "file:size": 5177659,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B04_1997.tif",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B04_1997.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/Nodes(Landsat_mosaic_1997_01-02_00N009E_V1.0.1)/Nodes(B04_1997.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4000,
+        4000
+      ],
+      "proj:transform": [
+        0.00025,
+        0.0,
+        9.0,
+        0.0,
+        -0.00025,
+        1.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004
+    },
+    "B05": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Band 5",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B05",
+          "description": "Short-wave Infrared 1.6",
+          "eo:center_wavelength": 1.609,
+          "eo:full_width_half_max": 0.085,
+          "eo:common_name": "swir16"
+        }
+      ],
+      "file:size": 4613179,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B05_1997.tif",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B05_1997.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/Nodes(Landsat_mosaic_1997_01-02_00N009E_V1.0.1)/Nodes(B05_1997.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4000,
+        4000
+      ],
+      "proj:transform": [
+        0.00025,
+        0.0,
+        9.0,
+        0.0,
+        -0.00025,
+        1.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004
+    },
+    "B06": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Band 6",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B06",
+          "description": "Short-wave Infrared 2.2",
+          "eo:center_wavelength": 2.201,
+          "eo:full_width_half_max": 0.187,
+          "eo:common_name": "swir22"
+        }
+      ],
+      "file:size": 3478018,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B06_1997.tif",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B06_1997.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/Nodes(Landsat_mosaic_1997_01-02_00N009E_V1.0.1)/Nodes(B06_1997.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4000,
+        4000
+      ],
+      "proj:transform": [
+        0.00025,
+        0.0,
+        9.0,
+        0.0,
+        -0.00025,
+        1.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004
+    },
+    "B07": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Band 7",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "B07",
+          "description": "Thermal",
+          "eo:center_wavelength": 12.005,
+          "eo:full_width_half_max": 1.01,
+          "eo:common_name": "lwir12"
+        }
+      ],
+      "file:size": 1467200,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B07_1997.tif",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/B07_1997.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/Nodes(Landsat_mosaic_1997_01-02_00N009E_V1.0.1)/Nodes(B07_1997.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4000,
+        4000
+      ],
+      "proj:transform": [
+        0.00025,
+        0.0,
+        9.0,
+        0.0,
+        -0.00025,
+        1.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004
+    },
+    "clear_sky_mask": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Clear sky mask",
+      "roles": [
+        "data",
+        "mask"
+      ],
+      "file:size": 4683,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1/clear_sky_mask_1997.tif",
+      "href": "s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/clear_sky_mask_1997.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/Nodes(Landsat_mosaic_1997_01-02_00N009E_V1.0.1)/Nodes(clear_sky_mask_1997.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "proj:shape": [
+        4000,
+        4000
+      ],
+      "proj:transform": [
+        0.00025,
+        0.0,
+        9.0,
+        0.0,
+        -0.00025,
+        1.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        9,
+        0,
+        10,
+        1
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        500,
+        500
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/Global-Mosaics/Landsat/OLM_SWA_ARD2/v1/1997/01/01/Landsat_mosaic_1997_01-02_00N009E_V1.0.1/&CRS=EPSG:4326&BBOX=9,0,10,1&WIDTH=500&HEIGHT=500&FORMAT=image/png&TRANSPARENT=false"
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011069227bb4f8dd3b59a59fb93f336424f2",
+      "file:size": 23685012,
+      "file:local_path": "Landsat_mosaic_1997_01-02_00N009E_V1.0.1.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(18151f6a-04fb-4630-9e1f-e063798618af)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

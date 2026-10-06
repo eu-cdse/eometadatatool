@@ -1,0 +1,288 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_gdmp_global_1km_10daily_v2_cog",
+  "id": "c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog",
+  "properties": {
+    "created": "2024-06-24T10:45:12.558825Z",
+    "updated": "2025-07-18T03:46:11.459880Z",
+    "published": "2025-03-11T07:53:00.368935Z",
+    "eopf:origin_datetime": "2024-06-24T10:45:12.558825Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2000-01-01T00:00:00.000000Z",
+    "start_datetime": "2000-01-01T00:00:00.000000Z",
+    "end_datetime": "2000-01-10T23:59:59.999999Z",
+    "instruments": [
+      "vegetation-1"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "dry-gross_dry_matter_productivity",
+    "processing:level": "L3",
+    "platform": "spot 4",
+    "constellation": "spot",
+    "processing:version": "V2.0.1",
+    "_private": {
+      "product_size": 174444212,
+      "product_uuid": "3c3cb487-d413-410c-97cd-e2371dd3fff7",
+      "product_name": "c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.9955357,
+    179.9955357,
+    80.0044643
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0044643
+        ],
+        [
+          -179.9999999,
+          -59.9955357
+        ],
+        [
+          -0.0022321499999975,
+          -59.9955357
+        ],
+        [
+          179.9955357,
+          -59.9955357
+        ],
+        [
+          179.9955357,
+          80.0044643
+        ],
+        [
+          -0.0022321499999975,
+          80.0044643
+        ],
+        [
+          -179.9999999,
+          80.0044643
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/dry-gross_dry_matter_productivity/gdmp_global_1km_10daily_v2/2000/01/10/c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "gdmp": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Gross Dry Matter Productivity",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "int16",
+      "nodata": -1,
+      "raster:scale": 0.019999999552965,
+      "bands": [
+        {
+          "name": "gdmp",
+          "description": "Gross Dry Matter Productivity"
+        }
+      ],
+      "file:size": 158144415,
+      "file:local_path": "c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog/c_gls_GDMP-GDMP_200001100000_GLOBE_VGT_V2.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/dry-gross_dry_matter_productivity/gdmp_global_1km_10daily_v2/2000/01/10/c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog/c_gls_GDMP-GDMP_200001100000_GLOBE_VGT_V2.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3c3cb487-d413-410c-97cd-e2371dd3fff7)/Nodes(c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog)/Nodes(c_gls_GDMP-GDMP_200001100000_GLOBE_VGT_V2.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Gross Dry Matter Productivity",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "qflag",
+          "description": "Quality Flag on Gross Dry Matter Productivity"
+        }
+      ],
+      "file:checksum": "d501100113705a8ca3957aaf684067078da169",
+      "file:size": 16299797,
+      "file:local_path": "c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog/c_gls_GDMP-QFLAG_200001100000_GLOBE_VGT_V2.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/dry-gross_dry_matter_productivity/gdmp_global_1km_10daily_v2/2000/01/10/c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog/c_gls_GDMP-QFLAG_200001100000_GLOBE_VGT_V2.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3c3cb487-d413-410c-97cd-e2371dd3fff7)/Nodes(c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog)/Nodes(c_gls_GDMP-QFLAG_200001100000_GLOBE_VGT_V2.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/dry-gross_dry_matter_productivity/gdmp_global_1km_10daily_v2/2000/01/10/c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog/c_gls_GDMP-GDMP_200001100000_GLOBE_VGT_V2.0.1.tiff&CRS=EPSG:4326&BBOX=-180.00446428571428,-59.995535714253904,179.9955357147765,80.00446428571429&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501108c81410231f6fa40a3f1e289fb426c7f",
+      "file:size": 174444800,
+      "file:local_path": "c_gls_GDMP_200001100000_GLOBE_VGT_V2.0.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3c3cb487-d413-410c-97cd-e2371dd3fff7)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

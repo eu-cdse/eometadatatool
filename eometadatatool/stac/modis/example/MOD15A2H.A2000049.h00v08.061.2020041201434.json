@@ -1,0 +1,295 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "modis-terra-mod15a2h",
+  "id": "MOD15A2H.A2000049.h00v08.061.2020041201434",
+  "properties": {
+    "created": "2020-02-10T20:14:34.000000Z",
+    "updated": "2025-10-08T10:59:42.141622Z",
+    "published": "2025-10-08T10:59:42.141622Z",
+    "eopf:origin_datetime": "2020-02-10T20:14:34.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2000-02-18T00:00:00.000000Z",
+    "start_datetime": "2000-02-18T00:00:00.000000Z",
+    "end_datetime": "2000-02-25T23:59:59.000000Z",
+    "constellation": "modis",
+    "processing:datetime": "2020-02-10T20:14:34.000000Z",
+    "processing:version": "6.1.1",
+    "product:type": "MOD15A2H",
+    "grid:code": "MSIN-0008",
+    "gsd": 500,
+    "instruments": [
+      "modis"
+    ],
+    "platform": "terra",
+    "sat:platform_international_designator": "1999-068A",
+    "processing:level": "L4",
+    "eo:cloud_cover": 0.0,
+    "statistics": {
+      "missing_data": 100.0,
+      "out_of_bounds_data": 100.0,
+      "interpolated_data": 0.0
+    },
+    "_private": {
+      "product_size": 224297,
+      "product_uuid": "5aa3d757-5fa9-4e79-9011-2c36e7d480e5",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260512134513+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -0.0068357003079556,
+    179.9999999,
+    9.99897831672069
+  ],
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -179.9999999,
+            9.998921615137636
+          ],
+          [
+            -179.9999999,
+            -0.0000672312562528532
+          ],
+          [
+            -179.999951582871,
+            -0.0068357003079556
+          ],
+          [
+            -169.99173290556,
+            5.67994760615426e-6
+          ],
+          [
+            -169.920147289013,
+            9.9909309627606
+          ],
+          [
+            -179.9999999,
+            9.998921615137636
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            179.9999999,
+            -0.0000672312562528532
+          ],
+          [
+            179.9999999,
+            9.998921615137636
+          ],
+          [
+            179.928473473918,
+            9.99897831672069
+          ],
+          [
+            179.9999999,
+            -0.0000672312562528532
+          ]
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Terra/MODIS/MOD15A2H.061/2000/02/18/MOD15A2H.A2000049.h00v08.061.2020041201434/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/MOD15A2H.A2000049.h00v08.061.2020041201434.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "MOD15A2H.A2000049.h00v08.061.2020041201434.cmr.xml",
+      "roles": [
+        "metadata"
+      ],
+      "file:checksum": "d5011005133ea2c62561073d0fb59891171b36",
+      "file:size": 9975,
+      "file:local_path": "MOD15A2H.A2000049.h00v08.061.2020041201434/MOD15A2H.A2000049.h00v08.061.2020041201434.cmr.xml",
+      "href": "s3://eodata/Terra/MODIS/MOD15A2H.061/2000/02/18/MOD15A2H.A2000049.h00v08.061.2020041201434/MOD15A2H.A2000049.h00v08.061.2020041201434.cmr.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5aa3d757-5fa9-4e79-9011-2c36e7d480e5)/Nodes(MOD15A2H.A2000049.h00v08.061.2020041201434)/Nodes(MOD15A2H.A2000049.h00v08.061.2020041201434.cmr.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "application/x-hdf",
+      "title": "MOD15A2H.A2000049.h00v08.061.2020041201434.hdf",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "Fpar_500m",
+          "description": "MOD15A2H MODIS/Terra Gridded 500M FPAR (8-day composite)"
+        },
+        {
+          "name": "Lai_500m",
+          "description": "MOD15A2H MODIS/Terra Gridded 500M Leaf Area Index LAI (8-day composite)"
+        },
+        {
+          "name": "FparLai_QC",
+          "description": "MOD15A2H MODIS/Terra+Aqua QC for FPAR and LAI (8-day composite)"
+        },
+        {
+          "name": "FparExtra_QC",
+          "description": "MOD15A2H MODIS/Terra+Aqua pass-through QC for FPAR and LAI (8-day composite)"
+        },
+        {
+          "name": "FparStdDev_500m",
+          "description": "MOD15A2H MODIS/Terra Gridded 500M Standard Deviation FPAR (8-day composite)"
+        },
+        {
+          "name": "LaiStdDev_500m",
+          "description": "MOD15A2H MODIS/Terra Gridded 500M Standard Deviation Leaf Area Index (8-day composite)"
+        }
+      ],
+      "proj:shape": [
+        2400,
+        2400
+      ],
+      "file:checksum": "d50110b3e47e7ce11106de3b230606f16d4b98",
+      "file:size": 199366,
+      "file:local_path": "MOD15A2H.A2000049.h00v08.061.2020041201434/MOD15A2H.A2000049.h00v08.061.2020041201434.hdf",
+      "href": "s3://eodata/Terra/MODIS/MOD15A2H.061/2000/02/18/MOD15A2H.A2000049.h00v08.061.2020041201434/MOD15A2H.A2000049.h00v08.061.2020041201434.hdf",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5aa3d757-5fa9-4e79-9011-2c36e7d480e5)/Nodes(MOD15A2H.A2000049.h00v08.061.2020041201434)/Nodes(MOD15A2H.A2000049.h00v08.061.2020041201434.hdf)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "BROWSE.MOD15A2H.A2000049.h00v08.061.2020041201434.1.jpg",
+      "roles": [
+        "thumbnail",
+        "graphic"
+      ],
+      "file:checksum": "d5011030d79e3b2075af8e5a0e61613eb98c4e",
+      "file:size": 7584,
+      "file:local_path": "MOD15A2H.A2000049.h00v08.061.2020041201434/BROWSE.MOD15A2H.A2000049.h00v08.061.2020041201434.1.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(25f30801-6ed3-43fe-9f4b-97cba57afb2c)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Terra/MODIS/MOD15A2H.061/2000/02/18/MOD15A2H.A2000049.h00v08.061.2020041201434/BROWSE.MOD15A2H.A2000049.h00v08.061.2020041201434.1.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501108331d363afb6f08f23fe55ef06bcf9ff",
+      "file:size": 225443,
+      "file:local_path": "MOD15A2H.A2000049.h00v08.061.2020041201434.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(5aa3d757-5fa9-4e79-9011-2c36e7d480e5)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

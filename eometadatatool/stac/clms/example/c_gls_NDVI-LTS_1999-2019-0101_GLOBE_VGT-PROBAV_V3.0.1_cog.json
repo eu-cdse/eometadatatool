@@ -1,0 +1,515 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_ndvi-lts_global_1km_10daily_v3_cog",
+  "id": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog",
+  "properties": {
+    "created": "2024-06-18T14:28:13.914400Z",
+    "updated": "2025-07-18T03:52:46.937660Z",
+    "published": "2025-03-19T14:28:17.438354Z",
+    "eopf:origin_datetime": "2024-06-18T14:28:13.914400Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "1999-01-01T00:00:00.000000Z",
+    "start_datetime": "1999-01-01T00:00:00.000000Z",
+    "end_datetime": "2019-12-31T23:59:59.999999Z",
+    "instruments": [
+      "vegetation-1",
+      "vegetation-2",
+      "vegetation"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "vegetation_indices",
+    "processing:level": "L4",
+    "processing:version": "V3.0.1",
+    "_private": {
+      "product_size": 576220182,
+      "product_uuid": "c98dd0eb-b586-4d24-a6d3-475cb29da354",
+      "product_name": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.9955357,
+    179.9955357,
+    80.0044643
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0044643
+        ],
+        [
+          -179.9999999,
+          -59.9955357
+        ],
+        [
+          -0.0022321499999975,
+          -59.9955357
+        ],
+        [
+          179.9955357,
+          -59.9955357
+        ],
+        [
+          179.9955357,
+          80.0044643
+        ],
+        [
+          -0.0022321499999975,
+          80.0044643
+        ],
+        [
+          -179.9999999,
+          80.0044643
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi-lts_global_1km_10daily_v3/1999/01/01/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "max_lts": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Maximum Normalized Difference Vegetation Index over time period",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004,
+      "raster:offset": -0.08,
+      "bands": [
+        {
+          "name": "max_lts",
+          "description": "Maximum Normalized Difference Vegetation Index over time period"
+        }
+      ],
+      "file:size": 119654945,
+      "file:local_path": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MAX-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi-lts_global_1km_10daily_v3/1999/01/01/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MAX-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c98dd0eb-b586-4d24-a6d3-475cb29da354)/Nodes(c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-MAX-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "mean_lts": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Mean Normalized Difference Vegetation Index over time period",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004,
+      "raster:offset": -0.08,
+      "bands": [
+        {
+          "name": "mean_lts",
+          "description": "Mean Normalized Difference Vegetation Index over time period"
+        }
+      ],
+      "file:size": 105865931,
+      "file:local_path": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MEAN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi-lts_global_1km_10daily_v3/1999/01/01/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MEAN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c98dd0eb-b586-4d24-a6d3-475cb29da354)/Nodes(c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-MEAN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "median_lts": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Median Normalized Difference Vegetation Index over time period",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004,
+      "raster:offset": -0.08,
+      "bands": [
+        {
+          "name": "median_lts",
+          "description": "Median Normalized Difference Vegetation Index over time period"
+        }
+      ],
+      "file:size": 107986084,
+      "file:local_path": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MEDIAN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi-lts_global_1km_10daily_v3/1999/01/01/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MEDIAN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c98dd0eb-b586-4d24-a6d3-475cb29da354)/Nodes(c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-MEDIAN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "min_lts": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Minimum Normalized Difference Vegetation Index over time period",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004,
+      "raster:offset": -0.08,
+      "bands": [
+        {
+          "name": "min_lts",
+          "description": "Minimum Normalized Difference Vegetation Index over time period"
+        }
+      ],
+      "file:size": 113420937,
+      "file:local_path": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MIN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi-lts_global_1km_10daily_v3/1999/01/01/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MIN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c98dd0eb-b586-4d24-a6d3-475cb29da354)/Nodes(c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-MIN-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "nobs_lts": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Number of observation",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 0,
+      "bands": [
+        {
+          "name": "nobs_lts",
+          "description": "Number of observation"
+        }
+      ],
+      "file:size": 41536663,
+      "file:local_path": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-NOBS-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi-lts_global_1km_10daily_v3/1999/01/01/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-NOBS-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c98dd0eb-b586-4d24-a6d3-475cb29da354)/Nodes(c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-NOBS-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "stdev_lts": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Standard deviation Normalized Difference Vegetation Index over time period",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        15680,
+        40320
+      ],
+      "proj:transform": [
+        0.0089285714285836,
+        0.0,
+        -180.00446428571428,
+        0.0,
+        -0.0089285714285694,
+        80.00446428571429
+      ],
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004,
+      "bands": [
+        {
+          "name": "stdev_lts",
+          "description": "Standard deviation Normalized Difference Vegetation Index over time period"
+        }
+      ],
+      "file:size": 87755622,
+      "file:local_path": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-STDEV-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi-lts_global_1km_10daily_v3/1999/01/01/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-STDEV-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c98dd0eb-b586-4d24-a6d3-475cb29da354)/Nodes(c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog)/Nodes(c_gls_NDVI-STDEV-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.00446428571428,
+        -59.995535714253904,
+        179.9955357147765,
+        80.00446428571429
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/vegetation_indices/ndvi-lts_global_1km_10daily_v3/1999/01/01/c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog/c_gls_NDVI-MAX-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1.tiff&CRS=EPSG:4326&BBOX=-180.00446428571428,-59.995535714253904,179.9955357147765,80.00446428571429&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/ndvi-lts_global_1km_10daily_v3/clms_global_ndvi-lts-max_1km_v3_10daily.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501109ae8a0c5b4fd13b738ec33e49e35e7f4",
+      "file:size": 576222210,
+      "file:local_path": "c_gls_NDVI-LTS_1999-2019-0101_GLOBE_VGT-PROBAV_V3.0.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(c98dd0eb-b586-4d24-a6d3-475cb29da354)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

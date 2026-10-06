@@ -1,0 +1,1137 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_swi_europe_1km_daily_v1_cog",
+  "id": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog",
+  "properties": {
+    "created": "2024-06-12T12:55:21.749879Z",
+    "updated": "2025-07-18T02:55:41.367543Z",
+    "published": "2025-03-26T18:17:00.692136Z",
+    "eopf:origin_datetime": "2024-06-12T12:55:21.749879Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2014-12-31T12:00:01.000000Z",
+    "start_datetime": "2014-12-31T12:00:01.000000Z",
+    "end_datetime": "2015-01-01T12:00:00.000000Z",
+    "instruments": [
+      "ascat",
+      "csar"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "soil_water_index",
+    "processing:level": "L3",
+    "product:timeliness": "P2D",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "V1.0.1",
+    "_private": {
+      "product_size": 55916205,
+      "product_uuid": "35bddd03-7887-4cdf-9ba9-682f2b9b9877",
+      "product_name": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -11.0,
+    35.0,
+    50.0,
+    72.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          50.0,
+          72.0
+        ],
+        [
+          -11.0,
+          72.0
+        ],
+        [
+          -11.0,
+          35.0
+        ],
+        [
+          50.0,
+          35.0
+        ],
+        [
+          50.0,
+          72.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "qflag002": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Soil Water Index with T=2",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "qflag002",
+          "description": "Quality Flag on Soil Water Index with T=2"
+        }
+      ],
+      "file:checksum": "d501109108f408bc0124bfa4fd6338449752a9",
+      "file:size": 1870915,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG002_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG002_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-QFLAG002_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag005": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Soil Water Index with T=5",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "qflag005",
+          "description": "Quality Flag on Soil Water Index with T=5"
+        }
+      ],
+      "file:checksum": "d501101b228c94347c59af81c00b0abd4b9cf2",
+      "file:size": 2067111,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG005_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG005_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-QFLAG005_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag010": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Soil Water Index with T=10",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "qflag010",
+          "description": "Quality Flag on Soil Water Index with T=10"
+        }
+      ],
+      "file:checksum": "d50110d0c6130d22540e4f366365765c65dace",
+      "file:size": 2230377,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG010_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG010_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-QFLAG010_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag015": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Soil Water Index with T=15",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "qflag015",
+          "description": "Quality Flag on Soil Water Index with T=15"
+        }
+      ],
+      "file:checksum": "d50110e3e2c1c6a22a034bc8dd4f2c081b6dc1",
+      "file:size": 2442322,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG015_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG015_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-QFLAG015_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag020": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Soil Water Index with T=20",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "qflag020",
+          "description": "Quality Flag on Soil Water Index with T=20"
+        }
+      ],
+      "file:checksum": "d501106c8266cfa741f7baf527dcceb98f219b",
+      "file:size": 2662214,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG020_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG020_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-QFLAG020_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag040": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Soil Water Index with T=40",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "qflag040",
+          "description": "Quality Flag on Soil Water Index with T=40"
+        }
+      ],
+      "file:checksum": "d501106934f385e1f8aceda119c9c33744c431",
+      "file:size": 3021361,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG040_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG040_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-QFLAG040_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag060": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Soil Water Index with T=60",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "qflag060",
+          "description": "Quality Flag on Soil Water Index with T=60"
+        }
+      ],
+      "file:checksum": "d50110364d8d791f4d4f8b89b67b478d2eef5f",
+      "file:size": 3036692,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG060_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG060_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-QFLAG060_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag100": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Soil Water Index with T=100",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "qflag100",
+          "description": "Quality Flag on Soil Water Index with T=100"
+        }
+      ],
+      "file:checksum": "d5011024c2be959bace63bcd97c49bb03d7988",
+      "file:size": 2897426,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG100_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-QFLAG100_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-QFLAG100_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ssf": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Surface State Flag",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "ssf",
+          "description": "Surface State Flag"
+        }
+      ],
+      "file:checksum": "d501109ed7d437c110cfdd9735238ed00abf56",
+      "file:size": 922010,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SSF_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SSF_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SSF_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "swi002": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Soil Water Index with T=2",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "swi002",
+          "description": "Soil Water Index with T=2"
+        }
+      ],
+      "file:checksum": "d5011055f1839f07cc05b629ea810ce87f1fef",
+      "file:size": 4184748,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI002_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI002_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SWI002_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "swi005": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Soil Water Index with T=5",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "swi005",
+          "description": "Soil Water Index with T=5"
+        }
+      ],
+      "file:checksum": "d501101e56c9841d6619d4f87031b77ae45662",
+      "file:size": 4505351,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI005_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI005_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SWI005_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "swi010": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Soil Water Index with T=10",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "swi010",
+          "description": "Soil Water Index with T=10"
+        }
+      ],
+      "file:checksum": "d501103ec4409715bbe76dd5788379cbf25ca1",
+      "file:size": 5218083,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI010_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI010_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SWI010_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "swi015": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Soil Water Index with T=15",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "swi015",
+          "description": "Soil Water Index with T=15"
+        }
+      ],
+      "file:checksum": "d501108ac8a1d833c526581276686ec5d0882a",
+      "file:size": 5606307,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI015_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI015_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SWI015_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "swi020": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Soil Water Index with T=20",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "swi020",
+          "description": "Soil Water Index with T=20"
+        }
+      ],
+      "file:checksum": "d50110c1b376df14a2abdcef42b79a7d1ee009",
+      "file:size": 5656216,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI020_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI020_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SWI020_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "swi040": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Soil Water Index with T=40",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "swi040",
+          "description": "Soil Water Index with T=40"
+        }
+      ],
+      "file:checksum": "d5011036c42bc22ac67efff47298ae5e3ab5b7",
+      "file:size": 5484749,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI040_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI040_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SWI040_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "swi060": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Soil Water Index with T=60",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "swi060",
+          "description": "Soil Water Index with T=60"
+        }
+      ],
+      "file:checksum": "d50110ad965f4b2f50957808d380d87278d427",
+      "file:size": 3952309,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI060_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI060_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SWI060_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "swi100": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Soil Water Index with T=100",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        4144,
+        6832
+      ],
+      "proj:transform": [
+        0.0089285714285712,
+        0.0,
+        -11.0,
+        0.0,
+        -0.0089285714285694,
+        71.9999999999916
+      ],
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.5,
+      "bands": [
+        {
+          "name": "swi100",
+          "description": "Soil Water Index with T=100"
+        }
+      ],
+      "file:checksum": "d501100d82c5101275bd02e126816a7736a574",
+      "file:size": 158014,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI100_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SWI100_201501011200_CEURO_SCATSAR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/Nodes(c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog)/Nodes(c_gls_SWI1km-SWI100_201501011200_CEURO_SCATSAR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -11.0,
+        35.00000000000001,
+        49.999999999998444,
+        71.9999999999916
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        455,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/soil_water_index/swi_europe_1km_daily_v1/2015/01/01/c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog/c_gls_SWI1km-SSF_201501011200_CEURO_SCATSAR_V1.0.1.tiff&CRS=EPSG:4326&BBOX=-11.0,35.00000000000001,49.999999999998444,71.9999999999916&WIDTH=750&HEIGHT=455&FORMAT=image/png&TRANSPARENT=false"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110817e5d06a59978b4e39d12eac8f8d75d",
+      "file:size": 55921523,
+      "file:local_path": "c_gls_SWI1km_201501011200_CEURO_SCATSAR_V1.0.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(35bddd03-7887-4cdf-9ba9-682f2b9b9877)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

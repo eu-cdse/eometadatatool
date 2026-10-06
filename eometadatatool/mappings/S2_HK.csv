@@ -1,0 +1,13 @@
+metadata;file;mappings;datatype
+beginningDateTime;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='startTime']/text();DateTimeOffset
+endingDateTime;manifest.safe;//*[local-name()='acquisitionPeriod']/*[local-name()='stopTime']/text();DateTimeOffset
+platformShortName;manifest.safe;//*[local-name()='platform']/*[local-name()='familyName']/text();String
+platformSerialIdentifier;manifest.safe;//*[local-name()='platform']/*[local-name()='number']/text();String
+orbitNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='orbitNumber' and @type='start']/text();Int64
+lastOrbitNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='orbitNumber' and @type='stop']/text();Int64
+relativeOrbitNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='relativeOrbitNumber' and @type='start']/text();Int64
+lastRelativeOrbitNumber;manifest.safe;//*[local-name()='orbitReference']/*[local-name()='relativeOrbitNumber' and @type='stop']/text();Int64
+processingDate;manifest.safe;//*[local-name()='processing']/@start;DateTimeOffset
+processingCenter;manifest.safe;//*[local-name()='processing']/*[local-name()='facility']/@site;String
+productType;static;productType;String
+instrumentShortName;static;SENTINEL-2;String

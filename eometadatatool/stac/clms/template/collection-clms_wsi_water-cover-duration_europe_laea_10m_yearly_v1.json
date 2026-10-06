@@ -1,0 +1,319 @@
+{
+  "id": "clms_wsi_water-cover-duration_europe_laea_10m_yearly_v1",
+  "description": "The Water Cover Duration (WCD) product is generated once a year. It provides an estimate of the number of days on which water covers the land at a European scale during the hydrological year. The hydrological year begins on 1 September. The product is derived from Sentinel-1 and Sentinel-2 data, as well as Sentinel-2 Water and Ice Cover (WIC S2) product. It has a spatial resolution of 10 m x 10 m. This product corresponds to a reprojection of the native product to the LAEA (Lambert azimuthal equal-area projection) grid.",
+  "stac_version": "1.1.0",
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Legal notice on the use of Copernicus Land Monitoring Service (CLMS) data"
+    },
+    {
+      "href": "https://sdi.eea.europa.eu/catalogue/srv/eng/catalog.search#/metadata/39e1ff33-01d9-45c2-9edc-00924383f34f",
+      "rel": "SDI_URL",
+      "type": "text/html",
+      "title": "EEA geospatial data catalogue"
+    }
+  ],
+  "stac_extensions": [
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json"
+  ],
+  "title": "Water Cover Duration 2016-present (raster 10 m, LAEA projection), Europe, annually",
+  "type": "Collection",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -32,
+          27,
+          46,
+          72
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2016-09-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "HR-WSI",
+    "Water snow and ice monitoring",
+    "monitoring",
+    "land cover",
+    "water",
+    "snow",
+    "ice",
+    "clouds",
+    "high resolution",
+    "near real time",
+    "pan-European",
+    "CLMS",
+    "Copernicus",
+    "climate change impact",
+    "landscape alteration",
+    "environmental policy"
+  ],
+  "providers": [
+    {
+      "name": "EEA",
+      "roles": [
+        "producer"
+      ],
+      "url": "https://land.copernicus.eu"
+    },
+    {
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ],
+      "url": "https://commission.europa.eu/"
+    },
+    {
+      "name": "GeoVille GmbH",
+      "roles": [
+        "processor"
+      ],
+      "url": "https://www.geoville.com/"
+    },
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    }
+  ],
+  "sci:doi": "10.2909/39e1ff33-01d9-45c2-9edc-00924383f34f",
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+45 33 36 71 00",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ],
+  "storage:schemes": {
+    "cdse-s3": {
+      "type": "custom-s3",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "requester_pays": false
+    },
+    "creodias-s3": {
+      "type": "custom-s3",
+      "title": "CREODIAS S3",
+      "platform": "https://eodata.cloudferro.com",
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "requester_pays": true
+    }
+  },
+  "item_assets": {
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "quality",
+        "archive"
+      ],
+      "title": "Zipped product",
+      "type": "application/zip",
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "MTD": {
+      "title": "Product metadata",
+      "description": "Product metadata",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "WCD": {
+      "title": "Water Cover Duration (days)",
+      "description": " Water presence frequency in a hydrological year expressed in number of days (between 0 and 366)",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "data_type": "uint16",
+      "nodata": 65535,
+      "classification:classes": [
+        {
+          "value": 0,
+          "name": "no_water",
+          "description": "No water"
+        },
+        {
+          "value": 65485,
+          "name": "cloud_or_cloud_shadow",
+          "description": "Cloud or cloud shadow"
+        },
+        {
+          "value": 65533,
+          "name": "sea_water",
+          "description": "Sea water"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "WCD-QA": {
+      "title": "Quality layer for the Water Cover Duration (WCD) layer",
+      "description": "Quality layer providing basic assessment of the Water Cover Duration layer.",
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "quality",
+        "data"
+      ],
+      "data_type": "uint8",
+      "nodata": 65535,
+      "classification:classes": [
+        {
+          "value": 0,
+          "name": "high_quality",
+          "description": "High quality"
+        },
+        {
+          "value": 1,
+          "name": "medium_quality",
+          "description": "Medium quality"
+        },
+        {
+          "value": 2,
+          "name": "low_quality",
+          "description": "Low quality"
+        },
+        {
+          "value": 3,
+          "name": "minimal_quality",
+          "description": "Minimal quality"
+        },
+        {
+          "value": 65485,
+          "name": "cloud_or_cloud_shadow",
+          "description": "Cloud or cloud shadow"
+        },
+        {
+          "value": 65533,
+          "name": "sea_water",
+          "description": "Sea water"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "WCD-MTD": {
+      "title": "WCD auxiliary metadata",
+      "description": "GDAL auxiliary metadata associated with the WCD raster layer (color table)",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "WCD-QA-MTD": {
+      "title": "WCD-QA auxiliary metadata",
+      "description": "GDAL auxiliary metadata associated with the WCD-QA raster layer (color table)",
+      "type": "application/xml",
+      "roles": [
+        "metadata"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:3035"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "water_extent"
+    ],
+    "processing:version": [
+      "v1.0"
+    ],
+    "instruments": [
+      "msi",
+      "sar"
+    ],
+    "product:timeliness_category": [
+      "NTC"
+    ],
+    "gsd": [
+      10.0
+    ],
+    "product:timeliness": [
+      "PT1M"
+    ],
+    "proj:shape": [
+      10000,
+      10000
+    ]
+  },
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_wsi_water-cover-duration_europe_laea_10m_yearly_v1.jpg",
+      "type": "image/jpeg",
+      "title": "Water Cover Duration 2016-present (raster 10 m, LAEA projection), Europe, annually Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  }
+}

@@ -1,0 +1,237 @@
+{
+  "stac_version": "1.1.0",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2000-01-01T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "id": "modis-terra-mod17a2hgf",
+  "type": "Collection",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "title": "MODIS Terra Gross Primary Productivity Gap-Filled 8-Day L4 Global 500m",
+  "description": "The MODIS Terra MOD17A2HGF Version 6.1 product provides a gap-filled 8-day cumulative composite of Gross Primary Productivity (GPP) at 500 m spatial resolution. The dataset is based on the radiation use efficiency concept and can be used as input for models analyzing terrestrial energy balance, carbon and water cycles, and vegetation biogeochemistry. In addition to GPP, the product includes Net Photosynthesis (PSN), calculated as GPP minus Maintenance Respiration (MR), along with a quality control (QC) layer providing quality information for both variables. The gap-filled product is generated at the end of each year once the complete annual MOD15A2H LAI/FPAR dataset becomes available. Poor-quality LAI/FPAR inputs are identified using quality control flags and replaced through linear interpolation to improve data consistency. Consequently, the dataset is not available in near-real time and is produced only after the completion of the full yearly dataset.",
+  "license": "other",
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/MODIS_TERRA.jpeg",
+      "type": "image/jpeg",
+      "title": "MODIS Terra Gross Primary Productivity Gap-Filled 8-Day L4 Global 500m Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "platform": [
+      "terra"
+    ],
+    "sat:platform_international_designator": [
+      "1999-068A"
+    ],
+    "processing:level": [
+      "L4"
+    ],
+    "product:type": [
+      "MOD17A2HGF"
+    ],
+    "constellation": [
+      "modis"
+    ],
+    "processing:version": [
+      "6.1.5",
+      "6.1.4",
+      "6.1.6"
+    ],
+    "instruments": [
+      "modis"
+    ],
+    "gsd": [
+      500
+    ]
+  },
+  "item_assets": {
+    "data": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "application/x-hdf",
+      "title": "MODIS HDF Data",
+      "bands": [
+        {
+          "name": "Gpp_500m",
+          "description": "MODIS/Terra Gross Primary Production (GPP) 8-Day L4 Global 500m SIN Grid"
+        },
+        {
+          "name": "PsnNet_500m",
+          "description": "MODIS/Terra Net Photosynthesis (GPP - maint resp) 8-Day L4 Global 500m SIN Grid"
+        },
+        {
+          "name": "Psn_QC_500m",
+          "description": "MODIS/Terra QC for 8-day GPP/PSN"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "metadata": {
+      "alternate:name": "S3",
+      "roles": [
+        "metadata"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "auth:refs": [
+        "s3"
+      ],
+      "type": "application/xml",
+      "title": "NASA CMR Granule Metadata",
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "thumbnail": {
+      "alternate:name": "HTTPS",
+      "roles": [
+        "thumbnail",
+        "graphic"
+      ],
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      },
+      "type": "image/jpeg",
+      "title": "Thumbnail"
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://lpdaac.usgs.gov/data/data-citation-and-policies/",
+      "title": "LP DAAC - Data Citation and Policies"
+    }
+  ],
+  "bands": [
+    {
+      "name": "Gpp_500m",
+      "description": "MODIS/Terra Gross Primary Production (GPP) 8-Day L4 Global 500m SIN Grid"
+    },
+    {
+      "name": "PsnNet_500m",
+      "description": "MODIS/Terra Net Photosynthesis (GPP - maint resp) 8-Day L4 Global 500m SIN Grid"
+    },
+    {
+      "name": "Psn_QC_500m",
+      "description": "MODIS/Terra QC for 8-day GPP/PSN"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "keywords": [
+    "MODIS",
+    "Terra",
+    "NASA",
+    "Satellite",
+    "Global",
+    "Vegetation",
+    "GPP",
+    "Gross Primary Productivity",
+    "Carbon",
+    "500m",
+    "MOD17A2HGF"
+  ]
+}

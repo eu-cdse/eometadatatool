@@ -1,0 +1,369 @@
+{
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180.0,
+          -90.0,
+          180.0,
+          90.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2006-12-31T12:00:00.000Z",
+          "2025-07-14T12:00:00.000Z"
+        ]
+      ]
+    }
+  },
+  "stac_version": "1.1.0",
+  "id": "clms_swi_global_12.5km_daily_v3_nc",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json"
+  ],
+  "type": "Collection",
+  "sci:doi": "10.2909/98c5e00e-3580-4bb3-9509-50a572b1e935",
+  "title": "CLMS Soil Water Index (SWI) Global 12.5km daily V3 (NetCDF)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "SWI",
+    "Soil Water Index",
+    "soil moisture",
+    "global",
+    "daily",
+    "12.5km",
+    "Metop",
+    "ASCAT"
+  ],
+  "description": "Provides daily updates on the moisture conditions in different soil layers. The data are available over the globe at the spatial resolution of 12.5 km and with the temporal extent from January 2007 to 2025.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_swi_global_12.5km_daily_v3.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS SWI Global 12.5km daily V3 (NetCDF) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "platform": [
+      "metop"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "soil_water_index"
+    ],
+    "constellation": [
+      "metop"
+    ],
+    "processing:version": [
+      "V3.1.1",
+      "V3.1.2"
+    ],
+    "instruments": [
+      "ascat"
+    ],
+    "product:timeliness_category": [
+      "OFFL"
+    ],
+    "gsd": [
+      12500.0
+    ],
+    "product:timeliness": [
+      "P1D"
+    ]
+  },
+  "item_assets": {
+    "Product": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "auth:refs": [
+        "s3"
+      ],
+      "type": "application/netcdf",
+      "title": "Daily Soil Water Index 0.1degree: GLOBE",
+      "bands": [
+        {
+          "name": "swi_005",
+          "description": "Soil Water Index with T=5"
+        },
+        {
+          "name": "swi_010",
+          "description": "Soil Water Index with T=10"
+        },
+        {
+          "name": "swi_001",
+          "description": "Soil Water Index with T=1"
+        },
+        {
+          "name": "swi_015",
+          "description": "Soil Water Index with T=15"
+        },
+        {
+          "name": "swi_100",
+          "description": "Soil Water Index with T=100"
+        },
+        {
+          "name": "swi_040",
+          "description": "Soil Water Index with T=40"
+        },
+        {
+          "name": "swi_060",
+          "description": "Soil Water Index with T=60"
+        },
+        {
+          "name": "swi_020",
+          "description": "Soil Water Index with T=20"
+        },
+        {
+          "name": "qflag_040",
+          "description": "Quality Flag with T=40"
+        },
+        {
+          "name": "qflag_010",
+          "description": "Quality Flag with T=10"
+        },
+        {
+          "name": "qflag_015",
+          "description": "Quality Flag with T=15"
+        },
+        {
+          "name": "qflag_100",
+          "description": "Quality Flag with T=100"
+        },
+        {
+          "name": "qflag_020",
+          "description": "Quality Flag with T=20"
+        },
+        {
+          "name": "qflag_005",
+          "description": "Quality Flag with T=5"
+        },
+        {
+          "name": "qflag_001",
+          "description": "Quality Flag with T=1"
+        },
+        {
+          "name": "qflag_060",
+          "description": "Quality Flag with T=60"
+        },
+        {
+          "name": "ssf",
+          "description": "Surface State Flag"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    },
+    {
+      "rel": "about",
+      "href": "https://land.copernicus.eu/en/products/soil-moisture/daily-soil-water-index-global-v3-0-12-5km",
+      "type": "text/html",
+      "title": "Product page"
+    }
+  ],
+  "bands": [
+    {
+      "description": "Quality Flag with T=5",
+      "name": "qflag_005"
+    },
+    {
+      "description": "Quality Flag with T=20",
+      "name": "qflag_020"
+    },
+    {
+      "name": "qflag_040",
+      "description": "Quality Flag with T=40"
+    },
+    {
+      "name": "swi_100",
+      "description": "Soil Water Index with T=100"
+    },
+    {
+      "description": "Quality Flag with T=60",
+      "name": "qflag_060"
+    },
+    {
+      "name": "swi_010",
+      "description": "Soil Water Index with T=10"
+    },
+    {
+      "name": "swi_060",
+      "description": "Soil Water Index with T=60"
+    },
+    {
+      "description": "Soil Water Index with T=5",
+      "name": "swi_005"
+    },
+    {
+      "description": "Quality Flag with T=100",
+      "name": "qflag_100"
+    },
+    {
+      "name": "ssf",
+      "description": "Surface State Flag"
+    },
+    {
+      "name": "swi_001",
+      "description": "Soil Water Index with T=1"
+    },
+    {
+      "name": "swi_040",
+      "description": "Soil Water Index with T=40"
+    },
+    {
+      "name": "qflag_015",
+      "description": "Quality Flag with T=15"
+    },
+    {
+      "description": "Quality Flag with T=1",
+      "name": "qflag_001"
+    },
+    {
+      "name": "swi_020",
+      "description": "Soil Water Index with T=20"
+    },
+    {
+      "description": "Quality Flag with T=10",
+      "name": "qflag_010"
+    },
+    {
+      "name": "swi_015",
+      "description": "Soil Water Index with T=15"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

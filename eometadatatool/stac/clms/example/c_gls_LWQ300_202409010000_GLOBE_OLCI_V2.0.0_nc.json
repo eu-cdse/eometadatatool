@@ -1,0 +1,748 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lwq-nrt_global_300m_10daily_v2_nc",
+  "id": "c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0_nc",
+  "properties": {
+    "created": "2024-09-13T12:06:24.000000Z",
+    "updated": "2025-07-16T16:12:58.804405Z",
+    "published": "2025-04-10T14:50:08.256183Z",
+    "eopf:origin_datetime": "2024-09-13T12:06:24.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2024-09-01T00:00:00.000000Z",
+    "start_datetime": "2024-09-01T00:00:00.000000Z",
+    "end_datetime": "2024-09-10T23:59:59.999999Z",
+    "instruments": [
+      "olci"
+    ],
+    "gsd": 300,
+    "proj:code": "EPSG:4326",
+    "product:type": "lake_water_quality",
+    "processing:level": "L3",
+    "cube:dimensions": {
+      "time": {
+        "type": "temporal",
+        "description": "reference time of the lwq file",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-01T05:32:47.000000Z"
+        ]
+      },
+      "lat": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude",
+        "extent": [
+          -89.99888392857142,
+          89.99888392857143
+        ]
+      },
+      "lon": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude",
+        "extent": [
+          -179.99888392857144,
+          179.99888392857142
+        ]
+      }
+    },
+    "cube:variables": {
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          19967.0
+        ],
+        "description": "reference time of the lwq file",
+        "unit": "days since 1970-01-01 00:00:00",
+        "data_type": "other"
+      },
+      "lat": {
+        "dimensions": [
+          "lat"
+        ],
+        "type": "data",
+        "description": "latitude",
+        "unit": "degrees_north",
+        "data_type": "other"
+      },
+      "lon": {
+        "dimensions": [
+          "lon"
+        ],
+        "type": "data",
+        "description": "longitude",
+        "unit": "degrees_east",
+        "data_type": "other"
+      },
+      "RwDayNum_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Age in days after the start of the observation period of the most representative water-leaving reflectance spectrum",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw400_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 400 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw412_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 412 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw443_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 443 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw490_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 490 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw510_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 510 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw560_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 560 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw620_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 620 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw665_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 665 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw674_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 674 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw681_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 681 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw709_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 709 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw754_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 754 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw779_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 779 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw885_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 885 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw900_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 900 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw1020_rep": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Representative spectrum of fully normalized water-leaving reflectance at 1020 nm",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw_relative_uncertainty": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Relative uncertainty in fully normalized water-leaving reflectance at peak reflectance",
+        "unit": "percent",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "Rw_relative_uncertainty_unbiased": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Relative unbiased uncertainty in fully normalized water-leaving reflectance at peak reflectance",
+        "unit": "percent",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "chla_mean": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Mean concentration of chlorophyll-a",
+        "unit": "mg.m-3",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "chla_uncertainty": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Relative uncertainty in concentration of chlorophyll-a",
+        "unit": "percent",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "tsm_mean": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Mean concentration of total suspended matter",
+        "unit": "g.m-3",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "tsm_uncertainty": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Relative uncertainty in concentration of total suspended matter",
+        "unit": "percent",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "turbidity_mean": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Mean turbidity in Nephelometric Turbidity Units",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "num_obs": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Number of observations of the pixel area",
+        "data_type": "int16"
+      },
+      "trophic_state_index": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Trophic state index",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "first_obs": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Age in days after the start of the observation period of the first observation included in the pixel area",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "last_obs": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Age in days after the start of the observation period of the last observation included in the pixel area",
+        "nodata": -32767,
+        "data_type": "int16"
+      },
+      "floating_cyanobacteria": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Probability of floating cyanobacteria",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "quality_flags": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Quality flags",
+        "nodata": 65535,
+        "data_type": "uint16"
+      },
+      "lat_bounds": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      },
+      "lon_bounds": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "nodata": 9.969209968386869e+36,
+        "data_type": "other"
+      }
+    },
+    "platform": "sentinel-3a",
+    "constellation": "sentinel-3",
+    "product:timeliness": "P3D",
+    "product:timeliness_category": "NRT",
+    "processing:version": "2.0.0",
+    "_private": {
+      "product_size": 3629909129,
+      "product_uuid": "b2a562a9-5957-4cbf-ad8b-5b01d38fff46",
+      "product_name": "c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0_nc",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260924120453+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -89.9999999,
+    179.9999999,
+    89.9999999
+  ],
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -179.9999999,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            89.9999999
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            1e-8,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            89.9999999
+          ],
+          [
+            1e-8,
+            89.9999999
+          ],
+          [
+            1e-8,
+            -89.9999999
+          ]
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_300m_10daily_v2/2024/09/01/c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0_nc/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0_nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "Product": {
+      "type": "application/netcdf",
+      "title": "Water Quality, Calimnos L3 Aggregated product",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "RwDayNum_rep",
+          "description": "Age in days after the start of the observation period of the most representative water-leaving reflectance spectrum"
+        },
+        {
+          "name": "Rw400_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 400 nm"
+        },
+        {
+          "name": "Rw412_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 412 nm"
+        },
+        {
+          "name": "Rw443_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 443 nm"
+        },
+        {
+          "name": "Rw490_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 490 nm"
+        },
+        {
+          "name": "Rw510_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 510 nm"
+        },
+        {
+          "name": "Rw560_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 560 nm"
+        },
+        {
+          "name": "Rw620_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 620 nm"
+        },
+        {
+          "name": "Rw665_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 665 nm"
+        },
+        {
+          "name": "Rw674_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 674 nm"
+        },
+        {
+          "name": "Rw681_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 681 nm"
+        },
+        {
+          "name": "Rw709_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 709 nm"
+        },
+        {
+          "name": "Rw754_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 754 nm"
+        },
+        {
+          "name": "Rw779_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 779 nm"
+        },
+        {
+          "name": "Rw885_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 885 nm"
+        },
+        {
+          "name": "Rw900_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 900 nm"
+        },
+        {
+          "name": "Rw1020_rep",
+          "description": "Representative spectrum of fully normalized water-leaving reflectance at 1020 nm"
+        },
+        {
+          "name": "Rw_relative_uncertainty",
+          "description": "Relative uncertainty in fully normalized water-leaving reflectance at peak reflectance"
+        },
+        {
+          "name": "Rw_relative_uncertainty_unbiased",
+          "description": "Relative unbiased uncertainty in fully normalized water-leaving reflectance at peak reflectance"
+        },
+        {
+          "name": "chla_mean",
+          "description": "Mean concentration of chlorophyll-a"
+        },
+        {
+          "name": "chla_uncertainty",
+          "description": "Relative uncertainty in concentration of chlorophyll-a"
+        },
+        {
+          "name": "tsm_mean",
+          "description": "Mean concentration of total suspended matter"
+        },
+        {
+          "name": "tsm_uncertainty",
+          "description": "Relative uncertainty in concentration of total suspended matter"
+        },
+        {
+          "name": "turbidity_mean",
+          "description": "Mean turbidity in Nephelometric Turbidity Units"
+        },
+        {
+          "name": "num_obs",
+          "description": "Number of observations of the pixel area"
+        },
+        {
+          "name": "trophic_state_index",
+          "description": "Trophic state index"
+        },
+        {
+          "name": "first_obs",
+          "description": "Age in days after the start of the observation period of the first observation included in the pixel area"
+        },
+        {
+          "name": "last_obs",
+          "description": "Age in days after the start of the observation period of the last observation included in the pixel area"
+        },
+        {
+          "name": "floating_cyanobacteria",
+          "description": "Probability of floating cyanobacteria"
+        },
+        {
+          "name": "quality_flags",
+          "description": "Quality flags"
+        }
+      ],
+      "file:size": 3629909129,
+      "file:local_path": "c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0_nc/c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0.nc",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_300m_10daily_v2/2024/09/01/c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0_nc/c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b2a562a9-5957-4cbf-ad8b-5b01d38fff46)/Nodes(c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0_nc)/Nodes(c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.00000000000003,
+        -90.00000000000344,
+        180.00000000000685,
+        90.0
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        375,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_300m_10daily_v2/2024/09/01/c_gls_LWQ300_202409010000_GLOBE_OLCI_V2.0.0_cog/c_gls_LWQ300-TSI_202409010000_GLOBE_OLCI_V2.0.0.tiff&CRS=EPSG:4326&BBOX=-180.00000000000003,-90.00000000000344,180.00000000000685,90.0&WIDTH=750&HEIGHT=375&FORMAT=image/png&TRANSPARENT=false"
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

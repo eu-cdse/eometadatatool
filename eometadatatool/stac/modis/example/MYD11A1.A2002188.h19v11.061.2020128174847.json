@@ -1,0 +1,293 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "modis-aqua-myd11a1",
+  "id": "MYD11A1.A2002188.h19v11.061.2020128174847",
+  "properties": {
+    "created": "2020-05-07T17:48:47.000000Z",
+    "updated": "2025-10-26T00:20:34.613883Z",
+    "published": "2025-10-26T00:20:34.613883Z",
+    "eopf:origin_datetime": "2020-05-07T17:48:47.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2002-07-07T00:00:00.000000Z",
+    "start_datetime": "2002-07-07T00:00:00.000000Z",
+    "end_datetime": "2002-07-08T23:59:59.000000Z",
+    "constellation": "modis",
+    "processing:datetime": "2020-05-07T17:48:47.000000Z",
+    "processing:version": "6.5.17",
+    "product:type": "MYD11A1",
+    "grid:code": "MSIN-1911",
+    "gsd": 1000,
+    "instruments": [
+      "modis"
+    ],
+    "platform": "aqua",
+    "sat:platform_international_designator": "2002-022A",
+    "processing:level": "L3",
+    "eo:cloud_cover": 9.0,
+    "statistics": {
+      "missing_data": 0.0,
+      "out_of_bounds_data": 0.0,
+      "interpolated_data": 0.0
+    },
+    "_private": {
+      "product_size": 4971246,
+      "product_uuid": "80abbd1d-76cb-4ee6-967d-ee51fd085654",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260512134513+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    10.6379216169259,
+    -29.9958333333333,
+    23.089182910917,
+    -20.0041666666667
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          10.6379216169259,
+          -20.0041666666667
+        ],
+        [
+          11.5421970696559,
+          -29.9958333333333
+        ],
+        [
+          23.089182910917,
+          -29.9958333333333
+        ],
+        [
+          21.280245407792,
+          -20.0041666666667
+        ],
+        [
+          10.6379216169259,
+          -20.0041666666667
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Aqua/MODIS/MYD11A1.061/2002/07/07/MYD11A1.A2002188.h19v11.061.2020128174847/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/MYD11A1.A2002188.h19v11.061.2020128174847.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "MYD11A1.A2002188.h19v11.061.2020128174847.cmr.xml",
+      "roles": [
+        "metadata"
+      ],
+      "file:checksum": "d50110e28c0b3a131409452e26e6bcd5cd7ad7",
+      "file:size": 12038,
+      "file:local_path": "MYD11A1.A2002188.h19v11.061.2020128174847/MYD11A1.A2002188.h19v11.061.2020128174847.cmr.xml",
+      "href": "s3://eodata/Aqua/MODIS/MYD11A1.061/2002/07/07/MYD11A1.A2002188.h19v11.061.2020128174847/MYD11A1.A2002188.h19v11.061.2020128174847.cmr.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(80abbd1d-76cb-4ee6-967d-ee51fd085654)/Nodes(MYD11A1.A2002188.h19v11.061.2020128174847)/Nodes(MYD11A1.A2002188.h19v11.061.2020128174847.cmr.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "application/x-hdf",
+      "title": "MYD11A1.A2002188.h19v11.061.2020128174847.hdf",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "LST_Day_1km",
+          "description": "Daily daytime 1km grid Land-surface Temperature"
+        },
+        {
+          "name": "QC_Day",
+          "description": "Quality control for daytime LST and emissivity"
+        },
+        {
+          "name": "Day_view_time",
+          "description": "Time of daytime Land-surface Temperature observation"
+        },
+        {
+          "name": "Day_view_angl",
+          "description": "View zenith angle of daytime Land-surface Temperature"
+        },
+        {
+          "name": "LST_Night_1km",
+          "description": "Daily nighttime 1km grid Land-surface Temperature"
+        },
+        {
+          "name": "QC_Night",
+          "description": "Quality control for nighttime LST and emissivity"
+        },
+        {
+          "name": "Night_view_time",
+          "description": "Time of nighttime Land-surface Temperature observation"
+        },
+        {
+          "name": "Night_view_angl",
+          "description": "View zenith angle of nighttime Land-surface Temperature"
+        },
+        {
+          "name": "Emis_31",
+          "description": "Band 31 emissivity"
+        },
+        {
+          "name": "Emis_32",
+          "description": "Band 32 emissivity"
+        },
+        {
+          "name": "Clear_day_cov",
+          "description": "day clear-sky coverage"
+        },
+        {
+          "name": "Clear_night_cov",
+          "description": "night clear-sky coverage"
+        }
+      ],
+      "proj:shape": [
+        1200,
+        1200
+      ],
+      "file:checksum": "d501103f3505a1a5b1bd9ed14bbe601bfda2b0",
+      "file:size": 4933757,
+      "file:local_path": "MYD11A1.A2002188.h19v11.061.2020128174847/MYD11A1.A2002188.h19v11.061.2020128174847.hdf",
+      "href": "s3://eodata/Aqua/MODIS/MYD11A1.061/2002/07/07/MYD11A1.A2002188.h19v11.061.2020128174847/MYD11A1.A2002188.h19v11.061.2020128174847.hdf",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(80abbd1d-76cb-4ee6-967d-ee51fd085654)/Nodes(MYD11A1.A2002188.h19v11.061.2020128174847)/Nodes(MYD11A1.A2002188.h19v11.061.2020128174847.hdf)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "BROWSE.MYD11A1.A2002188.h19v11.061.2020128174854.1.jpg",
+      "roles": [
+        "thumbnail",
+        "graphic"
+      ],
+      "file:checksum": "d50110b2e85b5dfd35711bb86600a41a44de04",
+      "file:size": 12671,
+      "file:local_path": "MYD11A1.A2002188.h19v11.061.2020128174847/BROWSE.MYD11A1.A2002188.h19v11.061.2020128174854.1.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(a9e9c34d-1e42-42ff-bca6-7e1a39395f39)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Aqua/MODIS/MYD11A1.061/2002/07/07/MYD11A1.A2002188.h19v11.061.2020128174847/BROWSE.MYD11A1.A2002188.h19v11.061.2020128174854.1.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011080c85efe872db48c6b3ba7425db09bf2",
+      "file:size": 4972376,
+      "file:local_path": "MYD11A1.A2002188.h19v11.061.2020128174847.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(80abbd1d-76cb-4ee6-967d-ee51fd085654)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

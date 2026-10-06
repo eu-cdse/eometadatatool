@@ -1,0 +1,232 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_sce_northernhemisphere_1km_daily_v1_cog",
+  "id": "c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog",
+  "properties": {
+    "created": "2025-05-16T14:08:21.000000Z",
+    "updated": "2025-05-16T14:12:36.555280Z",
+    "published": "2025-05-16T14:12:36.555280Z",
+    "eopf:origin_datetime": "2025-05-16T14:08:21.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2025-01-01T00:28:07.000000Z",
+    "start_datetime": "2025-01-01T00:28:07.000000Z",
+    "end_datetime": "2025-01-01T23:35:10.000000Z",
+    "instruments": [
+      "slstr"
+    ],
+    "gsd": 1000,
+    "proj:code": "EPSG:4326",
+    "product:type": "snow_cover_extent",
+    "processing:level": "L3",
+    "constellation": "sentinel-3",
+    "product:timeliness": "P1D",
+    "product:timeliness_category": "NRT",
+    "processing:version": "V1.0.1",
+    "_private": {
+      "product_size": 10653879,
+      "product_uuid": "8d17edb0-69bb-4eac-9a2e-68ed59c4ef87",
+      "product_name": "c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    25.0,
+    179.9999999,
+    84.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          84.0
+        ],
+        [
+          -179.9999999,
+          25.0
+        ],
+        [
+          0.0,
+          25.0
+        ],
+        [
+          179.9999999,
+          25.0
+        ],
+        [
+          179.9999999,
+          84.0
+        ],
+        [
+          0.0,
+          84.0
+        ],
+        [
+          -179.9999999,
+          84.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/snow_cover_extent/sce_northernhemisphere_1km_daily_v1/2025/01/01/c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "sce": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Surface snow area fraction",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        5900,
+        36000
+      ],
+      "proj:transform": [
+        0.01,
+        0.0,
+        -180.0,
+        0.0,
+        -0.01,
+        84.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        25.0,
+        180.0,
+        84.0
+      ],
+      "data_type": "int16",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "sce",
+          "description": "Surface snow area fraction"
+        }
+      ],
+      "file:checksum": "d50110c6ff7ba2cedcfa8cb6a8bb4d921f8797",
+      "file:size": 10653879,
+      "file:local_path": "c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog/c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/snow_cover_extent/sce_northernhemisphere_1km_daily_v1/2025/01/01/c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog/c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(8d17edb0-69bb-4eac-9a2e-68ed59c4ef87)/Nodes(c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog)/Nodes(c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0,
+        25.0,
+        180.0,
+        84.0
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        123,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/snow_cover_extent/sce_northernhemisphere_1km_daily_v1/2025/01/01/c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog/c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1.tiff&CRS=EPSG:4326&BBOX=-180.0,25.0,180.0,84.0&WIDTH=750&HEIGHT=123&FORMAT=image/png&TRANSPARENT=false"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501108f89e1d0b2420477379881ea6b5eed2f",
+      "file:size": 10654177,
+      "file:local_path": "c_gls_SCE_202501010000_NHEMI_SLSTR_V1.0.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(8d17edb0-69bb-4eac-9a2e-68ed59c4ef87)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

@@ -1,0 +1,509 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_fcover_global_300m_10daily_v1_cog",
+  "id": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog",
+  "properties": {
+    "created": "2025-01-23T12:47:36.705782Z",
+    "updated": "2025-07-17T02:38:18.742739Z",
+    "published": "2025-04-15T08:57:21.304957Z",
+    "eopf:origin_datetime": "2025-01-23T12:47:36.705782Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2025-01-01T00:00:00.000000Z",
+    "start_datetime": "2025-01-01T00:00:00.000000Z",
+    "end_datetime": "2025-01-10T23:59:59.999999Z",
+    "instruments": [
+      "olci"
+    ],
+    "gsd": 300,
+    "proj:code": "EPSG:4326",
+    "product:type": "vegetation_properties",
+    "processing:level": "L3",
+    "constellation": "sentinel-3",
+    "product:timeliness": "P5D",
+    "product:timeliness_category": "NRT",
+    "processing:version": "V1.1.2",
+    "_private": {
+      "product_size": 2000912137,
+      "product_uuid": "11e8bff7-3f12-478c-a24b-7acb6718c74a",
+      "product_name": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.9985119,
+    179.9985119,
+    80.0014881
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          -59.9985119
+        ],
+        [
+          -0.0007440499999944,
+          -59.9985119
+        ],
+        [
+          179.9985119,
+          -59.9985119
+        ],
+        [
+          179.9985119,
+          80.0014881
+        ],
+        [
+          -0.0007440499999944,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          80.0014881
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/fcover_global_300m_10daily_v1/2025/01/10/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "fcover": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fraction of green Vegetation Cover",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004,
+      "bands": [
+        {
+          "name": "fcover",
+          "description": "Fraction of green Vegetation Cover"
+        }
+      ],
+      "file:size": 582739320,
+      "file:local_path": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-FCOVER-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/fcover_global_300m_10daily_v1/2025/01/10/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-FCOVER-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(11e8bff7-3f12-478c-a24b-7acb6718c74a)/Nodes(c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog)/Nodes(c_gls_FCOVER300-FCOVER-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "lafter": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Length of semi-period after product date on Fraction of green Vegetation Cover",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "lafter",
+          "description": "Length of semi-period after product date on Fraction of green Vegetation Cover"
+        }
+      ],
+      "file:size": 134385007,
+      "file:local_path": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-LAFTER-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/fcover_global_300m_10daily_v1/2025/01/10/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-LAFTER-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(11e8bff7-3f12-478c-a24b-7acb6718c74a)/Nodes(c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog)/Nodes(c_gls_FCOVER300-LAFTER-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "lbefore": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Length of semi-period before product date on Fraction of green Vegetation Cover",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "lbefore",
+          "description": "Length of semi-period before product date on Fraction of green Vegetation Cover"
+        }
+      ],
+      "file:size": 441366364,
+      "file:local_path": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-LBEFORE-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/fcover_global_300m_10daily_v1/2025/01/10/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-LBEFORE-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(11e8bff7-3f12-478c-a24b-7acb6718c74a)/Nodes(c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog)/Nodes(c_gls_FCOVER300-LBEFORE-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "nobs": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Number of observation",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "nobs",
+          "description": "Number of observation"
+        }
+      ],
+      "file:size": 271564004,
+      "file:local_path": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-NOBS-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/fcover_global_300m_10daily_v1/2025/01/10/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-NOBS-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(11e8bff7-3f12-478c-a24b-7acb6718c74a)/Nodes(c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog)/Nodes(c_gls_FCOVER300-NOBS-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "qflag": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Quality Flag on Fraction of green Vegetation Cover",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "qflag",
+          "description": "Quality Flag on Fraction of green Vegetation Cover"
+        }
+      ],
+      "file:size": 110193119,
+      "file:local_path": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-QFLAG-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/fcover_global_300m_10daily_v1/2025/01/10/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-QFLAG-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(11e8bff7-3f12-478c-a24b-7acb6718c74a)/Nodes(c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog)/Nodes(c_gls_FCOVER300-QFLAG-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rmse": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Root Mean Square Error on Fraction of green Vegetation Cover",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.002976190476204,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761904761898,
+        80.00148809523809
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "raster:scale": 0.004,
+      "bands": [
+        {
+          "name": "rmse",
+          "description": "Root Mean Square Error on Fraction of green Vegetation Cover"
+        }
+      ],
+      "file:size": 460664323,
+      "file:local_path": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-RMSE-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_properties/fcover_global_300m_10daily_v1/2025/01/10/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-RMSE-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(11e8bff7-3f12-478c-a24b-7acb6718c74a)/Nodes(c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog)/Nodes(c_gls_FCOVER300-RMSE-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851190473011,
+        179.99851190639774,
+        80.00148809523809
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/vegetation_properties/fcover_global_300m_10daily_v1/2025/01/10/c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog/c_gls_FCOVER300-NOBS-RT1_202501100000_GLOBE_OLCI_V1.1.2.tiff&CRS=EPSG:4326&BBOX=-180.0014880952381,-59.99851190473011,179.99851190639774,80.00148809523809&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/fcover_global_300m_10daily_v2/clms_global_fcover-nobs_300m_v2_10daily.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110ded60f91a3217aa8d500acf2842418a5",
+      "file:size": 2000914107,
+      "file:local_path": "c_gls_FCOVER300-RT1_202501100000_GLOBE_OLCI_V1.1.2_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(11e8bff7-3f12-478c-a24b-7acb6718c74a)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

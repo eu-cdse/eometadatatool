@@ -1,0 +1,243 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2000-11-01T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "id": "modis-terraaqua-mcd64a1",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "title": "MODIS Terra and Aqua Direct Broadcast Burned Area Monthly L3 Global 500m",
+  "description": "The MODIS Terra and Aqua MCD64A1 Version 6.1 product provides a global monthly burned area dataset at 500 m spatial resolution with per-pixel burn and quality information. The product is generated using MODIS Surface Reflectance imagery at 500 m resolution combined with 1 km MODIS active fire observations. The algorithm applies a burn-sensitive vegetation index derived from atmospherically corrected MODIS shortwave infrared reflectance bands 5 and 7 along with temporal texture analysis to detect burned areas. The dataset identifies the burn date for each 500 m grid cell within a MODIS tile, encoded as the ordinal day of the calendar year when the burn occurred, with additional values representing unburned land, water, or missing data. The product includes layers for Burn Date, Burn Date Uncertainty, Quality Assurance, and the First and Last Day of reliable change detection within the year.",
+  "license": "other",
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/MODIS_TERRAAQUA.jpeg",
+      "type": "image/jpeg",
+      "title": "MODIS Terra and Aqua Direct Broadcast Burned Area Monthly L3 Global 500m Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "MCD64A1"
+    ],
+    "constellation": [
+      "modis"
+    ],
+    "processing:version": [
+      "6.1.4"
+    ],
+    "instruments": [
+      "modis"
+    ],
+    "gsd": [
+      500
+    ]
+  },
+  "item_assets": {
+    "data": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "application/x-hdf",
+      "title": "MODIS HDF Data",
+      "bands": [
+        {
+          "name": "Burn Date",
+          "description": "ordinal day of burn"
+        },
+        {
+          "name": "Burn Date Uncertainty",
+          "description": "uncertainty in day of burn"
+        },
+        {
+          "name": "QA",
+          "description": "QA"
+        },
+        {
+          "name": "First Day",
+          "description": "first day of reliable change detection"
+        },
+        {
+          "name": "Last Day",
+          "description": "last day of reliable change detection"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "metadata": {
+      "alternate:name": "S3",
+      "roles": [
+        "metadata"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "auth:refs": [
+        "s3"
+      ],
+      "type": "application/xml",
+      "title": "NASA CMR Granule Metadata",
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "thumbnail": {
+      "alternate:name": "HTTPS",
+      "roles": [
+        "thumbnail",
+        "graphic"
+      ],
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      },
+      "type": "image/jpeg",
+      "title": "Thumbnail"
+    }
+  },
+  "links": [
+    {
+      "href": "https://lpdaac.usgs.gov/data/data-citation-and-policies/",
+      "rel": "license",
+      "title": "LP DAAC - Data Citation and Policies"
+    }
+  ],
+  "bands": [
+    {
+      "name": "First Day",
+      "description": "first day of reliable change detection"
+    },
+    {
+      "description": "uncertainty in day of burn",
+      "name": "Burn Date Uncertainty"
+    },
+    {
+      "description": "last day of reliable change detection",
+      "name": "Last Day"
+    },
+    {
+      "name": "QA",
+      "description": "QA"
+    },
+    {
+      "description": "ordinal day of burn",
+      "name": "Burn Date"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "keywords": [
+    "MODIS",
+    "Terra",
+    "Aqua",
+    "NASA",
+    "Satellite",
+    "Global",
+    "Fire",
+    "Burnt Area",
+    "500m",
+    "MCD64A1"
+  ]
+}

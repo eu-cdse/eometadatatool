@@ -1,0 +1,221 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lcm_global_10m_yearly_v1_cog",
+  "id": "LCFM_LCM-10_V100_2020_N42W099_cog",
+  "properties": {
+    "created": "2025-06-11T23:02:04.000000Z",
+    "updated": "2026-04-25T08:46:13.126627Z",
+    "published": "2025-06-16T08:44:42.726238Z",
+    "eopf:origin_datetime": "2025-06-11T23:02:04.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2020-01-01T00:00:00.000000Z",
+    "start_datetime": "2020-01-01T00:00:00.000000Z",
+    "end_datetime": "2020-12-31T23:59:59.999999Z",
+    "instruments": [
+      "sar",
+      "msi"
+    ],
+    "gsd": 10,
+    "proj:code": "EPSG:4326",
+    "product:type": "dynamic_land_cover",
+    "processing:level": "L3",
+    "processing:version": "v100",
+    "_private": {
+      "product_size": 73767382,
+      "product_uuid": "12627b7d-9359-48a5-ab41-100d67dba791",
+      "product_name": "LCFM_LCM-10_V100_2020_N42W099_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -99.0,
+    42.0,
+    -96.0,
+    45.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -99.0,
+          45.0
+        ],
+        [
+          -99.0,
+          42.0
+        ],
+        [
+          -96.0,
+          42.0
+        ],
+        [
+          -96.0,
+          45.0
+        ],
+        [
+          -99.0,
+          45.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lcm_global_10m_yearly_v1/2020/01/01/LCFM_LCM-10_V100_2020_N42W099_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/LCFM_LCM-10_V100_2020_N42W099_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "map": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "LCM-10 Map",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        36000,
+        36000
+      ],
+      "proj:transform": [
+        0.0000833333333333,
+        0.0,
+        -99.0,
+        0.0,
+        -0.0000833333333333,
+        45.0
+      ],
+      "proj:bbox": [
+        -99.0,
+        42.0000000000012,
+        -96.0000000000012,
+        45.0
+      ],
+      "data_type": "uint8",
+      "nodata": 255,
+      "bands": [
+        {
+          "name": "map",
+          "description": "MAP"
+        }
+      ],
+      "file:size": 73767382,
+      "file:local_path": "LCFM_LCM-10_V100_2020_N42W099_cog/LCFM_LCM-10_V100_2020_N42W099_MAP.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lcm_global_10m_yearly_v1/2020/01/01/LCFM_LCM-10_V100_2020_N42W099_cog/LCFM_LCM-10_V100_2020_N42W099_MAP.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(12627b7d-9359-48a5-ab41-100d67dba791)/Nodes(LCFM_LCM-10_V100_2020_N42W099_cog)/Nodes(LCFM_LCM-10_V100_2020_N42W099_MAP.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -99.0,
+        42.0000000000012,
+        -96.0000000000012,
+        45.0
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        750,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/dynamic_land_cover/lcm_global_10m_yearly_v1/2020/01/01/LCFM_LCM-10_V100_2020_N42W099_cog/LCFM_LCM-10_V100_2020_N42W099_MAP.tif&CRS=EPSG:4326&BBOX=-99.0,42.0000000000012,-96.0000000000012,45.0&WIDTH=750&HEIGHT=750&FORMAT=image/png&TRANSPARENT=false"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110227d6a47240c5d880803b62cac37217c",
+      "file:size": 73767638,
+      "file:local_path": "LCFM_LCM-10_V100_2020_N42W099_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(12627b7d-9359-48a5-ab41-100d67dba791)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-1-aux-pp2",
+  "id": "S1D_AUX_PP2_V20260319T000000_G20260318T105911",
+  "properties": {
+    "created": "2026-03-18T11:05:56.918000Z",
+    "updated": "2026-05-15T14:38:41.889187Z",
+    "published": "2026-03-18T11:06:43.295058Z",
+    "eopf:origin_datetime": "2026-03-18T11:05:56.918000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2026-03-19T00:00:00.000000Z",
+    "start_datetime": "2026-03-19T00:00:00.000000Z",
+    "end_datetime": "2026-03-19T00:00:00.000000Z",
+    "platform": "sentinel-1d",
+    "constellation": "sentinel-1",
+    "instruments": [
+      "aux"
+    ],
+    "processing:level": "L1",
+    "processing:facility": "CLS-Brest",
+    "processing:datetime": "2026-03-18T10:59:11.000000Z",
+    "product:type": "AUX_PP2",
+    "sat:platform_international_designator": "2025-251A",
+    "eopf:instrument_configuration_id": 5,
+    "_private": {
+      "product_size": 17201,
+      "product_uuid": "bb88002b-af60-4055-9959-71680e47dbb6",
+      "product_name": "S1D_AUX_PP2_V20260319T000000_G20260318T105911.SAFE",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260703083555"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "geometry": null,
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-1/AUX/AUX_PP2/2026/03/19/S1D_AUX_PP2_V20260319T000000_G20260318T105911.SAFE.zip/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S1D_AUX_PP2_V20260319T000000_G20260318T105911.SAFE.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501106ebf4c8390246eb566851a072a874c7e",
+      "file:size": 17201,
+      "file:local_path": "S1D_AUX_PP2_V20260319T000000_G20260318T105911.SAFE.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(bb88002b-af60-4055-9959-71680e47dbb6)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

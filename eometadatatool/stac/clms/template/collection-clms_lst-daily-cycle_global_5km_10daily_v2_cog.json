@@ -1,0 +1,1225 @@
+{
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9999999,
+          -79.9776824,
+          179.9776872,
+          80.0223214
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-01-21T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/raster/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json"
+  ],
+  "stac_version": "1.1.0",
+  "sci:doi": "10.2909/49778fb4-bf1a-4e89-bd1d-09f1370e2bb9",
+  "id": "clms_lst-daily-cycle_global_5km_10daily_v2_cog",
+  "type": "Collection",
+  "title": "CLMS Land Surface Temperature (LST) Daily Cycle Global 5km 10-daily V2 (COG)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "LST",
+    "Land Surface Temperature",
+    "thermal infrared",
+    "global",
+    "10-daily",
+    "5km"
+  ],
+  "description": "Provides a statistical overview of the land surface temperature daily cycle for each 10-day compositing period and every geostationary sensor image pixel. The data are available at global scale in the spatial resolution of about 5 km and cover the period from 2021 to present.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_lst-daily-cycle_global_5km_10daily_v2.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS Land Surface Temperature (LST) Daily Cycle Global 5km 10-daily V2 (COG) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "processing:level": [
+      "L4"
+    ],
+    "product:type": [
+      "land_surface_temperature"
+    ],
+    "processing:version": [
+      "V2.2.1"
+    ],
+    "instruments": [
+      "ahi",
+      "abi",
+      "seviri",
+      "fm1",
+      "sevi"
+    ],
+    "product:timeliness_category": [
+      "OFFL"
+    ],
+    "gsd": [
+      5000.0
+    ],
+    "product:timeliness": [
+      "P2D"
+    ],
+    "proj:shape": [
+      3584,
+      8064
+    ]
+  },
+  "item_assets": {
+    "dc_fobs_00_11": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -8000.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fraction of valid observations at 00-11 hr on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "dc_fobs_00",
+          "description": "Fraction of valid observations at 0 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_01",
+          "description": "Fraction of valid observations at 1 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_02",
+          "description": "Fraction of valid observations at 2 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_03",
+          "description": "Fraction of valid observations at 3 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_04",
+          "description": "Fraction of valid observations at 4 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_05",
+          "description": "Fraction of valid observations at 5 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_06",
+          "description": "Fraction of valid observations at 6 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_07",
+          "description": "Fraction of valid observations at 7 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_08",
+          "description": "Fraction of valid observations at 8 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_09",
+          "description": "Fraction of valid observations at 9 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_10",
+          "description": "Fraction of valid observations at 10 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_11",
+          "description": "Fraction of valid observations at 11 hr on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "dc_fobs_12_23": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -8000.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fraction of valid observations at 12-23 hr on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "dc_fobs_12",
+          "description": "Fraction of valid observations at 12 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_13",
+          "description": "Fraction of valid observations at 13 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_14",
+          "description": "Fraction of valid observations at 14 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_15",
+          "description": "Fraction of valid observations at 15 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_16",
+          "description": "Fraction of valid observations at 16 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_17",
+          "description": "Fraction of valid observations at 17 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_18",
+          "description": "Fraction of valid observations at 18 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_19",
+          "description": "Fraction of valid observations at 19 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_20",
+          "description": "Fraction of valid observations at 20 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_21",
+          "description": "Fraction of valid observations at 21 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_22",
+          "description": "Fraction of valid observations at 22 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_fobs_23",
+          "description": "Fraction of valid observations at 23 hr on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "dc_max_00_11": {
+      "raster:offset": 273.15,
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -8000.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Maximum at 00-11 hr on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "dc_max_00",
+          "description": "Maximum at 0 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_01",
+          "description": "Maximum at 1 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_02",
+          "description": "Maximum at 2 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_03",
+          "description": "Maximum at 3 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_04",
+          "description": "Maximum at 4 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_05",
+          "description": "Maximum at 5 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_06",
+          "description": "Maximum at 6 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_07",
+          "description": "Maximum at 7 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_08",
+          "description": "Maximum at 8 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_09",
+          "description": "Maximum at 9 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_10",
+          "description": "Maximum at 10 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_11",
+          "description": "Maximum at 11 hr on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "dc_max_12_23": {
+      "raster:offset": 273.15,
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -8000.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Maximum at 12-23 hr on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "dc_max_12",
+          "description": "Maximum at 12 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_13",
+          "description": "Maximum at 13 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_14",
+          "description": "Maximum at 14 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_15",
+          "description": "Maximum at 15 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_16",
+          "description": "Maximum at 16 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_17",
+          "description": "Maximum at 17 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_18",
+          "description": "Maximum at 18 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_19",
+          "description": "Maximum at 19 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_20",
+          "description": "Maximum at 20 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_21",
+          "description": "Maximum at 21 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_22",
+          "description": "Maximum at 22 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_max_23",
+          "description": "Maximum at 23 hr on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "dc_median_00_11": {
+      "raster:offset": 273.15,
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -8000.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Median at 00-11 hr on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "dc_median_00",
+          "description": "Median at 0 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_01",
+          "description": "Median at 1 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_02",
+          "description": "Median at 2 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_03",
+          "description": "Median at 3 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_04",
+          "description": "Median at 4 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_05",
+          "description": "Median at 5 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_06",
+          "description": "Median at 6 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_07",
+          "description": "Median at 7 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_08",
+          "description": "Median at 8 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_09",
+          "description": "Median at 9 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_10",
+          "description": "Median at 10 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_11",
+          "description": "Median at 11 hr on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "dc_median_12_23": {
+      "raster:offset": 273.15,
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -8000.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Median at 12-23 hr on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "dc_median_12",
+          "description": "Median at 12 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_13",
+          "description": "Median at 13 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_14",
+          "description": "Median at 14 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_15",
+          "description": "Median at 15 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_16",
+          "description": "Median at 16 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_17",
+          "description": "Median at 17 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_18",
+          "description": "Median at 18 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_19",
+          "description": "Median at 19 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_20",
+          "description": "Median at 20 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_21",
+          "description": "Median at 21 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_22",
+          "description": "Median at 22 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_median_23",
+          "description": "Median at 23 hr on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "dc_min_00_11": {
+      "raster:offset": 273.15,
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -8000.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Minimum at 00-11 hr on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "dc_min_00",
+          "description": "Minimum at 0 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_01",
+          "description": "Minimum at 1 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_02",
+          "description": "Minimum at 2 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_03",
+          "description": "Minimum at 3 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_04",
+          "description": "Minimum at 4 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_05",
+          "description": "Minimum at 5 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_06",
+          "description": "Minimum at 6 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_07",
+          "description": "Minimum at 7 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_08",
+          "description": "Minimum at 8 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_09",
+          "description": "Minimum at 9 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_10",
+          "description": "Minimum at 10 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_11",
+          "description": "Minimum at 11 hr on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "dc_min_12_23": {
+      "raster:offset": 273.15,
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": -8000.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Minimum at 12-23 hr on Land Surface Temperature",
+      "bands": [
+        {
+          "name": "dc_min_12",
+          "description": "Minimum at 12 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_13",
+          "description": "Minimum at 13 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_14",
+          "description": "Minimum at 14 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_15",
+          "description": "Minimum at 15 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_16",
+          "description": "Minimum at 16 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_17",
+          "description": "Minimum at 17 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_18",
+          "description": "Minimum at 18 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_19",
+          "description": "Minimum at 19 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_20",
+          "description": "Minimum at 20 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_21",
+          "description": "Minimum at 21 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_22",
+          "description": "Minimum at 22 hr on Land Surface Temperature"
+        },
+        {
+          "name": "dc_min_23",
+          "description": "Minimum at 23 hr on Land Surface Temperature"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "raster:scale": 0.01,
+      "data_type": "int16",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    },
+    {
+      "rel": "about",
+      "href": "https://land.copernicus.eu/en/products/temperature-and-reflectance/10-daily-land-surface-temperature-daily-cycle-global-v2-0-5km",
+      "type": "text/html",
+      "title": "Product page"
+    }
+  ],
+  "bands": [
+    {
+      "description": "Minimum at 11 hr on Land Surface Temperature",
+      "name": "dc_min_11"
+    },
+    {
+      "description": "Minimum at 23 hr on Land Surface Temperature",
+      "name": "dc_min_23"
+    },
+    {
+      "name": "dc_min_05",
+      "description": "Minimum at 5 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Median at 20 hr on Land Surface Temperature",
+      "name": "dc_median_20"
+    },
+    {
+      "name": "dc_median_04",
+      "description": "Median at 4 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Minimum at 4 hr on Land Surface Temperature",
+      "name": "dc_min_04"
+    },
+    {
+      "description": "Fraction of valid observations at 6 hr on Land Surface Temperature",
+      "name": "dc_fobs_06"
+    },
+    {
+      "name": "dc_fobs_10",
+      "description": "Fraction of valid observations at 10 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Median at 18 hr on Land Surface Temperature",
+      "name": "dc_median_18"
+    },
+    {
+      "description": "Fraction of valid observations at 22 hr on Land Surface Temperature",
+      "name": "dc_fobs_22"
+    },
+    {
+      "description": "Minimum at 3 hr on Land Surface Temperature",
+      "name": "dc_min_03"
+    },
+    {
+      "description": "Minimum at 6 hr on Land Surface Temperature",
+      "name": "dc_min_06"
+    },
+    {
+      "description": "Fraction of valid observations at 17 hr on Land Surface Temperature",
+      "name": "dc_fobs_17"
+    },
+    {
+      "name": "dc_median_07",
+      "description": "Median at 7 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_median_21",
+      "description": "Median at 21 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Maximum at 5 hr on Land Surface Temperature",
+      "name": "dc_max_05"
+    },
+    {
+      "name": "dc_median_23",
+      "description": "Median at 23 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_fobs_03",
+      "description": "Fraction of valid observations at 3 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_median_12",
+      "description": "Median at 12 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Minimum at 14 hr on Land Surface Temperature",
+      "name": "dc_min_14"
+    },
+    {
+      "description": "Fraction of valid observations at 18 hr on Land Surface Temperature",
+      "name": "dc_fobs_18"
+    },
+    {
+      "description": "Fraction of valid observations at 8 hr on Land Surface Temperature",
+      "name": "dc_fobs_08"
+    },
+    {
+      "name": "dc_fobs_21",
+      "description": "Fraction of valid observations at 21 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Maximum at 11 hr on Land Surface Temperature",
+      "name": "dc_max_11"
+    },
+    {
+      "description": "Median at 17 hr on Land Surface Temperature",
+      "name": "dc_median_17"
+    },
+    {
+      "name": "dc_min_12",
+      "description": "Minimum at 12 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Median at 14 hr on Land Surface Temperature",
+      "name": "dc_median_14"
+    },
+    {
+      "name": "dc_min_00",
+      "description": "Minimum at 0 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_max_21",
+      "description": "Maximum at 21 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_median_05",
+      "description": "Median at 5 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Median at 6 hr on Land Surface Temperature",
+      "name": "dc_median_06"
+    },
+    {
+      "description": "Minimum at 16 hr on Land Surface Temperature",
+      "name": "dc_min_16"
+    },
+    {
+      "description": "Median at 0 hr on Land Surface Temperature",
+      "name": "dc_median_00"
+    },
+    {
+      "description": "Maximum at 23 hr on Land Surface Temperature",
+      "name": "dc_max_23"
+    },
+    {
+      "name": "dc_median_10",
+      "description": "Median at 10 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Maximum at 7 hr on Land Surface Temperature",
+      "name": "dc_max_07"
+    },
+    {
+      "name": "dc_max_14",
+      "description": "Maximum at 14 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_max_20",
+      "description": "Maximum at 20 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Maximum at 2 hr on Land Surface Temperature",
+      "name": "dc_max_02"
+    },
+    {
+      "description": "Fraction of valid observations at 0 hr on Land Surface Temperature",
+      "name": "dc_fobs_00"
+    },
+    {
+      "description": "Minimum at 20 hr on Land Surface Temperature",
+      "name": "dc_min_20"
+    },
+    {
+      "name": "dc_max_09",
+      "description": "Maximum at 9 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_fobs_14",
+      "description": "Fraction of valid observations at 14 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_max_08",
+      "description": "Maximum at 8 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Median at 11 hr on Land Surface Temperature",
+      "name": "dc_median_11"
+    },
+    {
+      "description": "Maximum at 10 hr on Land Surface Temperature",
+      "name": "dc_max_10"
+    },
+    {
+      "name": "dc_max_15",
+      "description": "Maximum at 15 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_max_19",
+      "description": "Maximum at 19 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_max_22",
+      "description": "Maximum at 22 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_median_19",
+      "description": "Median at 19 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_median_08",
+      "description": "Median at 8 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Fraction of valid observations at 11 hr on Land Surface Temperature",
+      "name": "dc_fobs_11"
+    },
+    {
+      "description": "Maximum at 13 hr on Land Surface Temperature",
+      "name": "dc_max_13"
+    },
+    {
+      "description": "Minimum at 8 hr on Land Surface Temperature",
+      "name": "dc_min_08"
+    },
+    {
+      "name": "dc_median_15",
+      "description": "Median at 15 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Median at 16 hr on Land Surface Temperature",
+      "name": "dc_median_16"
+    },
+    {
+      "description": "Median at 2 hr on Land Surface Temperature",
+      "name": "dc_median_02"
+    },
+    {
+      "name": "dc_min_01",
+      "description": "Minimum at 1 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_min_21",
+      "description": "Minimum at 21 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_max_16",
+      "description": "Maximum at 16 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Minimum at 22 hr on Land Surface Temperature",
+      "name": "dc_min_22"
+    },
+    {
+      "name": "dc_fobs_16",
+      "description": "Fraction of valid observations at 16 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_median_01",
+      "description": "Median at 1 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Maximum at 3 hr on Land Surface Temperature",
+      "name": "dc_max_03"
+    },
+    {
+      "description": "Maximum at 6 hr on Land Surface Temperature",
+      "name": "dc_max_06"
+    },
+    {
+      "name": "dc_fobs_19",
+      "description": "Fraction of valid observations at 19 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_median_22",
+      "description": "Median at 22 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Maximum at 4 hr on Land Surface Temperature",
+      "name": "dc_max_04"
+    },
+    {
+      "name": "dc_fobs_15",
+      "description": "Fraction of valid observations at 15 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Fraction of valid observations at 9 hr on Land Surface Temperature",
+      "name": "dc_fobs_09"
+    },
+    {
+      "name": "dc_fobs_04",
+      "description": "Fraction of valid observations at 4 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_min_02",
+      "description": "Minimum at 2 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_fobs_12",
+      "description": "Fraction of valid observations at 12 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_min_07",
+      "description": "Minimum at 7 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Minimum at 17 hr on Land Surface Temperature",
+      "name": "dc_min_17"
+    },
+    {
+      "description": "Minimum at 15 hr on Land Surface Temperature",
+      "name": "dc_min_15"
+    },
+    {
+      "description": "Maximum at 12 hr on Land Surface Temperature",
+      "name": "dc_max_12"
+    },
+    {
+      "name": "dc_min_18",
+      "description": "Minimum at 18 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_fobs_01",
+      "description": "Fraction of valid observations at 1 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_min_19",
+      "description": "Minimum at 19 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_fobs_20",
+      "description": "Fraction of valid observations at 20 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Fraction of valid observations at 5 hr on Land Surface Temperature",
+      "name": "dc_fobs_05"
+    },
+    {
+      "description": "Fraction of valid observations at 13 hr on Land Surface Temperature",
+      "name": "dc_fobs_13"
+    },
+    {
+      "description": "Minimum at 9 hr on Land Surface Temperature",
+      "name": "dc_min_09"
+    },
+    {
+      "name": "dc_max_17",
+      "description": "Maximum at 17 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Median at 9 hr on Land Surface Temperature",
+      "name": "dc_median_09"
+    },
+    {
+      "name": "dc_max_00",
+      "description": "Maximum at 0 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Maximum at 18 hr on Land Surface Temperature",
+      "name": "dc_max_18"
+    },
+    {
+      "name": "dc_fobs_07",
+      "description": "Fraction of valid observations at 7 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Minimum at 13 hr on Land Surface Temperature",
+      "name": "dc_min_13"
+    },
+    {
+      "description": "Fraction of valid observations at 23 hr on Land Surface Temperature",
+      "name": "dc_fobs_23"
+    },
+    {
+      "name": "dc_median_03",
+      "description": "Median at 3 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_median_13",
+      "description": "Median at 13 hr on Land Surface Temperature"
+    },
+    {
+      "description": "Maximum at 1 hr on Land Surface Temperature",
+      "name": "dc_max_01"
+    },
+    {
+      "name": "dc_min_10",
+      "description": "Minimum at 10 hr on Land Surface Temperature"
+    },
+    {
+      "name": "dc_fobs_02",
+      "description": "Fraction of valid observations at 2 hr on Land Surface Temperature"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

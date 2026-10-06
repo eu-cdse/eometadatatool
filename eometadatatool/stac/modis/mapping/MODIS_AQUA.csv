@@ -1,0 +1,22 @@
+metadata;file;mappings;datatype
+beginningDateTime;*.xml;concat(substring-before(string(//Temporal/RangeDateTime/BeginningDateTime),'T'),string(//RangeDateTime/RangeBeginningDate),'T',substring-after(string(//Temporal/RangeDateTime/BeginningDateTime),'T'),string(//RangeDateTime/RangeBeginningTime));DateTimeOffset
+endingDateTime;*.xml;concat(substring-before(string(//Temporal/RangeDateTime/EndingDateTime),'T'),string(//RangeDateTime/RangeEndingDate),'T',substring-after(string(//Temporal/RangeDateTime/EndingDateTime),'T'),string(//RangeDateTime/RangeEndingTime));DateTimeOffset
+
+coordinates;*.xml;concat('POLYGON((',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[1]/PointLongitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[1]/PointLongitude/text())[1],''),' ',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[1]/PointLatitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[1]/PointLatitude/text())[1],''),',',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[2]/PointLongitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[2]/PointLongitude/text())[1],''),' ',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[2]/PointLatitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[2]/PointLatitude/text())[1],''),',',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[3]/PointLongitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[3]/PointLongitude/text())[1],''),' ',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[3]/PointLatitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[3]/PointLatitude/text())[1],''),',',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[4]/PointLongitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[4]/PointLongitude/text())[1],''),' ',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[4]/PointLatitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[4]/PointLatitude/text())[1],''),',',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[1]/PointLongitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[1]/PointLongitude/text())[1],''),' ',concat((//Spatial/HorizontalSpatialDomain//GPolygon/Boundary/Point[1]/PointLatitude/text() | //SpatialDomainContainer//GPolygon/Boundary/Point[1]/PointLatitude/text())[1],''),'))');String
+
+processingDate;*.xml;(//DataGranule/ProductionDateTime/text() | //ECSDataGranule/ProductionDateTime/text())[1];DateTimeOffset
+
+productType;*.xml;concat((//Collection/ShortName/text() | //CollectionMetaData/ShortName/text())[1],'.',(//Collection/VersionId/text() | //CollectionMetaData/VersionID/text())[1]);String
+processorVersion;*.xml;//PGEVersionClass/PGEVersion/text();String
+
+hTile;*.xml;(//AdditionalAttributes/AdditionalAttribute[Name='HORIZONTALTILENUMBER']/Values/Value/text() | //PSAs/PSA[PSAName='HORIZONTALTILENUMBER']/PSAValue/text())[1];String
+vTile;*.xml;(//AdditionalAttributes/AdditionalAttribute[Name='VERTICALTILENUMBER']/Values/Value/text() | //PSAs/PSA[PSAName='VERTICALTILENUMBER']/PSAValue/text())[1];String
+
+orbitNumber;*.xml;//OrbitCalculatedSpatialDomains/OrbitCalculatedSpatialDomain[1]/OrbitNumber;Int64
+processorVersion;*.xml;string(//PGEVersionClass/PGEVersion);String
+
+cloudCover;*.xml;//CloudCover/text();String
+missing_data;*.xml;//QAStats/QAPercentMissingData/text();String
+out_of_bounds_data;*.xml;//QAStats/QAPercentOutOfBoundsData/text();String
+interpolated_data;*.xml;//QAStats/QAPercentInterpolatedData/text();String
+

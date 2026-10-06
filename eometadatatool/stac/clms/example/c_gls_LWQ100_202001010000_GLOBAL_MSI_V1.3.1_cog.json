@@ -1,0 +1,1240 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lwq-nrt_global_100m_10daily_v1_cog",
+  "id": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog",
+  "properties": {
+    "created": "2025-12-02T22:34:14.000000Z",
+    "updated": "2025-12-02T22:38:06.200845Z",
+    "published": "2025-12-02T22:38:06.200845Z",
+    "eopf:origin_datetime": "2025-12-02T22:34:14.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2020-01-01T00:00:00.000000Z",
+    "start_datetime": "2020-01-01T00:00:00.000000Z",
+    "end_datetime": "2020-01-10T23:59:59.999999Z",
+    "instruments": [
+      "msi"
+    ],
+    "gsd": 100,
+    "proj:code": "EPSG:4326",
+    "product:type": "lake_water_quality",
+    "processing:level": "L3",
+    "platform": "sentinel-2a",
+    "constellation": "sentinel-2",
+    "product:timeliness": "P4D",
+    "product:timeliness_category": "NRT",
+    "processing:version": "1.3.1",
+    "_private": {
+      "product_size": 6911390997,
+      "product_uuid": "3fa092f0-8256-4c49-9439-23b389ec6061",
+      "product_name": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -89.9999999,
+    179.9999999,
+    89.9999999
+  ],
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -179.9999999,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            89.9999999
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            1e-8,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            89.9999999
+          ],
+          [
+            1e-8,
+            89.9999999
+          ],
+          [
+            1e-8,
+            -89.9999999
+          ]
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "fobs": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "First observation day within 10-daily period of Lake Water Quality",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "fobs",
+          "description": "First observation day within 10-daily period of Lake Water Quality"
+        }
+      ],
+      "file:size": 324867614,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-FOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-FOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-FOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "lobs": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Last observation day within 10-daily period of Lake Water Quality",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "lobs",
+          "description": "Last observation day within 10-daily period of Lake Water Quality"
+        }
+      ],
+      "file:size": 324867610,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-LOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-LOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-LOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "nobs": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Number of observation",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "int16",
+      "nodata": -32768,
+      "bands": [
+        {
+          "name": "nobs",
+          "description": "Number of observation"
+        }
+      ],
+      "file:size": 165566259,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-NOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-NOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-NOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw1375": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 1375 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw1375",
+          "description": "Fully normalized water leaving reflectance at 1375 nm"
+        }
+      ],
+      "file:size": 388043097,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW1375_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW1375_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW1375_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw1610": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 1610 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw1610",
+          "description": "Fully normalized water leaving reflectance at 1610 nm"
+        }
+      ],
+      "file:size": 389454623,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW1610_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW1610_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW1610_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw2190": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 2190 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw2190",
+          "description": "Fully normalized water leaving reflectance at 2190 nm"
+        }
+      ],
+      "file:size": 389453878,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW2190_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW2190_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW2190_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw443": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 443 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw443",
+          "description": "Fully normalized water leaving reflectance at 443 nm"
+        }
+      ],
+      "file:size": 387598792,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW443_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW443_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW443_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw490": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 490 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw490",
+          "description": "Fully normalized water leaving reflectance at 490 nm"
+        }
+      ],
+      "file:size": 387703545,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW490_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW490_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW490_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw560": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 560 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw560",
+          "description": "Fully normalized water leaving reflectance at 560 nm"
+        }
+      ],
+      "file:size": 387570575,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW560_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW560_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW560_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw665": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 665 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw665",
+          "description": "Fully normalized water leaving reflectance at 665 nm"
+        }
+      ],
+      "file:size": 387963955,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW665_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW665_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW665_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw705": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 705 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw705",
+          "description": "Fully normalized water leaving reflectance at 705 nm"
+        }
+      ],
+      "file:size": 390192828,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW705_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW705_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW705_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw740": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 740 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw740",
+          "description": "Fully normalized water leaving reflectance at 740 nm"
+        }
+      ],
+      "file:size": 390338913,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW740_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW740_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW740_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw783": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 783 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw783",
+          "description": "Fully normalized water leaving reflectance at 783 nm"
+        }
+      ],
+      "file:size": 388888696,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW783_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW783_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW783_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw842": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 842 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw842",
+          "description": "Fully normalized water leaving reflectance at 842 nm"
+        }
+      ],
+      "file:size": 390047736,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW842_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW842_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW842_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw865": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 865 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw865",
+          "description": "Fully normalized water leaving reflectance at 865 nm"
+        }
+      ],
+      "file:size": 391049564,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW865_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW865_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW865_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "rw945": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Fully normalized water leaving reflectance at 945 nm",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "rw945",
+          "description": "Fully normalized water leaving reflectance at 945 nm"
+        }
+      ],
+      "file:size": 387387451,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW945_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-RW945_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-RW945_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tmean": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Mean of turbidity in water body",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "tmean",
+          "description": "Mean of turbidity in water body"
+        }
+      ],
+      "file:size": 388592897,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-TMEAN_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-TMEAN_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-TMEAN_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tobs": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Observation day within 10-daily period of Lake Water Quality",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "tobs",
+          "description": "Observation day within 10-daily period of Lake Water Quality"
+        }
+      ],
+      "file:size": 324492581,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-TOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-TOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-TOBS_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "tsi": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Trophic state index",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        200376,
+        400752
+      ],
+      "proj:transform": [
+        0.000898311174991,
+        0.0,
+        -180.0,
+        0.0,
+        -0.000898311174991,
+        90.0
+      ],
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "data_type": "float32",
+      "nodata": 9.96921e+36,
+      "bands": [
+        {
+          "name": "tsi",
+          "description": "Trophic state index"
+        }
+      ],
+      "file:size": 327310383,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-TSI_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-TSI_202001010000_GLOBAL_MSI_V1.3.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/Nodes(c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog)/Nodes(c_gls_LWQ100-TSI_202001010000_GLOBAL_MSI_V1.3.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0,
+        -89.99999999999662,
+        179.99999999999324,
+        90.0
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        375,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/lake_water_quality/lwq-nrt_global_100m_10daily_v1/2020/01/01/c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog/c_gls_LWQ100-TSI_202001010000_GLOBAL_MSI_V1.3.1.tiff&CRS=EPSG:4326&BBOX=-180.0,-89.99999999999662,179.99999999999324,90.0&WIDTH=750&HEIGHT=375&FORMAT=image/png&TRANSPARENT=false"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110cc5e8d4833a82e26e054ebf3f894533a",
+      "file:size": 6911396937,
+      "file:local_path": "c_gls_LWQ100_202001010000_GLOBAL_MSI_V1.3.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(3fa092f0-8256-4c49-9439-23b389ec6061)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

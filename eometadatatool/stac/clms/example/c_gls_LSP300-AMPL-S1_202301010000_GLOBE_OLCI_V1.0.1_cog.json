@@ -1,0 +1,231 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lsp_global_300m_yearly_v1_cog",
+  "id": "c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog",
+  "properties": {
+    "created": "2024-03-26T15:04:16.467098Z",
+    "updated": "2025-07-17T18:25:25.397155Z",
+    "published": "2025-03-21T16:41:01.593631Z",
+    "eopf:origin_datetime": "2024-03-26T15:04:16.467098Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2023-01-01T00:00:00.000000Z",
+    "start_datetime": "2023-01-01T00:00:00.000000Z",
+    "end_datetime": "2023-12-31T23:59:59.999999Z",
+    "instruments": [
+      "olci"
+    ],
+    "gsd": 300,
+    "proj:code": "EPSG:4326",
+    "product:type": "vegetation_phenology_and_productivity_parameters",
+    "processing:level": "L3",
+    "constellation": "sentinel-3",
+    "product:timeliness": "P1M",
+    "product:timeliness_category": "OFFL",
+    "processing:version": "V1.0.1",
+    "_private": {
+      "product_size": 2236386891,
+      "product_uuid": "1b3154d2-2ea1-47f7-a7eb-9cbeb11c85bd",
+      "product_name": "c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -59.998513,
+    179.9985148,
+    80.0014881
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          -59.998513
+        ],
+        [
+          -0.0007425999999953,
+          -59.998513
+        ],
+        [
+          179.9985148,
+          -59.998513
+        ],
+        [
+          179.9985148,
+          80.0014881
+        ],
+        [
+          -0.0007425999999953,
+          80.0014881
+        ],
+        [
+          -179.9999999,
+          80.0014881
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_phenology_and_productivity_parameters/lsp_global_300m_yearly_v1/2023/01/01/c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "ampl_s1": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Season amplitude season 1",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        47040,
+        120960
+      ],
+      "proj:transform": [
+        0.0029761905,
+        0.0,
+        -180.0014880952381,
+        0.0,
+        -0.0029761905,
+        80.0014880952381
+      ],
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851302476188,
+        179.99851478476185,
+        80.0014880952381
+      ],
+      "data_type": "int16",
+      "nodata": -9999,
+      "bands": [
+        {
+          "name": "ampl_s1",
+          "description": "Season amplitude season 1"
+        }
+      ],
+      "file:size": 2236386891,
+      "file:local_path": "c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog/c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/vegetation_phenology_and_productivity_parameters/lsp_global_300m_yearly_v1/2023/01/01/c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog/c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(1b3154d2-2ea1-47f7-a7eb-9cbeb11c85bd)/Nodes(c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog)/Nodes(c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -180.0014880952381,
+        -59.99851302476188,
+        179.99851478476185,
+        80.0014880952381
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        292,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/vegetation_phenology_and_productivity_parameters/lsp_global_300m_yearly_v1/2023/01/01/c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog/c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1.tiff&CRS=EPSG:4326&BBOX=-180.0014880952381,-59.99851302476188,179.99851478476185,80.0014880952381&WIDTH=750&HEIGHT=292&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/lsp_global_300m_yearly_v2/clms_global_lsp-tprod-season1_300m_v2_yearly.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011079ebfce2beec48d18b6cada61389c45d",
+      "file:size": 2236387229,
+      "file:local_path": "c_gls_LSP300-AMPL-S1_202301010000_GLOBE_OLCI_V1.0.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(1b3154d2-2ea1-47f7-a7eb-9cbeb11c85bd)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

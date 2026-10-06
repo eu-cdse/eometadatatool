@@ -1,0 +1,308 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "modis-terraaqua-mcd12q1",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2001-01-01T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json"
+  ],
+  "title": "MODIS Terra and Aqua Land Cover Type Yearly Global 500m",
+  "description": "The MODIS Terra and Aqua MCD12Q1 Version 6.1 product provides global land cover classification at yearly intervals. The dataset is generated using supervised classifications of combined MODIS Terra and Aqua reflectance data. Land cover types are derived from multiple classification schemes, including the International Geosphere-Biosphere Programme (IGBP), University of Maryland (UMD), Leaf Area Index (LAI), BIOME-Biogeochemical Cycles (BGC), and Plant Functional Types (PFT). The classifications are further refined through post-processing that incorporates prior knowledge and ancillary information. The product also includes additional land cover property layers based on the Food and Agriculture Organization (FAO) Land Cover Classification System (LCCS). Each dataset file contains layers for Land Cover Types 1-5, Land Cover Properties 1-3, Land Cover Property Assessments 1-3, a Land Cover Quality Control (QC) layer, and a Land-Water Mask.",
+  "license": "other",
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/MODIS_TERRAAQUA.jpeg",
+      "type": "image/jpeg",
+      "title": "MODIS Terra and Aqua Land Cover Type Yearly Global 500m Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "MCD12Q1"
+    ],
+    "constellation": [
+      "modis"
+    ],
+    "processing:version": [
+      "6.1.1"
+    ],
+    "instruments": [
+      "modis"
+    ],
+    "gsd": [
+      500
+    ]
+  },
+  "item_assets": {
+    "data": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "type": "application/x-hdf",
+      "title": "MODIS HDF Data",
+      "bands": [
+        {
+          "name": "LC_Type1",
+          "description": "Land_Cover_Type_1"
+        },
+        {
+          "name": "LC_Type2",
+          "description": "Land_Cover_Type_2"
+        },
+        {
+          "name": "LC_Type3",
+          "description": "Land_Cover_Type_3"
+        },
+        {
+          "name": "LC_Type4",
+          "description": "Land_Cover_Type_4"
+        },
+        {
+          "name": "LC_Type5",
+          "description": "Land_Cover_Type_5"
+        },
+        {
+          "name": "LC_Prop1_Assessment",
+          "description": "Land_Cover_Property_1_Assessment"
+        },
+        {
+          "name": "LC_Prop2_Assessment",
+          "description": "Land_Cover_Property_2_Assessment"
+        },
+        {
+          "name": "LC_Prop3_Assessment",
+          "description": "Land_Cover_Property_3_Assessment"
+        },
+        {
+          "name": "LC_Prop1",
+          "description": "Land_Cover_Property_1"
+        },
+        {
+          "name": "LC_Prop2",
+          "description": "Land_Cover_Property_2"
+        },
+        {
+          "name": "LC_Prop3",
+          "description": "Land_Cover_Property_3"
+        },
+        {
+          "name": "QC",
+          "description": "Quality_Flags"
+        },
+        {
+          "name": "LW",
+          "description": "Land_Water_Mask"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "metadata": {
+      "alternate:name": "S3",
+      "roles": [
+        "metadata"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "auth:refs": [
+        "s3"
+      ],
+      "type": "application/xml",
+      "title": "NASA CMR Granule Metadata",
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "thumbnail": {
+      "alternate:name": "HTTPS",
+      "roles": [
+        "thumbnail",
+        "graphic"
+      ],
+      "alternate": {
+        "s3": {
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      },
+      "type": "image/jpeg",
+      "title": "Thumbnail"
+    }
+  },
+  "links": [
+    {
+      "href": "https://lpdaac.usgs.gov/data/data-citation-and-policies/",
+      "rel": "license",
+      "title": "LP DAAC - Data Citation and Policies"
+    }
+  ],
+  "bands": [
+    {
+      "name": "LC_Prop2_Assessment",
+      "description": "Land_Cover_Property_2_Assessment"
+    },
+    {
+      "name": "LC_Prop1",
+      "description": "Land_Cover_Property_1"
+    },
+    {
+      "description": "Land_Cover_Property_3",
+      "name": "LC_Prop3"
+    },
+    {
+      "name": "LC_Type1",
+      "description": "Land_Cover_Type_1"
+    },
+    {
+      "description": "Land_Cover_Type_4",
+      "name": "LC_Type4"
+    },
+    {
+      "name": "QC",
+      "description": "Quality_Flags"
+    },
+    {
+      "description": "Land_Cover_Type_3",
+      "name": "LC_Type3"
+    },
+    {
+      "name": "LW",
+      "description": "Land_Water_Mask"
+    },
+    {
+      "description": "Land_Cover_Type_2",
+      "name": "LC_Type2"
+    },
+    {
+      "description": "Land_Cover_Property_2",
+      "name": "LC_Prop2"
+    },
+    {
+      "description": "Land_Cover_Type_5",
+      "name": "LC_Type5"
+    },
+    {
+      "name": "LC_Prop1_Assessment",
+      "description": "Land_Cover_Property_1_Assessment"
+    },
+    {
+      "name": "LC_Prop3_Assessment",
+      "description": "Land_Cover_Property_3_Assessment"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "keywords": [
+    "MODIS",
+    "Terra",
+    "Aqua",
+    "NASA",
+    "Satellite",
+    "Global",
+    "Land Cover",
+    "Land Use",
+    "Classification",
+    "500m",
+    "MCD12Q1"
+  ]
+}

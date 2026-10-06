@@ -1,0 +1,233 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-1-card-bs",
+  "id": "S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS",
+  "properties": {
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2014-12-25T23:50:28.790405Z",
+    "start_datetime": "2014-12-25T23:50:28.790405Z",
+    "end_datetime": "2014-12-25T23:51:28.782057Z",
+    "platform": "sentinel-1a",
+    "constellation": "sentinel-1",
+    "instruments": [
+      "sar"
+    ],
+    "processing:level": "L2",
+    "processing:facility": "CloudFerro",
+    "processing:datetime": "2014-12-26T02:31:12.097051Z",
+    "processing:software": {
+      "SNAP GPT": "10.0.0",
+      "Sentinel-1 IPF": "002.36",
+      "eometadatatool": "260908113235"
+    },
+    "product:type": "CARD-BS",
+    "sat:orbit_state": "ascending",
+    "sat:orbit_cycle": 36,
+    "sat:relative_orbit": 135,
+    "sat:absolute_orbit": 3882,
+    "sar:frequency_band": "C",
+    "sar:center_frequency": 5.405,
+    "sar:instrument_mode": "EW",
+    "sar:polarizations": [
+      "HH"
+    ],
+    "sar:observation_direction": "right",
+    "view:incidence_angle": 31.921,
+    "eopf:datatake_id": "19071",
+    "_private": {
+      "product_size": 14855797642,
+      "product_uuid": "7c68334f-a888-5e8d-acd4-4e94d867349b",
+      "product_name": "S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS",
+      "visible": true
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -65.1274044565878,
+    -69.4508384613899,
+    -48.99258208829692,
+    -64.20647781004844
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -63.55168642606248,
+          -64.20647781004844
+        ],
+        [
+          -65.1274044565878,
+          -69.44524337735338
+        ],
+        [
+          -48.99258208829692,
+          -69.4508384613899
+        ],
+        [
+          -50.54548483213217,
+          -64.21082264936283
+        ],
+        [
+          -63.55168642606248,
+          -64.20647781004844
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-1/SAR/CARD-BS/2014/12/25/S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "product_metadata": {
+      "type": "application/xml",
+      "title": "BEAM-DIMAP product metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "Full product metadata (BEAM-DIMAP format) produced by the ESA SNAP Graph Processing Tool, including the processing graph used to derive this product.",
+      "file:checksum": "d50110625fc2553837218ed5152dedb2776c4d",
+      "file:size": 5385001,
+      "href": "s3://eodata/Sentinel-1/SAR/CARD-BS/2014/12/25/S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS/S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS.dim",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "zipper",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "gamma0-hh": {
+      "type": "application/x-envi",
+      "title": "Gamma0 HH: terrain-corrected radiometrically calibrated backscatter",
+      "roles": [
+        "data"
+      ],
+      "data_type": "float32",
+      "nodata": 0.0,
+      "gsd": 10.0,
+      "proj:code": "EPSG:32721",
+      "proj:shape": [
+        58876,
+        63058
+      ],
+      "sar:polarizations": [
+        "HH"
+      ],
+      "sar:looks_range": 6,
+      "sar:looks_azimuth": 3,
+      "sar:pixel_spacing_range": 10.0,
+      "sar:pixel_spacing_azimuth": 10.0,
+      "description": "Gamma nought backscatter, HH polarization, radiometrically calibrated, thermal-noise-removed and terrain-corrected to ground range using a DEM.",
+      "file:size": 14850411232,
+      "href": "s3://eodata/Sentinel-1/SAR/CARD-BS/2014/12/25/S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS/S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS.data/Gamma0_HH.img",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "zipper",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "gamma0-hh-hdr": {
+      "type": "text/plain",
+      "title": "Gamma0 HH ENVI header",
+      "roles": [
+        "metadata"
+      ],
+      "description": "ENVI header file describing the raster layout, map info and coordinate reference system of the paired .img data file.",
+      "file:checksum": "d50110cec7cd5548c38f9a294191401fb1ee60",
+      "file:size": 975,
+      "href": "s3://eodata/Sentinel-1/SAR/CARD-BS/2014/12/25/S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS/S1A_EW_GRDM_1SSH_20141225T235028_20141225T235128_003882_004A7F_01D9_CARD_BS.data/Gamma0_HH.hdr",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "zipper",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/view/v1.1.0/schema.json"
+  ]
+}

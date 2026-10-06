@@ -1,0 +1,294 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_vlcc_tree-cover-presence-change_europe_20m_3yearly_v1",
+  "id": "CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00",
+  "properties": {
+    "created": "2025-12-18T05:29:40.860338Z",
+    "updated": "2025-12-21T04:34:40.752523Z",
+    "published": "2025-12-21T04:34:40.752523Z",
+    "eopf:origin_datetime": "2025-12-18T05:29:40.860338Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "gsd": 20,
+    "proj:code": "EPSG:3035",
+    "product:type": "tree_cover_density",
+    "datetime": "2018-01-01T00:00:00.000000Z",
+    "end_datetime": "2021-12-31T23:59:59.999999Z",
+    "classification:classes": [
+      {
+        "value": 0,
+        "name": "unchanged_areas_with_no_tree_cover",
+        "title": "unchanged areas with no tree cover"
+      },
+      {
+        "value": 1,
+        "name": "new_tree_cover",
+        "title": "new tree cover"
+      },
+      {
+        "value": 2,
+        "name": "loss_of_tree_cover",
+        "title": "loss of tree cover"
+      },
+      {
+        "value": 10,
+        "name": "unchanged_areas_with_tree_cover",
+        "title": "unchanged areas with tree cover"
+      },
+      {
+        "value": 255,
+        "name": "outside_area",
+        "title": "outside area"
+      }
+    ],
+    "_private": {
+      "product_size": 1672604,
+      "product_uuid": "8bd44eec-c471-4510-b888-2e5eeefaa5e6",
+      "product_name": "CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00",
+      "visible": true,
+      "cellID": "100kmE57N22",
+      "component": "landcover_landuse",
+      "gridLabel": "20m",
+      "fileFormat": "cog",
+      "nominalDate": "2021-01-01T00:00:00.000000Z",
+      "datasetAlias": "clms_vlcc_tree-cover-presence-change",
+      "areaOfInterest": "europe",
+      "collectionName": "CLMS",
+      "datasetVersion": 1,
+      "productVersion": "v01_r00",
+      "platformAcronym": "unspecified",
+      "datasetShortName": "tcpc",
+      "missionShortName": "unspecified",
+      "processingCenter": "unspecified",
+      "datasetIdentifier": "clms_vlcc_tree-cover-presence-change_europe_20m_3yearly_v1",
+      "metricGridSpacing": 20,
+      "platformShortName": "unspecified",
+      "temporalRepeatRate": "3yearly",
+      "instrumentShortName": "unspecified",
+      "productDeliveryDate": "2025-12-20T20:25:11.000000Z",
+      "SDIResourceIdentifier": "copernicus_r_3035_20_m_tcpc-2018-2021_p_2018-2021_v01_r00"
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "start_datetime": "2018-01-01T00:00:00.000000Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    26.6087751,
+    41.3245928,
+    28.0404052,
+    42.4075491
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          26.6087751,
+          41.5291198
+        ],
+        [
+          27.7780018,
+          41.3245928
+        ],
+        [
+          28.0404052,
+          42.1995711
+        ],
+        [
+          26.8554908,
+          42.4075491
+        ],
+        [
+          26.6087751,
+          41.5291198
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/tree_cover_density/clms_vlcc_tree-cover-presence-change_europe_20m_3yearly_v1/2021/01/01/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d501107df9e5821366e84aa7c0dc0603632b4f",
+      "file:size": 34684,
+      "file:local_path": "CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.xml",
+      "href": "s3://eodata/CLMS/landcover_landuse/tree_cover_density/clms_vlcc_tree-cover-presence-change_europe_20m_3yearly_v1/2021/01/01/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(8bd44eec-c471-4510-b888-2e5eeefaa5e6)/Nodes(CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00)/Nodes(CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Tree Cover Presence Change Raster (20m)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        5000,
+        5000
+      ],
+      "proj:transform": [
+        20.0,
+        0.0,
+        5700000.0,
+        0.0,
+        -20.0,
+        2300000.0
+      ],
+      "proj:bbox": [
+        5700000.0,
+        2200000.0,
+        5800000.0,
+        2300000.0
+      ],
+      "data_type": "uint8",
+      "bands": [
+        {
+          "description": "Tree Cover Presence Change",
+          "name": "tcpc"
+        }
+      ],
+      "file:checksum": "d501103596acd2cefddafbe640359c0b63f559",
+      "file:size": 1624631,
+      "file:local_path": "CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/tree_cover_density/clms_vlcc_tree-cover-presence-change_europe_20m_3yearly_v1/2021/01/01/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(8bd44eec-c471-4510-b888-2e5eeefaa5e6)/Nodes(CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00)/Nodes(CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        5700000.0,
+        2200000.0,
+        5800000.0,
+        2300000.0
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        750,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/tree_cover_density/clms_vlcc_tree-cover-presence-change_europe_20m_3yearly_v1/2021/01/01/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00/CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.tif&CRS=EPSG:3035&BBOX=5700000.0,2200000.0,5800000.0,2300000.0&WIDTH=750&HEIGHT=750&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/clms_vlcc_tree-cover-presence-change/clms_vlcc_tree-cover-presence-change_europe_20m_3yearly_v1.sld"
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d501102ed86c34ee716246270fb1ef91244a8e",
+      "file:size": 1674628,
+      "file:local_path": "CLMS_HRLVLCC_TCPC_C2018-2021_R20m_E57N22_03035_V01_R00.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(8bd44eec-c471-4510-b888-2e5eeefaa5e6)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

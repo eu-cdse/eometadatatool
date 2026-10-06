@@ -1,0 +1,21 @@
+metadata;file;mappings;datatype
+beginningDateTime;*.xml;//Temporal/RangeDateTime/BeginningDateTime/text();DateTimeOffset
+endingDateTime;*.xml;//Temporal/RangeDateTime/EndingDateTime/text();DateTimeOffset
+
+coordinates;*.xml;concat('POLYGON((',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[1]/PointLongitude/text(),' ',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[1]/PointLatitude/text(),',',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[2]/PointLongitude/text(),' ',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[2]/PointLatitude/text(),',',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[3]/PointLongitude/text(),' ',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[3]/PointLatitude/text(),',',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[4]/PointLongitude/text(),' ',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[4]/PointLatitude/text(),',',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[1]/PointLongitude/text(),' ',//Spatial/HorizontalSpatialDomain/Geometry/GPolygon/Boundary/Point[1]/PointLatitude/text(),'))');String
+
+processingDate;*.xml;//DataGranule/ProductionDateTime/text();DateTimeOffset
+
+productType;*.xml;concat(//Collection/ShortName/text(),'.',//Collection/VersionId/text());String
+processorVersion;*.xml;//PGEVersionClass/PGEVersion/text();String
+
+hTile;*.xml;concat(string(//AdditionalAttributes/AdditionalAttribute[Name='HORIZONTALTILENUMBER']/Values/Value),string(//PSAs/PSA[PSAName='HORIZONTALTILENUMBER']/PSAValue));String
+vTile;*.xml;concat(string(//AdditionalAttributes/AdditionalAttribute[Name='VERTICALTILENUMBER']/Values/Value),string(//PSAs/PSA[PSAName='VERTICALTILENUMBER']/PSAValue));String
+
+orbitNumber;*.xml;//OrbitCalculatedSpatialDomains/OrbitCalculatedSpatialDomain[1]/OrbitNumber;Int64
+processorVersion;*.xml;string(//PGEVersionClass/PGEVersion);String
+
+cloudCover;*.xml;//CloudCover/text();String
+missing_data;*.xml;//QAStats/QAPercentMissingData/text();String
+out_of_bounds_data;*.xml;//QAStats/QAPercentOutOfBoundsData/text();String
+interpolated_data;*.xml;//QAStats/QAPercentInterpolatedData/text();String

@@ -1,0 +1,304 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_vlcc_grassland-mowing-events_europe_10m_yearly_v1",
+  "id": "CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00",
+  "properties": {
+    "created": "2025-12-18T04:53:38.986274Z",
+    "updated": "2026-02-17T12:03:07.922470Z",
+    "published": "2026-02-17T12:03:07.922470Z",
+    "eopf:origin_datetime": "2025-12-18T04:53:38.986274Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "gsd": 10,
+    "proj:code": "EPSG:3035",
+    "product:type": "grassland_mowing_events",
+    "datetime": "2017-01-01T00:00:00.000000Z",
+    "end_datetime": "2017-12-31T23:59:59.999999Z",
+    "classification:classes": [
+      {
+        "value": 0,
+        "name": "no_mowing_detected",
+        "title": "no mowing detected"
+      },
+      {
+        "value": 1,
+        "name": "number_of_mowing_events_1",
+        "title": "Number of mowing events detected"
+      },
+      {
+        "value": 2,
+        "name": "number_of_mowing_events_2",
+        "title": "Number of mowing events detected"
+      },
+      {
+        "value": 3,
+        "name": "number_of_mowing_events_3",
+        "title": "Number of mowing events detected"
+      },
+      {
+        "value": 4,
+        "name": "number_of_mowing_events_4",
+        "title": "Number of mowing events detected"
+      },
+      {
+        "value": 253,
+        "name": "all_non_herbaceous_areas",
+        "title": "all non-herbaceous areas"
+      },
+      {
+        "value": 255,
+        "name": "outside_area",
+        "title": "outside area"
+      }
+    ],
+    "_private": {
+      "product_size": 11090153,
+      "product_uuid": "9b2380db-d615-4588-b2ac-317bcb38ca5a",
+      "product_name": "CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00",
+      "visible": true,
+      "cellID": "100kmE29N20",
+      "component": "landcover_landuse",
+      "gridLabel": "10m",
+      "fileFormat": "cog",
+      "nominalDate": "2017-01-01T00:00:00.000000Z",
+      "datasetAlias": "clms_vlcc_grassland-mowing-events",
+      "areaOfInterest": "europe",
+      "collectionName": "CLMS",
+      "datasetVersion": 1,
+      "productVersion": "v02_r00",
+      "platformAcronym": "unspecified",
+      "datasetShortName": "grame",
+      "missionShortName": "unspecified",
+      "processingCenter": "unspecified",
+      "datasetIdentifier": "clms_vlcc_grassland-mowing-events_europe_10m_yearly_v1",
+      "metricGridSpacing": 10,
+      "platformShortName": "unspecified",
+      "temporalRepeatRate": "yearly",
+      "instrumentShortName": "unspecified",
+      "productDeliveryDate": "2026-02-15T20:10:46.000000Z",
+      "SDIResourceIdentifier": "copernicus_r_3035_10_m_grame_p_2017-now_v01_r00"
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "start_datetime": "2017-01-01T00:00:00.000000Z",
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -6.8569332,
+    39.6857396,
+    -5.4794641,
+    40.7595402
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -6.6223217,
+          39.6857396
+        ],
+        [
+          -5.4794641,
+          39.8760278
+        ],
+        [
+          -5.6992145,
+          40.7595402
+        ],
+        [
+          -6.8569332,
+          40.5661692
+        ],
+        [
+          -6.6223217,
+          39.6857396
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_mowing_events/clms_vlcc_grassland-mowing-events_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "Product Metadata",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d50110c03470bcd2084e35f91b7f3c6be8a3bb",
+      "file:size": 34641,
+      "file:local_path": "CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.xml",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_mowing_events/clms_vlcc_grassland-mowing-events_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(9b2380db-d615-4588-b2ac-317bcb38ca5a)/Nodes(CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00)/Nodes(CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Grassland Mowing Events Raster (10m)",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        10000,
+        10000
+      ],
+      "proj:transform": [
+        10.0,
+        0.0,
+        2900000.0,
+        0.0,
+        -10.0,
+        2100000.0
+      ],
+      "proj:bbox": [
+        2900000.0,
+        2000000.0,
+        3000000.0,
+        2100000.0
+      ],
+      "data_type": "uint8",
+      "bands": [
+        {
+          "description": "Grassland Mowing Events",
+          "name": "grame"
+        }
+      ],
+      "file:checksum": "d50110249988a333f03a528dac479cfb9bec37",
+      "file:size": 10982310,
+      "file:local_path": "CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.tif",
+      "href": "s3://eodata/CLMS/landcover_landuse/grassland_mowing_events/clms_vlcc_grassland-mowing-events_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.tif",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(9b2380db-d615-4588-b2ac-317bcb38ca5a)/Nodes(CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00)/Nodes(CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.tif)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        2900000.0,
+        2000000.0,
+        3000000.0,
+        2100000.0
+      ],
+      "proj:code": "EPSG:3035",
+      "proj:shape": [
+        750,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/landcover_landuse/grassland_mowing_events/clms_vlcc_grassland-mowing-events_europe_10m_yearly_v1/2017/01/01/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00/CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.tif&CRS=EPSG:3035&BBOX=2900000.0,2000000.0,3000000.0,2100000.0&WIDTH=750&HEIGHT=750&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/clms_vlcc_grassland-mowing-events/clms_vlcc_grassland-mowing-events_europe_10m_yearly_v1.sld"
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110e072ba0a8ba86e7fff878ed45edb72f4",
+      "file:size": 11092105,
+      "file:local_path": "CLMS_HRLVLCC_GRAME_S2017_R10m_E29N20_03035_V02_R00.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(9b2380db-d615-4588-b2ac-317bcb38ca5a)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

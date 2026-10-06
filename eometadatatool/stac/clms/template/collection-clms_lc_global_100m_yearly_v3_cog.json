@@ -1,0 +1,1144 @@
+{
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9999999,
+          -60.0,
+          179.9999999,
+          80.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2014-01-01T00:00:00.000Z",
+          "2020-03-31T23:59:59.000Z"
+        ]
+      ]
+    }
+  },
+  "type": "Collection",
+  "id": "clms_lc_global_100m_yearly_v3_cog",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json"
+  ],
+  "sci:doi": "10.2909/c6377c6e-76cc-4d03-8330-628a03693042",
+  "stac_version": "1.1.0",
+  "title": "CLMS Land Cover (LC) Global 100m yearly V3 (COG)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "LC",
+    "Land Cover",
+    "land use land cover",
+    "global",
+    "yearly",
+    "100m",
+    "PROBA-V"
+  ],
+  "description": "The Dynamic Land Cover product provides a primary land cover scheme at three classification levels with class definitions according to the Land Cover Classification System (LCCS) scheme. This Collection 3 includes global land cover maps at 100 m resolution for base year 2015 and subsequent years until 2019, including a base classification with 23 classes, versatile fractional cover layers and forest type information.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_lc_global_100m_yearly_v3.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS Land Cover (LC) Global 100m yearly V3 (COG) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "platform": [
+      "proba-v"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "dynamic_land_cover"
+    ],
+    "constellation": [
+      "proba-1"
+    ],
+    "processing:version": [
+      "v3.1.2"
+    ],
+    "instruments": [
+      "vegetation"
+    ],
+    "gsd": [
+      100.0
+    ],
+    "proj:shape": [
+      141120,
+      362880
+    ]
+  },
+  "item_assets": {
+    "bare_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for bare-sparse-vegetation land cover class",
+      "bands": [
+        {
+          "name": "bare_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for bare-sparse-vegetation land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "builtup_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Ground Cover for built-up land cover class",
+      "bands": [
+        {
+          "name": "builtup_coverfraction_layer",
+          "description": "Percent Ground Cover for built-up land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "change_confidence_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Change Confidence for detected land cover changes compared to previous year",
+      "bands": [
+        {
+          "name": "change_confidence_layer",
+          "description": "Change Confidence for detected land cover changes compared to previous year",
+          "classification:classes": [
+            {
+              "value": 0,
+              "name": "no_change",
+              "description": "No change in discrete class between current year and previous year detected."
+            },
+            {
+              "value": 1,
+              "name": "potential_change",
+              "description": "BFASTmon detected break in second half of NRT year - potential change."
+            },
+            {
+              "value": 2,
+              "name": "medium_confidence",
+              "description": "Imprint of urban, permanent water, snow or wetland; OR change detected by BFAST but HMM model didn't confirm in higher resolution; OR change detected by BFASTmon in first half of NRT year."
+            },
+            {
+              "value": 3,
+              "name": "high_confidence",
+              "description": "BFAST detected a change and HMM confirmed this change in higher resolution."
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "crops_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for cropland land cover class",
+      "bands": [
+        {
+          "name": "crops_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for cropland land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "datadensityindicator": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Data Density Indicator for Algorithm input data",
+      "bands": [
+        {
+          "name": "datadensityindicator",
+          "description": "Data Density Indicator for Algorithm input data"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "discrete_classification_map": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Land Cover Classification",
+      "bands": [
+        {
+          "name": "discrete_classification_map",
+          "description": "Land Cover Classification",
+          "classification:classes": [
+            {
+              "value": 0,
+              "name": "no_data",
+              "description": "No input data available",
+              "color_hint": "282828"
+            },
+            {
+              "value": 20,
+              "name": "shrubs",
+              "description": "Woody perennial plants with persistent and woody stems, without any defined main stem, less than 5 m tall. Foliage can be evergreen or deciduous.",
+              "color_hint": "FFBB22"
+            },
+            {
+              "value": 30,
+              "name": "herbaceous_vegetation",
+              "description": "Plants without persistent stem or shoots above ground and lacking definite firm structure. Tree and shrub cover is less than 10%.",
+              "color_hint": "FFFF4C"
+            },
+            {
+              "value": 40,
+              "name": "cropland",
+              "description": "Cultivated and managed vegetation/agriculture. Lands covered with temporary crops followed by harvest and a bare soil period.",
+              "color_hint": "F096FF"
+            },
+            {
+              "value": 50,
+              "name": "urban_built_up",
+              "description": "Land covered by buildings and other man-made structures.",
+              "color_hint": "FA0000"
+            },
+            {
+              "value": 60,
+              "name": "bare_sparse_vegetation",
+              "description": "Lands with exposed soil, sand, or rocks and never has more than 10% vegetated cover during any time of the year.",
+              "color_hint": "B4B4B4"
+            },
+            {
+              "value": 70,
+              "name": "snow_ice",
+              "description": "Lands under snow or ice cover throughout the year.",
+              "color_hint": "F0F0F0"
+            },
+            {
+              "value": 80,
+              "name": "permanent_water_bodies",
+              "description": "Lakes, reservoirs, and rivers. Can be either fresh or salt-water bodies.",
+              "color_hint": "0032C8"
+            },
+            {
+              "value": 90,
+              "name": "herbaceous_wetland",
+              "description": "Lands with a permanent mixture of water and herbaceous or woody vegetation in salt, brackish, or fresh water.",
+              "color_hint": "0096A0"
+            },
+            {
+              "value": 100,
+              "name": "moss_lichen",
+              "description": "Moss and lichen.",
+              "color_hint": "FAE6A0"
+            },
+            {
+              "value": 111,
+              "name": "closed_forest_evergreen_needle_leaf",
+              "description": "Closed forest (tree canopy >70%), almost all needle leaf trees remain green all year.",
+              "color_hint": "58481F"
+            },
+            {
+              "value": 112,
+              "name": "closed_forest_evergreen_broad_leaf",
+              "description": "Closed forest (tree canopy >70%), almost all broadleaf trees remain green year round.",
+              "color_hint": "009900"
+            },
+            {
+              "value": 113,
+              "name": "closed_forest_deciduous_needle_leaf",
+              "description": "Closed forest (tree canopy >70%), seasonal needle leaf tree communities with annual leaf-on and leaf-off periods.",
+              "color_hint": "70663E"
+            },
+            {
+              "value": 114,
+              "name": "closed_forest_deciduous_broad_leaf",
+              "description": "Closed forest (tree canopy >70%), seasonal broadleaf tree communities with annual leaf-on and leaf-off periods.",
+              "color_hint": "00CC00"
+            },
+            {
+              "value": 115,
+              "name": "closed_forest_mixed",
+              "description": "Closed forest, mix of forest types.",
+              "color_hint": "4E751F"
+            },
+            {
+              "value": 116,
+              "name": "closed_forest_unknown",
+              "description": "Closed forest, not matching any of the other definitions.",
+              "color_hint": "007800"
+            },
+            {
+              "value": 121,
+              "name": "open_forest_evergreen_needle_leaf",
+              "description": "Open forest (trees 15-70%, second layer mixed shrubs and grassland), almost all needle leaf trees remain green all year.",
+              "color_hint": "666000"
+            },
+            {
+              "value": 122,
+              "name": "open_forest_evergreen_broad_leaf",
+              "description": "Open forest (trees 15-70%, second layer mixed shrubs and grassland), almost all broadleaf trees remain green year round.",
+              "color_hint": "8DB400"
+            },
+            {
+              "value": 123,
+              "name": "open_forest_deciduous_needle_leaf",
+              "description": "Open forest (trees 15-70%, second layer mixed shrubs and grassland), seasonal needle leaf tree communities with annual leaf-on and leaf-off periods.",
+              "color_hint": "8D7400"
+            },
+            {
+              "value": 124,
+              "name": "open_forest_deciduous_broad_leaf",
+              "description": "Open forest (trees 15-70%, second layer mixed shrubs and grassland), seasonal broadleaf tree communities with annual leaf-on and leaf-off periods.",
+              "color_hint": "A0DC00"
+            },
+            {
+              "value": 125,
+              "name": "open_forest_mixed",
+              "description": "Open forest, mix of forest types.",
+              "color_hint": "929900"
+            },
+            {
+              "value": 126,
+              "name": "open_forest_unknown",
+              "description": "Open forest, not matching any of the other definitions.",
+              "color_hint": "648C00"
+            },
+            {
+              "value": 200,
+              "name": "open_sea",
+              "description": "Oceans, seas. Can be either fresh or salt-water bodies.",
+              "color_hint": "000080"
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "discrete_classification_proba": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "quality indicator (classification probability) of the discrete classification",
+      "bands": [
+        {
+          "name": "discrete_classification_proba",
+          "description": "quality indicator (classification probability) of the discrete classification"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "forest_type_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Forest Type for all pixels with tree PVC bigger than 1%",
+      "bands": [
+        {
+          "name": "forest_type_layer",
+          "description": "Forest Type for all pixels with tree PVC bigger than 1%",
+          "classification:classes": [
+            {
+              "value": 0,
+              "name": "unknown",
+              "description": "Doesn't match any of the other forest types."
+            },
+            {
+              "value": 1,
+              "name": "evergreen_needle_leaf",
+              "description": "Evergreen needle leaf forest."
+            },
+            {
+              "value": 2,
+              "name": "evergreen_broad_leaf",
+              "description": "Evergreen broad leaf forest."
+            },
+            {
+              "value": 3,
+              "name": "deciduous_needle_leaf",
+              "description": "Deciduous needle leaf forest."
+            },
+            {
+              "value": 4,
+              "name": "deciduous_broad_leaf",
+              "description": "Deciduous broad leaf forest."
+            },
+            {
+              "value": 5,
+              "name": "mixed",
+              "description": "Mix of forest types."
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "grass_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for herbaceous vegetation land cover class",
+      "bands": [
+        {
+          "name": "grass_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for herbaceous vegetation land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "mosslichen_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for moss&lichen land cover class",
+      "bands": [
+        {
+          "name": "mosslichen_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for moss&lichen land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "permanentwater_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Ground Cover for permanent water land cover class",
+      "bands": [
+        {
+          "name": "permanentwater_coverfraction_layer",
+          "description": "Percent Ground Cover for permanent water land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    },
+    "seasonalwater_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Ground Cover for seasonal water land cover class",
+      "bands": [
+        {
+          "name": "seasonalwater_coverfraction_layer",
+          "description": "Percent Ground Cover for seasonal water land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "shrub_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for shrubland land cover class",
+      "bands": [
+        {
+          "name": "shrub_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for shrubland land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "snow_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Ground Cover for snow&ice land cover class",
+      "bands": [
+        {
+          "name": "snow_coverfraction_layer",
+          "description": "Percent Ground Cover for snow&ice land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "tree_coverfraction_layer": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Percent Vegetation Cover (PVC) for forest land cover class",
+      "bands": [
+        {
+          "name": "tree_coverfraction_layer",
+          "description": "Percent Vegetation Cover (PVC) for forest land cover class"
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    },
+    {
+      "rel": "about",
+      "href": "https://land.copernicus.eu/en/products/global-dynamic-land-cover/copernicus-global-land-service-land-cover-100m-collection-3-epoch-2015-2019-globe",
+      "type": "text/html",
+      "title": "Product page"
+    }
+  ],
+  "bands": [
+    {
+      "name": "bare_coverfraction_layer",
+      "description": "Percent Vegetation Cover (PVC) for bare-sparse-vegetation land cover class"
+    },
+    {
+      "name": "builtup_coverfraction_layer",
+      "description": "Percent Ground Cover for built-up land cover class"
+    },
+    {
+      "name": "change_confidence_layer",
+      "description": "Change Confidence for detected land cover changes compared to previous year",
+      "classification:classes": [
+        {
+          "value": 0,
+          "name": "no_change",
+          "description": "No change in discrete class between current year and previous year detected."
+        },
+        {
+          "value": 1,
+          "name": "potential_change",
+          "description": "BFASTmon detected break in second half of NRT year - potential change."
+        },
+        {
+          "value": 2,
+          "name": "medium_confidence",
+          "description": "Imprint of urban, permanent water, snow or wetland; OR change detected by BFAST but HMM model didn't confirm in higher resolution; OR change detected by BFASTmon in first half of NRT year."
+        },
+        {
+          "value": 3,
+          "name": "high_confidence",
+          "description": "BFAST detected a change and HMM confirmed this change in higher resolution."
+        }
+      ]
+    },
+    {
+      "name": "crops_coverfraction_layer",
+      "description": "Percent Vegetation Cover (PVC) for cropland land cover class"
+    },
+    {
+      "name": "datadensityindicator",
+      "description": "Data Density Indicator for Algorithm input data"
+    },
+    {
+      "name": "discrete_classification_map",
+      "description": "Land Cover Classification",
+      "classification:classes": [
+        {
+          "value": 0,
+          "name": "no_data",
+          "description": "No input data available",
+          "color_hint": "282828"
+        },
+        {
+          "value": 20,
+          "name": "shrubs",
+          "description": "Woody perennial plants with persistent and woody stems, without any defined main stem, less than 5 m tall. Foliage can be evergreen or deciduous.",
+          "color_hint": "FFBB22"
+        },
+        {
+          "value": 30,
+          "name": "herbaceous_vegetation",
+          "description": "Plants without persistent stem or shoots above ground and lacking definite firm structure. Tree and shrub cover is less than 10%.",
+          "color_hint": "FFFF4C"
+        },
+        {
+          "value": 40,
+          "name": "cropland",
+          "description": "Cultivated and managed vegetation/agriculture. Lands covered with temporary crops followed by harvest and a bare soil period.",
+          "color_hint": "F096FF"
+        },
+        {
+          "value": 50,
+          "name": "urban_built_up",
+          "description": "Land covered by buildings and other man-made structures.",
+          "color_hint": "FA0000"
+        },
+        {
+          "value": 60,
+          "name": "bare_sparse_vegetation",
+          "description": "Lands with exposed soil, sand, or rocks and never has more than 10% vegetated cover during any time of the year.",
+          "color_hint": "B4B4B4"
+        },
+        {
+          "value": 70,
+          "name": "snow_ice",
+          "description": "Lands under snow or ice cover throughout the year.",
+          "color_hint": "F0F0F0"
+        },
+        {
+          "value": 80,
+          "name": "permanent_water_bodies",
+          "description": "Lakes, reservoirs, and rivers. Can be either fresh or salt-water bodies.",
+          "color_hint": "0032C8"
+        },
+        {
+          "value": 90,
+          "name": "herbaceous_wetland",
+          "description": "Lands with a permanent mixture of water and herbaceous or woody vegetation in salt, brackish, or fresh water.",
+          "color_hint": "0096A0"
+        },
+        {
+          "value": 100,
+          "name": "moss_lichen",
+          "description": "Moss and lichen.",
+          "color_hint": "FAE6A0"
+        },
+        {
+          "value": 111,
+          "name": "closed_forest_evergreen_needle_leaf",
+          "description": "Closed forest (tree canopy >70%), almost all needle leaf trees remain green all year.",
+          "color_hint": "58481F"
+        },
+        {
+          "value": 112,
+          "name": "closed_forest_evergreen_broad_leaf",
+          "description": "Closed forest (tree canopy >70%), almost all broadleaf trees remain green year round.",
+          "color_hint": "009900"
+        },
+        {
+          "value": 113,
+          "name": "closed_forest_deciduous_needle_leaf",
+          "description": "Closed forest (tree canopy >70%), seasonal needle leaf tree communities with annual leaf-on and leaf-off periods.",
+          "color_hint": "70663E"
+        },
+        {
+          "value": 114,
+          "name": "closed_forest_deciduous_broad_leaf",
+          "description": "Closed forest (tree canopy >70%), seasonal broadleaf tree communities with annual leaf-on and leaf-off periods.",
+          "color_hint": "00CC00"
+        },
+        {
+          "value": 115,
+          "name": "closed_forest_mixed",
+          "description": "Closed forest, mix of forest types.",
+          "color_hint": "4E751F"
+        },
+        {
+          "value": 116,
+          "name": "closed_forest_unknown",
+          "description": "Closed forest, not matching any of the other definitions.",
+          "color_hint": "007800"
+        },
+        {
+          "value": 121,
+          "name": "open_forest_evergreen_needle_leaf",
+          "description": "Open forest (trees 15-70%, second layer mixed shrubs and grassland), almost all needle leaf trees remain green all year.",
+          "color_hint": "666000"
+        },
+        {
+          "value": 122,
+          "name": "open_forest_evergreen_broad_leaf",
+          "description": "Open forest (trees 15-70%, second layer mixed shrubs and grassland), almost all broadleaf trees remain green year round.",
+          "color_hint": "8DB400"
+        },
+        {
+          "value": 123,
+          "name": "open_forest_deciduous_needle_leaf",
+          "description": "Open forest (trees 15-70%, second layer mixed shrubs and grassland), seasonal needle leaf tree communities with annual leaf-on and leaf-off periods.",
+          "color_hint": "8D7400"
+        },
+        {
+          "value": 124,
+          "name": "open_forest_deciduous_broad_leaf",
+          "description": "Open forest (trees 15-70%, second layer mixed shrubs and grassland), seasonal broadleaf tree communities with annual leaf-on and leaf-off periods.",
+          "color_hint": "A0DC00"
+        },
+        {
+          "value": 125,
+          "name": "open_forest_mixed",
+          "description": "Open forest, mix of forest types.",
+          "color_hint": "929900"
+        },
+        {
+          "value": 126,
+          "name": "open_forest_unknown",
+          "description": "Open forest, not matching any of the other definitions.",
+          "color_hint": "648C00"
+        },
+        {
+          "value": 200,
+          "name": "open_sea",
+          "description": "Oceans, seas. Can be either fresh or salt-water bodies.",
+          "color_hint": "000080"
+        }
+      ]
+    },
+    {
+      "name": "discrete_classification_proba",
+      "description": "quality indicator (classification probability) of the discrete classification"
+    },
+    {
+      "name": "forest_type_layer",
+      "description": "Forest Type for all pixels with tree PVC bigger than 1%",
+      "classification:classes": [
+        {
+          "value": 0,
+          "name": "unknown",
+          "description": "Doesn't match any of the other forest types."
+        },
+        {
+          "value": 1,
+          "name": "evergreen_needle_leaf",
+          "description": "Evergreen needle leaf forest."
+        },
+        {
+          "value": 2,
+          "name": "evergreen_broad_leaf",
+          "description": "Evergreen broad leaf forest."
+        },
+        {
+          "value": 3,
+          "name": "deciduous_needle_leaf",
+          "description": "Deciduous needle leaf forest."
+        },
+        {
+          "value": 4,
+          "name": "deciduous_broad_leaf",
+          "description": "Deciduous broad leaf forest."
+        },
+        {
+          "value": 5,
+          "name": "mixed",
+          "description": "Mix of forest types."
+        }
+      ]
+    },
+    {
+      "name": "grass_coverfraction_layer",
+      "description": "Percent Vegetation Cover (PVC) for herbaceous vegetation land cover class"
+    },
+    {
+      "name": "mosslichen_coverfraction_layer",
+      "description": "Percent Vegetation Cover (PVC) for moss&lichen land cover class"
+    },
+    {
+      "name": "permanentwater_coverfraction_layer",
+      "description": "Percent Ground Cover for permanent water land cover class"
+    },
+    {
+      "name": "seasonalwater_coverfraction_layer",
+      "description": "Percent Ground Cover for seasonal water land cover class"
+    },
+    {
+      "name": "shrub_coverfraction_layer",
+      "description": "Percent Vegetation Cover (PVC) for shrubland land cover class"
+    },
+    {
+      "name": "snow_coverfraction_layer",
+      "description": "Percent Ground Cover for snow&ice land cover class"
+    },
+    {
+      "name": "tree_coverfraction_layer",
+      "description": "Percent Vegetation Cover (PVC) for forest land cover class"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

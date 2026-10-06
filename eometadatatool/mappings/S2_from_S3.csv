@@ -1,0 +1,155 @@
+metadata;file;mappings;datatype
+beginningDateTime;MTD_MSIL1C.xml;//PRODUCT_START_TIME/text();DateTimeOffset
+endingDateTime;MTD_MSIL1C.xml;//PRODUCT_STOP_TIME/text();DateTimeOffset
+processingDate;MTD_MSIL1C.xml;//GENERATION_TIME/text();DateTimeOffset
+platformShortName;MTD_MSIL1C.xml;substring(//SPACECRAFT_NAME/text(),1,10);String
+platformSerialIdentifier;MTD_MSIL1C.xml;concat('2',substring(//PRODUCT_URI/text(),3,1));String
+instrumentShortName;MTD_MSIL1C.xml;substring(//PRODUCT_TYPE/text(), 3, 3);String
+orbitNumber;manifest.safe;//safe:orbitNumber[@type="start"]/text();Int64
+relativeOrbitNumber;MTD_MSIL1C.xml;//SENSING_ORBIT_NUMBER/text();Int64
+orbitDirection;MTD_MSIL1C.xml;//SENSING_ORBIT_DIRECTION/text();String
+srs;MTD_MSIL1C.xml;//Coordinate_Reference_System/GEO_TABLES/text();String
+cloudCover;MTD_MSIL1C.xml;//Cloud_Coverage_Assessment/text();Double
+productType;MTD_MSIL1C.xml;//PRODUCT_TYPE/text();String
+acquisitionDate;MTD_MSIL1C.xml;//DATATAKE_SENSING_START/text();DateTimeOffset
+acquisitionStation;MTD_DS.xml;//RECEPTION_STATION/text();String
+archivingIdentifier;MTD_MSIL1C.xml;//Datatake/@datatakeIdentifier/text();String
+archivingCenter;MTD_TL.xml;//ARCHIVING_CENTRE/text();String
+archivingDate;MTD_TL.xml;//ARCHIVING_TIME/text();DateTimeOffset
+processingCenter;MTD_MSIL1C.xml;//PROCESSING_CENTER/text();String
+processorVersion;MTD_MSIL1C.xml;//PROCESSING_BASELINE/text();String
+processingLevel;MTD_MSIL1C.xml;substring-after(//PROCESSING_LEVEL/text(), "-");String
+nativeProductFormat;MTD_MSIL1C.xml;//PRODUCT_FORMAT/text();String
+tileId;MTD_MSIL1C.xml;substring(//PRODUCT_URI/text(),40,5);String
+s2msi:productUri;MTD_MSIL1C.xml;//PRODUCT_URI/text();String
+s2msi:dataTakeType;MTD_MSIL1C.xml;//DATATAKE_TYPE/text();String
+s2msi:reflectanceConversion;MTD_MSIL1C.xml;//Reflectance_Conversion/U/text();Double
+s2msi:productionDEMtype;MTD_MSIL1C.xml;//PRODUCTION_DEM_TYPE/text();String
+s2msi:degradedANCdataPercentage;MTD_MSIL1C.xml;//DEGRADED_ANC_DATA_PERCENTAGE/text();Double
+s2msi:degradedMSIdataPercentage;MTD_MSIL1C.xml;//DEGRADED_MSI_DATA_PERCENTAGE/text();Double
+processingDate;MTD_MSIL1C.xml;//Product_Info/GENERATION_TIME/text();DateTimeOffset
+datastripId;MTD_MSIL1C.xml;//Granule/@datastripIdentifier;String
+granuleIdentifier;MTD_MSIL1C.xml;//Granule/@granuleIdentifier;String
+productGroupId;MTD_MSIL1C.xml;//Datatake/@datatakeIdentifier;String
+illuminationZenithAngle;MTD_TL.xml;//Mean_Sun_Angle/AZIMUTH_ANGLE/text();Double
+view:sun_elevation;MTD_TL.xml;//Mean_Sun_Angle/ZENITH_ANGLE/text();Double
+s2msi:cloudyPixelPercentage;MTD_TL.xml;//CLOUDY_PIXEL_PERCENTAGE/text();Double
+s2msi:tileId;MTD_TL.xml;//TILE_ID/text();String
+qualityStatus;MTD_MSIL1C.xml;map(concat(//quality_check[1]/text(),'+',//quality_check[2]/text(),'+',//quality_check[3]/text(),'+',//quality_check[4]/text()),'{"PASSED+PASSED+PASSED+PASSED":"NOMINAL","default":"DEGRADED"}');String
+qualityFlags;MTD_MSIL1C.xml;concat(//quality_check[1]/text(),'+',//quality_check[2]/text(),'+',//quality_check[3]/text(),'+',//quality_check[4]/text());String
+eop:browse;MTD_TL.xml;concat('#',//PVI_FILENAME/text());String
+coordinates;MTD_MSIL1C.xml;WKT(//Global_Footprint/EXT_POS_LIST/text());String
+eop:sensorType;static;OPTICAL;String
+eop:instrumentType;static;OPTICAL;String
+eop:instrumentDescription;static;Multi Spectral Instrument (MSI);String
+eop:sensorResolution;static;10;Int64
+eop:platformOrbitType;static;LEO;String
+eop:acquisitionType;static;NOMINAL;String
+eop:status;static;ARCHIVED;String
+asset:B01;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[1]/text(), '.jp2');String
+asset:B02;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[2]/text(), '.jp2');String
+asset:B03;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[3]/text(), '.jp2');String
+asset:B04;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[4]/text(), '.jp2');String
+asset:B05;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[5]/text(), '.jp2');String
+asset:B06;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[6]/text(), '.jp2');String
+asset:B07;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[7]/text(), '.jp2');String
+asset:B08;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[8]/text(), '.jp2');String
+asset:B8A;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[9]/text(), '.jp2');String
+asset:B09;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[10]/text(), '.jp2');String
+asset:B10;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[11]/text(), '.jp2');String
+asset:B11;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[12]/text(), '.jp2');String
+asset:B12;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[13]/text(), '.jp2');String
+asset:TCI;MTD_MSIL1C.xml;concat(//Granule/IMAGE_FILE[14]/text(), '.jp2');String
+asset:B01:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='0']/AZIMUTH_ANGLE/text();Double
+asset:B02:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='1']/AZIMUTH_ANGLE/text();Double
+asset:B03:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='2']/AZIMUTH_ANGLE/text();Double
+asset:B04:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='3']/AZIMUTH_ANGLE/text();Double
+asset:B05:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='4']/AZIMUTH_ANGLE/text();Double
+asset:B06:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='5']/AZIMUTH_ANGLE/text();Double
+asset:B07:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='6']/AZIMUTH_ANGLE/text();Double
+asset:B08:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='7']/AZIMUTH_ANGLE/text();Double
+asset:B8A:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='8']/AZIMUTH_ANGLE/text();Double
+asset:B09:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='9']/AZIMUTH_ANGLE/text();Double
+asset:B10:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='10']/AZIMUTH_ANGLE/text();Double
+asset:B11:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='11']/AZIMUTH_ANGLE/text();Double
+asset:B12:view:azimuth;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='12']/AZIMUTH_ANGLE/text();Double
+asset:B01:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='0']/ZENITH_ANGLE/text();Double
+asset:B02:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='1']/ZENITH_ANGLE/text();Double
+asset:B03:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='2']/ZENITH_ANGLE/text();Double
+asset:B04:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='3']/ZENITH_ANGLE/text();Double
+asset:B05:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='4']/ZENITH_ANGLE/text();Double
+asset:B06:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='5']/ZENITH_ANGLE/text();Double
+asset:B07:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='6']/ZENITH_ANGLE/text();Double
+asset:B08:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='7']/ZENITH_ANGLE/text();Double
+asset:B8A:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='8']/ZENITH_ANGLE/text();Double
+asset:B09:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='9']/ZENITH_ANGLE/text();Double
+asset:B10:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='10']/ZENITH_ANGLE/text();Double
+asset:B11:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='11']/ZENITH_ANGLE/text();Double
+asset:B12:view:incidence_angle;MTD_TL.xml;//Mean_Viewing_Incidence_Angle[@bandId='12']/ZENITH_ANGLE/text();Double
+asset:B01:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='0']/Wavelength/CENTRAL/text();Double
+asset:B02:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='1']/Wavelength/CENTRAL/text();Double
+asset:B03:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='2']/Wavelength/CENTRAL/text();Double
+asset:B04:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='3']/Wavelength/CENTRAL/text();Double
+asset:B05:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='4']/Wavelength/CENTRAL/text();Double
+asset:B06:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='5']/Wavelength/CENTRAL/text();Double
+asset:B07:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='6']/Wavelength/CENTRAL/text();Double
+asset:B08:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='7']/Wavelength/CENTRAL/text();Double
+asset:B8A:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='8']/Wavelength/CENTRAL/text();Double
+asset:B09:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='9']/Wavelength/CENTRAL/text();Double
+asset:B10:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='10']/Wavelength/CENTRAL/text();Double
+asset:B11:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='11']/Wavelength/CENTRAL/text();Double
+asset:B12:eo:center_wavelength;MTD_MSIL1C.xml;//Spectral_Information[@bandId='12']/Wavelength/CENTRAL/text();Double
+asset:B01:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='0']/Wavelength/MAX/text();Double
+asset:B02:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='1']/Wavelength/MAX/text();Double
+asset:B03:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='2']/Wavelength/MAX/text();Double
+asset:B04:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='3']/Wavelength/MAX/text();Double
+asset:B05:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='4']/Wavelength/MAX/text();Double
+asset:B06:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='5']/Wavelength/MAX/text();Double
+asset:B07:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='6']/Wavelength/MAX/text();Double
+asset:B08:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='7']/Wavelength/MAX/text();Double
+asset:B8A:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='8']/Wavelength/MAX/text();Double
+asset:B09:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='9']/Wavelength/MAX/text();Double
+asset:B10:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='10']/Wavelength/MAX/text();Double
+asset:B11:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='11']/Wavelength/MAX/text();Double
+asset:B12:eo:full_width_half_max;MTD_MSIL1C.xml;//Spectral_Information[@bandId='12']/Wavelength/MAX/text();Double
+asset:B01:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='0']/RESOLUTION/text();Double
+asset:B02:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='1']/RESOLUTION/text();Double
+asset:B03:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='2']/RESOLUTION/text();Double
+asset:B04:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='3']/RESOLUTION/text();Double
+asset:B05:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='4']/RESOLUTION/text();Double
+asset:B06:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='5']/RESOLUTION/text();Double
+asset:B07:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='6']/RESOLUTION/text();Double
+asset:B08:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='7']/RESOLUTION/text();Double
+asset:B8A:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='8']/RESOLUTION/text();Double
+asset:B09:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='9']/RESOLUTION/text();Double
+asset:B10:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='10']/RESOLUTION/text();Double
+asset:B11:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='11']/RESOLUTION/text();Double
+asset:B12:eo:gsd;MTD_MSIL1C.xml;//Spectral_Information[@bandId='12']/RESOLUTION/text();Double
+asset:proj:shape:10:NROWS;MTD_TL.xml;//Size[@resolution='10']/NROWS/text();Int64
+asset:proj:shape:10:NCOLS;MTD_TL.xml;//Size[@resolution='10']/NCOLS/text();Int64
+asset:proj:shape:20:NROWS;MTD_TL.xml;//Size[@resolution='20']/NROWS/text();Int64
+asset:proj:shape:20:NCOLS;MTD_TL.xml;//Size[@resolution='20']/NCOLS/text();Int64
+asset:proj:shape:60:NROWS;MTD_TL.xml;//Size[@resolution='60']/NROWS/text();Int64
+asset:proj:shape:60:NCOLS;MTD_TL.xml;//Size[@resolution='60']/NCOLS/text();Int64
+asset:proj:shape:10:NROWS;MTD_TL.xml;//Size[@resolution='10']/NROWS/text();Int64
+asset:proj:shape:10:NCOLS;MTD_TL.xml;//Size[@resolution='10']/NCOLS/text();Int64
+asset:proj:shape:20:NROWS;MTD_TL.xml;//Size[@resolution='20']/NROWS/text();Int64
+asset:proj:shape:20:NCOLS;MTD_TL.xml;//Size[@resolution='20']/NCOLS/text();Int64
+asset:proj:shape:60:NROWS;MTD_TL.xml;//Size[@resolution='60']/NROWS/text();Int64
+asset:proj:shape:60:NCOLS;MTD_TL.xml;//Size[@resolution='60']/NCOLS/text();Int64
+asset:proj:transform:10:ULX;MTD_TL.xml;//Geoposition[@resolution='10']/ULX/text();Int64
+asset:proj:transform:10:ULY;MTD_TL.xml;//Geoposition[@resolution='10']/ULY/text();Int64
+asset:proj:transform:20:ULX;MTD_TL.xml;//Geoposition[@resolution='20']/ULX/text();Int64
+asset:proj:transform:20:ULY;MTD_TL.xml;//Geoposition[@resolution='20']/ULY/text();Int64
+asset:proj:transform:60:ULX;MTD_TL.xml;//Geoposition[@resolution='60']/ULX/text();Int64
+asset:proj:transform:60:ULY;MTD_TL.xml;//Geoposition[@resolution='60']/ULY/text();Int64
+raster:bands:nodata;MTD_MSIL1C.xml;//Special_Values/SPECIAL_VALUE_INDEX/text();Int64
+epsg;MTD_TL.xml;substring(//Tile_Geocoding/HORIZONTAL_CS_CODE/text(), 6, 6);Int64
+mgrs:utm_zone;MTD_MSIL1C.xml;substring(//PRODUCT_URI/text(),40,2);Int64
+mgrs:latitude_band;MTD_MSIL1C.xml;substring(//PRODUCT_URI/text(),42,1);String
+mgrs:grid_square;MTD_MSIL1C.xml;substring(//PRODUCT_URI/text(),43,2);String
+grid:code;MTD_MSIL1C.xml;concat('MGRS-',substring(//PRODUCT_URI/text(),40,5));String
+asset:B12:eo:incidence_angle;MTD_MSIL1C.xml;//Spectral_Information[@bandId='12']/Wavelength/MAX/text();Double
+s2:degraded_msi_data_percentage;MTD_TL.xml;//Image_Content_QI/DEGRADED_MSI_DATA_PERCENTAGE/text();Double
+MTD_TL;manifest.safe;substring-after(//dataObject[@ID="S2_Level-1C_Tile1_Metadata"]/byteStream/fileLocation/@href, '.');String
+MTD_DS;manifest.safe;substring-after(//dataObject[@ID="S2_Level-1C_Datastrip1_Metadata"]/byteStream/fileLocation/@href, '.');String

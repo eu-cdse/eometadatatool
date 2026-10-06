@@ -1,0 +1,139 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-2-gri-l1c-gcp",
+  "id": "S2_GRI_L1C_GCP_N00E006",
+  "properties": {
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2015-06-23T01:52:00.000000Z",
+    "start_datetime": "2015-06-23T01:52:00.000000Z",
+    "end_datetime": "2262-01-01T00:00:00.000000Z",
+    "constellation": "sentinel-2",
+    "instruments": [
+      "msi"
+    ],
+    "gsd": 10,
+    "processing:level": "L1",
+    "product:type": "S2GRIL1CGCP",
+    "grid:code": "CDEM-N00E006",
+    "_private": {
+      "product_size": 328627,
+      "product_uuid": "3585cc02-7cca-5fa0-bc22-8e5ec188e15d",
+      "product_name": "S2_GRI_L1C_GCP_N00E006",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260908113235"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    6.0,
+    0.0,
+    7.0,
+    1.0
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          6.0,
+          0.0
+        ],
+        [
+          7.0,
+          0.0
+        ],
+        [
+          7.0,
+          1.0
+        ],
+        [
+          6.0,
+          1.0
+        ],
+        [
+          6.0,
+          0.0
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-2/AUX/S2_GRI_L1C_GCP/N00/S2_GRI_L1C_GCP_N00E006/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  ],
+  "assets": {
+    "gcp_metadata": {
+      "type": "application/json",
+      "title": "JSON metadata",
+      "roles": [
+        "metadata"
+      ],
+      "href": "s3://eodata/Sentinel-2/AUX/S2_GRI_L1C_GCP/N00/S2_GRI_L1C_GCP_N00E006/N00E006.json",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "gcp": {
+      "type": "application/x-gtar",
+      "title": "Tarball compressed product",
+      "roles": [
+        "data"
+      ],
+      "href": "s3://eodata/Sentinel-2/AUX/S2_GRI_L1C_GCP/N00/S2_GRI_L1C_GCP_N00E006/N00E006_L1C.tar.gz",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

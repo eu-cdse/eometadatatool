@@ -1,0 +1,295 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_lst_global_3km_hourly_v3_nc",
+  "id": "c_gls_LST_201801010000_GLOBE_GEO_V3.0.1_nc",
+  "properties": {
+    "created": "2025-06-30T13:53:49.936225Z",
+    "updated": "2026-03-10T15:20:02.691735Z",
+    "published": "2026-03-10T15:20:02.691735Z",
+    "eopf:origin_datetime": "2025-06-30T13:53:49.936225Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2018-01-01T00:00:00.000000Z",
+    "start_datetime": "2018-01-01T00:00:00.000000Z",
+    "end_datetime": "2018-01-01T00:15:00.000000Z",
+    "instruments": [
+      "seviri"
+    ],
+    "gsd": 3000,
+    "proj:code": "EPSG:4326",
+    "product:type": "land_surface_temperature",
+    "processing:level": "L4",
+    "cube:dimensions": {
+      "lat": {
+        "type": "spatial",
+        "axis": "y",
+        "description": "latitude",
+        "extent": [
+          -70.00000000003183,
+          70.0
+        ]
+      },
+      "lon": {
+        "type": "spatial",
+        "axis": "x",
+        "description": "longitude",
+        "extent": [
+          -180.0,
+          179.97500000008188
+        ]
+      },
+      "time": {
+        "type": "temporal",
+        "description": "time",
+        "extent": [
+          0,
+          1
+        ],
+        "values": [
+          "2010-01-01T00:00:00.000000Z"
+        ]
+      }
+    },
+    "cube:variables": {
+      "lat": {
+        "dimensions": [
+          "lat"
+        ],
+        "type": "data",
+        "description": "latitude",
+        "unit": "degrees_north",
+        "data_type": "other"
+      },
+      "lon": {
+        "dimensions": [
+          "lon"
+        ],
+        "type": "data",
+        "description": "longitude",
+        "unit": "degrees_east",
+        "data_type": "other"
+      },
+      "time": {
+        "dimensions": [
+          "time"
+        ],
+        "type": "auxiliary",
+        "values": [
+          0
+        ],
+        "description": "time",
+        "unit": "seconds since 2018-01-01 00:00:00",
+        "data_type": "int32"
+      },
+      "LST": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "Land Surface Temperature",
+        "unit": "K",
+        "nodata": -9999,
+        "data_type": "int16"
+      },
+      "ERRORBAR_LST": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "LST Error Bar",
+        "unit": "K",
+        "nodata": -9999,
+        "data_type": "int16"
+      },
+      "Q_FLAGS": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "LST Quality Flags",
+        "nodata": -9999,
+        "data_type": "int16"
+      },
+      "TIME_DELTA": {
+        "dimensions": [
+          "time",
+          "lat",
+          "lon"
+        ],
+        "type": "data",
+        "description": "LST Time Deltas",
+        "unit": "minutes",
+        "nodata": -9999,
+        "data_type": "int16"
+      }
+    },
+    "product:timeliness": "PT4H",
+    "product:timeliness_category": "NRT",
+    "processing:version": "V3.0.1",
+    "_private": {
+      "product_size": 13107087,
+      "product_uuid": "b51eab11-7c46-444d-8faf-0127e52e28e0",
+      "product_name": "c_gls_LST_201801010000_GLOBE_GEO_V3.0.1_nc",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260924120453+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -79.9776824,
+    179.9776872,
+    80.0223214
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -179.9999999,
+          80.0223214
+        ],
+        [
+          -179.9999999,
+          -79.9776824
+        ],
+        [
+          -0.0111564000000044,
+          -79.9776824
+        ],
+        [
+          179.9776872,
+          -79.9776824
+        ],
+        [
+          179.9776872,
+          80.0223214
+        ],
+        [
+          -0.0111564000000044,
+          80.0223214
+        ],
+        [
+          -179.9999999,
+          80.0223214
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst_global_3km_hourly_v3/2018/01/01/c_gls_LST_201801010000_GLOBE_GEO_V3.0.1_nc/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_LST_201801010000_GLOBE_GEO_V3.0.1_nc",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "Product": {
+      "type": "application/netcdf",
+      "title": "Hourly Land Surface Temperature: GLOBE 2018-01-01T00:00:00Z",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "LST",
+          "description": "Land Surface Temperature"
+        },
+        {
+          "name": "ERRORBAR_LST",
+          "description": "LST Error Bar"
+        },
+        {
+          "name": "Q_FLAGS",
+          "description": "LST Quality Flags"
+        },
+        {
+          "name": "TIME_DELTA",
+          "description": "LST Time Deltas"
+        }
+      ],
+      "file:checksum": "d5011019fb3021c81e750d320ec26924d5a8bf",
+      "file:size": 13107087,
+      "file:local_path": "c_gls_LST_201801010000_GLOBE_GEO_V3.0.1_nc/c_gls_LST_201801010000_GLOBE_GEO_V3.0.1.nc",
+      "href": "s3://eodata/CLMS/bio-geophysical/land_surface_temperature/lst_global_3km_hourly_v3/2018/01/01/c_gls_LST_201801010000_GLOBE_GEO_V3.0.1_nc/c_gls_LST_201801010000_GLOBE_GEO_V3.0.1.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b51eab11-7c46-444d-8faf-0127e52e28e0)/Nodes(c_gls_LST_201801010000_GLOBE_GEO_V3.0.1_nc)/Nodes(c_gls_LST_201801010000_GLOBE_GEO_V3.0.1.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

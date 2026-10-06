@@ -1,0 +1,14 @@
+metadata;file;mappings;datatype;Sample
+beginningDateTime;*.nc;time_coverage_start;DateTimeOffset
+endingDateTime;*.nc;time_coverage_end;DateTimeOffset
+orbitNumber;*.nc;orbit;Int
+identifier;*.nc;METADATA_EOP_METADATA_eop_metaDataProperty_eop_identifier;String
+productType;*.nc;METADATA_ESA_METADATA_earth_explorer_header_fixed_header_File_Type;String
+processingCenter;*.nc;METADATA_EOP_METADATA_eop_metaDataProperty_eop_processing_eop_processingCenter;String
+processingDate;*.nc;METADATA_EOP_METADATA_eop_metaDataProperty_eop_processing_eop_processingDate;String
+processorVersion;*.nc;METADATA_EOP_METADATA_eop_metaDataProperty_eop_processing_eop_processorVersion;String
+timeliness;*.nc;regex-match(METADATA_EOP_METADATA_eop_metaDataProperty_eop_identifier, '^[^_]*_([^_]*)');String
+coordinates;*.nc;WKT(METADATA_EOP_METADATA_om_featureOfInterest_eop_multiExtentOf_gml_surfaceMembers_gml_exterior_gml_posList);String
+dimensions;*.nc;dimensions;Dict
+variables;*.nc;variables;Dict
+level;static;2;Int

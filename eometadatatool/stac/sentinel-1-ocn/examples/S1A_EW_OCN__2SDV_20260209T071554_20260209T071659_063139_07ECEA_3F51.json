@@ -1,0 +1,3110 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "sentinel-1-ocn",
+  "id": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51",
+  "properties": {
+    "created": "2026-02-09T08:10:27.931000Z",
+    "updated": "2026-02-09T08:13:20.466911Z",
+    "published": "2026-02-09T08:13:20.466911Z",
+    "eopf:origin_datetime": "2026-02-09T08:10:27.931000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2026-02-09T07:15:54.833886Z",
+    "start_datetime": "2026-02-09T07:15:54.833886Z",
+    "end_datetime": "2026-02-09T07:16:59.093142Z",
+    "platform": "sentinel-1a",
+    "constellation": "sentinel-1",
+    "instruments": [
+      "sar"
+    ],
+    "processing:level": "L2",
+    "processing:facility": "S1 Production Service-SERCO",
+    "processing:datetime": "2026-02-09T07:39:27.022257Z",
+    "processing:version": "04.03",
+    "processing:software": {
+      "Sentinel-1 IPF": "004.03",
+      "eometadatatool": "260908113235"
+    },
+    "product:type": "EW_OCN__2S",
+    "sat:orbit_state": "descending",
+    "sat:orbit_cycle": 375,
+    "sat:relative_orbit": 67,
+    "sat:absolute_orbit": 63139,
+    "sat:platform_international_designator": "2014-016A",
+    "sat:anx_datetime": "2026-02-09T06:37:34.732586Z",
+    "sar:frequency_band": "C",
+    "sar:center_frequency": 5.405,
+    "sar:instrument_mode": "EW",
+    "sar:beam_ids": [
+      "ew1",
+      "ew2",
+      "ew3",
+      "ew4",
+      "ew5"
+    ],
+    "sar:polarizations": [
+      "VV",
+      "VH"
+    ],
+    "eopf:datatake_id": "519402",
+    "eopf:instrument_configuration_id": 7,
+    "product:timeliness": "PT3H",
+    "product:timeliness_category": "NRT-3h",
+    "_private": {
+      "product_size": 163626616,
+      "product_uuid": "b001135b-d0b5-476d-8c48-42a1cc034a45",
+      "product_name": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE",
+      "visible": true
+    },
+    "sar:resolution_range": 20,
+    "sar:resolution_azimuth": 40,
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -20.056332,
+    36.276054,
+    -14.374603,
+    40.819275
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -15.429052,
+          36.276054
+        ],
+        [
+          -14.374603,
+          40.13451
+        ],
+        [
+          -19.256464,
+          40.819275
+        ],
+        [
+          -20.056332,
+          36.962215
+        ],
+        [
+          -15.429052,
+          36.276054
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "safe_manifest": {
+      "type": "application/xml",
+      "title": "manifest.safe",
+      "roles": [
+        "metadata"
+      ],
+      "description": "General product metadata in XML format.",
+      "file:checksum": "d50110d6d68304e1c23acad3de03acae40b13c",
+      "file:size": 21398,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/manifest.safe",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/manifest.safe",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b001135b-d0b5-476d-8c48-42a1cc034a45)/Nodes(S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE)/Nodes(manifest.safe)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "file:checksum": "d50110dd6cbacb25a1c50b83727accd2089ef7",
+      "file:size": 484182,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/preview/quick-look-l2-owi.png",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/preview/quick-look-l2-owi.png",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    "ew-ocn-vv": {
+      "type": "application/netcdf",
+      "title": "OCN Measurement Data (VV)",
+      "roles": [
+        "data",
+        "ew"
+      ],
+      "data_type": "float32",
+      "sar:polarizations": [
+        "VV"
+      ],
+      "cube:dimensions": {
+        "owiRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            420
+          ]
+        },
+        "owiAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            430
+          ]
+        },
+        "owiIncSize": {
+          "type": "other",
+          "extent": [
+            0,
+            275
+          ]
+        },
+        "owiPolarisation": {
+          "type": "other",
+          "extent": [
+            0,
+            2
+          ]
+        },
+        "owiSwath": {
+          "type": "other",
+          "description": "subswath name",
+          "extent": [
+            0,
+            5
+          ]
+        },
+        "rvlRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            115
+          ]
+        },
+        "length": {
+          "type": "other",
+          "extent": [
+            0,
+            26
+          ]
+        },
+        "rvlAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            400
+          ]
+        },
+        "rvlSwath": {
+          "type": "other",
+          "extent": [
+            0,
+            5
+          ]
+        },
+        "oswRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            1
+          ]
+        },
+        "oswAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            1
+          ]
+        },
+        "oswWavenumberBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            1
+          ]
+        },
+        "oswAngularBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            1
+          ]
+        },
+        "oswPartitions": {
+          "type": "other",
+          "description": "wave partition numbers",
+          "extent": [
+            0,
+            1
+          ]
+        },
+        "oswKxBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            1
+          ]
+        },
+        "oswKyBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            1
+          ]
+        },
+        "oswLag": {
+          "type": "other",
+          "extent": [
+            0,
+            1
+          ]
+        }
+      },
+      "cube:variables": {
+        "oswPolSpec": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "estimated swell spectrum on log-polar grid",
+          "unit": "m^4",
+          "data_type": "other"
+        },
+        "oswPolSpecNV": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "estimated swell spectrum Normalized Variance on log-polar grid",
+          "data_type": "other"
+        },
+        "oswPartitions": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "wave partition numbers",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "oswQualityCrossSpectraRe": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "real part of cross spectra log-polar grid",
+          "unit": "(m/rad)^2",
+          "data_type": "other"
+        },
+        "oswQualityCrossSpectraIm": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize",
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "imaginary part of cross spectra log-polar grid",
+          "unit": "(m/rad)^2",
+          "data_type": "other"
+        },
+        "oswK": {
+          "dimensions": [
+            "oswWavenumberBinSize"
+          ],
+          "type": "data",
+          "description": "array of the wavenumbers for polar spectra",
+          "unit": "rad/m",
+          "data_type": "other"
+        },
+        "oswPhi": {
+          "dimensions": [
+            "oswAngularBinSize"
+          ],
+          "type": "data",
+          "description": "array of angular values for polar spectra",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "oswAzCutoff": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "azimuth cut-off wavelength",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswRaCutoff": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "range cut-off wavelength",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswSpecRes": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswAngularBinSize"
+          ],
+          "type": "data",
+          "description": "azimuth cut-off wavelength as function of wave direction",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswLon": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Longitude at cell center",
+          "unit": "degrees_east",
+          "data_type": "other"
+        },
+        "oswLat": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Latitude at cell center",
+          "unit": "degrees_north",
+          "data_type": "other"
+        },
+        "oswHs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Significant waveheight for each partition",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswHsNV": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Significant waveheight for each partition NV mean (new definition)",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswWl": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Dominant wave length for each partition",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswDirmet": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Dominant wave direction for each partition (with respect to North)",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswSnr": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "signal to noise ratio of cross spectra",
+          "unit": "dB",
+          "data_type": "other"
+        },
+        "oswAmbiFac": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "ambiguity factor for wave propagation direction",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIconf": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "confidance flag for wave direction resolution",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "oswLookSeparationTime": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Separation time between inner and outer look",
+          "unit": "s",
+          "data_type": "other"
+        },
+        "oswNrcs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Normalized Radar Cross Section",
+          "unit": "dB",
+          "data_type": "other"
+        },
+        "oswNrcsNeszCorr": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Normalized Radar Cross Section Denoised",
+          "unit": "dB",
+          "data_type": "other"
+        },
+        "oswInten": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "input SLC image intensity estimated within each cell",
+          "data_type": "other"
+        },
+        "oswNv": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Normalised variance of the input SLC image estimated within each cell",
+          "data_type": "other"
+        },
+        "oswSkew": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "skewness of the input SLC image estimated within each cell",
+          "data_type": "other"
+        },
+        "oswKurt": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "kurtosis of the input SLC image estimated within each cell",
+          "data_type": "other"
+        },
+        "oswWindSpeed": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "SAR Wind speed",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "oswWindDirection": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "SAR Wind direction (meteorological convention=clockwise direction from where the wind comes respect to North)",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "oswEcmwfWindSpeed": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "ECMWF Wind speed",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "oswEcmwfWindDirection": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "ECMWF Wind direction (meteorological convention=clockwise direction from where the wind comes respect to North)",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "oswWindSeaHs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Significant wave height of the wind sea, estimated by extracting the wind sea component from the full wave spectrum without using partitioning.",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswPhs0": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Significant wave height of the wind sea partition, obtained from the spectral partitioning of the wave spectrum.",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswWaveAge": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "describe the state of dev. of the wind sea component of the wave spectra",
+          "data_type": "other"
+        },
+        "oswDepth": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "water depth from GEBCO data set",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswNlWidth": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "non linear inverse spectral width",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswLandFlag": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead",
+          "data_type": "int8"
+        },
+        "oswLandCoverage": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within the cell",
+          "unit": "%",
+          "data_type": "other"
+        },
+        "oswIncidenceAngle": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Incidence angle at cell center",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "oswHeading": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Platform heading (azimuth from North)",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "oswGroundRngSize": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "ground range size of the estimation area",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswAziSize": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "azimuth size of the estimation area",
+          "unit": "m",
+          "data_type": "other"
+        },
+        "oswEllipsLength": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "length of the major axis of the ellipsoid for Group analysis",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswEllipsLengthStdDev": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "standard deviation of the major axis of the ellipsoid for Group analysis",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswEllipsWidth": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "length of the minor axis of the ellipsoid for Group analysis",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswEllipsWidthStdDev": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "standard deviation of the minor axis of the ellipsoid for Group analysis",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswGroupDir": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Swell direction from group analysis",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswQualityFlagPartition": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Quality flag per partition",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "oswQualityFlag": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Total quality flag",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "oswTotalHs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Total significant wave height",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswTotalHsStdev": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Standard deviation of total significant wave height",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCartSpecIm": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Imaginary part of half Cartesian cross spectra between the different sub view: zero time lag; 1rst time lag; 2nd time lag",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCartSpecRe": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Real part of half Cartesian cross spectra between the different sub view: zero time lag; 1rst time lag; 2nd time lag",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKx": {
+          "dimensions": [
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Positive frequencies array of the Cartesian crossSpectra on Range direction",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKy": {
+          "dimensions": [
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "frequencies array of the Cartesian crossSpectra on Azimuth direction",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJx": {
+          "dimensions": [
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Range direction of the cartesian CrossSpectra (Half corresponding to positive frequencies)",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJy": {
+          "dimensions": [
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Azimuth direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswPclut1": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Estimated clutter noise levels of the cross covariance spectra",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswPclut2": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Estimated clutter noise levels on cross spectra from which low frequency signal is removed",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswRaSizeSLC": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Size of SLC swath over Range dimension",
+          "unit": "pixels",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswAzSizeSLC": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Size of SLC swath over Azimuth dimension",
+          "unit": "pixels",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiRadVel": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "radial velocity",
+          "unit": "m/s",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiHs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Significant waveheight for each partition",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiWl": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Dominant wave length for each partition",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiDirmet": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswPartitions"
+          ],
+          "type": "data",
+          "description": "Dominant wave direction for each partition (with respect to North)",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiWindSeaHs": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Significant waveheight for the wind sea part of the total wave height",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiSwath": {
+          "dimensions": [
+            "owiSwath"
+          ],
+          "type": "data",
+          "description": "subswath name",
+          "data_type": "int8"
+        },
+        "owiSubswathCoverage": {
+          "dimensions": [
+            "owiSwath",
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Percentage of overlap with each subswath",
+          "data_type": "uint8"
+        },
+        "owiLon": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Longitude at wind cell center",
+          "unit": "degrees_east",
+          "data_type": "other"
+        },
+        "owiLat": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Latitude at wind cell center",
+          "unit": "degrees_north",
+          "data_type": "other"
+        },
+        "owiIncidenceAngle": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Incidence angle at wind cell center",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "owiElevationAngle": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Elevation Angle at wind cell center",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "owiWindSpeed": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "SAR Wind speed",
+          "unit": "m/s",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiWindDirection": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "SAR Wind direction (meteorological convention= clockwise direction from where the wind comes respect to North)",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiEcmwfWindSpeed": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "ECMWF Wind speed",
+          "unit": "m/s",
+          "data_type": "other"
+        },
+        "owiEcmwfWindDirection": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "ECMWF Wind direction (meteorological convention= clockwise direction from where the wind comes respect to North)",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "owiNrcs": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize",
+            "owiPolarisation"
+          ],
+          "type": "data",
+          "description": "Normalized Radar Cross Section",
+          "unit": "m^2/m^2",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiNesz": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize",
+            "owiPolarisation"
+          ],
+          "type": "data",
+          "description": "Noise Equivalent SigmaNaught",
+          "unit": "m^2/m^2",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiPBright": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize",
+            "owiPolarisation"
+          ],
+          "type": "data",
+          "description": "Percentage of bright targets pixels detectied in cell",
+          "unit": "%",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiNrcsCmod": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "predicted Normalized Radar Cross Section from CMOD and ECMWF",
+          "unit": "m^2/m^2",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiCalConstObsi": {
+          "dimensions": [
+            "owiIncSize"
+          ],
+          "type": "data",
+          "description": "geophysical calibration constant estimated from ECMWF and CMOD GMF",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiCalConstInci": {
+          "dimensions": [
+            "owiIncSize"
+          ],
+          "type": "data",
+          "description": "Incidence angles vector corresponding to the geophysical calibration constant estimated from ECMWF and CMOD GMF",
+          "unit": "degrees",
+          "data_type": "other"
+        },
+        "owiInversionQuality": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "inversion quality flag",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "owiMask": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Mask of data",
+          "data_type": "int8"
+        },
+        "owiHeading": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Platform heading (azimuth from North)",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiWindQuality": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize"
+          ],
+          "type": "data",
+          "description": "Aggregate wind quality flag taking into account the wind inversion and the data validity",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "owiNrcsNeszCorr": {
+          "dimensions": [
+            "owiAzSize",
+            "owiRaSize",
+            "owiPolarisation"
+          ],
+          "type": "data",
+          "description": "Noise Corrected Nrcs averaged on the owi grid",
+          "unit": "m^2/m^2",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "owiPolarisationName": {
+          "dimensions": [
+            "owiPolarisation"
+          ],
+          "type": "data",
+          "description": "Polarisation name",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "rvlLon": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Longitude at cell center",
+          "unit": "degrees_east",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlLat": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Latitude at cell center",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlLandCoverage": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within a cell",
+          "unit": "%",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlLandFlag": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "rvlIncidenceAngle": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Incidence angle at cell center",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlHeading": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Platform heading (azimuth from North)",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlNrcs": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Normalized Radar Cross-Section",
+          "unit": "m^2/m^2",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlDcObs": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Estimated doppler centroid frequency",
+          "unit": "Hz",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlDcObsStd": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Estimated doppler centroid frequency std",
+          "unit": "Hz",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlRadVel": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "radial velocity",
+          "unit": "m/s",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlRadVelStd": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "radial velocity std",
+          "unit": "m/s",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlDcGeo": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "predicted (geometric) doppler frequency",
+          "unit": "Hz",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlDcMiss": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "doppler frequency from antenna mispointing at cell centre",
+          "unit": "Hz",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlConfDcObs": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "confidence on Estimated doppler centroid frequency",
+          "nodata": -128,
+          "data_type": "int8"
+        },
+        "rvlUssX": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Longitudinal component of surface stokes drift from Wavewatch III model",
+          "unit": "m/s",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlUssY": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Meridional component of surface stokes drift from Wavewatch III model",
+          "unit": "m/s",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlPitch": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "satellite pitch at zero Doppler time",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlYaw": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "satellite yaw at zero Doppler time",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlRoll": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "satellite roll at zero Doppler time",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlSnr": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "signal to noise ratio",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlSweepAngle": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "sweep angle of antenna",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlSlantRangeTime": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "two way slant range time to cell center",
+          "unit": "s",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlZeroDopplerTime": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "length",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "zero doppler time at cell center",
+          "data_type": "other"
+        },
+        "rvlGroundRngSize": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Ground range size of estimation area",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlAziSize": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "azimuth size of estimation area",
+          "unit": "m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "rvlMask": {
+          "dimensions": [
+            "rvlAzSize",
+            "rvlRaSize",
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Mask of data",
+          "data_type": "int8"
+        },
+        "rvlSwathNumber": {
+          "dimensions": [
+            "rvlSwath"
+          ],
+          "type": "data",
+          "description": "Swath number",
+          "data_type": "int8"
+        }
+      },
+      "description": "Level-2 Ocean Product measurement file containing Ocean Wind Field Component (OWI) and Radial Surface Velocity Component (RVL).",
+      "file:checksum": "d501105f6dc6e256645596cf87c6b9989ca337",
+      "file:size": 42208116,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew-ocn-vv-20260209t071554-20260209t071702-063139-07ECEA-001.nc",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew-ocn-vv-20260209t071554-20260209t071702-063139-07ECEA-001.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b001135b-d0b5-476d-8c48-42a1cc034a45)/Nodes(S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE)/Nodes(measurement)/Nodes(s1a-ew-ocn-vv-20260209t071554-20260209t071702-063139-07ECEA-001.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ew1-osw-vv-001": {
+      "type": "application/netcdf",
+      "title": "OSW Component",
+      "roles": [
+        "data",
+        "ew1"
+      ],
+      "data_type": "float32",
+      "sar:polarizations": [
+        "VV"
+      ],
+      "cube:dimensions": {
+        "oswAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            21
+          ]
+        },
+        "oswRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            4
+          ]
+        },
+        "oswKyBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            99
+          ]
+        },
+        "oswKxBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            128
+          ]
+        },
+        "oswCellCorner": {
+          "type": "other",
+          "extent": [
+            0,
+            4
+          ]
+        },
+        "oswLag": {
+          "type": "other",
+          "extent": [
+            0,
+            2
+          ]
+        }
+      },
+      "cube:variables": {
+        "oswCartSpecRe": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Real part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCartSpecIm": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Imaginary part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on Azimuth direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on range direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Range direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Azimuth direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLat": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Latitude at cell center",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLon": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Longitude at cell center",
+          "unit": "degrees_east",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIncidenceAngle": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Incidence angle at cell center",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswHeading": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Heading estimated within the cell",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKurt": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "kurtosis estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswSkew": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Skewness estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswNv": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Normalized variance estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIntensity": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Nrcs intensity estimated within the cell",
+          "unit": "pixel",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCellBound": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Cell Bound : (xmin, ymin, xsize, ysize) in the valid bound in SLC for each overlap area. Lag0 : from previous burst, Lag1 : from next burst",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLandCoverage": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within the cell",
+          "data_type": "other"
+        },
+        "oswLandFlag": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead within the cell",
+          "data_type": "int8"
+        },
+        "oswLatitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "the cell corners latitudes",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLongitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "The cell corners longitude",
+          "unit": "degrees_neast",
+          "nodata": -999.0,
+          "data_type": "other"
+        }
+      },
+      "description": "The Ocean Swell Wave Spectra component - EW1, VV",
+      "file:checksum": "d501108967d7fdb229142145f1877bd65aee6b",
+      "file:size": 26032108,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew1-osw-vv-20260209t071554-20260209t071702-063139-07ecea-001.nc",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew1-osw-vv-20260209t071554-20260209t071702-063139-07ecea-001.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b001135b-d0b5-476d-8c48-42a1cc034a45)/Nodes(S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE)/Nodes(measurement)/Nodes(s1a-ew1-osw-vv-20260209t071554-20260209t071702-063139-07ecea-001.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ew2-osw-vv-002": {
+      "type": "application/netcdf",
+      "title": "OSW Component",
+      "roles": [
+        "data",
+        "ew2"
+      ],
+      "data_type": "float32",
+      "sar:polarizations": [
+        "VV"
+      ],
+      "cube:dimensions": {
+        "oswAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            21
+          ]
+        },
+        "oswRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            3
+          ]
+        },
+        "oswKyBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            83
+          ]
+        },
+        "oswKxBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            128
+          ]
+        },
+        "oswCellCorner": {
+          "type": "other",
+          "extent": [
+            0,
+            4
+          ]
+        },
+        "oswLag": {
+          "type": "other",
+          "extent": [
+            0,
+            2
+          ]
+        }
+      },
+      "cube:variables": {
+        "oswCartSpecRe": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Real part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCartSpecIm": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Imaginary part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on Azimuth direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on range direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Range direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Azimuth direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLat": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Latitude at cell center",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLon": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Longitude at cell center",
+          "unit": "degrees_east",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIncidenceAngle": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Incidence angle at cell center",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswHeading": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Heading estimated within the cell",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKurt": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "kurtosis estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswSkew": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Skewness estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswNv": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Normalized variance estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIntensity": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Nrcs intensity estimated within the cell",
+          "unit": "pixel",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCellBound": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Cell Bound : (xmin, ymin, xsize, ysize) in the valid bound in SLC for each overlap area. Lag0 : from previous burst, Lag1 : from next burst",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLandCoverage": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within the cell",
+          "data_type": "other"
+        },
+        "oswLandFlag": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead within the cell",
+          "data_type": "int8"
+        },
+        "oswLatitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "the cell corners latitudes",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLongitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "The cell corners longitude",
+          "unit": "degrees_neast",
+          "nodata": -999.0,
+          "data_type": "other"
+        }
+      },
+      "description": "The Ocean Swell Wave Spectra component - EW2, VV",
+      "file:checksum": "d50110bf9d5ff265d525b252dd57486ab99f78",
+      "file:size": 21077755,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew2-osw-vv-20260209t071555-20260209t071702-063139-07ecea-002.nc",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew2-osw-vv-20260209t071555-20260209t071702-063139-07ecea-002.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b001135b-d0b5-476d-8c48-42a1cc034a45)/Nodes(S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE)/Nodes(measurement)/Nodes(s1a-ew2-osw-vv-20260209t071555-20260209t071702-063139-07ecea-002.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ew3-osw-vv-003": {
+      "type": "application/netcdf",
+      "title": "OSW Component",
+      "roles": [
+        "data",
+        "ew3"
+      ],
+      "data_type": "float32",
+      "sar:polarizations": [
+        "VV"
+      ],
+      "cube:dimensions": {
+        "oswAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            21
+          ]
+        },
+        "oswRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            4
+          ]
+        },
+        "oswKyBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            83
+          ]
+        },
+        "oswKxBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            128
+          ]
+        },
+        "oswCellCorner": {
+          "type": "other",
+          "extent": [
+            0,
+            4
+          ]
+        },
+        "oswLag": {
+          "type": "other",
+          "extent": [
+            0,
+            2
+          ]
+        }
+      },
+      "cube:variables": {
+        "oswCartSpecRe": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Real part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCartSpecIm": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Imaginary part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on Azimuth direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on range direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Range direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Azimuth direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLat": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Latitude at cell center",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLon": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Longitude at cell center",
+          "unit": "degrees_east",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIncidenceAngle": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Incidence angle at cell center",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswHeading": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Heading estimated within the cell",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKurt": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "kurtosis estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswSkew": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Skewness estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswNv": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Normalized variance estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIntensity": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Nrcs intensity estimated within the cell",
+          "unit": "pixel",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCellBound": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Cell Bound : (xmin, ymin, xsize, ysize) in the valid bound in SLC for each overlap area. Lag0 : from previous burst, Lag1 : from next burst",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLandCoverage": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within the cell",
+          "data_type": "other"
+        },
+        "oswLandFlag": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead within the cell",
+          "data_type": "int8"
+        },
+        "oswLatitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "the cell corners latitudes",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLongitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "The cell corners longitude",
+          "unit": "degrees_neast",
+          "nodata": -999.0,
+          "data_type": "other"
+        }
+      },
+      "description": "The Ocean Swell Wave Spectra component - EW3, VV",
+      "file:checksum": "d501102fe9d0ded271924c8cd1aa630788b3e0",
+      "file:size": 25870038,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew3-osw-vv-20260209t071556-20260209t071703-063139-07ecea-003.nc",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew3-osw-vv-20260209t071556-20260209t071703-063139-07ecea-003.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b001135b-d0b5-476d-8c48-42a1cc034a45)/Nodes(S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE)/Nodes(measurement)/Nodes(s1a-ew3-osw-vv-20260209t071556-20260209t071703-063139-07ecea-003.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ew4-osw-vv-004": {
+      "type": "application/netcdf",
+      "title": "OSW Component",
+      "roles": [
+        "data",
+        "ew4"
+      ],
+      "data_type": "float32",
+      "sar:polarizations": [
+        "VV"
+      ],
+      "cube:dimensions": {
+        "oswAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            21
+          ]
+        },
+        "oswRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            4
+          ]
+        },
+        "oswKyBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            83
+          ]
+        },
+        "oswKxBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            128
+          ]
+        },
+        "oswCellCorner": {
+          "type": "other",
+          "extent": [
+            0,
+            4
+          ]
+        },
+        "oswLag": {
+          "type": "other",
+          "extent": [
+            0,
+            2
+          ]
+        }
+      },
+      "cube:variables": {
+        "oswCartSpecRe": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Real part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCartSpecIm": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Imaginary part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on Azimuth direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on range direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Range direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Azimuth direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLat": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Latitude at cell center",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLon": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Longitude at cell center",
+          "unit": "degrees_east",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIncidenceAngle": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Incidence angle at cell center",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswHeading": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Heading estimated within the cell",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKurt": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "kurtosis estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswSkew": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Skewness estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswNv": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Normalized variance estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIntensity": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Nrcs intensity estimated within the cell",
+          "unit": "pixel",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCellBound": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Cell Bound : (xmin, ymin, xsize, ysize) in the valid bound in SLC for each overlap area. Lag0 : from previous burst, Lag1 : from next burst",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLandCoverage": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within the cell",
+          "data_type": "other"
+        },
+        "oswLandFlag": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead within the cell",
+          "data_type": "int8"
+        },
+        "oswLatitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "the cell corners latitudes",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLongitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "The cell corners longitude",
+          "unit": "degrees_neast",
+          "nodata": -999.0,
+          "data_type": "other"
+        }
+      },
+      "description": "The Ocean Swell Wave Spectra component - EW4, VV",
+      "file:checksum": "d5011009573e1b6672a1d09ea164dcbe341ebb",
+      "file:size": 25889011,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew4-osw-vv-20260209t071556-20260209t071703-063139-07ecea-004.nc",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew4-osw-vv-20260209t071556-20260209t071703-063139-07ecea-004.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b001135b-d0b5-476d-8c48-42a1cc034a45)/Nodes(S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE)/Nodes(measurement)/Nodes(s1a-ew4-osw-vv-20260209t071556-20260209t071703-063139-07ecea-004.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "ew5-osw-vv-015": {
+      "type": "application/netcdf",
+      "title": "OSW Component",
+      "roles": [
+        "data",
+        "ew5"
+      ],
+      "data_type": "float32",
+      "sar:polarizations": [
+        "VV"
+      ],
+      "cube:dimensions": {
+        "oswAzSize": {
+          "type": "other",
+          "extent": [
+            0,
+            21
+          ]
+        },
+        "oswRaSize": {
+          "type": "other",
+          "extent": [
+            0,
+            3
+          ]
+        },
+        "oswKyBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            83
+          ]
+        },
+        "oswKxBinSize": {
+          "type": "other",
+          "extent": [
+            0,
+            128
+          ]
+        },
+        "oswCellCorner": {
+          "type": "other",
+          "extent": [
+            0,
+            4
+          ]
+        },
+        "oswLag": {
+          "type": "other",
+          "extent": [
+            0,
+            2
+          ]
+        }
+      },
+      "cube:variables": {
+        "oswCartSpecRe": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Real part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCartSpecIm": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Imaginary part of cartesian cross spectra in sinh grid",
+          "unit": "m^4",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on Azimuth direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Frequencies array of the Cartesian crossSpectra on range direction in sinh grid",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJx": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKxBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Range direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswJy": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswKyBinSize"
+          ],
+          "type": "data",
+          "description": "Jacobian of the non linear resampling on Azimuth direction of the cartesian CrossSpectra",
+          "unit": "m/m",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLat": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Latitude at cell center",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLon": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Longitude at cell center",
+          "unit": "degrees_east",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIncidenceAngle": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Incidence angle at cell center",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswHeading": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "Heading estimated within the cell",
+          "unit": "degrees",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswKurt": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "kurtosis estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswSkew": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Skewness estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswNv": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Normalized variance estimated within the cell",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswIntensity": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Nrcs intensity estimated within the cell",
+          "unit": "pixel",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswCellBound": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner",
+            "oswLag"
+          ],
+          "type": "data",
+          "description": "Cell Bound : (xmin, ymin, xsize, ysize) in the valid bound in SLC for each overlap area. Lag0 : from previous burst, Lag1 : from next burst",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLandCoverage": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "percentage of land coverage within the cell",
+          "data_type": "other"
+        },
+        "oswLandFlag": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize"
+          ],
+          "type": "data",
+          "description": "land flag : 1 if presence of more than 10% of land coverage, 0 instead within the cell",
+          "data_type": "int8"
+        },
+        "oswLatitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "the cell corners latitudes",
+          "unit": "degrees_north",
+          "nodata": -999.0,
+          "data_type": "other"
+        },
+        "oswLongitudeCorner": {
+          "dimensions": [
+            "oswAzSize",
+            "oswRaSize",
+            "oswCellCorner"
+          ],
+          "type": "data",
+          "description": "The cell corners longitude",
+          "unit": "degrees_neast",
+          "nodata": -999.0,
+          "data_type": "other"
+        }
+      },
+      "description": "The Ocean Swell Wave Spectra component - EW5, VV",
+      "file:checksum": "d50110b56ead242b5c8df8ca1a707ddcac3620",
+      "file:size": 20785219,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew5-osw-vv-20260209t071557-20260209t071704-063139-07ecea-015.nc",
+      "href": "s3://eodata/Sentinel-1/SAR/EW_OCN__2S/2026/02/09/S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE/measurement/s1a-ew5-osw-vv-20260209t071557-20260209t071704-063139-07ecea-015.nc",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b001135b-d0b5-476d-8c48-42a1cc034a45)/Nodes(S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE)/Nodes(measurement)/Nodes(s1a-ew5-osw-vv-20260209t071557-20260209t071704-063139-07ecea-015.nc)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110796e2efc5142e43a4bf5520b8882b624",
+      "file:size": 163633212,
+      "file:local_path": "S1A_EW_OCN__2SDV_20260209T071554_20260209T071659_063139_07ECEA_3F51.SAFE.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(b001135b-d0b5-476d-8c48-42a1cc034a45)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/datacube/v2.3.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sar/v1.3.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

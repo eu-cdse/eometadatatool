@@ -1,0 +1,322 @@
+{
+  "stac_version": "1.1.0",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -179.9999999,
+          -48.0,
+          179.9999999,
+          36.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2020-01-01T00:00:00.000Z",
+          null
+        ]
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/contacts/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/classification/v2.0.0/schema.json"
+  ],
+  "type": "Collection",
+  "id": "clms_tcd_pantropical_10m_yearly_v1_cog",
+  "sci:doi": "10.2909/59cc02d6-ddfe-4820-83cb-345205eacec5",
+  "title": "CLMS Tree Cover Density (TCD) Pantropical 10m yearly V1 (COG)",
+  "keywords": [
+    "Copernicus",
+    "CLMS",
+    "TCD",
+    "Tree Cover Density",
+    "forest monitoring",
+    "pantropical",
+    "yearly",
+    "10m",
+    "Sentinel-2",
+    "MSI"
+  ],
+  "description": "Provides pantropical tree cover density as projective tree cover in percent per pixel at 10 m resolution for the 2020 base year. The product belongs to the Copernicus Global Land Cover and Tropical Forest Mapping and Monitoring Service (LCFM) and builds upon initiatives like the REDDCopernicus, EO4SD Forest Monitoring and pan-European Vegetated Land Cover Characteristics. It advances tropical forest monitoring capabilities, ensuring alignment with international sustainability initiatives and providing critical information for analysis and monitoring of deforestation and forest degradation.",
+  "license": "other",
+  "providers": [
+    {
+      "name": "CloudFerro",
+      "roles": [
+        "host"
+      ],
+      "url": "https://cloudferro.com/"
+    },
+    {
+      "url": "https://joint-research-centre.ec.europa.eu/",
+      "name": "European Commission's Joint Research Centre",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://vito.be/",
+      "name": "VITO",
+      "roles": [
+        "processor"
+      ]
+    }
+  ],
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/clms_lcfm-tcd_pantropical_10m_yearly_v1.jpg",
+      "type": "image/jpeg",
+      "title": "CLMS Tree Cover Density (TCD) Pantropical 10m yearly V1 (COG) Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "proj:code": [
+      "EPSG:4326"
+    ],
+    "processing:level": [
+      "L3"
+    ],
+    "product:type": [
+      "dynamic_land_cover"
+    ],
+    "processing:version": [
+      "V100"
+    ],
+    "instruments": [
+      "msi"
+    ],
+    "gsd": [
+      10.0
+    ],
+    "proj:shape": [
+      36000,
+      36000
+    ]
+  },
+  "item_assets": {
+    "map": {
+      "alternate:name": "S3",
+      "roles": [
+        "data"
+      ],
+      "alternate": {
+        "https": {
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      },
+      "nodata": 255.0,
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "TCD-10 Map",
+      "bands": [
+        {
+          "name": "map",
+          "description": "MAP",
+          "classification:classes": [
+            {
+              "value": 10,
+              "name": "tcd_0_10",
+              "description": "Tree Cover Density 0% – 10%",
+              "color_hint": "EDF8E9"
+            },
+            {
+              "value": 20,
+              "name": "tcd_10_20",
+              "description": "Tree Cover Density 10% – 20%",
+              "color_hint": "C7E9C0"
+            },
+            {
+              "value": 30,
+              "name": "tcd_20_30",
+              "description": "Tree Cover Density 20% – 30%",
+              "color_hint": "A1D99B"
+            },
+            {
+              "value": 40,
+              "name": "tcd_30_40",
+              "description": "Tree Cover Density 30% – 40%",
+              "color_hint": "74C476"
+            },
+            {
+              "value": 50,
+              "name": "tcd_40_50",
+              "description": "Tree Cover Density 40% – 50%",
+              "color_hint": "41AB5D"
+            },
+            {
+              "value": 60,
+              "name": "tcd_50_60",
+              "description": "Tree Cover Density 50% – 60%",
+              "color_hint": "238B45"
+            },
+            {
+              "value": 70,
+              "name": "tcd_60_70",
+              "description": "Tree Cover Density 60% – 70%",
+              "color_hint": "006D2C"
+            },
+            {
+              "value": 80,
+              "name": "tcd_70_80",
+              "description": "Tree Cover Density 70% – 80%",
+              "color_hint": "00561F"
+            },
+            {
+              "value": 90,
+              "name": "tcd_80_90",
+              "description": "Tree Cover Density 80% – 90%",
+              "color_hint": "003D15"
+            },
+            {
+              "value": 100,
+              "name": "tcd_90_100",
+              "description": "Tree Cover Density 90% – 100%",
+              "color_hint": "00250C"
+            },
+            {
+              "value": 254,
+              "name": "unclassifiable",
+              "description": "Unclassifiable due to data gaps (e.g. persistent cloud cover)",
+              "color_hint": "AAAAAA"
+            },
+            {
+              "value": 255,
+              "name": "no_data",
+              "description": "No Data – outside area of interest",
+              "color_hint": "000000",
+              "nodata": true
+            }
+          ]
+        }
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "data_type": "uint8",
+      "auth:refs": [
+        "s3"
+      ]
+    },
+    "Product": {
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/zip",
+      "title": "Zipped product"
+    }
+  },
+  "links": [
+    {
+      "href": "https://land.copernicus.eu/en/data-policy",
+      "rel": "license",
+      "type": "text/html",
+      "title": "Data policy for Copernicus Land Monitoring Service products and services"
+    },
+    {
+      "rel": "about",
+      "href": "https://land.copernicus.eu/en/products/global-dynamic-land-cover/tree-cover-density-2020-raster-10-m-pantropical-annual",
+      "type": "text/html",
+      "title": "Product page"
+    }
+  ],
+  "bands": [
+    {
+      "name": "map",
+      "description": "MAP"
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    },
+    "oidc": {
+      "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration",
+      "type": "openIdConnect"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "class": "hot",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "contacts": [
+    {
+      "name": "Copernicus Land Monitoring Service",
+      "organization": "European Environment Agency",
+      "roles": [
+        "producer"
+      ],
+      "emails": [
+        {
+          "value": "copernicus@eea.europa.eu",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "phones": [
+        {
+          "value": "+4533367100",
+          "roles": [
+            "contact point"
+          ]
+        }
+      ],
+      "links": [
+        {
+          "href": "https://land.copernicus.eu/",
+          "rel": "about",
+          "type": "text/html",
+          "title": "Homepage of the Copernicus Land Monitoring Service"
+        }
+      ]
+    }
+  ]
+}

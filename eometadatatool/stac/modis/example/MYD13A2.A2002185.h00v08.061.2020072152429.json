@@ -1,0 +1,319 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "modis-aqua-myd13a2",
+  "id": "MYD13A2.A2002185.h00v08.061.2020072152429",
+  "properties": {
+    "created": "2020-03-12T19:24:29.000000Z",
+    "updated": "2025-10-28T05:19:14.554892Z",
+    "published": "2025-10-28T05:19:14.554892Z",
+    "eopf:origin_datetime": "2020-03-12T19:24:29.000000Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2002-07-04T00:00:00.000000Z",
+    "start_datetime": "2002-07-04T00:00:00.000000Z",
+    "end_datetime": "2002-07-19T23:59:59.000000Z",
+    "constellation": "modis",
+    "processing:datetime": "2020-03-12T19:24:29.000000Z",
+    "processing:version": "6.1.1",
+    "product:type": "MYD13A2",
+    "grid:code": "MSIN-0008",
+    "gsd": 1000,
+    "instruments": [
+      "modis"
+    ],
+    "platform": "aqua",
+    "sat:platform_international_designator": "2002-022A",
+    "processing:level": "L3",
+    "eo:cloud_cover": 100.0,
+    "statistics": {
+      "missing_data": 0.0,
+      "out_of_bounds_data": 0.0,
+      "interpolated_data": 100.0
+    },
+    "_private": {
+      "product_size": 1328150,
+      "product_uuid": "78bfe9c5-6274-45f6-af69-ec0d239e4903",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260512134513+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -0.0068357003079556,
+    179.9999999,
+    9.99897831672069
+  ],
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -179.9999999,
+            9.998921615137636
+          ],
+          [
+            -179.9999999,
+            -0.0000672312562528532
+          ],
+          [
+            -179.999951582871,
+            -0.0068357003079556
+          ],
+          [
+            -169.99173290556,
+            5.67994760615426e-6
+          ],
+          [
+            -169.920147289013,
+            9.9909309627606
+          ],
+          [
+            -179.9999999,
+            9.998921615137636
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            179.9999999,
+            -0.0000672312562528532
+          ],
+          [
+            179.9999999,
+            9.998921615137636
+          ],
+          [
+            179.928473473918,
+            9.99897831672069
+          ],
+          [
+            179.9999999,
+            -0.0000672312562528532
+          ]
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/Aqua/MODIS/MYD13A2.061/2002/07/04/MYD13A2.A2002185.h00v08.061.2020072152429/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/MYD13A2.A2002185.h00v08.061.2020072152429.zip",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "metadata": {
+      "type": "application/xml",
+      "title": "MYD13A2.A2002185.h00v08.061.2020072152429.cmr.xml",
+      "roles": [
+        "metadata"
+      ],
+      "file:checksum": "d50110fec36992b933e91ccd6111c585e15736",
+      "file:size": 21865,
+      "file:local_path": "MYD13A2.A2002185.h00v08.061.2020072152429/MYD13A2.A2002185.h00v08.061.2020072152429.cmr.xml",
+      "href": "s3://eodata/Aqua/MODIS/MYD13A2.061/2002/07/04/MYD13A2.A2002185.h00v08.061.2020072152429/MYD13A2.A2002185.h00v08.061.2020072152429.cmr.xml",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(78bfe9c5-6274-45f6-af69-ec0d239e4903)/Nodes(MYD13A2.A2002185.h00v08.061.2020072152429)/Nodes(MYD13A2.A2002185.h00v08.061.2020072152429.cmr.xml)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "data": {
+      "type": "application/x-hdf",
+      "title": "MYD13A2.A2002185.h00v08.061.2020072152429.hdf",
+      "roles": [
+        "data"
+      ],
+      "bands": [
+        {
+          "name": "1 km 16 days NDVI",
+          "description": "1 km 16 days NDVI"
+        },
+        {
+          "name": "1 km 16 days EVI",
+          "description": "1 km 16 days EVI"
+        },
+        {
+          "name": "1 km 16 days VI Quality",
+          "description": "1 km 16 days VI Quality"
+        },
+        {
+          "name": "1 km 16 days red reflectance",
+          "description": "1 km 16 days red reflectance"
+        },
+        {
+          "name": "1 km 16 days NIR reflectance",
+          "description": "1 km 16 days NIR reflectance"
+        },
+        {
+          "name": "1 km 16 days blue reflectance",
+          "description": "1 km 16 days blue reflectance"
+        },
+        {
+          "name": "1 km 16 days MIR reflectance",
+          "description": "1 km 16 days MIR reflectance"
+        },
+        {
+          "name": "1 km 16 days view zenith angle",
+          "description": "1 km 16 days view zenith angle"
+        },
+        {
+          "name": "1 km 16 days sun zenith angle",
+          "description": "1 km 16 days sun zenith angle"
+        },
+        {
+          "name": "1 km 16 days relative azimuth angle",
+          "description": "1 km 16 days relative azimuth angle"
+        },
+        {
+          "name": "1 km 16 days composite day of the year",
+          "description": "1 km 16 days composite day of the year"
+        },
+        {
+          "name": "1 km 16 days pixel reliability",
+          "description": "1 km 16 days pixel reliability"
+        }
+      ],
+      "proj:shape": [
+        1200,
+        1200
+      ],
+      "file:checksum": "d5011025e21585f57211675579b2e6a0af4531",
+      "file:size": 1297053,
+      "file:local_path": "MYD13A2.A2002185.h00v08.061.2020072152429/MYD13A2.A2002185.h00v08.061.2020072152429.hdf",
+      "href": "s3://eodata/Aqua/MODIS/MYD13A2.061/2002/07/04/MYD13A2.A2002185.h00v08.061.2020072152429/MYD13A2.A2002185.h00v08.061.2020072152429.hdf",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(78bfe9c5-6274-45f6-af69-ec0d239e4903)/Nodes(MYD13A2.A2002185.h00v08.061.2020072152429)/Nodes(MYD13A2.A2002185.h00v08.061.2020072152429.hdf)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/jpeg",
+      "title": "BROWSE.MYD13A2.A2002185.h00v08.061.2020072152429.1.jpg",
+      "roles": [
+        "thumbnail",
+        "graphic"
+      ],
+      "file:checksum": "d50110b628c7a5dc8ed903c63d28143c7bbd8e",
+      "file:size": 4554,
+      "file:local_path": "MYD13A2.A2002185.h00v08.061.2020072152429/BROWSE.MYD13A2.A2002185.h00v08.061.2020072152429.1.jpg",
+      "href": "https://datahub.creodias.eu/odata/v1/Assets(1415e8fd-1c3a-47e2-840e-b95a43dd0a1c)/$value",
+      "alternate:name": "HTTPS",
+      "alternate": {
+        "s3": {
+          "href": "s3://eodata/Aqua/MODIS/MYD13A2.061/2002/07/04/MYD13A2.A2002185.h00v08.061.2020072152429/BROWSE.MYD13A2.A2002185.h00v08.061.2020072152429.1.jpg",
+          "alternate:name": "S3",
+          "auth:refs": [
+            "s3"
+          ],
+          "storage:refs": [
+            "cdse-s3",
+            "creodias-s3"
+          ]
+        }
+      }
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d5011093c3dc9774034baa1ed82fccb4e7ba04",
+      "file:size": 1329280,
+      "file:local_path": "MYD13A2.A2002185.h00v08.061.2020072152429.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(78bfe9c5-6274-45f6-af69-ec0d239e4903)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/grid/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}

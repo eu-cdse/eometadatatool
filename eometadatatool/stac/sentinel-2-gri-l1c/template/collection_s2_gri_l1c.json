@@ -1,0 +1,199 @@
+{
+  "type": "Collection",
+  "id": "sentinel-2-gri-l1c",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -180,
+          -90,
+          180,
+          90
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2015-07-06T10:57:26.420Z",
+          "2018-09-06T08:25:59.458Z"
+        ]
+      ]
+    }
+  },
+  "stac_version": "1.1.0",
+  "stac_extensions": [
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/eo/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/sat/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
+  ],
+  "title": "Sentinel-2 GRI L1C",
+  "description": "The Sentinel-2 GRI STAC collection provides a multi-layer Level-1C “Global Reference Image” composed of B04 (red) band plus corresponding quality masks, derived from a multi-layer L1B GRI for improved geometric consistency. ",
+  "license": "other",
+  "assets": {
+    "thumbnail": {
+      "href": "https://s3.waw3-2.cloudferro.com/swift/v1/stac-png/S2_GRI.jpg",
+      "type": "image/jpeg",
+      "title": "Sentinel-2 GRI L1C Thumbnail",
+      "roles": [
+        "thumbnail"
+      ],
+      "proj:code": null,
+      "proj:shape": [
+        360,
+        640
+      ]
+    }
+  },
+  "summaries": {
+    "platform": [
+      "sentinel-2a",
+      "sentinel-2b"
+    ],
+    "processing:level": [
+      "L1"
+    ],
+    "product:type": [
+      "S2GRIL1C"
+    ],
+    "constellation": [
+      "sentinel-2"
+    ],
+    "sat:orbit_state": [
+      "descending",
+      "ascending"
+    ],
+    "processing:version": [
+      "05.00"
+    ],
+    "instruments": [
+      "msi"
+    ],
+    "gsd": [
+      10.0
+    ]
+  },
+  "item_assets": {
+    "B04": {
+      "proj:shape": [
+        10980,
+        10980
+      ],
+      "roles": [
+        "data"
+      ],
+      "data_type": "uint16",
+      "gsd": 10,
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "image/jp2",
+      "title": "Red (band 4) - 10m",
+      "bands": [
+        {
+          "eo:full_width_half_max": 0.342,
+          "name": "B04",
+          "description": "Red (band 4)",
+          "eo:common_name": "red",
+          "eo:center_wavelength": 0.665
+        }
+      ]
+    },
+    "datastrip_metadata": {
+      "roles": [
+        "metadata"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/xml",
+      "title": "Datastrip metadata"
+    },
+    "tile_metadata": {
+      "roles": [
+        "metadata"
+      ],
+      "auth:refs": [
+        "oidc"
+      ],
+      "type": "application/xml",
+      "title": "Tile metadata"
+    }
+  },
+  "links": [
+    {
+      "rel": "license",
+      "href": "https://sentinel.esa.int/documents/247904/690755/Sentinel_Data_Legal_Notice",
+      "type": "application/pdf",
+      "title": "Legal notice on the use of Copernicus Sentinel Data and Service Information"
+    }
+  ],
+  "bands": [
+    {
+      "name": "B04",
+      "eo:common_name": "red",
+      "description": "Red (band 4)",
+      "eo:center_wavelength": 0.665,
+      "eo:full_width_half_max": 0.342
+    }
+  ],
+  "auth:schemes": {
+    "s3": {
+      "type": "s3"
+    }
+  },
+  "storage:schemes": {
+    "creodias-s3": {
+      "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+      "title": "CREODIAS S3",
+      "type": "custom-s3",
+      "platform": "https://eodata.cloudferro.com",
+      "requester_pays": true
+    },
+    "cdse-s3": {
+      "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+      "title": "Copernicus Data Space Ecosystem S3",
+      "type": "custom-s3",
+      "platform": "https://eodata.dataspace.copernicus.eu",
+      "requester_pays": false
+    }
+  },
+  "providers": [
+    {
+      "url": "https://sentinel.esa.int/web/sentinel/missions/sentinel-5p",
+      "name": "ESA",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "url": "https://commission.europa.eu/",
+      "name": "European Commission",
+      "roles": [
+        "licensor"
+      ]
+    },
+    {
+      "url": "https://cloudferro.com/",
+      "name": "CloudFerro",
+      "roles": [
+        "host",
+        "processor"
+      ]
+    }
+  ],
+  "sci:citation": "Copernicus Sentinel data [Year]",
+  "keywords": [
+    "EC",
+    "ESA",
+    "EU",
+    "Global",
+    "Sentinel",
+    "Sentinel-2",
+    "GRI"
+  ]
+}

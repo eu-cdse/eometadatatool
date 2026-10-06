@@ -1,0 +1,247 @@
+{
+  "type": "Feature",
+  "stac_version": "1.1.0",
+  "collection": "clms_swi-static_global_12.5km_daily_v3_cog",
+  "id": "c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog",
+  "properties": {
+    "created": "2025-04-22T08:36:32.651841Z",
+    "updated": "2025-07-18T03:48:28.860930Z",
+    "published": "2025-04-24T17:09:56.370464Z",
+    "eopf:origin_datetime": "2025-04-22T08:36:32.651841Z",
+    "auth:schemes": {
+      "s3": {
+        "type": "s3"
+      },
+      "oidc": {
+        "type": "openIdConnect",
+        "openIdConnectUrl": "https://identity.dataspace.copernicus.eu/auth/realms/CDSE/.well-known/openid-configuration"
+      }
+    },
+    "storage:schemes": {
+      "cdse-s3": {
+        "title": "Copernicus Data Space Ecosystem S3",
+        "description": "This endpoint provides access to EO data which is stored on the object storage of both CloudFerro Cloud and OpenTelekom Cloud (OTC). See the [documentation](https://documentation.dataspace.copernicus.eu/APIs/S3.html) for more information, including how to get credentials.",
+        "platform": "https://eodata.dataspace.copernicus.eu",
+        "requester_pays": false,
+        "type": "custom-s3",
+        "class": "hot"
+      },
+      "creodias-s3": {
+        "title": "CREODIAS S3",
+        "description": "Comprehensive Earth Observation Data (EODATA) archive offered by CREODIAS as a commercial part of CDSE, designed to provide users with access to a vast repository of satellite data without predefined quota limits.",
+        "platform": "https://eodata.cloudferro.com",
+        "requester_pays": true,
+        "type": "custom-s3",
+        "class": "hot"
+      }
+    },
+    "datetime": "2007-01-01T00:00:00.000000Z",
+    "start_datetime": "2007-01-01T00:00:00.000000Z",
+    "end_datetime": "2007-12-31T23:59:59.999999Z",
+    "instruments": [
+      "ascat"
+    ],
+    "gsd": 12500,
+    "proj:code": "EPSG:4326",
+    "product:type": "soil_water_index",
+    "processing:level": "L4",
+    "processing:version": "V3.2.1",
+    "_private": {
+      "product_size": 5836489,
+      "product_uuid": "8b162e90-9f38-4058-b06b-785e8e077fa7",
+      "product_name": "c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog",
+      "visible": true
+    },
+    "processing:software": {
+      "eometadatatool": "260827122548+dirty"
+    },
+    "expires": "2262-01-01T00:00:00.000000Z"
+  },
+  "bbox": [
+    -179.9999999,
+    -89.9999999,
+    179.9999999,
+    89.9999999
+  ],
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            -179.9999999,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            -89.9999999
+          ],
+          [
+            -1e-8,
+            89.9999999
+          ],
+          [
+            -179.9999999,
+            89.9999999
+          ]
+        ]
+      ],
+      [
+        [
+          [
+            1e-8,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            -89.9999999
+          ],
+          [
+            179.9999999,
+            89.9999999
+          ],
+          [
+            1e-8,
+            89.9999999
+          ],
+          [
+            1e-8,
+            -89.9999999
+          ]
+        ]
+      ]
+    ]
+  },
+  "links": [
+    {
+      "rel": "enclosure",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi-static_global_12.5km_daily_v3/2007/01/01/c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog/",
+      "type": "application/x-directory",
+      "title": "S3 path to source directory",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ]
+    },
+    {
+      "rel": "version-history",
+      "href": "https://trace.dataspace.copernicus.eu/api/v1/traces/name/c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog",
+      "type": "application/json",
+      "title": "Product history record from the CDSE traceability service"
+    }
+  ],
+  "assets": {
+    "static_ci": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "title": "Pearson Correlation between SWI and GLDAS NOAH version 1 average layer 1 soil moisture",
+      "roles": [
+        "data"
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        1800,
+        3600
+      ],
+      "proj:transform": [
+        0.1,
+        0.0,
+        -179.99999999999997,
+        0.0,
+        -0.1,
+        89.99999999998977
+      ],
+      "proj:bbox": [
+        -179.99999999999997,
+        -90.00000000001023,
+        180.00000000000003,
+        89.99999999998977
+      ],
+      "data_type": "float64",
+      "nodata": "nan",
+      "bands": [
+        {
+          "name": "static_ci",
+          "description": "Pearson Correlation between SWI and GLDAS NOAH version 1 average layer 1 soil moisture"
+        }
+      ],
+      "file:checksum": "d501102ea7f602b337d4d05a3203d2be632a85",
+      "file:size": 5836489,
+      "file:local_path": "c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog/c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1.tiff",
+      "href": "s3://eodata/CLMS/bio-geophysical/soil_water_index/swi-static_global_12.5km_daily_v3/2007/01/01/c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog/c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1.tiff",
+      "alternate:name": "S3",
+      "auth:refs": [
+        "s3"
+      ],
+      "storage:refs": [
+        "cdse-s3",
+        "creodias-s3"
+      ],
+      "alternate": {
+        "https": {
+          "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(8b162e90-9f38-4058-b06b-785e8e077fa7)/Nodes(c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog)/Nodes(c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1.tiff)/$value",
+          "alternate:name": "HTTPS",
+          "auth:refs": [
+            "oidc"
+          ],
+          "storage:refs": []
+        }
+      }
+    },
+    "thumbnail": {
+      "type": "image/png",
+      "title": "Quicklook",
+      "roles": [
+        "thumbnail",
+        "overview"
+      ],
+      "data_type": "uint8",
+      "proj:bbox": [
+        -179.99999999999997,
+        -90.00000000001023,
+        180.00000000000003,
+        89.99999999998977
+      ],
+      "proj:code": "EPSG:4326",
+      "proj:shape": [
+        375,
+        750
+      ],
+      "alternate:name": "HTTPS",
+      "href": "https://thumbnails.dataspace.copernicus.eu/wms?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetMap&LAYERS=s3://eodata/CLMS/bio-geophysical/soil_water_index/swi-static_global_12.5km_daily_v3/2007/01/01/c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog/c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1.tiff&CRS=EPSG:4326&BBOX=-179.99999999999997,-90.00000000001023,180.00000000000003,89.99999999998977&WIDTH=750&HEIGHT=375&FORMAT=image/png&TRANSPARENT=false&sld=https://raw.githubusercontent.com/copernicus-land/colourmaps-legends/main/colourmaps/swi-static_global_12.5km_daily_v3/clms_global_swi_12.5km_static_ci_v3.sld"
+    },
+    "Product": {
+      "type": "application/zip",
+      "title": "Zipped product",
+      "roles": [
+        "data",
+        "metadata",
+        "archive"
+      ],
+      "file:checksum": "d50110a90b5ee4147569899b69715d74ae3c35",
+      "file:size": 5836843,
+      "file:local_path": "c_gls_SWI-STATIC-CI_200701010000_GLOBE_SWI-GLDAS_V3.2.1_cog.zip",
+      "href": "https://download.dataspace.copernicus.eu/odata/v1/Products(8b162e90-9f38-4058-b06b-785e8e077fa7)/$value",
+      "auth:refs": [
+        "oidc"
+      ]
+    }
+  },
+  "stac_extensions": [
+    "https://cs-si.github.io/eopf-stac-extension/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/alternate-assets/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/authentication/v1.1.0/schema.json",
+    "https://stac-extensions.github.io/file/v2.1.0/schema.json",
+    "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+    "https://stac-extensions.github.io/product/v1.0.0/schema.json",
+    "https://stac-extensions.github.io/projection/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/storage/v2.0.0/schema.json",
+    "https://stac-extensions.github.io/timestamps/v1.1.0/schema.json"
+  ]
+}
